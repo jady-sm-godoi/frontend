@@ -1,0 +1,338 @@
+.cttbtn_externalContainer {
+    -webkit-transition: all 1s;
+
+    overflow: hidden;
+    position: fixed;
+    z-index: 50;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: none;
+}
+
+.cttbtn_exitmask {
+    -webkit-transition: all 0.1s;
+
+    opacity: 0%;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(3px);
+
+}
+
+.cttbtn_inputContent {
+    position: relative;
+
+    &::after {
+        content: attr(data-errormessage);
+        color: red;
+        position: absolute;
+        right: 0;
+        bottom: 0rem;
+        font-size: 0.75rem;
+    }
+
+}
+
+.cttbtn_whatsapp_button_input {
+    display: none;
+    visibility: hidden;
+}
+
+.cttbtn_renderSelector {
+    display: none;
+}
+
+.cttbtn_whatsappBtn {
+    border: none;
+    z-index: 51;
+    min-width: 4rem;
+    min-height: 4rem;
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    border-radius: 10rem;
+    background-color: #009e0c;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.cttbtn_defaultCardButton {
+    padding-top: 24px;
+}
+
+.cttbtn_cardButtons {
+    color: black;
+    position: fixed;
+    bottom: 2rem;
+    right: 8rem;
+    background-color: white;
+    height: 0;
+    width: 372px;
+    -webkit-transition: all 0.3s;
+    overflow: hidden;
+    border-radius: 4px;
+}
+
+.ctttn_closeButton {
+    display: flex;
+    justify-content: right;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+
+    button {
+        background-color: transparent;
+        border: none;
+        width: 1rem;
+        height: 1rem;
+        position: relative;
+        cursor: pointer;
+    }
+}
+
+// 
+//  CSS RESPONSAVEL PELA MAIN SCREEN
+// 
+
+.cttbtn_mainContent {
+    padding-inline: 1rem;
+    height: 220px;
+
+    &:nth-child(2) {
+        background-color: #F1F1F1;
+        border-top: 1px solid #E0E0E0;
+    }
+
+    p {
+        padding-top: 24px;
+        text-align: center;
+        font-size: 1.25rem;
+        font-weight: 500;
+    }
+
+    &_buttons {
+        display: flex;
+        justify-content: space-around;
+        margin-block: 2rem;
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        span {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            b {
+                color: #00A300;
+                font-weight: normal;
+            }
+        }
+
+        button {
+            background-color: transparent;
+            border: none;
+        }
+
+        div {
+            width: 5.5rem;
+            width: 50px;
+            height: 50px;
+            border-radius: 100rem;
+
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+
+            img {
+                width: 20px;
+                height: 20px;
+            }
+        }
+
+        a,
+        button {
+            &:focus {
+                outline: none;
+                outline: 2px solid rgb(0, 0, 0);
+
+            }
+        }
+
+        &_primary {
+            margin-bottom: 1rem;
+            background-color: #00A300;
+
+            &::after {
+                font-size: 1rem;
+                position: absolute;
+                min-width: 100px;
+                text-align: center;
+                bottom: -36px;
+                font-weight: 500;
+            }
+        }
+
+        &_secundary {
+            margin-bottom: 1rem;
+            border: 1px solid #E0E0E0;
+        }
+    }
+}
+
+// 
+//  CSS RESPONSAVEL PELOS DOIS MODAIS
+// 
+
+.renderComponent_chatBot,
+.renderComponent_phonebtn {
+    position: absolute;
+    z-index: 100;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 2rem;
+    display: none;
+}
+
+// CSS RESPONSAVEL PELO CHATBOT
+
+.cttbtn_chatbotContent {
+    position: absolute;
+    background-color: white;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 2rem;
+    box-shadow: 1px 1px 8px 1px rgba(0, 0, 0, 0.2);
+
+    p {
+        margin-block: 8px;
+        color: #1F1F1F;
+    }
+
+    form {
+        margin-top: 24px;
+        display: flex;
+        background-attachment: red;
+        flex-direction: column;
+        gap: 1rem;
+
+        button {
+            width: 100%;
+            background-color: #00a300;
+            min-height: 48px;
+            border-radius: 100rem;
+            color: white;
+            border: none;
+
+            font-weight: 500;
+            -webkit-transition: all 0.3s;
+        }
+
+        button:disabled {
+            background-color: #E0E0E0;
+            cursor: not-allowed;
+            color: #8F8F8F;
+        }
+
+        div {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            padding-bottom: 1rem;
+
+            input {
+                padding: 1rem;
+                border-radius: 8px;
+                border-color: #E0E0E0;
+                border-style: solid;
+                border-width: 1px;
+
+                &::-webkit-input-placeholder {
+                    color: #8F8F8F;
+                }
+
+                &::placeholder {
+                    color: #8F8F8F;
+                }
+            }
+
+            label {
+                width: 100%;
+                font-weight: 500;
+                font-size: 1rem;
+                color: #1F1F1F;
+            }
+        }
+    }
+}
+
+// CSS RESPONSAVEL PELO PHONE
+
+.cttbtn_phoneContent {
+
+    position: absolute;
+    background-color: white;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 2rem;
+    box-shadow: 1px 1px 8px 1px rgba(0, 0, 0, 0.2);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    p {
+        margin-block: 8px;
+        color: #1F1F1F;
+        text-transform: uppercase;
+    }
+
+    a {
+        width: 100%;
+        background-color: #00a300;
+        min-height: 48px;
+        border-radius: 100rem;
+        color: white;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+
+        font-weight: 500;
+        font-size: 1rem;
+    }
+
+}
+
+@media (max-width: 768px) {
+    .cttbtn_cardButtons {
+        right: 0;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+    }
+
+    .cttbtn_whatsappBtn {
+        z-index: 50;
+    }
+
+}

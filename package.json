@@ -1,0 +1,27 @@
+{
+    "name": "boilerplate-lumis",
+    "version": "2.0.0",
+    "author": "yuri.ruas@lumis.com.br",
+    "description": "template para novos projetos html na Lumis",
+    "license": "ISC",
+    "scripts": {
+        "start": "gulp start",
+        "start-lumis": "gulp start-deploy",
+        "build-lumis": "gulp build-deploy"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.18.6",
+        "@babel/preset-env": "^7.18.6",
+        "del": "^6.1.1",
+        "gulp": "^4.0.2",
+        "gulp-autoprefixer": "^8.0.0",
+        "gulp-babel": "^8.0.0",
+        "gulp-file-include": "^2.3.0",
+        "gulp-livereload": "^4.0.2",
+        "gulp-sass": "^5.1.0",
+        "gulp-sourcemaps": "^3.0.0",
+        "gulp-terser": "^2.1.0",
+        "node-static": "^0.7.11",
+        "sass": "^1.53.0"
+    }
+}

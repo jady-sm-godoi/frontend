@@ -1,0 +1,56 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass variables.
+// -----------------------------------------------------------------------------
+
+// Container's maximum width
+$max-width: 1320px;
+// -- Container's maximum width --
+
+// Screen sizes 
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+$xxl: 1400px;
+// -- Screen sizes --
+
+// Media queries for mobile first 
+$min-sm: 'min-width: #{$sm}';
+$min-md: 'min-width: #{$md}';
+$min-lg: 'min-width: #{$lg}';
+$min-xl: 'min-width: #{$xl}';
+$min-hd: 'min-width: #{$xxl}';
+// -- Media queries for mobile first
+
+// Media queries for desktop first
+$max-xs: 'max-width: #{$sm - 0.2px}';
+$max-sm: 'max-width: #{$md - 0.2px}';
+$max-md: 'max-width: #{$lg - 0.2px}';
+$max-lg: 'max-width: #{$xl - 0.2px}';
+$max-xl: 'max-width: #{$xxl - 0.2px}';
+// -- Media queries for desktop first --
+
+// Default colors
+$white: #fff;
+$black: #000;
+// -- Default colors --
+
+// Specific colors
+$primary-color: #98D318;
+$secondary-color: #FBD84B;
+$primary-text-color: #282828;
+$secondary-text-color: #9E9E9E;
+$primary-bg-color: #F5F5F5;
+$header-bg-color: #f2f2f2;
+$secondary-bg-color: #F0F0F0;
+$oferta-para-color: #F1F1F1;
+$oferta-color: #747474;
+$price-color: #A5E114;
+$primary-bt-text-color:#0B0B0B;
+// -- Specific colors --
+
+// Specific fonts
+$primary-font: 'Simplon BP', sans-serif;
+$paragraph-font: 'Open Sans', sans-serif;
+$headline-font: 'Simplon Oi', sans-serif;
+// -- Specific fonts --

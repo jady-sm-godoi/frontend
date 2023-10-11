@@ -1,0 +1,44 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass mixins.
+// -----------------------------------------------------------------------------
+
+/// Event wrapper
+/// @author Harry Roberts
+/// @param {Bool} $self [false] - Whether or not to include current selector
+/// @link https://twitter.com/csswizardry/status/478938530342006784 Original tweet from Harry Roberts
+@mixin on-event($self: false) {
+	@if $self {
+
+		&,
+		&:hover,
+		&:active,
+		&:focus {
+			@content;
+		}
+	}
+
+	@else {
+
+		&:hover,
+		&:active,
+		&:focus {
+			@content;
+		}
+	}
+}
+
+@mixin limitTextLines($numberOfLines: 1) {
+	/*! autoprefixer: ignore next */
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: $numberOfLines;
+}
+
+@mixin flex($align: flex-start, $justify: flex-start, $direction: row) {
+	display: flex;
+	align-items: $align;
+	justify-content: $justify;
+	flex-direction: $direction;
+}

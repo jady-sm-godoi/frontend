@@ -1,0 +1,2 @@
+"use strict";function debounce(t){var e,n=this,r=arguments.length>1&&void 0!==arguments[1]?arguments[1]:300;return function(){for(var i=arguments.length,o=new Array(i),u=0;u<i;u++)o[u]=arguments[u];clearTimeout(e),e=setTimeout((function(){t.apply(n,o)}),r)}}
+//# sourceMappingURL=main.js.map

@@ -1,0 +1,99 @@
+// -----------------------------------------------------------------------------
+// This file contains CSS helper classes.
+// -----------------------------------------------------------------------------
+
+/*
+ * Main content containers
+ * 1. Make the container full-width with a maximum width
+ * 2. Center it in the viewport
+ * 3. Leave some space on the edges, especially valuable on small screens
+ */
+.container {
+  width: 100%; /* 1 */
+  max-width: calc($max-width + 3rem); /* 1 */
+  margin-inline: auto; /* 2 */
+  padding-inline: 1.5rem; /* 3 */
+  display: flex;
+}
+
+.mobile-only {
+  @media screen and ($min-md) {
+    display: none;
+  }
+}
+
+.desktop-only {
+  @media screen and ($max-md) {
+    display: none;
+  }
+}
+
+.gradient-text {
+  background: linear-gradient(69.14deg, #40d802 26.33%, #90d604 61%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+  display: inline-flex;
+
+  &:before {
+    content: attr(data-title);
+    position: absolute;
+    top: 0;
+    left: 0;
+    filter: blur(3px);
+    background: linear-gradient(69.14deg, #40d802 26.33%, #90d604 61%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.oi_container {
+  position: relative;
+  width: 100%;
+  max-width: 1236px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+
+  @media screen and (min-width: 0) and (max-width: 767px) {
+    padding: 0 32px;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1023px) {
+    padding: 0 32px;
+  }
+
+  @media screen and (min-width: 1024px) and (max-width: 1365px) {
+    padding: 0 32px;
+  }
+}
+
+.max_width_container{
+	width: 100%;
+	margin: 0px auto;
+	padding: 0 24px;
+
+  @media (min-width: 769px) {
+    padding: 0 24px;
+  }
+
+  // @media (min-width: 1364px) {
+  //   width: 1223px;
+  //   padding: 0;
+  // }
+
+  @media (min-width: 1364px){
+    width: 1320px;
+    padding:0;
+  }
+
+}
+
+a{
+  text-decoration: none;
+}

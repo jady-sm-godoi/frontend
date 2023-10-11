@@ -1,0 +1,95 @@
+.footer {
+	padding-block: 3.75rem 7.5rem;
+	background-color: $secondary-bg-color;
+
+	@media ($max-sm) {
+		padding-block: 3rem;
+	}
+
+	&__container {
+		flex-direction: column;
+	}
+
+	&__top {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		@media ($max-sm) {
+			flex-direction: column;
+			align-items: flex-start;
+			gap: 1.5rem;
+		}
+	}
+
+	&__logos {
+		list-style: none;
+		display: flex;
+		gap: 1rem;
+		align-items: center;
+
+		&--item {
+			display: inline-flex;
+			align-items: center;
+
+			&:not(:first-child) {
+				&:before {
+					content: "";
+					width: 1px;
+					height: 1.5rem;
+					background-color: #b8b8b8;
+					display: inline-block;
+					margin-inline-end: 1rem;
+				}
+			}
+		}
+	}
+
+	&__links {
+		display: flex;
+		align-items: center;
+		gap: 3rem;
+
+		@media ($max-sm) {
+			gap: 1rem;
+		}
+
+		& > a {
+			color: $primary-text-color;
+
+			&:hover,
+			&:focus {
+				text-decoration: underline;
+			}
+		}
+
+		&--social {
+			display: flex;
+			list-style: none;
+			gap: 1rem;
+			align-items: center;
+		}
+	}
+
+	&__bottom {
+		border-block-start: solid 1px $primary-text-color;
+		padding-block-start: 2rem;
+		margin-block-start: 2rem;
+
+		p {
+			max-width: 66.5625rem;
+			font-size: .875rem;
+			color: $primary-text-color;
+			font-family: $paragraph-font;
+
+			a {
+				color: inherit;
+				text-decoration: underline;
+			}
+
+			@media ($max-sm) {
+				font-size: 1rem;
+			}
+		}
+	}
+}

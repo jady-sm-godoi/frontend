@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    @@include("./components/_head.html", { 
+    "title": "Internet fibra ótica: planos de internet banda larga Oi Fibra", 
+    "description": "Saiba como funciona a internet fibra ótica. Conheça os planos de Oi Fibra e os benefícios exclusivos pra você. Acesse e aproveite as melhores ofertas.",
+    "canonicalUrl": "https://oi.com.br/internet", "ogType":"website",
+    "ogLocale":"pt_BR",
+    "ogImage":"https://portalnovafibra.s3.amazonaws.com/prd/home/oi-logo-verde.svg",
+    "ogImageType":"image/svg+xml", "ogImageWidth":"48px" ,
+    "ogImageHeight":"42px", "twitterCard": "summary", "twitterSite":
+    "@oi_oficial", "twitterCreator": "@oi_oficial", "twitterDomain":"https://www.oi.com.br/" })
+    <script src="http://localhost:4000/livereload.js"></script>
+    <script defer src="scripts/components/getoffers.js"></script>
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-T7VSHHJ");
+    </script>
+  </head>
+
+  <body>
+    <!-- HEADER -->
+    @@include("./components/_header.html")
+    <!--// HEADER -->
+
+    <!-- CONTENT -->
+    <main id="main" class="main">
+      @@include("./components/_banneroifibra.html")
+      @@include("./components/_cards_ofertas.html")
+      @@include("./components/_carousel.html")
+      @@include("./components/_vantagensfibra.html")
+      @@include('./components/_oiplay.html')
+      @@include("./components/_oi-e.html")
+      @@include("./components/_oiexpert.html")
+      @@include("./components/_new_faq.html")
+    </main>
+    <!--// CONTENT -->
+
+    <!-- FOOTER -->
+    @@include("./components/_footerfibra.html")
+    @@include("./components/contactButton/_contactButton.html")
+    @@include("./components/_cookiesBar.html")
+    <!--// FOOTER -->
+  </body>
+</html>

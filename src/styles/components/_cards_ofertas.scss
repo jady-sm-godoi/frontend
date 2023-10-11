@@ -1,0 +1,867 @@
+.cards_ofertas_section {
+  background-color: #ffffff;
+  font-family: "Simplon BP";
+}
+
+.cards_ofertas_box {
+  margin-bottom: 10px;
+}
+
+.cards_ofertas_header {
+  margin-top: 80px;
+}
+
+.cards_ofertas_title {
+  font-weight: 400;
+  font-size: 1.25rem;
+  line-height: 24px;
+  color: #1f1f1f;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.cards_ofertas_planos {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 40px;
+}
+
+.cards_ofertas_busca {
+  font-weight: 500;
+  font-size: 3rem;
+  line-height: 56px;
+  color: #303030;
+  text-align: center;
+}
+
+.cards_ofertas_cidade {
+  font-weight: 500;
+  font-size: 3rem;
+  line-height: 56px;
+  color: #00a300;
+  background-color: transparent;
+  border: none;
+}
+
+.cards_ofertas_botoes {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.cards_ofertas_botao_internet_desktop,
+.cards_ofertas_botao_internet_mobile,
+.cards_ofertas_botao_telefone_desktop,
+.cards_ofertas_botao_telefone_mobile,
+.cards_ofertas_botao_tv {
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 24px;
+  width: 280px;
+  padding-bottom: 16px;
+  color: #8f8f8f;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #e0e0e0;
+
+  &.selecionado {
+    color: #00a300;
+    border-bottom: 2px solid #00a300;
+  }
+}
+
+.cards_ofertas_container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 28px;
+  flex-wrap: wrap;
+}
+
+.cards_ofertas_card {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  width: 264px;
+  -webkit-transition: all 0.5s;
+  border-radius: 20px;
+
+  &:hover {
+    border-right: none;
+    background-color: #009e0b;
+    // transition: color, background-color 0.5s;
+  }
+}
+
+.cards_ofertas_titulo_container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+}
+
+.cards_ofertas_titulo {
+  color: #000000;
+  text-transform: uppercase;
+  font-size: 3rem;
+  font-weight: 500;
+  line-height: 48px;
+  letter-spacing: -0.03em;
+  text-align: left;
+}
+
+.cards_ofertas_titulo_span {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.25rem;
+  color: #1f1f1f;
+}
+
+
+
+.cards_ofertas_card:hover div,
+.cards_ofertas_card:hover span,
+.cards_ofertas_card:hover h3,
+.cards_ofertas_card:hover img {
+  color: #ffffff;
+  filter: brightness(0) invert(1);
+}
+
+.cards_ofertas_card:last-child {
+  border-right: 0;
+}
+
+.cards_ofertas_infos_container {
+  display: flex;
+  flex-direction: column;
+  font-family: "Open Sans";
+  font-size: 0.75rem;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 0.02em;
+  text-align: left;
+  color: #303030;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.cards_ofertas_infos_wifi,
+.cards_ofertas_infos_cartao {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  width: 170px;
+}
+
+.cards_ofertas_infos_cartao {
+  min-height: 32px;
+}
+
+.cards_ofertas_icon_wifi_green,
+.cards_ofertas_icon_wallet_green {
+  display: none;
+}
+
+.cards_ofertas_preco {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  margin-bottom: 10px;
+}
+
+.cards_ofertas_simbolo {
+  font-family: "Simplon Oi";
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 32px;
+  letter-spacing: 0px;
+  text-align: left;
+  color: #009e0c;
+}
+
+.cards_ofertas_reais {
+  font-family: "Simplon Oi";
+  font-weight: 500;
+  font-size: 3rem;
+  line-height: 48px;
+  color: #009e0c;
+}
+
+.cards_ofertas_centavos {
+  display: flex;
+  flex-direction: column;
+}
+
+.cards_ofertas_centavos_numero {
+  font-family: "Simplon Oi";
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 16px;
+  color: #009e0c;
+}
+
+.cards_ofertas_centavos_mes {
+  font-family: "Simplon Oi";
+  font-weight: 500;
+  font-size: 0.875rem;
+  line-height: 24px;
+  color: #009e0c;
+}
+
+.cards_ofertas_ancora {
+  padding-block: 16px;
+  background-color: #fbd84b;
+  border-radius: 48px;
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 24px;
+  text-align: center;
+  color: #000000;
+  cursor: pointer;
+  margin-bottom: 25px;
+}
+
+.cards_ofertas_beneficios {
+  margin-bottom: 14px;
+  cursor: pointer;
+
+  img {
+    transform: rotate(180deg);
+  }
+
+  &[open] {
+    img {
+      transform: rotate(0deg);
+      transition: 0.5s;
+    }
+  }
+}
+
+.cards_ofertas_sumario {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 14px;
+}
+
+.cards_ofertas_span_beneficios {
+  font-family: "Open Sans";
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 20px;
+  color: #282828;
+}
+
+.cards_ofertas_li_beneficios {
+  margin-top: 16px;
+  display: flex;
+  flex-direction: row;
+}
+
+li.cards_ofertas_li_beneficios:first-child {
+  margin-top: 24px;
+}
+
+.cards_ofertas_picture_beneficios {
+  margin-right: 10px;
+  min-width: 20px;
+
+  &[open] {
+    img {
+      transform: rotate(0deg);
+      transition: 0.5s;
+    }
+  }
+}
+
+.cards_ofertas_span_beneficios_incluidos {
+  margin: 0px;
+}
+
+.cards_ofertas_ul_beneficios {
+  color: #282828;
+  list-style: none;
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 20px;
+  padding-left: 0;
+}
+
+.cards_ofertas_detalhes {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 14px;
+  cursor: pointer;
+  margin-bottom: 14px;
+  border: none;
+  background: transparent;
+}
+
+.cards_fertas_span_detalhes {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 24px;
+  color: #282828;
+}
+
+.cards_ofertas_combo_section {
+  margin-top: 60px;
+  width: 100%;
+  background-color: #f1f1f1;
+  padding-block: 25px;
+}
+
+.cards_ofertas_peca_oi {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.5rem;
+  font-weight: 300;
+  line-height: 28px;
+  color: #303030;
+}
+
+.cards_ofertas_outros_produtos {
+  font-family: "Simplon Oi";
+  font-weight: 500;
+  font-size: 2rem;
+  line-height: 36px;
+  letter-spacing: -1px;
+}
+
+.cards_ofertas_combo_section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.cards_ofertas_combo_container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cards_ofertas_icons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.cards_ofertas_icons_box {
+  width: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.cards_ofertas_icons_img {
+  width: 56px;
+  aspect-ratio: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  border-radius: 100%;
+}
+
+.cards_ofertas_icons_text {
+  font-family: "Open Sans";
+  font-size: 1rem;
+  line-height: 20px;
+  color: #000000;
+  margin-top: 9px;
+}
+
+.cards_ofertas_meucombo_ancora {
+  width: 100%;
+  max-width: 331px;
+  padding: 20px 0;
+  background-color: #009e0c;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 48px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.cards_ofertas_botao_internet_mobile,
+.cards_ofertas_botao_telefone_mobile {
+  display: none;
+}
+
+.cards_ofertas_oi_expert {
+  color: #ffffff;
+}
+
+.cards_ofertas_card.cards_ofertas_oi_expert {
+  background-color: #1f1f1f;
+  border-radius: 20px;
+  color: #ffffff;
+
+  &:hover {
+    background-color: #009e0b;
+  }
+
+  h3 {
+    color: #ffffff;
+  }
+
+  .cards_ofertas_img_wifi {
+    filter: brightness(0) invert(1);
+  }
+}
+
+.cards_ofertas_simbolo.cards_ofertas_oi_expert,
+.cards_ofertas_reais.cards_ofertas_oi_expert,
+.cards_ofertas_centavos_numero.cards_ofertas_oi_expert,
+.cards_ofertas_centavos_mes.cards_ofertas_oi_expert {
+  color: #70ff84;
+}
+
+.cards_ofertas_card.cards_ofertas_oi_expert:hover div,
+.cards_ofertas_card.cards_ofertas_oi_expert:hover span,
+.cards_ofertas_card.cards_ofertas_oi_expert:hover h3 {
+  filter: none;
+}
+
+.cards_ofertas_ancora.cards_ofertas_oi_expert {
+  color: #000000;
+}
+
+.cards_ofertas_borda {
+  width: 1px;
+  height: 389px;
+  margin: 19px 12px 0;
+}
+
+.cards_ofertas_borda_cinza {
+  background-color: #e0e0e0;
+}
+
+.cards_ofertas_ancora_saiba_mais {
+  display: none;
+}
+
+.cards_ofertas_modal {
+  position: fixed;
+  color: #121212;
+  border: none;
+  transform: translateX(100%);
+  max-height: 100%;
+  max-width: 50%;
+  padding: 40px 13px 40px 62px;
+  -webkit-transition: all 1s;
+
+  
+}
+
+.cards_ofertas_modal::backdrop {
+  background-color: #00000080;
+  // backdrop-filter: blur(3px);
+}
+
+.cards_ofertas_modal_container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 80px);
+  padding-right: 40px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  scrollbar-width: 6px;
+  scrollbar-color: #cccccc transparent;
+}
+
+.cards_ofertas_modal_container::-webkit-scrollbar {
+  width: 6px;
+  height: 238px;
+}
+
+.cards_ofertas_modal_container::-webkit-scrollbar-thumb {
+  width: 6px;
+  height: 238px;
+  background: #cccccc;
+  border-radius: 2px;
+}
+
+.cards_ofertas_close_modal_button {
+  position: absolute;
+  top: 0;
+  right: 45px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  // outline: none;
+}
+
+.cards_ofertas_modal_name {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  margin-bottom: 8px;
+}
+
+.cards_ofertas_modal_oferta {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 29px;
+  margin-bottom: 8px;
+}
+
+.cards_ofertas_modal_oferta_description,
+.cards_ofertas_modal_oferta_subtitle_description_value {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  margin-bottom: 8px;
+  width: 100%;
+}
+
+.cards_ofertas_modal_first_line {
+  width: 50px;
+  height: 2px;
+  background: #00ae15;
+  margin: 8px 0;
+}
+
+.cards_ofertas_modal_lista {
+  font-family: "Open Sans";
+  list-style-type: none;
+  color: #282828;
+}
+
+.cards_ofertas_modal_item {
+  border-bottom: 1px solid #00ae15;
+  margin-bottom: 16px;
+  padding-bottom: 16px;
+}
+
+.cards_ofertas_modal_item:last-child {
+  border-style: none;
+}
+
+.cards_ofertas_modal_item_title {
+  font-weight: 700;
+  font-size: 0.875rem;
+  line-height: 18px;
+}
+
+.cards_ofertas_modal_item_paragraph {
+  font-weight: 400;
+  font-size: 0.75rem;
+  line-height: 18px;
+  margin-bottom: 16px;
+}
+
+.cards_ofertas_modal_item_paragraph:last-child {
+  margin-bottom: 0px;
+}
+
+.cards_ofertas_modal_item_paragraph_bold {
+  font-weight: 700;
+}
+
+.cards_ofertas_modal_item_paragraph_list {
+  font-weight: 600;
+}
+
+.cards_ofertas_modal_item_link {
+  color: #00ae15;
+  font-weight: 600;
+  font-size: 0.75rem;
+  line-height: 18px;
+}
+
+@media screen and (max-width: 768px) {
+  .cards_ofertas_borda {
+    display: none;
+  }
+
+  .cards_ofertas_span_wifi {
+    font-weight: 600;
+  }
+
+  .cards_ofertas_ancora_saiba_mais {
+    display: block;
+    font-family: "Open Sans";
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 24px;
+    color: #009e0b;
+    text-decoration-line: underline;
+  }
+
+  .cards_ofertas_ancora {
+    margin-bottom: 10px;
+    padding-block: 11px;
+  }
+
+  .cards_ofertas_botao_internet_desktop.selecionado,
+  .cards_ofertas_botao_internet_mobile.selecionado,
+  .cards_ofertas_botao_telefone_desktop.selecionado,
+  .cards_ofertas_botao_telefone_mobile.selecionado,
+  .cards_ofertas_botao_tv.selecionado {
+    color: #00a300;
+    border-bottom: 3px solid #00a300;
+  }
+
+  .cards_ofertas_container {
+    flex-direction: column;
+  }
+
+  .cards_ofertas_card {
+    width: 100%;
+    padding: 16px 16px 12px 16px;
+    position: relative;
+
+
+    &:hover {
+      border-right: none;
+      border-radius: 20px;
+
+    }
+  }
+
+  .cards_ofertas_header {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: flex-start;
+    text-align: left;
+    margin-top: 48px;
+  }
+
+  .cards_ofertas_planos {
+    margin-bottom: 12px;
+    gap: 0;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .cards_ofertas_title {
+    font-size: 1rem;
+    text-align: left;
+    line-height: 20px;
+  }
+
+  .cards_ofertas_busca {
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 32px;
+    margin-bottom: 8px;
+  }
+
+  .cards_ofertas_cidade {
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 32px;
+  }
+
+  .cards_ofertas_preco {
+    position: absolute;
+    right: 0;
+    padding-right: 42px;
+    align-items: flex-start;
+  }
+
+  .cards_ofertas_box {
+    border-radius: 8px;
+    border: 2px solid #cccccc;
+
+    &:hover {
+      border: none;
+      background-color: #009e0b;
+      border-radius: 8px;
+    }
+  }
+
+  .cards_ofertas_titulo {
+    margin-bottom: 0;
+    font-size: 2rem;
+    line-height: 100%;
+  }
+
+  .cards_ofertas_titulo_span {
+    font-size: 1rem;
+    line-height: 100%;
+    margin-bottom: 0px;
+  }
+
+  .cards_ofertas_titulo_container {
+    margin-bottom: 10px;
+  }
+
+  .cards_ofertas_simbolo,
+  .cards_ofertas_centavos_numero {
+    font-size: 1rem;
+    line-height: 38px;
+  }
+
+  .cards_ofertas_reais {
+    font-size: 2.375rem;
+    // line-height: 38px;
+  }
+
+  .cards_ofertas_infos_cartao {
+    min-height: 0px;
+  }
+
+  .cards_ofertas_centavos_mes {
+    position: absolute;
+    top: 20px;
+    font-size: 0.75rem;
+    background-color: transparent;
+  }
+
+  .cards_ofertas_centavos {
+    position: relative;
+  }
+
+  .cards_ofertas_centavos_numero {
+    position: absolute;
+  }
+
+  .cards_ofertas_icon_wifi_gray,
+  .cards_ofertas_icon_wallet_gray {
+    display: none;
+  }
+
+  .cards_ofertas_icon_wifi_green,
+  .cards_ofertas_icon_wallet_green {
+    display: block;
+  }
+
+  .cards_ofertas_beneficios {
+    display: none;
+  }
+
+  .cards_ofertas_infos_container {
+    margin-bottom: 10px;
+    gap: 10px;
+  }
+
+  .cards_ofertas_box {
+    margin-bottom: 10px;
+  }
+
+  .cards_fertas_span_detalhes {
+    font-size: 0.75rem;
+  }
+
+  .cards_ofertas_detalhes {
+    margin-bottom: 0px;
+    gap: 6px;
+  }
+
+  .cards_ofertas_infos_wifi,
+  .cards_ofertas_infos_cartao {
+    min-height: 0;
+    gap: 4px;
+    width: 100%;
+  }
+
+  .cards_ofertas_botoes {
+    scroll-snap-type: x mandatory;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    width: 100%;
+  }
+
+  .cards_ofertas_botao_tv {
+    min-width: 156px;
+    text-transform: uppercase;
+    font-size: 1.25rem;
+    color: #303030;
+    border-bottom: 1px solid #7f7f7f;
+    padding-bottom: 12px;
+  }
+
+  .cards_ofertas_botao_telefone_mobile {
+    display: block;
+    min-width: 130px;
+    text-transform: uppercase;
+    font-size: 1.25rem;
+    color: #303030;
+    border-bottom: 1px solid #7f7f7f;
+    padding-bottom: 12px;
+  }
+
+  .cards_ofertas_botao_telefone_desktop,
+  .cards_ofertas_botao_internet_desktop {
+    display: none;
+  }
+
+  .cards_ofertas_botao_internet_mobile {
+    min-width: 156px;
+    display: block;
+    text-transform: uppercase;
+    font-size: 1.25rem;
+    color: #303030;
+    border-bottom: 1px solid #7f7f7f;
+    padding-bottom: 12px;
+  }
+
+  .cards_ofertas_botoes {
+    justify-content: flex-start;
+    text-transform: uppercase;
+  }
+
+  .cards_ofertas_card.cards_ofertas_oi_expert {
+    border-radius: 8px;
+  }
+
+  //////////////
+
+  .cards_ofertas_combo_section {
+    .max_width_container {
+      width: 360px;
+    }
+  }
+
+  .cards_ofertas_combo_container {
+    flex-direction: column;
+    margin: 0;
+    max-width: 360px;
+    padding: 39px 24px 58px 24px;
+  }
+
+  .cards_ofertas_peca_oi {
+    width: 100%;
+    font-size: 1.25rem;
+    line-height: 24px;
+    margin-bottom: 17px;
+  }
+
+  .cards_ofertas_icons {
+    margin-bottom: 24px;
+  }
+
+  .cards_ofertas_icons_box {
+    width: 82px;
+  }
+
+  .cards_ofertas_modal {
+    transform: translateX(0);
+    max-width: 100%;
+    padding: 20px 13px 20px 30px;
+  }
+
+  .cards_ofertas_modal_container {
+    height: calc(100vh - 20px);
+  }
+}

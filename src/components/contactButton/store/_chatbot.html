@@ -1,0 +1,64 @@
+<div class="cttbtn_chatbotContent" id="cttbtn_chatbotContent">
+  <div class="ctttn_closeButton">
+    <button
+      onclick="
+      toggleRenderComponent({hidden:'.renderComponent_phonebtn'}); 
+      toggleRenderComponent({hidden:'.renderComponent_chatBot'}); 
+      toggleRenderComponent({focus:'cttbtn_main'})"
+      class="cttbtn_tabeable"
+      data-focusedScreen="cttbtn_chatbot"
+    >
+      &#x2715;
+    </button>
+  </div>
+
+  <p>Nosso vendedor online vai te ajudar a encontrar a melhor oferta :)</p>
+  <p>Digite seus dados pra contato:</p>
+  <form action="/chatbot" method="get">
+    <div class="cttbtn_inputContent" id="cttbtn_inputNameContent_field">
+      <label for="cttbtn_chatbotinput_name">Nome</label>
+      <input
+        type="text"
+        id="cttbtn_chatbotinput_name"
+        placeholder="Digite seu nome"
+        oninput="nameValidation(this)"
+        class="cttbtn_tabeable cttbtn_inputContent"
+        data-focusedScreen="cttbtn_chatbot"
+        name="nome"
+      />
+    </div>
+
+    <div class="cttbtn_inputContent" id="cttbtn_inputPhoneContent_field">
+      <label for="cttbtn_chatbotinput_phone">Telefone</label>
+      <input
+        id="cttbtn_chatbotinput_phone"
+        placeholder="DDD + Número"
+        oninput="phoneValidation(this)"
+        type="tel"
+        min="14"
+        max="15"
+        data-focusedScreen="cttbtn_chatbot"
+        class="cttbtn_tabeable"
+      />
+    </div>
+
+    <input type="number" id="cttbtn_chatbotinputhidden_ddd" name="ddd" hidden />
+    <input
+      type="number"
+      id="cttbtn_chatbotinputhidden_phone"
+      name="telefone"
+      hidden
+    />
+
+    <button
+      data-gtmButton="iniciar_chat_button"
+      data-focusedScreen="cttbtn_chatbot"
+      class="cttbtn_tabeable"
+      type="submit"
+      id="cttbtn_chatbotsubmit"
+      disabled
+    >
+      Iniciar chat
+    </button>
+  </form>
+</div>

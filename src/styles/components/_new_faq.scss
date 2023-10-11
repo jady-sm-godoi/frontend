@@ -1,0 +1,166 @@
+.section_faq {
+  padding: 44px 0px 40px 0px;
+  background-color: #ffffff;
+}
+
+.faq__all_container {
+  display: flex;
+  flex-direction: column;
+}
+
+.faq__left_content {
+  min-width: 332px;
+}
+
+.faq__title {
+  width: 100%;
+  height: 100%;
+
+  img {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 28px;
+    filter: var(--icon-help-svg);
+  }
+
+  h2 {
+    font-family: "Simplon BP";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.5rem;
+    line-height: 32px;
+    color: #1f1f1f;
+    margin: 0px 0px 22px 0px;
+    max-width: 332px;
+  }
+}
+
+.faq__right_content {
+  max-width: 872px;
+  width: 100%;
+}
+
+.faq__duvidas {
+  margin: 0px;
+  padding: 0px;
+}
+
+.duvidas__details {
+  border-bottom: 1px solid #dbdbdb;
+  padding: 24px 0px 24px 0px;
+
+  h3 {
+    font-family: "Simplon BP";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.25rem;
+    line-height: 32px;
+    color: #1f1f1f;
+  }
+
+  img {
+    transition: all 0.4s;
+  }
+
+  p {
+    margin: 0px 0px 20px 0px;
+  }
+
+  p:last-child {
+    margin: 0px;
+  }
+  a {
+    color: #00a300;
+    font-weight: 400;
+  }
+
+  .duvidas__content {
+    margin: 24px 0px 0px 0px;
+  }
+
+  &[open] {
+    .duvidas__header_summary {
+      img {
+        transform: rotate(-180deg);
+      }
+    }
+  }
+}
+
+.duvidas__header_summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+  cursor: pointer;
+}
+.duvidas__content {
+  p {
+    font-family: "Simplon BP";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 24px;
+    color: #8f8f8f;
+  }
+}
+
+.faq__button_maisDuvidas {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 2px 40px;
+  gap: 8px;
+  width: 312px;
+  height: 48px;
+  border: 2px solid #00a300;
+  border-radius: 48px;
+  font-family: "Simplon BP";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 150%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #00a300;
+  background-color: #ffffff;
+  margin: 40px 0px 0px 0px;
+}
+
+.duvidas__details_mostrarMais{
+  margin-top: 24px;
+}
+
+@media screen and (min-width: 768px) {
+  .faq__all_container {
+    display: flex;
+    flex-direction: row;
+    gap: 116px;
+    justify-content: space-between;
+  }
+  .faq__title {
+    img {
+      width: 34px;
+      height: 34px;
+      margin-bottom: 28px;
+    }
+
+    h2 {
+      font-weight: 500;
+      font-size: 2rem;
+      line-height: 40px;
+    }
+  }
+  .duvidas__details {
+    h3 {
+      font-size: 1.5rem;
+      line-height: 36px;
+    }
+  }
+
+  .duvidas__details:first-child {
+    padding: 0px 0px 24px 0px;
+  }
+}
