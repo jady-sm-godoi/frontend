@@ -1,0 +1,10 @@
+{
+  "semi": false,
+  "singleQuote": true,
+  "tabWidth": 2,
+  "useTabs": true,
+  "jsxBracketSameLine": true,
+  "trailingComma": "none",
+  "bracketSpacing": true,
+  "files": ["./components/**/*.jsx","./pages/**/*.{js, jsx}", "./widgets/**/*.{js, jsx}", "./utils/**/*.{js, jsx}"]
+}

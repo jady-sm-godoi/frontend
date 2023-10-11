@@ -1,17 +1,11 @@
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
-    @@include("./components/_head.html", { 
-    "title": "Internet fibra ótica: planos de internet banda larga Oi Fibra", 
-    "description": "Saiba como funciona a internet fibra ótica. Conheça os planos de Oi Fibra e os benefícios exclusivos pra você. Acesse e aproveite as melhores ofertas.",
-    "canonicalUrl": "https://oi.com.br/internet", "ogType":"website",
-    "ogLocale":"pt_BR",
-    "ogImage":"https://portalnovafibra.s3.amazonaws.com/prd/home/oi-logo-verde.svg",
-    "ogImageType":"image/svg+xml", "ogImageWidth":"48px" ,
-    "ogImageHeight":"42px", "twitterCard": "summary", "twitterSite":
-    "@oi_oficial", "twitterCreator": "@oi_oficial", "twitterDomain":"https://www.oi.com.br/" })
+    @@loop("./components/head/_head.html", "./scripts-sync/data/head-og.json")
     <script src="http://localhost:4000/livereload.js"></script>
-    <script defer src="scripts/components/getoffers.js"></script>
+    <!-- <script defer src="scripts/components/getoffers.js"></script> -->
+    
+
     <script>
       (function (w, d, s, l, i) {
         w[l] = w[l] || [];
@@ -28,26 +22,29 @@
 
   <body>
     <!-- HEADER -->
-    @@include("./components/_header.html")
+    @@include("./components/header/_header.html")
     <!--// HEADER -->
 
     <!-- CONTENT -->
     <main id="main" class="main">
-      @@include("./components/_banneroifibra.html")
-      @@include("./components/_cards_ofertas.html")
-      @@include("./components/_carousel.html")
-      @@include("./components/_vantagensfibra.html")
-      @@include('./components/_oiplay.html')
-      @@include("./components/_oi-e.html")
-      @@include("./components/_oiexpert.html")
-      @@include("./components/_new_faq.html")
+      @@include("./components/banneroifibra/_banneroifibra.html")
+      @@include("./components/cards_ofertas/_cards_ofertas.html")
+      @@include("./components/carousel/_carousel.html")
+      @@include("./components/vantagensfibra/_vantagensfibra.html")
+      @@include('./components/oiplay/_oiplay.html')
+      @@include("./components/oi-e/_oi-e.html")
+      @@include("./components/oiexpert/_oiexpert.html")
+      @@include("./components/new_faq/_new_faq.html")
     </main>
     <!--// CONTENT -->
 
     <!-- FOOTER -->
-    @@include("./components/_footerfibra.html")
+    @@include("./components/footerfibra/_footerfibra.html")
     @@include("./components/contactButton/_contactButton.html")
-    @@include("./components/_cookiesBar.html")
+    @@include("./components/cookiesBar/_cookiesBar.html")
     <!--// FOOTER -->
   </body>
+  <script defer src="scripts/js-asyncload-main.js" async></script>
+
+  
 </html>

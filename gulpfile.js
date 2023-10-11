@@ -10,7 +10,7 @@ const sass = require('gulp-sass')(require('sass'))
 const sourcemaps = require('gulp-sourcemaps')
 const terser = require('gulp-terser')
 const concat = require('gulp-concat')
-const cleanCSS = require('gulp-clean-css');
+const cleanCSS = require('gulp-clean-css')
 
 const fs = require('fs')
 
@@ -44,7 +44,7 @@ function refreshSEO() {
 		JSON.stringify(seo)
 	)
 }
-refreshSEO()
+// refreshSEO()
 function cleanStart() {
 	return del('./www/**/*')
 }
@@ -74,17 +74,33 @@ async function imageStart() {
 		.pipe(livereload())
 }
 
-async function javascriptStart() {
+async function javascriptStartSyncLoad() {
 	// this funct load a components scripts after page load to prevent run when page as loading
 	gulp
-		.src(['./src/scripts/**/*.js', './src/components/**/*.js'])
+		.src('./src/scripts-sync/**.js')
 		.pipe(sourcemaps.init())
 		.pipe(
 			babel({
 				presets: ['@babel/preset-env']
 			})
 		)
-		.pipe(concat('main.js'))
+		.pipe(concat('js-syncload-main.js'))
+		.pipe(terser())
+		.pipe(sourcemaps.write('./'))
+		.pipe(gulp.dest('./www/scripts'))
+		.pipe(livereload())
+}
+async function javascriptStartAsyncLoad() {
+	// this funct load a components scripts after page load to prevent run when page as loading
+	gulp
+		.src(['./src/components/**/*.js', './src/scripts-async/**.js'])
+		.pipe(sourcemaps.init())
+		.pipe(
+			babel({
+				presets: ['@babel/preset-env']
+			})
+		)
+		.pipe(concat('js-asyncload-main.js'))
 		.pipe(terser())
 		.pipe(sourcemaps.write('./'))
 		.pipe(gulp.dest('./www/scripts'))
@@ -146,7 +162,11 @@ async function watchStart() {
 	gulp.watch('./src/assets/images/**/*', imageStart)
 	gulp.watch(
 		['./src/scripts/**/*.js', './src/components/**/*.js'],
-		javascriptStart
+		javascriptStartSyncLoad
+	)
+	gulp.watch(
+		['./src/scripts/**/*.js', './src/components/**/*.js'],
+		javascriptStartAsyncLoad
 	)
 	gulp.watch(
 		['./src/components/**/*.scss', './src/styles/**/*.scss'],
@@ -175,7 +195,8 @@ gulp.task(
 			faviconStart,
 			htmlStart,
 			imageStart,
-			javascriptStart,
+			javascriptStartSyncLoad,
+			javascriptStartAsyncLoad,
 			sassStart,
 			vendorStart,
 			fontStart,
