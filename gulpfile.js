@@ -74,33 +74,21 @@ async function imageStart() {
 		.pipe(livereload())
 }
 
-async function javascriptStartSyncLoad() {
+async function javascriptStart() {
 	// this funct load a components scripts after page load to prevent run when page as loading
 	gulp
-		.src('./src/scripts-sync/**.js')
+		.src([
+			'./src/scripts/**/**.js',
+			'./src/scripts/*.js',
+			'./src/components/**/*.js'
+		])
 		.pipe(sourcemaps.init())
 		.pipe(
 			babel({
 				presets: ['@babel/preset-env']
 			})
 		)
-		.pipe(concat('js-syncload-main.js'))
-		.pipe(terser())
-		.pipe(sourcemaps.write('./'))
-		.pipe(gulp.dest('./www/scripts'))
-		.pipe(livereload())
-}
-async function javascriptStartAsyncLoad() {
-	// this funct load a components scripts after page load to prevent run when page as loading
-	gulp
-		.src(['./src/components/**/*.js', './src/scripts-async/**.js'])
-		.pipe(sourcemaps.init())
-		.pipe(
-			babel({
-				presets: ['@babel/preset-env']
-			})
-		)
-		.pipe(concat('js-asyncload-main.js'))
+		.pipe(concat('main.js'))
 		.pipe(terser())
 		.pipe(sourcemaps.write('./'))
 		.pipe(gulp.dest('./www/scripts'))
@@ -162,12 +150,9 @@ async function watchStart() {
 	gulp.watch('./src/assets/images/**/*', imageStart)
 	gulp.watch(
 		['./src/scripts/**/*.js', './src/components/**/*.js'],
-		javascriptStartSyncLoad
+		javascriptStart
 	)
-	gulp.watch(
-		['./src/scripts/**/*.js', './src/components/**/*.js'],
-		javascriptStartAsyncLoad
-	)
+
 	gulp.watch(
 		['./src/components/**/*.scss', './src/styles/**/*.scss'],
 		sassStart
@@ -195,8 +180,7 @@ gulp.task(
 			faviconStart,
 			htmlStart,
 			imageStart,
-			javascriptStartSyncLoad,
-			javascriptStartAsyncLoad,
+			javascriptStart,
 			sassStart,
 			vendorStart,
 			fontStart,
