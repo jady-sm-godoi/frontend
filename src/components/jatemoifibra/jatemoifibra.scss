@@ -1,0 +1,144 @@
+.section_jatemoifibra {
+    background: #C2FFCA;
+}
+
+.jatemoifibra__container {
+    padding: 32px 24px;
+}
+
+.jatemoifibra__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.jatemoifibra__image_icon_fibra {
+    margin-bottom: 24px;
+}
+
+.jatemoifibra__title {
+    margin-bottom: 24px;
+}
+
+.jatemoifibra__ancoras {
+    gap: 16px;
+    display: flex;
+    flex-direction: column;
+}
+
+.jatemoifibra__cta,
+.ancora_whatsapp {
+    background: #1F1F1F;
+    display: flex;
+    width: 312px;
+    height: 48px;
+    padding: 8px 40px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    border-radius: 50px;
+}
+
+.jatemoifibra__ancora_text,
+.confira_whatsapp {
+    color: #FFF;
+    font-family: Simplon BP;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 150%;
+}
+
+.confira_minhaoi {
+    color: #1F1F1F;
+}
+
+.ancora_minhaoi {
+    border: 2px solid var(--functional-neutral-darkest, #1F1F1F);
+    background: transparent;
+}
+
+.jatemoifibra__title {
+    color: #1F1F1F;
+    font-family: Simplon BP;
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 125%;
+    text-align: center;
+}
+
+.jatemoifibra__confira_ofertas {
+    color: #1F1F1F;
+    font-family: Simplon BP;
+    font-size: 1.25rem;
+    font-weight: 400;
+    line-height: 120%;
+    text-align: center;
+    min-width: 312px;
+}
+
+.jatemoifibra__ofertas_fibra {
+    margin-bottom: 24px;
+}
+
+@media screen and (min-width: 768px) {
+    .jatemoifibra__content {
+        flex-direction: row;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .jatemoifibra__container {
+        padding: 32px 12px;
+    }
+
+    .jatemoifibra__ofertas_fibra {
+        margin-left: 24px;
+        margin-bottom: 0px;
+    }
+
+    .jatemoifibra__title {
+        margin-bottom: 4px;
+    }
+
+    .jatemoifibra__title {
+        text-align: left;
+    }
+
+    .jatemoifibra__confira_ofertas {
+        text-align: left;
+        width: 232px;
+        min-width: 0px;
+    }
+
+    .ancora_whatsapp,
+    .jatemoifibra__cta {
+        width: 284px;
+    }
+
+    .jatemoifibra__image_icon_fibra {
+        margin-bottom: 0px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .jatemoifibra__ancoras {
+        flex-direction: column;
+
+    }
+
+    .jatemoifibra__confira_ofertas {
+        min-width: 388px;
+    }
+}
+
+
+
+@media screen and (min-width: 1366px) {
+    .jatemoifibra__ancoras {
+        flex-direction: row;
+    }
+
+    .jatemoifibra__confira_ofertas {
+        min-width: 388px;
+    }
+}

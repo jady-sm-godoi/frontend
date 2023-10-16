@@ -1,50 +1,52 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    @@loop("./components/head/_head.html", "./scripts/data/head-og.json")
-    <script src="http://localhost:4000/livereload.js"></script>
-    <!-- <script defer src="scripts/components/getoffers.js"></script> -->
-    
 
-    <script>
-      (function (w, d, s, l, i) {
-        w[l] = w[l] || [];
-        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
-        var f = d.getElementsByTagName(s)[0],
-          j = d.createElement(s),
-          dl = l != "dataLayer" ? "&l=" + l : "";
-        j.async = true;
-        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
-        f.parentNode.insertBefore(j, f);
-      })(window, document, "script", "dataLayer", "GTM-T7VSHHJ");
-    </script>
-  </head>
+<head>
+  @@loop("./components/head/_head.html", "./scripts/data/head-og.json")
+  <script src="http://localhost:4000/livereload.js"></script>
+  <!-- <script defer src="scripts/components/getoffers.js"></script> -->
 
-  <body>
-    <!-- HEADER -->
-    @@include("./components/header/_header.html")
-    <!--// HEADER -->
 
-    <!-- CONTENT -->
-    <main id="main" class="main">
-      @@include("./components/banneroifibra/_banneroifibra.html")
-      @@include("./components/cards_ofertas/_cards_ofertas.html")
-      @@include("./components/carousel/_carousel.html")
-      @@include("./components/vantagensfibra/_vantagensfibra.html")
-      @@include('./components/oiplay/_oiplay.html')
-      @@include("./components/oi-e/_oi-e.html")
-      @@include("./components/oiexpert/_oiexpert.html")
-      @@include("./components/new_faq/_new_faq.html")
-    </main>
-    <!--// CONTENT -->
+  <script>
+    (function (w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+      var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s),
+        dl = l != "dataLayer" ? "&l=" + l : "";
+      j.async = true;
+      j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+      f.parentNode.insertBefore(j, f);
+    })(window, document, "script", "dataLayer", "GTM-T7VSHHJ");
+  </script>
+</head>
 
-    <!-- FOOTER -->
-    @@include("./components/footerfibra/_footerfibra.html")
-    @@include("./components/contactButton/_contactButton.html")
-    @@include("./components/cookiesBar/_cookiesBar.html")
-    <!--// FOOTER -->
-  </body>
-  
+<body>
+  <!-- HEADER -->
+  @@include("./components/header/_header.html")
+  <!--// HEADER -->
 
-  
+  <!-- CONTENT -->
+  <main id="main" class="main">
+    @@include("./components/banneroifibra/_banneroifibra.html")
+    @@include("./components/cards_ofertas/_cards_ofertas.html")
+    @@include("./components/carousel/_carousel.html")
+    @@include("./components/vantagensfibra/_vantagensfibra.html")
+    @@include("./components/jatemoifibra/_jatemoifibra.html")
+    @@include('./components/oiplay/_oiplay.html')
+    @@include("./components/oi-e/_oi-e.html")
+    @@include("./components/oiexpert/_oiexpert.html")
+    @@include("./components/new_faq/_new_faq.html")
+  </main>
+  <!--// CONTENT -->
+
+  <!-- FOOTER -->
+  @@include("./components/footerfibra/_footerfibra.html")
+  @@include("./components/contactButton/_contactButton.html")
+  @@include("./components/cookiesBar/_cookiesBar.html")
+  <!--// FOOTER -->
+</body>
+
+
+
 </html>
