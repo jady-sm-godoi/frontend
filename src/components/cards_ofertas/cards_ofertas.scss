@@ -468,7 +468,7 @@ li.cards_ofertas_li_beneficios:first-child {
   padding: 40px 13px 40px 62px;
   -webkit-transition: all 1s;
 
-  
+
 }
 
 .cards_ofertas_modal::backdrop {
@@ -682,8 +682,8 @@ li.cards_ofertas_li_beneficios:first-child {
   }
 
   .cards_ofertas_box {
-    border-radius: 8px;
-    border: 2px solid #cccccc;
+    border-radius: 24px;
+    border: 1px solid #cccccc;
 
     &:hover {
       border: none;
@@ -768,6 +768,8 @@ li.cards_ofertas_li_beneficios:first-child {
   .cards_ofertas_detalhes {
     margin-bottom: 0px;
     gap: 6px;
+    border-top: 1px solid #E0E0E0;
+
   }
 
   .cards_ofertas_infos_wifi,
@@ -824,7 +826,7 @@ li.cards_ofertas_li_beneficios:first-child {
   }
 
   .cards_ofertas_card.cards_ofertas_oi_expert {
-    border-radius: 8px;
+    border-radius: 24px;
   }
 
   //////////////
