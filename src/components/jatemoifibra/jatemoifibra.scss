@@ -85,15 +85,17 @@
         flex-direction: row;
         display: flex;
         justify-content: space-between;
+        position: relative;
     }
 
     .jatemoifibra__container {
-        padding: 32px 12px;
+        padding: 32px 0px;
     }
 
     .jatemoifibra__ofertas_fibra {
-        margin-left: 24px;
         margin-bottom: 0px;
+        position: absolute;
+        left: 102px;
     }
 
     .jatemoifibra__title {
@@ -110,7 +112,6 @@
         min-width: 0px;
     }
 
-    .ancora_whatsapp,
     .jatemoifibra__cta {
         width: 284px;
     }
@@ -131,8 +132,6 @@
     }
 }
 
-
-
 @media screen and (min-width: 1366px) {
     .jatemoifibra__ancoras {
         flex-direction: row;
@@ -140,5 +139,12 @@
 
     .jatemoifibra__confira_ofertas {
         min-width: 388px;
+    }
+}
+
+@media screen and (min-width: 1920px) {
+
+    .jatemoifibra__cta {
+        width: 312px;
     }
 }
