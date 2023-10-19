@@ -175,9 +175,9 @@
 
 .cards_ofertas_simbolo {
   font-family: "Simplon Oi";
-  font-size: 1.5rem;
-  font-weight: 500;
-  line-height: 32px;
+  font-size: 1.75rem;
+  font-weight: 700;
+  line-height: 36.4px;
   letter-spacing: 0px;
   text-align: left;
   color: #009e0c;
@@ -185,29 +185,30 @@
 
 .cards_ofertas_reais {
   font-family: "Simplon Oi";
-  font-weight: 500;
-  font-size: 3rem;
-  line-height: 48px;
+  font-weight: 700;
+  font-size: 1.75rem;
+  line-height: 36.4px;
   color: #009e0c;
 }
 
 .cards_ofertas_centavos {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  align-items: flex-end;
 }
 
 .cards_ofertas_centavos_numero {
   font-family: "Simplon Oi";
-  font-weight: 500;
-  font-size: 1.5rem;
-  line-height: 16px;
+  font-weight: 700;
+  font-size: 1.75rem;
+  line-height: 36.4px;
   color: #009e0c;
 }
 
 .cards_ofertas_centavos_mes {
   font-family: "Simplon Oi";
-  font-weight: 500;
-  font-size: 0.875rem;
+  font-weight: 400;
+  font-size: 1rem;
   line-height: 24px;
   color: #009e0c;
 }
@@ -706,35 +707,35 @@ li.cards_ofertas_li_beneficios:first-child {
     margin-bottom: 10px;
   }
 
-  .cards_ofertas_simbolo,
-  .cards_ofertas_centavos_numero {
-    font-size: 1rem;
-    line-height: 38px;
-  }
+  // .cards_ofertas_simbolo,
+  // .cards_ofertas_centavos_numero {
+  //   font-size: 1rem;
+  //   line-height: 38px;
+  // }
 
-  .cards_ofertas_reais {
-    font-size: 2.375rem;
-    // line-height: 38px;
-  }
+  // .cards_ofertas_reais {
+  //   font-size: 2.375rem;
+  //   // line-height: 38px;
+  // }
 
   .cards_ofertas_infos_cartao {
     min-height: 0px;
   }
 
-  .cards_ofertas_centavos_mes {
-    position: absolute;
-    top: 20px;
-    font-size: 0.75rem;
-    background-color: transparent;
-  }
+  // .cards_ofertas_centavos_mes {
+  //   position: absolute;
+  //   top: 20px;
+  //   font-size: 0.75rem;
+  //   background-color: transparent;
+  // }
 
   .cards_ofertas_centavos {
     position: relative;
   }
 
-  .cards_ofertas_centavos_numero {
-    position: absolute;
-  }
+  // .cards_ofertas_centavos_numero {
+  //   position: absolute;
+  // }
 
   .cards_ofertas_icon_wifi_gray,
   .cards_ofertas_icon_wallet_gray {
