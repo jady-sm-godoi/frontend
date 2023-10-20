@@ -26,7 +26,7 @@ let offers_card_ofertas,
 (async () => {
   const reciveFetchOffers = await fetchOffers();
 
-  offers_card_ofertas = reciveFetchOffers.offers;
+  offers_card_ofertas = reciveFetchOffers.data.offers;
 
   offerProps.oi_telefone.amount =
     reciveFetchOffers.addons.VOIP_FIXOILIMITADO.amount;

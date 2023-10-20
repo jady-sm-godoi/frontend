@@ -1,11 +1,11 @@
-const caminhoFallback = "../../fallbacks/data.json";
+const caminhoFallback = "fallbacks/data.json";
 
 let cachedData = null;
 
 async function fetchOffers() {
   return cachedData
     ? cachedData
-    : fetch(cityRegionalizationFallback)
+    : fetch(caminhoFallback)
         .then((response) => {
           cachedData = response.json();
           return cachedData;
