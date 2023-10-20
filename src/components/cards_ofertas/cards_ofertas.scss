@@ -3,9 +3,9 @@
   font-family: "Simplon BP";
 }
 
-.cards_ofertas_box {
-  margin-bottom: 10px;
-}
+// .cards_ofertas_box {
+//   margin-bottom: 24px;
+// }
 
 .cards_ofertas_header {
   margin-top: 80px;
@@ -85,9 +85,9 @@
 .cards_ofertas_card {
   display: flex;
   flex-direction: column;
-  padding: 16px;
+  padding: 16px 0px;
   width: 264px;
-  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
   border-radius: 20px;
 
   &:hover {
@@ -100,7 +100,6 @@
 .cards_ofertas_titulo_container {
   display: flex;
   flex-direction: column;
-  margin-bottom: 16px;
 }
 
 .cards_ofertas_titulo {
@@ -108,7 +107,7 @@
   text-transform: uppercase;
   font-size: 1.25rem;
   font-weight: 700;
-  line-height: 48px;
+  //line-height: 48px;
   //letter-spacing: -0.03em;
   text-align: left;
 }
@@ -144,8 +143,7 @@
   letter-spacing: 0.02em;
   text-align: left;
   color: #303030;
-  gap: 8px;
-  margin-bottom: 16px;
+  gap: 12px;
 }
 
 .cards_ofertas_infos_wifi,
@@ -170,7 +168,6 @@
   display: flex;
   flex-direction: row;
   align-items: flex-end;
-  margin-bottom: 10px;
 }
 
 .cards_ofertas_simbolo {
@@ -223,7 +220,13 @@
   text-align: center;
   color: #000000;
   cursor: pointer;
-  margin-bottom: 25px;
+  margin-bottom: 26px;
+  width: 248px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
 }
 
 .cards_ofertas_beneficios {
@@ -303,6 +306,7 @@ li.cards_ofertas_li_beneficios:first-child {
   margin-bottom: 14px;
   border: none;
   background: transparent;
+  padding-top: 16px;
 }
 
 .cards_fertas_span_detalhes {
@@ -589,6 +593,15 @@ li.cards_ofertas_li_beneficios:first-child {
   line-height: 18px;
 }
 
+.cards_ofertas_titulo_container,
+.cards_ofertas_infos_wifi,
+.cards_ofertas_infos_cartao,
+.cards_ofertas_preco,
+.cards_ofertas_ancora,
+.cards_ofertas_detalhes {
+  margin-bottom: 12px;
+}
+
 @media screen and (max-width: 768px) {
   .cards_ofertas_borda {
     display: none;
@@ -609,7 +622,7 @@ li.cards_ofertas_li_beneficios:first-child {
   }
 
   .cards_ofertas_ancora {
-    margin-bottom: 10px;
+    margin-bottom: 16px;
     padding-block: 11px;
   }
 
@@ -628,7 +641,7 @@ li.cards_ofertas_li_beneficios:first-child {
 
   .cards_ofertas_card {
     width: 100%;
-    padding: 16px 16px 12px 16px;
+    //padding: 16px 16px 12px 16px;
     position: relative;
 
 
@@ -703,39 +716,14 @@ li.cards_ofertas_li_beneficios:first-child {
     margin-bottom: 0px;
   }
 
-  .cards_ofertas_titulo_container {
-    margin-bottom: 10px;
-  }
-
-  // .cards_ofertas_simbolo,
-  // .cards_ofertas_centavos_numero {
-  //   font-size: 1rem;
-  //   line-height: 38px;
-  // }
-
-  // .cards_ofertas_reais {
-  //   font-size: 2.375rem;
-  //   // line-height: 38px;
-  // }
-
   .cards_ofertas_infos_cartao {
     min-height: 0px;
   }
-
-  // .cards_ofertas_centavos_mes {
-  //   position: absolute;
-  //   top: 20px;
-  //   font-size: 0.75rem;
-  //   background-color: transparent;
-  // }
 
   .cards_ofertas_centavos {
     position: relative;
   }
 
-  // .cards_ofertas_centavos_numero {
-  //   position: absolute;
-  // }
 
   .cards_ofertas_icon_wifi_gray,
   .cards_ofertas_icon_wallet_gray {
@@ -751,24 +739,27 @@ li.cards_ofertas_li_beneficios:first-child {
     display: none;
   }
 
-  .cards_ofertas_infos_container {
-    margin-bottom: 10px;
-    gap: 10px;
-  }
-
   .cards_ofertas_box {
-    margin-bottom: 10px;
+    margin-bottom: 24px;
   }
 
   .cards_fertas_span_detalhes {
     font-size: 0.75rem;
   }
 
+  .cards_ofertas_titulo_container,
+  .cards_ofertas_infos_wifi,
+  .cards_ofertas_infos_cartao,
+  .cards_ofertas_preco,
+  .cards_ofertas_detalhes {
+    padding: 0px 32px;
+  }
+
   .cards_ofertas_detalhes {
     margin-bottom: 0px;
     gap: 6px;
     border-top: 1px solid #E0E0E0;
-
+    padding-top: 16px;
   }
 
   .cards_ofertas_infos_wifi,
