@@ -1,41 +1,23 @@
-const arrCity = [
-	{
-		id: 4329,
-		city: 'Salvador das Missões',
-		uf: 'RS',
-		ddd: 55,
-		normalized: 'salvador das missoes'
-	},
-	{
-		id: 4330,
-		city: 'Salvador do Sul',
-		uf: 'RS',
-		ddd: 51,
-		normalized: 'salvador do sul'
-	},
-	{
-		id: 4882,
-		city: 'São Salvador do Tocantins',
-		uf: 'TO',
-		ddd: 63,
-		normalized: 'sao salvador do tocantins'
-	},
-	{
-		id: 4328,
-		city: 'Salvador',
-		uf: 'BA',
-		ddd: 71,
-		normalized: 'salvador'
-	}
-]
+'use strict'
 
-const modalStructure = `<div class="header-modal_search_bar">
+let arrCity = []
+
+// fetch city array
+const cityRegionalizationFallback =
+	'fallbacks/default-city-regionalization.json'
+
+fetch(cityRegionalizationFallback)
+	.then(async (request) => (arrCity = await request.json()))
+	.catch(() => {})
+
+const modalStructure = `
+<div class="header-modal_search_bar">
     <div class="max_width_container header-modal_input-content">
       <input oninput="searchCity(this)" placeholder="ONDE VOCÊ ESTÁ?" id="header-modal_inputcontent">
-      <button onclick="destroyModal()" >CANCELAR</button>
+      <button onclick="destroyModal()">CANCELAR</button>
     </div>
-  </div>
-  `
+</div>
+`
 
 const selectCity = (city) => {
 	const fetchCity = arrCity.find((mapcity) => mapcity.id == city.dataset.cityid)
@@ -72,53 +54,50 @@ const searchCity = (e) => {
 	getSearchInput = e.value.toLowerCase()
 
 	// making a fetch on backend
-	getSearchInput == ''
+	getSearchInput.length <= 2
 		? showCitys(arrCity)
 		: fetchCitysOnBackend(getSearchInput)
-	// render cityes
-	// showCitys(newFilter)
 
 	// mapping focused buttons
 	mappingFocusedButtons()
 }
 
-let breakingFetchRequest = false
+class DebounceSearchRequest {
+	constructor() {
+		this.timer
+		this.delayToDeploy = 500
+	}
+	deployPromisse(callback, { autokill = false }) {
+		autokill && this.kill()
+		this.timer = setTimeout(callback, this.delayToDeploy)
+	}
+	kill() {
+		this.timer && clearTimeout(this.timer)
+	}
+}
 
-
+const debounceSearchRequest = new DebounceSearchRequest()
 const fetchCitysOnBackend = (city) => {
 	// instance api url handler
 	const apiUrl = new URL(
 		'https://homeoifibra-back-dev-hml.hml.ocpcorp.oi.intranet'
 	)
 
-	// // set pathname
-	console.log(city)
+	// set pathname
 	apiUrl.pathname = '/cities/name/' + city
 
-	if (!breakingFetchRequest) {
-		breakingFetchRequest = true
-
-		setTimeout(async () => {
-			try {
-				const requestAPi = () => {
-					fetch(apiUrl.href).then(async (request) => {
-						if (request.url != apiUrl.href) {
-							console.log('url', request.url)
-							console.log('href', apiUrl.href)
-							requestAPi()
-						}
-						request = await request.json()
-						request.length > 0 && showCitys(request)
-					})
-				}
-				requestAPi()
-			} catch (error) {
-				showCitys(arrCity)
-			}
-
-			breakingFetchRequest = false
-		}, 300)
-	}
+	debounceSearchRequest.deployPromisse(
+		() => {
+			console.log('Fazendo request')
+			fetch(apiUrl.href)
+				.then(async (request) => {
+					request = await request.json()
+					request.length > 0 && showCitys(request)
+				})
+				.catch(() => showCitys(arrCity))
+		},
+		{ autokill: true }
+	)
 }
 
 // HOW TO GET OFFER

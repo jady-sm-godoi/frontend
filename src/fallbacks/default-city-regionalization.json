@@ -1,0 +1,30 @@
+[
+	{
+		"id": 4329,
+		"city": "Salvador das Missões",
+		"uf": "RS",
+		"ddd": 55,
+		"normalized": "salvador das missoes"
+	},
+	{
+		"id": 4330,
+		"city": "Salvador do Sul",
+		"uf": "RS",
+		"ddd": 51,
+		"normalized": "salvador do sul"
+	},
+	{
+		"id": 4882,
+		"city": "São Salvador do Tocantins",
+		"uf": "TO",
+		"ddd": 63,
+		"normalized": "sao salvador do tocantins"
+	},
+	{
+		"id": 4328,
+		"city": "Salvador",
+		"uf": "BA",
+		"ddd": 71,
+		"normalized": "salvador"
+	}
+]

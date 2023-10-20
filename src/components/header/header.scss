@@ -71,10 +71,8 @@
 
 .header-modal_city_modal {
 	position: fixed;
-	top: 0;
-	right: 0;
-	left: 0;
-	bottom: 0;
+	inset: 0;
+	height: 100%;
 }
 
 .header-modal_search_bar {
@@ -91,6 +89,11 @@
 		color: #8cc272de;
 		opacity: 0.9;
 	}
+
+	overflow-y: auto;
+	display: flex;
+	flex-direction: column;
+	height: 100%;
 }
 
 .header-modal_input-content {
@@ -223,16 +226,15 @@
 
 	position: relative;
 
-  // drop icon (V)
+	// drop icon (V)
 	&::after {
-
 		position: absolute;
 		inset: 4px -1rem 0 auto;
 		content: '';
 		width: 8px;
 		height: 8px;
 		border-width: 0 2px 2px 0;
-    border-style: solid;
+		border-style: solid;
 		border-color: #00a300;
 		transform: rotate(45deg);
 	}

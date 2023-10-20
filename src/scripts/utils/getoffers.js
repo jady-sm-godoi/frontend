@@ -5,7 +5,7 @@ let cachedData = null;
 async function fetchOffers() {
   return cachedData
     ? cachedData
-    : fetch(caminhoFallback)
+    : fetch(cityRegionalizationFallback)
         .then((response) => {
           cachedData = response.json();
           return cachedData;

@@ -1,524 +1,987 @@
 {
-  "offers": [
-    {
-      "code": "BL_400MB_VAR_JAN23_PRICEUP_119_90_109_90",
-      "name": "Oi Fibra 400 Mega",
-      "description": "Muita velocidade, qualidade, e estabilidade pra ver vídeos, jogar online e trabalhar de casa.",
-      "amount": 109.9,
-      "targetAudience": "Ideal para até 20 dispositivos conectados ao mesmo tempo",
-      "childProducts": [
-        {
-          "name": "Oi Banda Larga 400Mbps",
-          "code": "BL_400MB",
-          "description": "Internet de alta velocidade (Fibra) com 400MBPS",
-          "velocidadeDownload": "400"
-        },
-        {
-          "name": "Oi Leitura",
-          "code": "OI_LTR",
-          "description": "Fique bem informado ao longo do dia com os jornais Globo Digital e Extra Online para ler quando e onde quiser.\n\nSão conteúdos na íntegra, atualizados diariamente, disponíveis em versão PDF ou digitalizada.Faça download dos jornais para ler off-line.",
-          "fidelization": null,
-          "paymentMean": null,
-          "targetAudience": null,
-          "endOfLifeDate": null,
-          "velocidadeDownload": null,
-          "attachment": null,
-          "priceResult": null,
-          "chargeamount": 16.85,
-          "baseamount": 20.6,
-          "amount": 20.6,
-          "adjustments": "-3.75",
-          "overrides": null,
-          "type": "a2X3h000000A8zqEAC"
-        },
-        {
-          "name": "Oi Notícias",
-          "code": "OI_NTC",
-          "description": "Oi Notícias disponibiliza o jornal Valor Econômico, o mais importante veículo de economia, finanças e negócios do Brasil.\n\nSão conteúdos na íntegra, atualizados diariamente, disponíveis em versão PDF ou digitalizada.Faça download dos jornais para ler off-line.",
-          "fidelization": null,
-          "paymentMean": null,
-          "targetAudience": null,
-          "endOfLifeDate": null,
-          "velocidadeDownload": null,
-          "attachment": null,
-          "priceResult": null,
-          "chargeamount": 4.58,
-          "baseamount": 5.6,
-          "amount": 5.6,
-          "adjustments": "-1.02",
-          "overrides": null,
-          "type": "a2X3h000000A8zqEAC"
-        },
-        {
-          "name": "Oi Esportes em Revistas",
-          "code": "OI_RDC",
-          "description": "As melhores revistas de Esportes pra você",
-          "fidelization": null,
-          "paymentMean": null,
-          "targetAudience": null,
-          "endOfLifeDate": null,
-          "velocidadeDownload": null,
-          "attachment": null,
-          "priceResult": null,
-          "chargeamount": 8.75,
-          "baseamount": 10.7,
-          "amount": 10.7,
-          "adjustments": "-1.95",
-          "overrides": null,
-          "type": "a2X3h000000A8zqEAC"
-        },
-        {
-          "name": "Oi Mundo e Negócios 1",
-          "code": "OI_MUND_1",
-          "description": "Fique sempre atualizado com notícias do Brasil, mundo, política, economia e cultura com as revistas do Oi Mundo e Negócios. \nFaça download das suas revistas favoritas para ler onde e quando quiser.\nTenha acesso direto do seu celular, tablet ou desktop",
-          "fidelization": null,
-          "paymentMean": null,
-          "targetAudience": null,
-          "endOfLifeDate": null,
-          "velocidadeDownload": null,
-          "attachment": null,
-          "priceResult": null,
-          "chargeamount": 4.91,
-          "baseamount": 6,
-          "amount": 6,
-          "adjustments": "-1.09",
-          "overrides": null,
-          "type": "a2X3h000000A8zqEAC"
-        },
-        {
-          "name": "Oi Play Básico",
-          "code": "OI_PLY_BSC",
-          "description": "Serviço de streaming da Oi com conteúdo pra aproveitar com toda a família. Conteúdo do seu jeito em um só lugar.",
-          "fidelization": null,
-          "paymentMean": null,
-          "targetAudience": null,
-          "endOfLifeDate": null,
-          "velocidadeDownload": null,
-          "attachment": null,
-          "priceResult": null,
-          "chargeamount": 0,
-          "baseamount": 0,
-          "amount": 6.9,
-          "adjustments": null,
-          "overrides": "0.00000",
-          "type": "a2X3h000000A8zlEAC"
-        },
-        {
-          "name": "Oi Expert Remoto",
-          "code": "EXP_RMT",
-          "description": "Tenha técnicos especializados 24 horas para suporte por telefone a seus dispositivos.",
-          "fidelization": null,
-          "paymentMean": null,
-          "targetAudience": null,
-          "endOfLifeDate": null,
-          "velocidadeDownload": null,
-          "attachment": null,
-          "priceResult": null,
-          "chargeamount": 8.661726078799246,
-          "baseamount": 9.9,
-          "amount": 9.9,
-          "adjustments": "-12.5078173858662",
-          "overrides": null,
-          "type": "a2X3h000000A8zpEAC"
-        },
-        {
-          "name": "Taxa de Habilitação",
-          "code": "TA_BL",
-          "description": "Taxa cobrada ao efetuar a compra de um produto que necessite do serviço de instalação",
-          "fidelization": "FidelizacaoAnual",
-          "paymentMean": null,
-          "targetAudience": null,
-          "endOfLifeDate": null,
-          "velocidadeDownload": null,
-          "attachment": null,
-          "priceResult": null,
-          "chargeamount": 0,
-          "baseamount": 540,
-          "amount": 540,
-          "adjustments": "-100.00",
-          "overrides": null,
-          "type": "a2X3h000000A8zmEAC"
-        }
-      ],
-      "attachments": [
-        {
-          "title": "Sumário",
-          "url": "https://oinovafibra.my.salesforce.com/sfc/p/3h000006f2Dc/a/3h000000pHfW/HuXIE4IHAPjR5yZbmZT3jdiwbI8JSXbaJdF.y4BrPLI"
-        },
-        {
-          "title": "Regulamento + Termo de Adesão",
-          "url": "https://oinovafibra.my.salesforce.com/sfc/p/3h000006f2Dc/a/3h000000pHfk/KalCu2bV6L9UaWE2JWVrrFY1lLFhgrJoOIA8nXbN15o"
-        }
-      ]
-    },
-    {
-      "code": "BL_500MB_VAR_JAN23_PRICEUP_129_90_119_90",
-      "name": "Oi Fibra 500 Mega",
-      "description": "Ainda mais velocidade pra ver vídeos, jogar online e trabalhar de casa com qualidade e estabilidade.",
-      "amount": 119.9,
-      "targetAudience": "Ideal para até 20 dispositivos conectados ao mesmo tempo",
-      "childProducts": [
-        {
-          "name": "Oi Banda Larga 500Mbps",
-          "code": "BL_500MB",
-          "description": "Internet de alta velocidade (Fibra) com 500MBPS",
-          "velocidadeDownload": "500"
-        },
-        {
-          "name": "Oi Leitura",
-          "code": "OI_LTR",
-          "description": "Fique bem informado ao longo do dia com os jornais Globo Digital e Extra Online para ler quando e onde quiser.\n\nSão conteúdos na íntegra, atualizados diariamente, disponíveis em versão PDF ou digitalizada.Faça download dos jornais para ler off-line.",
-          "fidelization": null,
-          "paymentMean": null,
-          "targetAudience": null,
-          "endOfLifeDate": null,
-          "velocidadeDownload": null,
-          "attachment": null,
-          "priceResult": null,
-          "chargeamount": 16.85,
-          "baseamount": 20.6,
-          "amount": 20.6,
-          "adjustments": "-3.75",
-          "overrides": null,
-          "type": "a2X3h000000A8zqEAC"
-        },
-        {
-          "name": "Oi Notícias",
-          "code": "OI_NTC",
-          "description": "Oi Notícias disponibiliza o jornal Valor Econômico, o mais importante veículo de economia, finanças e negócios do Brasil.\n\nSão conteúdos na íntegra, atualizados diariamente, disponíveis em versão PDF ou digitalizada.Faça download dos jornais para ler off-line.",
-          "fidelization": null,
-          "paymentMean": null,
-          "targetAudience": null,
-          "endOfLifeDate": null,
-          "velocidadeDownload": null,
-          "attachment": null,
-          "priceResult": null,
-          "chargeamount": 4.58,
-          "baseamount": 5.6,
-          "amount": 5.6,
-          "adjustments": "-1.02",
-          "overrides": null,
-          "type": "a2X3h000000A8zqEAC"
-        },
-        {
-          "name": "Oi Esportes em Revistas",
-          "code": "OI_RDC",
-          "description": "As melhores revistas de Esportes pra você",
-          "fidelization": null,
-          "paymentMean": null,
-          "targetAudience": null,
-          "endOfLifeDate": null,
-          "velocidadeDownload": null,
-          "attachment": null,
-          "priceResult": null,
-          "chargeamount": 8.75,
-          "baseamount": 10.7,
-          "amount": 10.7,
-          "adjustments": "-1.95",
-          "overrides": null,
-          "type": "a2X3h000000A8zqEAC"
-        },
-        {
-          "name": "Oi Mundo e Negócios 1",
-          "code": "OI_MUND_1",
-          "description": "Fique sempre atualizado com notícias do Brasil, mundo, política, economia e cultura com as revistas do Oi Mundo e Negócios. \nFaça download das suas revistas favoritas para ler onde e quando quiser.\nTenha acesso direto do seu celular, tablet ou desktop",
-          "fidelization": null,
-          "paymentMean": null,
-          "targetAudience": null,
-          "endOfLifeDate": null,
-          "velocidadeDownload": null,
-          "attachment": null,
-          "priceResult": null,
-          "chargeamount": 4.91,
-          "baseamount": 6,
-          "amount": 6,
-          "adjustments": "-1.09",
-          "overrides": null,
-          "type": "a2X3h000000A8zqEAC"
-        },
-        {
-          "name": "Oi Play Básico",
-          "code": "OI_PLY_BSC",
-          "description": "Serviço de streaming da Oi com conteúdo pra aproveitar com toda a família. Conteúdo do seu jeito em um só lugar.",
-          "fidelization": null,
-          "paymentMean": null,
-          "targetAudience": null,
-          "endOfLifeDate": null,
-          "velocidadeDownload": null,
-          "attachment": null,
-          "priceResult": null,
-          "chargeamount": 0,
-          "baseamount": 0,
-          "amount": 6.9,
-          "adjustments": null,
-          "overrides": "0.00000",
-          "type": "a2X3h000000A8zlEAC"
-        },
-        {
-          "name": "Oi Expert Remoto",
-          "code": "EXP_RMT",
-          "description": "Tenha técnicos especializados 24 horas para suporte por telefone a seus dispositivos.",
-          "fidelization": null,
-          "paymentMean": null,
-          "targetAudience": null,
-          "endOfLifeDate": null,
-          "velocidadeDownload": null,
-          "attachment": null,
-          "priceResult": null,
-          "chargeamount": 8.661726078799246,
-          "baseamount": 9.9,
-          "amount": 9.9,
-          "adjustments": "-12.5078173858662",
-          "overrides": null,
-          "type": "a2X3h000000A8zpEAC"
-        },
-        {
-          "name": "Taxa de Habilitação",
-          "code": "TA_BL",
-          "description": "Taxa cobrada ao efetuar a compra de um produto que necessite do serviço de instalação",
-          "fidelization": "FidelizacaoAnual",
-          "paymentMean": null,
-          "targetAudience": null,
-          "endOfLifeDate": null,
-          "velocidadeDownload": null,
-          "attachment": null,
-          "priceResult": null,
-          "chargeamount": 0,
-          "baseamount": 540,
-          "amount": 540,
-          "adjustments": "-100.00",
-          "overrides": null,
-          "type": "a2X3h000000A8zmEAC"
-        }
-      ],
-      "attachments": [
-        {
-          "title": "Sumário",
-          "url": "https://oinovafibra.my.salesforce.com/sfc/p/3h000006f2Dc/a/3h000000pHfB/R1_HY46.WNBdA.6BLsCWUT2PDN1e9cSSAVOFAh2_QwA"
-        },
-        {
-          "title": "Regulamento + Termo de Adesão",
-          "url": "https://oinovafibra.my.salesforce.com/sfc/p/3h000006f2Dc/a/3h000000pHff/5c9Bsf6NnpajkfHAtg.VHpNUxkCgH_RryjnJF8n5fF8"
-        }
-      ]
-    },
-    {
-      "code": "BL_1GB_VAR_OUT22_219_90_E_199_90",
-      "name": "Oi Fibra 1 Giga",
-      "description": "Supervelocidade pra baixar e subir arquivos pesados muito mais rápido com qualidade e estabilidade.",
-      "amount": 199.9,
-      "targetAudience": "Ideal para até 20 dispositivos conectados ao mesmo tempo",
-      "childProducts": [
-        {
-          "name": "Oi Banda Larga 1Gbps",
-          "code": "BL_1000MB",
-          "description": "Internet de alta velocidade (Fibra) com 1GB",
-          "velocidadeDownload": "1000"
-        },
-        {
-          "name": "Oi Leitura",
-          "code": "OI_LTR",
-          "description": "Fique bem informado ao longo do dia com os jornais Globo Digital e Extra Online para ler quando e onde quiser.\n\nSão conteúdos na íntegra, atualizados diariamente, disponíveis em versão PDF ou digitalizada.Faça download dos jornais para ler off-line.",
-          "fidelization": null,
-          "paymentMean": null,
-          "targetAudience": null,
-          "endOfLifeDate": null,
-          "velocidadeDownload": null,
-          "attachment": null,
-          "priceResult": null,
-          "chargeamount": 16.85,
-          "baseamount": 20.6,
-          "amount": 20.6,
-          "adjustments": "-3.75",
-          "overrides": null,
-          "type": "a2X3h000000A8zqEAC"
-        },
-        {
-          "name": "Oi Notícias",
-          "code": "OI_NTC",
-          "description": "Oi Notícias disponibiliza o jornal Valor Econômico, o mais importante veículo de economia, finanças e negócios do Brasil.\n\nSão conteúdos na íntegra, atualizados diariamente, disponíveis em versão PDF ou digitalizada.Faça download dos jornais para ler off-line.",
-          "fidelization": null,
-          "paymentMean": null,
-          "targetAudience": null,
-          "endOfLifeDate": null,
-          "velocidadeDownload": null,
-          "attachment": null,
-          "priceResult": null,
-          "chargeamount": 4.58,
-          "baseamount": 5.6,
-          "amount": 5.6,
-          "adjustments": "-1.02",
-          "overrides": null,
-          "type": "a2X3h000000A8zqEAC"
-        },
-        {
-          "name": "Oi Esportes em Revistas",
-          "code": "OI_RDC",
-          "description": "As melhores revistas de Esportes pra você",
-          "fidelization": null,
-          "paymentMean": null,
-          "targetAudience": null,
-          "endOfLifeDate": null,
-          "velocidadeDownload": null,
-          "attachment": null,
-          "priceResult": null,
-          "chargeamount": 8.75,
-          "baseamount": 10.7,
-          "amount": 10.7,
-          "adjustments": "-1.95",
-          "overrides": null,
-          "type": "a2X3h000000A8zqEAC"
-        },
-        {
-          "name": "Oi Mundo e Negócios 1",
-          "code": "OI_MUND_1",
-          "description": "Fique sempre atualizado com notícias do Brasil, mundo, política, economia e cultura com as revistas do Oi Mundo e Negócios. \nFaça download das suas revistas favoritas para ler onde e quando quiser.\nTenha acesso direto do seu celular, tablet ou desktop",
-          "fidelization": null,
-          "paymentMean": null,
-          "targetAudience": null,
-          "endOfLifeDate": null,
-          "velocidadeDownload": null,
-          "attachment": null,
-          "priceResult": null,
-          "chargeamount": 4.91,
-          "baseamount": 6,
-          "amount": 6,
-          "adjustments": "-1.09",
-          "overrides": null,
-          "type": "a2X3h000000A8zqEAC"
-        },
-        {
-          "name": "Oi Play Básico",
-          "code": "OI_PLY_BSC",
-          "description": "Serviço de streaming da Oi com conteúdo pra aproveitar com toda a família. Conteúdo do seu jeito em um só lugar.",
-          "fidelization": null,
-          "paymentMean": null,
-          "targetAudience": null,
-          "endOfLifeDate": null,
-          "velocidadeDownload": null,
-          "attachment": null,
-          "priceResult": null,
-          "chargeamount": 0,
-          "baseamount": 0,
-          "amount": 6.9,
-          "adjustments": null,
-          "overrides": "0.00000",
-          "type": "a2X3h000000A8zlEAC"
-        },
-        {
-          "name": "Oi Expert Remoto",
-          "code": "EXP_RMT",
-          "description": "Tenha técnicos especializados 24 horas para suporte por telefone a seus dispositivos.",
-          "fidelization": null,
-          "paymentMean": null,
-          "targetAudience": null,
-          "endOfLifeDate": null,
-          "velocidadeDownload": null,
-          "attachment": null,
-          "priceResult": null,
-          "chargeamount": 8.661726078799246,
-          "baseamount": 9.9,
-          "amount": 9.9,
-          "adjustments": "-12.5078173858662",
-          "overrides": null,
-          "type": "a2X3h000000A8zpEAC"
-        },
-        {
-          "name": "Taxa de Habilitação",
-          "code": "TA_BL",
-          "description": "Taxa cobrada ao efetuar a compra de um produto que necessite do serviço de instalação",
-          "fidelization": "FidelizacaoAnual",
-          "paymentMean": null,
-          "targetAudience": null,
-          "endOfLifeDate": null,
-          "velocidadeDownload": null,
-          "attachment": null,
-          "priceResult": null,
-          "chargeamount": 0,
-          "baseamount": 540,
-          "amount": 540,
-          "adjustments": "-100.00",
-          "overrides": null,
-          "type": "a2X3h000000A8zmEAC"
-        }
-      ],
-      "attachments": [
-        {
-          "title": "Sumário",
-          "url": "https://oinovafibra.my.salesforce.com/sfc/p/3h000006f2Dc/a/3h000000pHfV/TzBc48tBfnwJbIaN15ihpG_SoI5CsD6Yu25FJKg5pqo"
-        },
-        {
-          "title": "Regulamento + Termo de Adesão",
-          "url": "https://oinovafibra.my.salesforce.com/sfc/p/3h000006f2Dc/a/3h000000pHfz/xvuSyPJKs8Xm0.6OjzQx9.RsmLaZ8VHHGL3I96dWz9s"
-        }
-      ]
-    }
-  ],
-  "segmentation": "regular",
-  "heroOffer": "BL_400MB_VAR_JAN23_PRICEUP_119_90_109_90",
-  "featuredCardOffer": "BL_400MB_VAR_JAN23_PRICEUP_119_90_109_90",
-  "loweredPriceOffer": null,
-  "isUnified": false,
-  "daccDiscount": 10,
-  "businessOffers": [
-    "BL_400MB_VAR_JAN23_PRICEUP_119_90_109_90",
-    "BL_500MB_VAR_JAN23_PRICEUP_129_90_119_90",
-    "BL_1GB_VAR_OUT22_219_90_E_199_90"
-  ],
-  "businessOffersPlus": [],
-  "isPromotional": false,
-  "lowestSpeed": 400,
-  "salesforceLink": "https://ti-oinovafibra.cs195.oi.com.br/fibra/s/",
-  "displayFibraXCard": false,
-  "cityId": 4203,
-  "grupoDeMenus": ["regular-fibra"],
-  "addons": {
-    "OI_PLAY_TV": {
-      "code": "OI_PLAY_TV",
-      "name": "Oi Play TV",
-      "description": "O melhor da TV por assinatura em streaming dentro do Oi Play! São diversos canais ao vivo para você curtir com a família. Com o Oi Play TV você também acessa aos conteúdos incríveis do Paramount+. É entretenimento para todos os gostos: filmes de sucesso direto do cinema, séries exclusivas, reality shows, animações e conteúdo infantil.",
-      "amount": 69.9,
-      "attachments": []
-    },
-    "EXP_CSA_AV": {
-      "code": "EXP_CSA_AV",
-      "name": "Oi Expert Presencial",
-      "description": "Tenha técnicos especializados 24 horas para suporte por telefone a seus dispositivos. Se for necessário, vamos até você.",
-      "amount": 9.9
-    },
-    "EXP_RMT_AV": {
-      "code": "EXP_RMT_AV",
-      "name": "Oi Expert Remoto - Avulso",
-      "description": "Tenha técnicos especializados 24 horas para suporte por telefone a seus dispositivos.",
-      "amount": 14.9
-    },
-    "SVA_SULAMERICA": {
-      "code": "SVA_SULAMERICA",
-      "name": "SulAmérica Docway Telemedicina",
-      "description": "Serviço de Telemedicina da SulAmérica Docway proporcionando conforto, rapidez e a segurança nos atendimentos médicos à distância.",
-      "amount": 19.9,
-      "attachments": [
-        {
-          "title": "productLogo",
-          "url": "https://oinovafibra--c.documentforce.com/sfc/dist/version/download/?oid=00D3h000006f2Dc&ids=0683h00000GeDls&d=/a/3h000000KR5F/wp4ojkV5oj5A3HykCBHfxuVBWaykiGmRiXHlx383C38&asPdf=false"
-        }
-      ]
-    },
-    "VOIP_FIXOILIMITADO": {
-      "code": "VOIP_FIXOILIMITADO",
-      "name": "Oi Fixo Fibra",
-      "description": "Ligações ilimitadas locais e DDD pra fixo e celular de qualquer operadora usando o código 31 ou 14.",
-      "amount": 29.9,
-      "attachments": [
-        {
-          "title": "Contrato de prestação de serviço",
-          "url": "https://oinovafibra.my.salesforce.com/sfc/p/#3h000006f2Dc/a/3h000000pHxZ/3mAsIiVAr5ActlB69R6SSyobcKBM5gz6mYIy6oBTyiA"
-        },
-        {
-          "title": "Plano de Serviço",
-          "url": "https://oinovafibra.my.salesforce.com/sfc/p/#3h000006f2Dc/a/3h000000pHxU/jjOaq9ZzNusCp6HhP1plcQGJJ6HjE9bsmlR4y8pHZvo"
-        }
-      ]
-    }
-  }
+	"city": "Rio de Janeiro",
+	"uf": "RJ",
+	"data": {
+		"offers": [
+			{
+				"code": "BL_100MB_VAR_JUN23_NW_99_90_79_90",
+				"name": "Oi Fibra 100 Mega",
+				"description": "Experimente a melhor internet na medida certa pra sua casa. Vem com 1 ponto Wi-Fi 5 (roteador principal).",
+				"amount": 79.9,
+				"adherenceFee": 0,
+				"targetAudience": "Ideal para até 10 dispositivos conectados ao mesmo tempo",
+				"downloadSpeed": "100",
+				"childProducts": [
+					{
+						"name": "Oi Banda Larga 100Mbps",
+						"code": "BL_100MB",
+						"description": "Internet de alta velocidade (Fibra) com 100MBPS",
+						"endOfLifeDate": "",
+						"chargeamount": 0,
+						"downloadSpeed": "100",
+						"type": "a2X3h000000A8zfEAC",
+						"objectTypeName": "Banda Larga",
+						"amount": "R$ 79,90",
+						"attachments": [
+							{
+								"contentType": "Plano de Serviço + Contrato de Prestação de serviço",
+								"defaultAttachment": false,
+								"sequenceNumber": 10,
+								"title": "Contrato de serviço 100Mbps",
+								"url": "https://oinovafibra--devppf.my.salesforce.com/sfc/p/010000008mF1/a/01000000GttI/KZh4Jodh6SwlNOCNiZS0F41P._LyRWTZnYOmXQ77.gY"
+							}
+						],
+						"velocidadeDownload": "100"
+					},
+					{
+						"name": "Oi Play Básico",
+						"code": "OI_PLY_BSC",
+						"description": "Serviço de streaming da Oi com conteúdo pra aproveitar com toda a família. Conteúdo do seu jeito em um só lugar.",
+						"endOfLifeDate": "",
+						"chargeamount": 0,
+						"downloadSpeed": "",
+						"type": "a2X3h000000A8zlEAC",
+						"objectTypeName": "Oi Play",
+						"amount": "R$ 6,90",
+						"attachments": []
+					},
+					{
+						"name": "Oi Livros",
+						"code": "OI_LVR",
+						"description": "Serviço de leitura que entrega todo mês 1 livro entre os mais vendidos do Brasil.",
+						"endOfLifeDate": "",
+						"chargeamount": 0,
+						"downloadSpeed": "",
+						"type": "a2X3h000000JhN6EAK",
+						"objectTypeName": "SVA_SEM_IMPOSTACAO",
+						"amount": "R$ 20,60",
+						"attachments": []
+					},
+					{
+						"name": "Oi News Meia Hora",
+						"code": "SVA_NEWS_MH",
+						"description": "Fique atualizado com notícias de esportes, utilidades públicas, entretenimento, saúde, tecnologia e mais com o jornal Meia Hora. Para acessar baixe o aplicativo Oi News (Google Play e App Store).",
+						"endOfLifeDate": "",
+						"chargeamount": 0,
+						"downloadSpeed": "",
+						"type": "a2X3h000000A8zqEAC",
+						"objectTypeName": "SVA",
+						"amount": "R$ 1,50",
+						"attachments": []
+					},
+					{
+						"name": "Oi News O Dia",
+						"code": "SVA_NEWS_ODIA",
+						"description": "Tenha as últimas notícias de esportes, economia, diversão e muito mais com o jornal O Dia. Para acessar baixe o aplicativo Oi News (Google Play e App Store).",
+						"endOfLifeDate": "",
+						"chargeamount": 0,
+						"downloadSpeed": "",
+						"type": "a2X3h000000A8zqEAC",
+						"objectTypeName": "SVA",
+						"amount": "R$ 1,99",
+						"attachments": []
+					},
+					{
+						"name": "Oi News Isto É",
+						"code": "SVA_NEWS_IE",
+						"description": "Tenha análise dos principais fatos das mais variadas áreas com a revista Isto É. Para acessar baixe o aplicativo Oi News (Google Play e App Store).",
+						"endOfLifeDate": "",
+						"chargeamount": 0,
+						"downloadSpeed": "",
+						"type": "a2X3h000000A8zqEAC",
+						"objectTypeName": "SVA",
+						"amount": "R$ 10,70",
+						"attachments": []
+					},
+					{
+						"name": "Oi Expert Remoto",
+						"code": "EXP_RMT",
+						"description": "Assistência tecnológica para instalar e configurar impressora, computador, celular, Smart TV, roteador e muito mais. 24 horas por dia, 7 dias por semana. Para falar com um especialista, clique na sessão “Suporte” e depois “Precisa de ajuda?” no Oi_e.",
+						"endOfLifeDate": "",
+						"chargeamount": 0,
+						"downloadSpeed": "",
+						"type": "a2X3h000000A8zpEAC",
+						"objectTypeName": "SVA Próprio",
+						"amount": "R$ 9,90",
+						"attachments": []
+					},
+					{
+						"name": "Taxa de Habilitação",
+						"code": "TA_BL",
+						"description": "Taxa cobrada ao efetuar a compra de um produto que necessite do serviço de instalação",
+						"endOfLifeDate": "",
+						"chargeamount": 0,
+						"downloadSpeed": "",
+						"type": "a2X3h000000A8zmEAC",
+						"objectTypeName": "Taxas",
+						"amount": "R$ 540,00",
+						"attachments": []
+					}
+				],
+				"fidelization": "",
+				"type": "a2X3h000000A8zgEAC",
+				"objectTypeName": "Oferta",
+				"quantity": 1,
+				"attachments": [
+					{
+						"contentType": "Regulamento + Termo de Adesão",
+						"defaultAttachment": false,
+						"sequenceNumber": 10,
+						"title": "Regulamento + Termo de Adesão",
+						"url": "https://oinovafibra.my.salesforce.com/sfc/p/3h000006f2Dc/a/3h0000013HEy/LwuBuONTnYo_Ugd7.PpShUB670gGjvNntX6jMZe54FA"
+					},
+					{
+						"contentType": "Sumário",
+						"defaultAttachment": false,
+						"sequenceNumber": 20,
+						"title": "Sumário",
+						"url": "https://oinovafibra.my.salesforce.com/sfc/p/3h000006f2Dc/a/3h0000013HF3/KGtwV5BEVgGUZJjqq0g4nWOkshYvRpTXzgkIDwOc0V4"
+					}
+				],
+				"fixoAmount": 79.9
+			},
+			{
+				"code": "BL_400MB_VAR_MAI23_NW_119_90_109_90",
+				"name": "Oi Fibra 400 Mega",
+				"description": "Internet a vontade pra todo mundo em casa se conectar ao mesmo tempo. Vem com 1 ponto Wi-Fi 5 (roteador principal).",
+				"amount": 109.9,
+				"adherenceFee": 0,
+				"targetAudience": "Ideal para até 20 dispositivos conectados ao mesmo tempo",
+				"downloadSpeed": "400",
+				"childProducts": [
+					{
+						"name": "Oi Banda Larga 400Mbps",
+						"code": "BL_400MB",
+						"description": "Internet de alta velocidade (Fibra) com 400MBPS",
+						"endOfLifeDate": "",
+						"chargeamount": 0,
+						"downloadSpeed": "400",
+						"type": "a2X3h000000A8zfEAC",
+						"objectTypeName": "Banda Larga",
+						"amount": "R$ 149,00",
+						"attachments": [
+							{
+								"defaultAttachment": false,
+								"sequenceNumber": 10,
+								"title": "Plano SCM (Plano de Serviço)",
+								"url": "https://oinovafibra.my.salesforce.com/sfc/p/3h000006f2Dc/a/3h000000D24W/6tuiQ27VKZMFlBgxYOla6ztbve6taP8Efsd0UYqNmQE"
+							},
+							{
+								"contentType": "Plano de Serviço + Contrato de Prestação de serviço",
+								"defaultAttachment": false,
+								"sequenceNumber": 10,
+								"title": "Contrato de serviço 400Mbps",
+								"url": "https://oinovafibra--devppf.my.salesforce.com/sfc/p/010000008mF1/a/01000000GttI/KZh4Jodh6SwlNOCNiZS0F41P._LyRWTZnYOmXQ77.gY"
+							}
+						],
+						"velocidadeDownload": "400"
+					},
+					{
+						"name": "Oi Play Básico",
+						"code": "OI_PLY_BSC",
+						"description": "Serviço de streaming da Oi com conteúdo pra aproveitar com toda a família. Conteúdo do seu jeito em um só lugar.",
+						"endOfLifeDate": "",
+						"chargeamount": 0,
+						"downloadSpeed": "",
+						"type": "a2X3h000000A8zlEAC",
+						"objectTypeName": "Oi Play",
+						"amount": "R$ 6,90",
+						"attachments": []
+					},
+					{
+						"name": "Oi Livros",
+						"code": "OI_LVR",
+						"description": "Serviço de leitura que entrega todo mês 1 livro entre os mais vendidos do Brasil.",
+						"endOfLifeDate": "",
+						"chargeamount": 0,
+						"downloadSpeed": "",
+						"type": "a2X3h000000JhN6EAK",
+						"objectTypeName": "SVA_SEM_IMPOSTACAO",
+						"amount": "R$ 20,60",
+						"attachments": []
+					},
+					{
+						"name": "Oi Notícias",
+						"code": "OI_NTC",
+						"description": "Notícias de política, economia e cultura de jornais do Brasil.",
+						"endOfLifeDate": "",
+						"chargeamount": 0,
+						"downloadSpeed": "",
+						"type": "a2X3h000000A8zqEAC",
+						"objectTypeName": "SVA",
+						"amount": "R$ 5,60",
+						"attachments": []
+					},
+					{
+						"name": "Oi Áudio Livros",
+						"code": "OI_AUD_LVR",
+						"description": "Serviço de áudio livros que entrega todo mês 1 áudio livro entre os mais vendidos do Brasil.",
+						"endOfLifeDate": "",
+						"chargeamount": 0,
+						"downloadSpeed": "",
+						"type": "a2X3h000000JhN6EAK",
+						"objectTypeName": "SVA_SEM_IMPOSTACAO",
+						"amount": "R$ 6,00",
+						"attachments": []
+					},
+					{
+						"name": "Oi News Meia Hora",
+						"code": "SVA_NEWS_MH",
+						"description": "Fique atualizado com notícias de esportes, utilidades públicas, entretenimento, saúde, tecnologia e mais com o jornal Meia Hora. Para acessar baixe o aplicativo Oi News (Google Play e App Store).",
+						"endOfLifeDate": "",
+						"chargeamount": 0,
+						"downloadSpeed": "",
+						"type": "a2X3h000000A8zqEAC",
+						"objectTypeName": "SVA",
+						"amount": "R$ 1,50",
+						"attachments": []
+					},
+					{
+						"name": "Oi News Marie Claire, Glamour e GQ",
+						"code": "SVA_NEWS_MC_GLM_GQ",
+						"description": "Conheça as tendências de moda, estilo,  cultura, cinema, fitness, música, viagens e mais com as revistas Marie Claire, Glamour e GQ. Para acessar baixe o aplicativo Oi News (Google Play e App Store).",
+						"endOfLifeDate": "",
+						"chargeamount": 0,
+						"downloadSpeed": "",
+						"type": "a2X3h000000A8zqEAC",
+						"objectTypeName": "SVA",
+						"amount": "R$ 9,99",
+						"attachments": []
+					},
+					{
+						"name": "Oi Expert Remoto",
+						"code": "EXP_RMT",
+						"description": "Assistência tecnológica para instalar e configurar impressora, computador, celular, Smart TV, roteador e muito mais. 24 horas por dia, 7 dias por semana. Para falar com um especialista, clique na sessão “Suporte” e depois “Precisa de ajuda?” no Oi_e.",
+						"endOfLifeDate": "",
+						"chargeamount": 0,
+						"downloadSpeed": "",
+						"type": "a2X3h000000A8zpEAC",
+						"objectTypeName": "SVA Próprio",
+						"amount": "R$ 9,90",
+						"attachments": []
+					},
+					{
+						"name": "Taxa de Habilitação",
+						"code": "TA_BL",
+						"description": "Taxa cobrada ao efetuar a compra de um produto que necessite do serviço de instalação",
+						"endOfLifeDate": "",
+						"chargeamount": 0,
+						"downloadSpeed": "",
+						"type": "a2X3h000000A8zmEAC",
+						"objectTypeName": "Taxas",
+						"amount": "R$ 540,00",
+						"attachments": []
+					}
+				],
+				"fidelization": "",
+				"type": "a2X3h000000A8zgEAC",
+				"objectTypeName": "Oferta",
+				"quantity": 1,
+				"attachments": [
+					{
+						"contentType": "Regulamento + Termo de Adesão",
+						"defaultAttachment": false,
+						"sequenceNumber": 10,
+						"title": "Regulamento + Termo de Adesão",
+						"url": "https://oinovafibra.my.salesforce.com/sfc/p/3h000006f2Dc/a/3h0000013HGI/5xqe1ax.M3Bi9FrXGAKCGXUtu2oPeLPg7sMzm8CvtnM"
+					},
+					{
+						"contentType": "Sumário",
+						"defaultAttachment": false,
+						"sequenceNumber": 20,
+						"title": "Sumário",
+						"url": "https://oinovafibra.my.salesforce.com/sfc/p/3h000006f2Dc/a/3h0000013HGJ/mD7Vn73AmFPCC1GmhcEgutCu_LGJmOcPy2.mnp6g9X8"
+					}
+				],
+				"fixoAmount": 109.9
+			},
+			{
+				"code": "BL_500MB_VAR_MAI23_NW_129_90_119_90",
+				"name": "Oi Fibra 500 Mega",
+				"description": "Melhor experiência de internet e mais velocidade para jogar sem lag, fazer reuniões sem congelar, maratonar séries e curtir muito mais. Vem com 1 ponto Wi-Fi 5 (roteador principal).",
+				"amount": 119.9,
+				"adherenceFee": 0,
+				"targetAudience": "Ideal para até 20 dispositivos conectados ao mesmo tempo",
+				"downloadSpeed": "500",
+				"childProducts": [
+					{
+						"name": "Oi Banda Larga 500Mbps",
+						"code": "BL_500MB",
+						"description": "Internet de alta velocidade (Fibra) com 500MBPS",
+						"endOfLifeDate": "",
+						"chargeamount": 0,
+						"downloadSpeed": "500",
+						"type": "a2X3h000000A8zfEAC",
+						"objectTypeName": "Banda Larga",
+						"amount": "R$129,90",
+						"attachments": [
+							{
+								"contentType": "Plano de Serviço + Contrato de Prestação de serviço",
+								"defaultAttachment": false,
+								"sequenceNumber": 10,
+								"title": "Contrato de serviço 500Mbps",
+								"url": "https://oinovafibra--devppf.my.salesforce.com/sfc/p/010000008mF1/a/01000000GttI/KZh4Jodh6SwlNOCNiZS0F41P._LyRWTZnYOmXQ77.gY"
+							},
+							{
+								"contentType": "Plano de Serviço",
+								"defaultAttachment": false,
+								"sequenceNumber": 20,
+								"title": "Plano SCM (Plano de Serviço)",
+								"url": "https://oinovafibra.my.salesforce.com/sfc/p/3h000006f2Dc/a/3h000000KVQz/Qm3yEiYjPOo_w91dLk7wrtrnlSx2Drjl9IpmhUR5X_Y"
+							}
+						],
+						"velocidadeDownload": "500"
+					},
+					{
+						"name": "Oi Play Básico",
+						"code": "OI_PLY_BSC",
+						"description": "Serviço de streaming da Oi com conteúdo pra aproveitar com toda a família. Conteúdo do seu jeito em um só lugar.",
+						"endOfLifeDate": "",
+						"chargeamount": 0,
+						"downloadSpeed": "",
+						"type": "a2X3h000000A8zlEAC",
+						"objectTypeName": "Oi Play",
+						"amount": "R$ 6,90",
+						"attachments": []
+					},
+					{
+						"name": "Oi Livros",
+						"code": "OI_LVR",
+						"description": "Serviço de leitura que entrega todo mês 1 livro entre os mais vendidos do Brasil.",
+						"endOfLifeDate": "",
+						"chargeamount": 0,
+						"downloadSpeed": "",
+						"type": "a2X3h000000JhN6EAK",
+						"objectTypeName": "SVA_SEM_IMPOSTACAO",
+						"amount": "R$ 20,60",
+						"attachments": []
+					},
+					{
+						"name": "Oi Notícias",
+						"code": "OI_NTC",
+						"description": "Notícias de política, economia e cultura de jornais do Brasil.",
+						"endOfLifeDate": "",
+						"chargeamount": 0,
+						"downloadSpeed": "",
+						"type": "a2X3h000000A8zqEAC",
+						"objectTypeName": "SVA",
+						"amount": "R$ 5,60",
+						"attachments": []
+					},
+					{
+						"name": "Oi Áudio Livros",
+						"code": "OI_AUD_LVR",
+						"description": "Serviço de áudio livros que entrega todo mês 1 áudio livro entre os mais vendidos do Brasil.",
+						"endOfLifeDate": "",
+						"chargeamount": 0,
+						"downloadSpeed": "",
+						"type": "a2X3h000000JhN6EAK",
+						"objectTypeName": "SVA_SEM_IMPOSTACAO",
+						"amount": "R$ 6,00",
+						"attachments": []
+					},
+					{
+						"name": "Oi News Meia Hora",
+						"code": "SVA_NEWS_MH",
+						"description": "Fique atualizado com notícias de esportes, utilidades públicas, entretenimento, saúde, tecnologia e mais com o jornal Meia Hora. Para acessar baixe o aplicativo Oi News (Google Play e App Store).",
+						"endOfLifeDate": "",
+						"chargeamount": 0,
+						"downloadSpeed": "",
+						"type": "a2X3h000000A8zqEAC",
+						"objectTypeName": "SVA",
+						"amount": "R$ 1,50",
+						"attachments": []
+					},
+					{
+						"name": "Oi News Estadão",
+						"code": "SVA_NEWS_ESTD",
+						"description": "Se informe com o jornal O Estado de S. Paulo, o Estadão, de grande referência do Brasil. Para acessar baixe o aplicativo Oi News (Google Play e App Store).",
+						"endOfLifeDate": "",
+						"chargeamount": 0,
+						"downloadSpeed": "",
+						"type": "a2X3h000000A8zqEAC",
+						"objectTypeName": "SVA",
+						"amount": "R$ 3,99",
+						"attachments": []
+					},
+					{
+						"name": "Oi News Isto É",
+						"code": "SVA_NEWS_IE",
+						"description": "Tenha análise dos principais fatos das mais variadas áreas com a revista Isto É. Para acessar baixe o aplicativo Oi News (Google Play e App Store).",
+						"endOfLifeDate": "",
+						"chargeamount": 0,
+						"downloadSpeed": "",
+						"type": "a2X3h000000A8zqEAC",
+						"objectTypeName": "SVA",
+						"amount": "R$ 10,70",
+						"attachments": []
+					},
+					{
+						"name": "Oi Expert Remoto",
+						"code": "EXP_RMT",
+						"description": "Assistência tecnológica para instalar e configurar impressora, computador, celular, Smart TV, roteador e muito mais. 24 horas por dia, 7 dias por semana. Para falar com um especialista, clique na sessão “Suporte” e depois “Precisa de ajuda?” no Oi_e.",
+						"endOfLifeDate": "",
+						"chargeamount": 0,
+						"downloadSpeed": "",
+						"type": "a2X3h000000A8zpEAC",
+						"objectTypeName": "SVA Próprio",
+						"amount": "R$ 9,90",
+						"attachments": []
+					},
+					{
+						"name": "Taxa de Habilitação",
+						"code": "TA_BL",
+						"description": "Taxa cobrada ao efetuar a compra de um produto que necessite do serviço de instalação",
+						"endOfLifeDate": "",
+						"chargeamount": 0,
+						"downloadSpeed": "",
+						"type": "a2X3h000000A8zmEAC",
+						"objectTypeName": "Taxas",
+						"amount": "R$ 540,00",
+						"attachments": []
+					}
+				],
+				"fidelization": "",
+				"type": "a2X3h000000A8zgEAC",
+				"objectTypeName": "Oferta",
+				"quantity": 1,
+				"attachments": [
+					{
+						"contentType": "Regulamento + Termo de Adesão",
+						"defaultAttachment": false,
+						"sequenceNumber": 10,
+						"title": "Regulamento + Termo de Adesão",
+						"url": "https://oinovafibra.my.salesforce.com/sfc/p/3h000006f2Dc/a/3h0000013HJ5/j2Lq7OHFEusawYm_LjlLC12tMuxnJ5yAQLCAEBG0eFE"
+					},
+					{
+						"contentType": "Sumário",
+						"defaultAttachment": false,
+						"sequenceNumber": 20,
+						"title": "Sumário",
+						"url": "https://oinovafibra.my.salesforce.com/sfc/p/3h000006f2Dc/a/3h0000013HJF/yPlXtsRrVWZ3Y1pLgFtXeFwmM3WJrsXi5xfHyOUl5zM"
+					}
+				],
+				"fixoAmount": 119.9
+			},
+			{
+				"code": "BL_700MB_AV_JUN23_1AP_EXTRA_MESH_169_90",
+				"name": "Oi Fibra X 700 Mega",
+				"description": "Cobertura Wi-Fi ampliada. Já vem com 2 pontos Wi-Fi 5 (roteador principal + ponto extra) que formam uma rede inteligente e única. E conta com gerenciamento proativo de rede e atendimento diferenciado.",
+				"amount": 169.9,
+				"adherenceFee": 0,
+				"targetAudience": "Ideal para até 20 dispositivos conectados ao mesmo tempo",
+				"downloadSpeed": "700",
+				"childProducts": [
+					{
+						"name": "Oi Banda Larga 700Mbps",
+						"code": "BL_700MB",
+						"description": "Internet de alta velocidade (Fibra) com 700Mbps",
+						"endOfLifeDate": "",
+						"chargeamount": 0,
+						"downloadSpeed": "700",
+						"type": "a2X3h000000A8zfEAC",
+						"objectTypeName": "Banda Larga",
+						"amount": "R$ 3.087,00",
+						"attachments": [
+							{
+								"contentType": "Plano de Serviço",
+								"defaultAttachment": false,
+								"sequenceNumber": 10,
+								"title": "Plano SCM (Plano de Serviço)",
+								"url": "https://oinovafibra.my.salesforce.com/sfc/p/3h000006f2Dc/a/3h000000KVQz/Qm3yEiYjPOo_w91dLk7wrtrnlSx2Drjl9IpmhUR5X_Y"
+							},
+							{
+								"contentType": "Contrato de Prestação de serviço",
+								"defaultAttachment": false,
+								"sequenceNumber": 20,
+								"title": "Contrato de serviço 700Mbps",
+								"url": "https://oinovafibra.my.salesforce.com/sfc/p/3h000006f2Dc/a/3h000000pBu5/pcFz4TjfbAeCpoZZTkC0aX386eJOukbAGKJNqW1poxk"
+							}
+						],
+						"velocidadeDownload": "700"
+					},
+					{
+						"name": "Oi Play Básico",
+						"code": "OI_PLY_BSC",
+						"description": "Serviço de streaming da Oi com conteúdo pra aproveitar com toda a família. Conteúdo do seu jeito em um só lugar.",
+						"endOfLifeDate": "",
+						"chargeamount": 0,
+						"downloadSpeed": "",
+						"type": "a2X3h000000A8zlEAC",
+						"objectTypeName": "Oi Play",
+						"amount": "R$ 6,90",
+						"attachments": []
+					},
+					{
+						"name": "Oi Livros",
+						"code": "OI_LVR",
+						"description": "Serviço de leitura que entrega todo mês 1 livro entre os mais vendidos do Brasil.",
+						"endOfLifeDate": "",
+						"chargeamount": 0,
+						"downloadSpeed": "",
+						"type": "a2X3h000000JhN6EAK",
+						"objectTypeName": "SVA_SEM_IMPOSTACAO",
+						"amount": "R$ 20,60",
+						"attachments": []
+					},
+					{
+						"name": "Oi Áudio Livros",
+						"code": "OI_AUD_LVR",
+						"description": "Serviço de áudio livros que entrega todo mês 1 áudio livro entre os mais vendidos do Brasil.",
+						"endOfLifeDate": "",
+						"chargeamount": 0,
+						"downloadSpeed": "",
+						"type": "a2X3h000000JhN6EAK",
+						"objectTypeName": "SVA_SEM_IMPOSTACAO",
+						"amount": "R$ 6,00",
+						"attachments": []
+					},
+					{
+						"name": "Oi News O Dia",
+						"code": "SVA_NEWS_ODIA",
+						"description": "Tenha as últimas notícias de esportes, economia, diversão e muito mais com o jornal O Dia. Para acessar baixe o aplicativo Oi News (Google Play e App Store).",
+						"endOfLifeDate": "",
+						"chargeamount": 0,
+						"downloadSpeed": "",
+						"type": "a2X3h000000A8zqEAC",
+						"objectTypeName": "SVA",
+						"amount": "R$ 1,99",
+						"attachments": []
+					},
+					{
+						"name": "Oi News Estadão",
+						"code": "SVA_NEWS_ESTD",
+						"description": "Se informe com o jornal O Estado de S. Paulo, o Estadão, de grande referência do Brasil. Para acessar baixe o aplicativo Oi News (Google Play e App Store).",
+						"endOfLifeDate": "",
+						"chargeamount": 0,
+						"downloadSpeed": "",
+						"type": "a2X3h000000A8zqEAC",
+						"objectTypeName": "SVA",
+						"amount": "R$ 3,99",
+						"attachments": []
+					},
+					{
+						"name": "Oi News Isto É",
+						"code": "SVA_NEWS_IE",
+						"description": "Tenha análise dos principais fatos das mais variadas áreas com a revista Isto É. Para acessar baixe o aplicativo Oi News (Google Play e App Store).",
+						"endOfLifeDate": "",
+						"chargeamount": 0,
+						"downloadSpeed": "",
+						"type": "a2X3h000000A8zqEAC",
+						"objectTypeName": "SVA",
+						"amount": "R$ 10,70",
+						"attachments": []
+					},
+					{
+						"name": "Oi Expert Presencial",
+						"code": "EXP_CSA",
+						"description": "Assistência tecnológica pra instalar e configurar impressora, computador, celular, Smart TV. Atendimento 24h por dia, 7 dias por semana. Se precisar, solicite visita técnica. Para acessar, clique na sessão “Suporte” e depois “Precisa de ajuda?” no Oi_e.",
+						"endOfLifeDate": "",
+						"chargeamount": 0,
+						"downloadSpeed": "",
+						"type": "a2X3h000000A8zpEAC",
+						"objectTypeName": "SVA Próprio",
+						"amount": "R$ 14,90",
+						"attachments": []
+					},
+					{
+						"name": "1 ponto extra Wi-Fi 5",
+						"code": "FIBRAX_MESH_1AP",
+						"description": "Compatível com todas as ofertas, exceto Oi Fibra X Premium: Amplia a cobertura Wi-Fi através da instalação de mais 1 ponto Wi-Fi 5 com a tecnologia Mesh, formando uma rede inteligente e única pra fornecer uma melhor experiência Wi-Fi dentro de casa.",
+						"endOfLifeDate": "",
+						"chargeamount": 0,
+						"downloadSpeed": "",
+						"type": "a2X3h000000MVgsEAG",
+						"objectTypeName": "SVA Próprio Avulso",
+						"amount": "R$ 40,00",
+						"attachments": []
+					},
+					{
+						"name": "Taxa de Habilitação",
+						"code": "TA_BL",
+						"description": "Taxa cobrada ao efetuar a compra de um produto que necessite do serviço de instalação",
+						"endOfLifeDate": "",
+						"chargeamount": 0,
+						"downloadSpeed": "",
+						"type": "a2X3h000000A8zmEAC",
+						"objectTypeName": "Taxas",
+						"amount": "R$ 540,00",
+						"attachments": []
+					}
+				],
+				"fidelization": "",
+				"type": "a2X3h000000A8zgEAC",
+				"objectTypeName": "Oferta",
+				"quantity": 1,
+				"attachments": [
+					{
+						"contentType": "Regulamento + Termo de Adesão",
+						"defaultAttachment": false,
+						"sequenceNumber": 10,
+						"title": "Regulamento + Termo de Adesão",
+						"url": "https://oinovafibra.my.salesforce.com/sfc/p/3h000006f2Dc/a/3h000000pXal/Gzw0POQjWFZIV7Cofoy2wuuRjiGnib4G4b_ihInT0hk"
+					},
+					{
+						"contentType": "Sumário",
+						"defaultAttachment": false,
+						"sequenceNumber": 20,
+						"title": "Sumário",
+						"url": "https://oinovafibra.my.salesforce.com/sfc/p/3h000006f2Dc/a/3h000000pXaq/uBvu5dYnRvybrNS8bP0SLlnqbYFLUAGFp42ivDPftVo"
+					}
+				],
+				"fixoAmount": 169.9
+			},
+			{
+				"code": "BL_1GB_AV_SET23_1AP_EXTRA_FTTR_249_90",
+				"name": "Oi Fibra X Premium 1 Giga",
+				"description": "Melhor experiência Wi-Fi. Já vem com 2 pontos Wi-Fi 6 FTTR (roteador principal + ponto extra) conectados por fibra invisível que ampliam a cobertura com a máxima performance. E conta com gerenciamento proativo de rede e atendimento diferenciado.",
+				"amount": 249.9,
+				"adherenceFee": 0,
+				"targetAudience": "Ideal para até 20 dispositivos conectados ao mesmo tempo",
+				"downloadSpeed": "1000",
+				"childProducts": [
+					{
+						"name": "Oi Banda Larga 1Gbps",
+						"code": "BL_1000MB",
+						"description": "Internet de alta velocidade (Fibra) com 1GB",
+						"endOfLifeDate": "",
+						"chargeamount": 0,
+						"downloadSpeed": "1000",
+						"type": "a2X3h000000A8zfEAC",
+						"objectTypeName": "Banda Larga",
+						"amount": "R$ 409,00",
+						"attachments": [
+							{
+								"defaultAttachment": false,
+								"sequenceNumber": 10,
+								"title": "Plano SCM (Plano de Serviço)",
+								"url": "https://oinovafibra.my.salesforce.com/sfc/p/3h000006f2Dc/a/3h000000D24W/6tuiQ27VKZMFlBgxYOla6ztbve6taP8Efsd0UYqNmQE"
+							},
+							{
+								"contentType": "Plano de Serviço + Contrato de Prestação de serviço",
+								"defaultAttachment": false,
+								"sequenceNumber": 10,
+								"title": "Contrato de serviço 1Gbps",
+								"url": "https://oinovafibra--devppf.my.salesforce.com/sfc/p/010000008mF1/a/01000000GttI/KZh4Jodh6SwlNOCNiZS0F41P._LyRWTZnYOmXQ77.gY"
+							}
+						],
+						"velocidadeDownload": "1000"
+					},
+					{
+						"name": "Oi Play Básico",
+						"code": "OI_PLY_BSC",
+						"description": "Serviço de streaming da Oi com conteúdo pra aproveitar com toda a família. Conteúdo do seu jeito em um só lugar.",
+						"endOfLifeDate": "",
+						"chargeamount": 0,
+						"downloadSpeed": "",
+						"type": "a2X3h000000A8zlEAC",
+						"objectTypeName": "Oi Play",
+						"amount": "R$ 6,90",
+						"attachments": []
+					},
+					{
+						"name": "Oi Livros",
+						"code": "OI_LVR",
+						"description": "Serviço de leitura que entrega todo mês 1 livro entre os mais vendidos do Brasil.",
+						"endOfLifeDate": "",
+						"chargeamount": 0,
+						"downloadSpeed": "",
+						"type": "a2X3h000000JhN6EAK",
+						"objectTypeName": "SVA_SEM_IMPOSTACAO",
+						"amount": "R$ 20,60",
+						"attachments": []
+					},
+					{
+						"name": "Oi Áudio Livros",
+						"code": "OI_AUD_LVR",
+						"description": "Serviço de áudio livros que entrega todo mês 1 áudio livro entre os mais vendidos do Brasil.",
+						"endOfLifeDate": "",
+						"chargeamount": 0,
+						"downloadSpeed": "",
+						"type": "a2X3h000000JhN6EAK",
+						"objectTypeName": "SVA_SEM_IMPOSTACAO",
+						"amount": "R$ 6,00",
+						"attachments": []
+					},
+					{
+						"name": "Oi Notícias",
+						"code": "OI_NTC",
+						"description": "Notícias de política, economia e cultura de jornais do Brasil.",
+						"endOfLifeDate": "",
+						"chargeamount": 0,
+						"downloadSpeed": "",
+						"type": "a2X3h000000A8zqEAC",
+						"objectTypeName": "SVA",
+						"amount": "R$ 5,60",
+						"attachments": []
+					},
+					{
+						"name": "Oi News Estadão",
+						"code": "SVA_NEWS_ESTD",
+						"description": "Se informe com o jornal O Estado de S. Paulo, o Estadão, de grande referência do Brasil. Para acessar baixe o aplicativo Oi News (Google Play e App Store).",
+						"endOfLifeDate": "",
+						"chargeamount": 0,
+						"downloadSpeed": "",
+						"type": "a2X3h000000A8zqEAC",
+						"objectTypeName": "SVA",
+						"amount": "R$ 3,99",
+						"attachments": []
+					},
+					{
+						"name": "Oi News Isto É",
+						"code": "SVA_NEWS_IE",
+						"description": "Tenha análise dos principais fatos das mais variadas áreas com a revista Isto É. Para acessar baixe o aplicativo Oi News (Google Play e App Store).",
+						"endOfLifeDate": "",
+						"chargeamount": 0,
+						"downloadSpeed": "",
+						"type": "a2X3h000000A8zqEAC",
+						"objectTypeName": "SVA",
+						"amount": "R$ 10,70",
+						"attachments": []
+					},
+					{
+						"name": "Oi News Marie Claire, Glamour e GQ",
+						"code": "SVA_NEWS_MC_GLM_GQ",
+						"description": "Conheça as tendências de moda, estilo,  cultura, cinema, fitness, música, viagens e mais com as revistas Marie Claire, Glamour e GQ. Para acessar baixe o aplicativo Oi News (Google Play e App Store).",
+						"endOfLifeDate": "",
+						"chargeamount": 0,
+						"downloadSpeed": "",
+						"type": "a2X3h000000A8zqEAC",
+						"objectTypeName": "SVA",
+						"amount": "R$ 9,99",
+						"attachments": []
+					},
+					{
+						"name": "Oi Expert Presencial",
+						"code": "EXP_CSA",
+						"description": "Assistência tecnológica pra instalar e configurar impressora, computador, celular, Smart TV. Atendimento 24h por dia, 7 dias por semana. Se precisar, solicite visita técnica. Para acessar, clique na sessão “Suporte” e depois “Precisa de ajuda?” no Oi_e.",
+						"endOfLifeDate": "",
+						"chargeamount": 0,
+						"downloadSpeed": "",
+						"type": "a2X3h000000A8zpEAC",
+						"objectTypeName": "SVA Próprio",
+						"amount": "R$ 14,90",
+						"attachments": []
+					},
+					{
+						"name": "1 ponto extra Wi-Fi 6 FTTR",
+						"code": "FIBRAX_FTTR_1AP",
+						"description": "Compatível apenas com Oi Fibra X Premium: Amplia a cobertura Wi-Fi através da instalação de mais 1 ponto Wi-Fi 6 FTTR que, conectado aos demais pontos com fibra transparente e sem interferir na decoração da casa, leva a máxima velocidade e estabilidade.",
+						"endOfLifeDate": "",
+						"chargeamount": 0,
+						"downloadSpeed": "",
+						"type": "a2X3h000000MVgsEAG",
+						"objectTypeName": "SVA Próprio Avulso",
+						"amount": "R$ 40,00",
+						"attachments": []
+					},
+					{
+						"name": "Taxa de Habilitação",
+						"code": "TA_BL",
+						"description": "Taxa cobrada ao efetuar a compra de um produto que necessite do serviço de instalação",
+						"endOfLifeDate": "",
+						"chargeamount": 0,
+						"downloadSpeed": "",
+						"type": "a2X3h000000A8zmEAC",
+						"objectTypeName": "Taxas",
+						"amount": "R$ 540,00",
+						"attachments": []
+					}
+				],
+				"fidelization": "",
+				"type": "a2X3h000000A8zgEAC",
+				"objectTypeName": "Oferta",
+				"quantity": 1,
+				"attachments": [
+					{
+						"contentType": "Regulamento + Termo de Adesão",
+						"defaultAttachment": false,
+						"sequenceNumber": 10,
+						"title": "Regulamento + Termo de Adesão",
+						"url": "https://oinovafibra.my.salesforce.com/sfc/p/3h000006f2Dc/a/3h0000012x3g/NoiPT8VSy8Oi6z.BpMeFbqFxe.zaJdPNRqzfQmMLQe4"
+					},
+					{
+						"contentType": "Sumário",
+						"defaultAttachment": false,
+						"sequenceNumber": 20,
+						"title": "Sumário",
+						"url": "https://oinovafibra.my.salesforce.com/sfc/p/3h000006f2Dc/a/3h0000012x3l/.MLA7jnw3i_5CozzP216kEwiShMYPoTVokXmdcND4hY"
+					}
+				],
+				"fixoAmount": 249.9
+			}
+		]
+	},
+	"segmentation": "regular",
+	"heroOffer": "BL_400MB_VAR_MAI23_NW_119_90_109_90",
+	"featuredCardOffer": null,
+	"loweredPriceOffer": null,
+	"isUnified": false,
+	"daccDiscount": 10,
+	"businessOffers": [
+		"BL_100MB_VAR_JUN23_NW_99_90_79_90",
+		"BL_400MB_VAR_MAI23_NW_119_90_109_90",
+		"BL_500MB_VAR_MAI23_NW_129_90_119_90"
+	],
+	"businessOffersPlus": [
+		"BL_700MB_AV_JUN23_1AP_EXTRA_MESH_169_90",
+		"BL_1GB_AV_SET23_1AP_EXTRA_FTTR_249_90"
+	],
+	"isPromotional": false,
+	"lowestSpeed": 100,
+	"salesforceLink": "https://oinovafibra.oi.com.br/fibra/s/",
+	"displayFibraXCard": false,
+	"whatsappButton": false,
+	"cityId": 4203,
+	"grupoDeMenus": ["regular-fibra"],
+	"addons": {
+		"OI_PLAY_TV": {
+			"code": "OI_PLAY_TV",
+			"name": "Oi Play TV",
+			"description": "Assista online aos canais de maior audiência da TV ao vivo, são 39 entre eles: Globo, Band, SBT, Globonews, Gloob, Sport TV, Viva, Multishow, MTV, GNT e Comedy Central. Acesso via app Oi Play ou oiplay.tv",
+			"amount": 69.9,
+			"attachments": [
+				{
+					"title": "productLogo",
+					"url": "https://oinovafibra--c.documentforce.com/sfc/dist/version/download/?oid=00D3h000006f2Dc&ids=0683h00000Fv03t&d=/a/3h000000JREY/tezDtCBJjF8f6349C02n5tjVzLg4Cev_DjlYlTKecpA&asPdf=false"
+				}
+			]
+		},
+		"SVOD_GLOBOPLAY": {
+			"code": "SVOD_GLOBOPLAY",
+			"name": "Globoplay",
+			"description": "Só no Globoplay você assiste séries originais e exclusivas, filmes, novelas, shows, documentários e muito mais, além de toda a programação da TV Globo ao vivo ou quando quiser.",
+			"amount": 24.9,
+			"attachments": [
+				{
+					"title": "productLogo",
+					"url": "https://oinovafibra--c.documentforce.com/sfc/dist/version/download/?oid=00D3h000006f2Dc&ids=0683h00000GeDlr&d=/a/3h000000KR5E/xi31l78oycllkySnedxmbgxJYInZvuDtUe2vsgDHSw0&asPdf=false"
+				}
+			]
+		},
+		"FIBRAX_MESH_1AP_AV": {
+			"code": "FIBRAX_MESH_1AP_AV",
+			"name": "1 ponto extra Wi-Fi 5",
+			"description": "Compatível com todas as ofertas, exceto Oi Fibra X Premium: Amplia a cobertura Wi-Fi através da instalação de mais 1 ponto Wi-Fi 5 com a tecnologia Mesh, formando uma rede inteligente e única para fornecer uma melhor experiência Wi-Fi dentro de casa.",
+			"amount": 40
+		},
+		"FIBRAX_MESH_2AP": {
+			"code": "FIBRAX_MESH_2AP",
+			"name": "2 pontos extras Wi-Fi 5",
+			"description": "Compatível com todas as ofertas, exceto Oi Fibra X Premium: Amplia a cobertura Wi-Fi através da instalação de mais 2 pontos Wi-Fi 5 com a tecnologia Mesh, formando uma rede inteligente e única pra fornecer uma melhor experiência Wi-Fi dentro de casa.",
+			"amount": 80
+		},
+		"SVA_SULAMERICA": {
+			"code": "SVA_SULAMERICA",
+			"name": "Oi Saúde",
+			"description": "Serviço de Telemedicina da SulAmérica Docway proporcionando conforto, rapidez e a segurança nos atendimentos médicos à distância.",
+			"amount": 19.9,
+			"attachments": [
+				{
+					"title": "ProductLogo",
+					"url": "https://oinovafibra.file.force.com/sfc/dist/version/download/?oid=00D3h000006f2Dc&ids=0683h00000JiXgn&d=2F3h0000012G7u%2FF7hsN3QmuUybouylIHi.SW.k0vVar7T4.eyMwTguaO8&asPdf=false"
+				}
+			]
+		},
+		"FIBRAX_FTTR_1AP_AV": {
+			"code": "FIBRAX_FTTR_1AP_AV",
+			"name": "1 ponto extra Wi-Fi 6 FTTR",
+			"description": "Compatível apenas com Oi Fibra X Premium: Amplia a cobertura Wi-Fi através da instalação de mais 1 ponto Wi-Fi 6 FTTR que, conectados aos demais pontos com fibra transparente e sem interferir na decoração da casa, levam a máxima velocidade e estabilidade.",
+			"amount": 40
+		},
+		"FIBRAX_FTTR_2AP": {
+			"code": "FIBRAX_FTTR_2AP",
+			"name": "2 pontos extras Wi-Fi 6 FTTR",
+			"description": "Compatível apenas com Oi Fibra X Premium: Amplia a cobertura Wi-Fi através da instalação de mais 2 pontos Wi-Fi 6 FTTR que, conectados ao roteador com fibra transparente e sem interferir na decoração da casa, levam a máxima velocidade e estabilidade.",
+			"amount": 80
+		},
+		"FIBRAX_FTTR_3AP": {
+			"code": "FIBRAX_FTTR_3AP",
+			"name": "3 pontos extras Wi-Fi 6 FTTR",
+			"description": "Compatível apenas com Oi Fibra X Premium: Amplia a cobertura Wi-Fi através da instalação de mais 3 pontos Wi-Fi 6 FTTR que, conectados aos demais pontos com fibra transparente e sem interferir na decoração da casa, levam a máxima velocidade e estabilidade.",
+			"amount": 120
+		},
+		"FIBRAX_FTTR_4AP": {
+			"code": "FIBRAX_FTTR_4AP",
+			"name": "4 pontos extras Wi-Fi 6 FTTR",
+			"description": "Compatível apenas com Oi Fibra X Premium: Amplia a cobertura Wi-Fi através da instalação de mais 4 pontos Wi-Fi 6 FTTR que, conectados aos demais pontos com fibra transparente e sem interferir na decoração da casa, levam a máxima velocidade e estabilidade.",
+			"amount": 160
+		},
+		"FIBRAX_FTTR_5AP": {
+			"code": "FIBRAX_FTTR_5AP",
+			"name": "5 pontos extras Wi-Fi 6 FTTR",
+			"description": "Compatível apenas com Oi Fibra X Premium: Amplia a cobertura Wi-Fi através da instalação de mais 5 pontos Wi-Fi 6 FTTR que, conectados aos demais pontos com fibra transparente e sem interferir na decoração da casa, levam a máxima velocidade e estabilidade.",
+			"amount": 200
+		},
+		"FIBRAX_FTTR_6AP": {
+			"code": "FIBRAX_FTTR_6AP",
+			"name": "6 pontos extras Wi-Fi 6 FTTR",
+			"description": "Compatível apenas com Oi Fibra X Premium: Amplia a cobertura Wi-Fi através da instalação de mais 6 pontos Wi-Fi 6 FTTR que, conectados aos demais pontos com fibra transparente e sem interferir na decoração da casa, levam a máxima velocidade e estabilidade.",
+			"amount": 240
+		},
+		"FIBRAX_FTTR_7AP": {
+			"code": "FIBRAX_FTTR_7AP",
+			"name": "7 pontos extras Wi-Fi 6 FTTR",
+			"description": "Compatível apenas com Oi Fibra X Premium: Amplia a cobertura Wi-Fi através da instalação de mais 7 pontos Wi-Fi 6 FTTR que, conectados aos demais pontos com fibra transparente e sem interferir na decoração da casa, levam a máxima velocidade e estabilidade.",
+			"amount": 280
+		},
+		"FIBRAX_FTTR_8AP": {
+			"code": "FIBRAX_FTTR_8AP",
+			"name": "8 pontos extras Wi-Fi 6 FTTR",
+			"description": "Compatível apenas com Oi Fibra X Premium: Amplia a cobertura Wi-Fi através da instalação de mais 8 pontos Wi-Fi 6 FTTR que, conectados aos demais pontos com fibra transparente e sem interferir na decoração da casa, levam a máxima velocidade e estabilidade.",
+			"amount": 320
+		},
+		"FIBRAX_FTTR_9AP": {
+			"code": "FIBRAX_FTTR_9AP",
+			"name": "9 pontos extras Wi-Fi 6 FTTR",
+			"description": "Compatível apenas com Oi Fibra X Premium: Amplia a cobertura Wi-Fi através da instalação de mais 9 pontos Wi-Fi 6 FTTR que, conectados aos demais pontos com fibra transparente e sem interferir na decoração da casa, levam a máxima velocidade e estabilidade.",
+			"amount": 360
+		},
+		"FIBRAX_FTTR_10AP": {
+			"code": "FIBRAX_FTTR_10AP",
+			"name": "10 pontos extras Wi-Fi 6 FTTR",
+			"description": "Compatível apenas com Oi Fibra X Premium: Amplia a cobertura Wi-Fi através da instalação de mais 10 pontos Wi-Fi 6 FTTR que, conectados aos demais pontos com fibra transparente e sem interferir na decoração da casa, levam a máxima velocidade e estabilidade.",
+			"amount": 400
+		},
+		"FIBRAX_FTTR_11AP": {
+			"code": "FIBRAX_FTTR_11AP",
+			"name": "11 pontos extras Wi-Fi 6 FTTR",
+			"description": "Compatível apenas com Oi Fibra X Premium: Amplia a cobertura Wi-Fi através da instalação de mais 11 pontos Wi-Fi 6 FTTR que, conectados aos demais pontos com fibra transparente e sem interferir na decoração da casa, levam a máxima velocidade e estabilidade.",
+			"amount": 440
+		},
+		"FIBRAX_FTTR_12AP": {
+			"code": "FIBRAX_FTTR_12AP",
+			"name": "12 pontos extras Wi-Fi 6 FTTR",
+			"description": "Compatível apenas com Oi Fibra X Premium: Amplia a cobertura Wi-Fi através da instalação de mais 12 pontos Wi-Fi 6 FTTR que, conectados aos demais pontos com fibra transparente e sem interferir na decoração da casa, levam a máxima velocidade e estabilidade.",
+			"amount": 480
+		},
+		"FIBRAX_FTTR_13AP": {
+			"code": "FIBRAX_FTTR_13AP",
+			"name": "13 pontos extras Wi-Fi 6 FTTR",
+			"description": "Compatível apenas com Oi Fibra X Premium: Amplia a cobertura Wi-Fi através da instalação de mais 13 pontos Wi-Fi 6 FTTR que, conectados aos demais pontos com fibra transparente e sem interferir na decoração da casa, levam a máxima velocidade e estabilidade.",
+			"amount": 520
+		},
+		"FIBRAX_FTTR_14AP": {
+			"code": "FIBRAX_FTTR_14AP",
+			"name": "14 pontos extras Wi-Fi 6 FTTR",
+			"description": "Compatível apenas com Oi Fibra X Premium: Amplia a cobertura Wi-Fi através da instalação de mais 14 pontos Wi-Fi 6 FTTR que, conectados aos demais pontos com fibra transparente e sem interferir na decoração da casa, levam a máxima velocidade e estabilidade.",
+			"amount": 560
+		},
+		"VOIP_FIXOILIMITADO_19_90": {
+			"code": "VOIP_FIXOILIMITADO_19_90",
+			"name": "Oi Fixo Fibra",
+			"description": "Ligações ilimitadas locais e DDD pra fixo e celular de qualquer operadora usando o código 31 ou 14.",
+			"amount": 19.9,
+			"attachments": [
+				{
+					"title": "Plano de Serviço",
+					"url": "https://oinovafibra.my.salesforce.com/sfc/p/3h000006f2Dc/a/3h000000szi4/rne7AhLDQti0v8cLss5WlFH1IqQg96tnlS.lHuPY_wg"
+				},
+				{
+					"title": "Contrato de prestação de serviço",
+					"url": "https://oinovafibra.my.salesforce.com/sfc/p/#3h000006f2Dc/a/3h000000pHxZ/3mAsIiVAr5ActlB69R6SSyobcKBM5gz6mYIy6oBTyiA"
+				}
+			]
+		}
+	}
 }
