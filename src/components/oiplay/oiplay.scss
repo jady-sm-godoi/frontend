@@ -14,9 +14,12 @@
   display: flex;
   flex-direction: column;
 }
+.oi_play_titulo_imagem{
+  margin-bottom: 40px;
+}
 
 .texto_oi_play>.texto_oi_play_heading {
-  font-size: 1.5rem;
+  font-size: 32px;
   line-height: 32px;
   font-family: 'Simplon BP';
   font-weight: 500;
@@ -87,10 +90,10 @@
   text-align: center;
   max-height: 56px;
   border-radius: 48px;
-  font-family: 'Simplon BP';
-  font-weight: 300px;
-  font-size: 1rem;
   border: 2px solid #a5e114;
+  font-family: 'Simplon BP';
+  font-weight: 500 !important; 
+  font-size: 1rem;
 }
 
 .botao_conheca_oi_play {
@@ -158,7 +161,7 @@
   }
 
   .texto_oi_play_basico_tv {
-    max-width: 540px;
+    max-width: 568px;
   }
 
   .botao_conheca_oi_play,
@@ -171,7 +174,7 @@
   }
 
   .texto_oi_play>h2:first-child {
-    max-width: 476px;
+    max-width: 634spx;
     margin-right: 20px;
   }
 

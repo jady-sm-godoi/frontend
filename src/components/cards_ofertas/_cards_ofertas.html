@@ -14,41 +14,19 @@
     </div>
 
     <div id='cards_ofertas_botoes' class="cards_ofertas_botoes">
-      <button
-       id="conteudoInternet" 
-       class="cards_ofertas_botao_internet_desktop selecionado"
-       data-button-type-offer="oi_fibra"
-       data-gtmButton="click_aba_internet_oi_fibra"
-       onclick="card_oferta_toggle_view(this);"
-       >Internet Oi Fibra</button>
-      <button 
-      id="conteudoInternet" 
-      class="cards_ofertas_botao_internet_mobile selecionado"
-      data-button-type-offer="oi_fibra"
-      data-gtmButton="click_aba_internet_oi_fibra"
-      onclick="card_oferta_toggle_view(this);"
-      >Internet</button>
-      <button 
-      id="conteudoTelefone" 
-      class="cards_ofertas_botao_telefone_desktop"
-      data-gtmButton="click_aba_telefone_fixo"
-      data-button-type-offer="oi_telefone"
-      onclick="card_oferta_toggle_view(this);"
-      >+ Telefone fixo</button>
-      <button 
-      id="conteudoTelefone" 
-      class="cards_ofertas_botao_telefone_mobile"
-      data-gtmButton="click_aba_telefone_fixo"
-      data-button-type-offer="oi_telefone"
-      onclick="card_oferta_toggle_view(this);"
-      >+ fixo</button>
-      <button 
-      id="conteudoTv" 
-      class="cards_ofertas_botao_tv"
-      data-gtmButton="click_aba_oi_play_tv"
-      data-button-type-offer="oi_playtv"
-      onclick="card_oferta_toggle_view(this);"
-      >+ Oi Play TV</button>
+      <button id="conteudoInternet" class="cards_ofertas_botao_internet_desktop selecionado"
+        data-button-type-offer="oi_fibra" data-gtmButton="click_aba_internet_oi_fibra"
+        onclick="card_oferta_toggle_view(this);">Internet Oi Fibra</button>
+      <button id="conteudoInternet" class="cards_ofertas_botao_internet_mobile selecionado"
+        data-button-type-offer="oi_fibra" data-gtmButton="click_aba_internet_oi_fibra"
+        onclick="card_oferta_toggle_view(this);">Internet</button>
+      <button id="conteudoTelefone" class="cards_ofertas_botao_telefone_desktop"
+        data-gtmButton="click_aba_telefone_fixo" data-button-type-offer="oi_telefone"
+        onclick="card_oferta_toggle_view(this);">+ Telefone fixo</button>
+      <button id="conteudoTelefone" class="cards_ofertas_botao_telefone_mobile" data-gtmButton="click_aba_telefone_fixo"
+        data-button-type-offer="oi_telefone" onclick="card_oferta_toggle_view(this);">+ fixo</button>
+      <button id="conteudoTv" class="cards_ofertas_botao_tv" data-gtmButton="click_aba_oi_play_tv"
+        data-button-type-offer="oi_playtv" onclick="card_oferta_toggle_view(this);">+ Oi Play TV</button>
     </div>
 
     <div id="cardsOfertas" class="cards_ofertas_container">
@@ -56,19 +34,25 @@
         <div class="cards_ofertas_card">
 
           <div class="cards_ofertas_titulo_container">
-          <h3 id="FirstCard" class="cards_ofertas_titulo">100 MEGA</h3>
-          <span class="cards_ofertas_titulo_span">+ telefone fixo</span>
+            <h4 class="cards_ofertas_titulo_oifibra">oi fibra <span
+                class="cards_ofertas_titulo_oifibra_destaque">start</span></h4>
+            <h3 id="FirstCard" class="cards_ofertas_titulo">100 MEGA</h3>
+            <span class="cards_ofertas_titulo_span">+ telefone fixo</span>
           </div>
 
           <div class="cards_ofertas_infos_container">
             <div class="cards_ofertas_infos_wifi">
-              <img width="20" height="20" loading="lazy" alt="Wi-Fi" title="Wi-Fi" class="cards_ofertas_icon_wifi_gray" src="../assets/images/icon-wifi.svg" />
-              <img width="20" height="20" loading="lazy" alt="Wi-Fi" title="Wi-Fi" class="cards_ofertas_icon_wifi_green" src="../assets/images/icon-wifi-green.svg" />
+              <img width="20" height="20" loading="lazy" alt="Wi-Fi" title="Wi-Fi" class="cards_ofertas_icon_wifi_gray"
+                src="../assets/images/icon-wifi.svg" />
+              <img width="20" height="20" loading="lazy" alt="Wi-Fi" title="Wi-Fi" class="cards_ofertas_icon_wifi_green"
+                src="../assets/images/icon-wifi-green.svg" />
               <span class="cards_ofertas_span_wifi">1 ponto <b>Wi-Fi 5</b></span>
             </div>
             <div class="cards_ofertas_infos_cartao">
-              <img width="20" height="20" loading="lazy" alt="Carteira de dineiro" title="Carteira de dineiro"  class="cards_ofertas_icon_wallet_gray" src="../assets/images/icon-wallet.svg" />
-              <img width="20" height="20" loading="lazy" alt="Carteira de dineiro" title="Carteira de dineiro"  class="cards_ofertas_icon_wallet_green" src="../assets/images/icon-wallet-green.svg" />
+              <img width="20" height="20" loading="lazy" alt="Carteira de dineiro" title="Carteira de dineiro"
+                class="cards_ofertas_icon_wallet_gray" src="../assets/images/icon-wallet.svg" />
+              <img width="20" height="20" loading="lazy" alt="Carteira de dineiro" title="Carteira de dineiro"
+                class="cards_ofertas_icon_wallet_green" src="../assets/images/icon-wallet-green.svg" />
               <span>No cartão de crédito</span>
             </div>
           </div>
@@ -87,430 +71,385 @@
 
           <details class="cards_ofertas_beneficios">
             <summary class="cards_ofertas_sumario">
-              <span class="cards_ofertas_span_beneficios"
-                >Benefícios incluídos</span
-              >
-              <img width="12" height="8" loading="lazy" alt="Seta para baixo" title="Seta para baixo" src="../assets/images/icon-arrow.svg" />
+              <span class="cards_ofertas_span_beneficios">Benefícios incluídos</span>
+              <img width="12" height="8" loading="lazy" alt="Seta para baixo" title="Seta para baixo"
+                src="../assets/images/icon-arrow.svg" />
             </summary>
             <ul class="cards_ofertas_ul_beneficios">
               <li class="cards_ofertas_li_beneficios">
-                
-                  <img class="cards_ofertas_picture_beneficios" src=../assets/images/icon-checkmark-light.svg alt=""
+
+                <img class="cards_ofertas_picture_beneficios" src=../assets/images/icon-checkmark-light.svg alt=""
                   loading="lazy" />
-               
-                <span class="cards_ofertas_span_beneficios_incluidos"
-                  >Oi Play Básico</span
-                >
+
+                <span class="cards_ofertas_span_beneficios_incluidos">Oi Play Básico</span>
               </li>
               <li class="cards_ofertas_li_beneficios">
-                <picture class="cards_ofertas_picture_beneficios"
-                  ><img width="16" height="16" src=../assets/images/icon-checkmark-light.svg alt="Marca de Seleção" title="Marca de Seleção"
-                  loading="lazy" />
+                <picture class="cards_ofertas_picture_beneficios"><img width="16" height="16"
+                    src=../assets/images/icon-checkmark-light.svg alt="Marca de Seleção" title="Marca de Seleção"
+                    loading="lazy" />
                 </picture>
-                <span class="cards_ofertas_span_beneficios_incluidos"
-                  >Oi Livros</span
-                >
+                <span class="cards_ofertas_span_beneficios_incluidos">Oi Livros</span>
               </li>
               <li class="cards_ofertas_li_beneficios">
-                <picture class="cards_ofertas_picture_beneficios"
-                  ><img width="16" height="16" src=../assets/images/icon-checkmark-light.svg alt="Marca de Seleção" title="Marca de Seleção"
-                  loading="lazy" />
+                <picture class="cards_ofertas_picture_beneficios"><img width="16" height="16"
+                    src=../assets/images/icon-checkmark-light.svg alt="Marca de Seleção" title="Marca de Seleção"
+                    loading="lazy" />
                 </picture>
-                <span class="cards_ofertas_span_beneficios_incluidos"
-                  >Oi News Meia Hora</span
-                >
+                <span class="cards_ofertas_span_beneficios_incluidos">Oi News Meia Hora</span>
               </li>
               <li class="cards_ofertas_li_beneficios">
-                <picture class="cards_ofertas_picture_beneficios"
-                  ><img width="16" height="16" src=../assets/images/icon-checkmark-light.svg alt="Marca de Seleção" title="Marca de Seleção"
-                  loading="lazy" />
+                <picture class="cards_ofertas_picture_beneficios"><img width="16" height="16"
+                    src=../assets/images/icon-checkmark-light.svg alt="Marca de Seleção" title="Marca de Seleção"
+                    loading="lazy" />
                 </picture>
-                <span class="cards_ofertas_span_beneficios_incluidos"
-                  >Oi News O Dia</span
-                >
+                <span class="cards_ofertas_span_beneficios_incluidos">Oi News O Dia</span>
               </li>
               <li class="cards_ofertas_li_beneficios">
-                <picture class="cards_ofertas_picture_beneficios"
-                  ><img width="16" height="16" src=../assets/images/icon-checkmark-light.svg alt="Marca de Seleção" title="Marca de Seleção"
-                  loading="lazy" />
+                <picture class="cards_ofertas_picture_beneficios"><img width="16" height="16"
+                    src=../assets/images/icon-checkmark-light.svg alt="Marca de Seleção" title="Marca de Seleção"
+                    loading="lazy" />
                 </picture>
-                <span class="cards_ofertas_span_beneficios_incluidos"
-                  >Oi News Isto É</span
-                >
+                <span class="cards_ofertas_span_beneficios_incluidos">Oi News Isto É</span>
               </li>
               <li class="cards_ofertas_li_beneficios">
-                <picture class="cards_ofertas_picture_beneficios"
-                  ><img width="16" height="16" src=../assets/images/icon-checkmark-light.svg alt="Marca de Seleção" title="Marca de Seleção"
-                  loading="lazy" />
+                <picture class="cards_ofertas_picture_beneficios"><img width="16" height="16"
+                    src=../assets/images/icon-checkmark-light.svg alt="Marca de Seleção" title="Marca de Seleção"
+                    loading="lazy" />
                 </picture>
-                <span class="cards_ofertas_span_beneficios_incluidos"
-                  >Oi Expert Remoto</span
-                >
+                <span class="cards_ofertas_span_beneficios_incluidos">Oi Expert Remoto</span>
               </li>
             </ul>
           </details>
 
           <div class="cards_ofertas_detalhes">
-            <img width="14" height="14" loading="lazy" alt="ícone do símbolo de um sinal de adição" title="ícone do símbolo de um sinal de adição"
-              src="../assets/images/icon-more.svg"
-            />
-            <span class="cards_fertas_span_detalhes">Detalhes da oferta</span>
+            <img width="14" height="14" loading="lazy" alt="ícone do símbolo de um sinal de adição"
+              title="ícone do símbolo de um sinal de adição" src="../assets/images/icon-more.svg" />
+            <span class="cards_fertas_span_detalhes">detalhes da oferta</span>
           </div>
         </div>
       </div>
-     <canvas class="cards_ofertas_borda cards_ofertas_borda_cinza"></canvas>
-    <div class="cards_ofertas_box">
-      <div class="cards_ofertas_card">
+      <canvas class="cards_ofertas_borda cards_ofertas_borda_cinza"></canvas>
+      <div class="cards_ofertas_box">
+        <div class="cards_ofertas_card">
 
-        <div class="cards_ofertas_titulo_container">
-          <h3 class="cards_ofertas_titulo">400 MEGA</h3>
-          <span class="cards_ofertas_titulo_span">+ telefone fixo</span>
+          <div class="cards_ofertas_titulo_container">
+            <h4 class="cards_ofertas_titulo_oifibra">oi fibra <span
+                class="cards_ofertas_titulo_oifibra_destaque">start</span></h4>
+            <h3 class="cards_ofertas_titulo">400 MEGA</h3>
+            <span class="cards_ofertas_titulo_span">+ telefone fixo</span>
           </div>
 
-        <div class="cards_ofertas_infos_container">
-          <div class="cards_ofertas_infos_wifi">
-            <img width="20" height="20" loading="lazy" alt="Wi-Fi" title="Wi-Fi" class="cards_ofertas_icon_wifi_gray" src="../assets/images/icon-wifi.svg" />
-            <img width="20" height="20" loading="lazy" alt="Wi-Fi" title="Wi-Fi" class="cards_ofertas_icon_wifi_green" src="../assets/images/icon-wifi-green.svg" />
-            <span class="cards_ofertas_span_wifi">1 ponto <b>Wi-Fi 5</b></span>
+          <div class="cards_ofertas_infos_container">
+            <div class="cards_ofertas_infos_wifi">
+              <img width="20" height="20" loading="lazy" alt="Wi-Fi" title="Wi-Fi" class="cards_ofertas_icon_wifi_gray"
+                src="../assets/images/icon-wifi.svg" />
+              <img width="20" height="20" loading="lazy" alt="Wi-Fi" title="Wi-Fi" class="cards_ofertas_icon_wifi_green"
+                src="../assets/images/icon-wifi-green.svg" />
+              <span class="cards_ofertas_span_wifi">1 ponto <b>Wi-Fi 5</b></span>
+            </div>
+            <div class="cards_ofertas_infos_cartao">
+              <img width="20" height="20" loading="lazy" alt="Carteira de dineiro" title="Carteira de dineiro"
+                class="cards_ofertas_icon_wallet_gray" src="../assets/images/icon-wallet.svg" />
+              <img width="20" height="20" loading="lazy" alt="Carteira de dineiro" title="Carteira de dineiro"
+                class="cards_ofertas_icon_wallet_green" src="../assets/images/icon-wallet-green.svg" />
+              <span>No cartão de crédito ou débito em conta</span>
+            </div>
           </div>
-          <div class="cards_ofertas_infos_cartao">
-            <img width="20" height="20" loading="lazy" alt="Carteira de dineiro" title="Carteira de dineiro"  class="cards_ofertas_icon_wallet_gray" src="../assets/images/icon-wallet.svg" />
-            <img width="20" height="20" loading="lazy" alt="Carteira de dineiro" title="Carteira de dineiro"  class="cards_ofertas_icon_wallet_green" src="../assets/images/icon-wallet-green.svg" />
-            <span>No cartão de crédito ou débito em conta</span>
+
+          <div class="cards_ofertas_preco">
+            <span class="cards_ofertas_simbolo">R$</span>
+            <span class="cards_ofertas_reais">99</span>
+
+            <div class="cards_ofertas_centavos">
+              <span class="cards_ofertas_centavos_numero">,90</span>
+              <span class="cards_ofertas_centavos_mes">/MÊS</span>
+            </div>
           </div>
-        </div>
 
-        <div class="cards_ofertas_preco">
-          <span class="cards_ofertas_simbolo">R$</span>
-          <span class="cards_ofertas_reais">99</span>
+          <a class="cards_ofertas_ancora">Eu quero</a>
 
-          <div class="cards_ofertas_centavos">
-            <span class="cards_ofertas_centavos_numero">,90</span>
-            <span class="cards_ofertas_centavos_mes">/MÊS</span>
+          <details class="cards_ofertas_beneficios">
+            <summary class="cards_ofertas_sumario">
+              <span class="cards_ofertas_span_beneficios">Benefícios incluídos</span>
+              <img width="12" height="8" loading="lazy" alt="Seta para baixo" title="Seta para baixo"
+                src="../assets/images/icon-arrow.svg" />
+            </summary>
+            <ul class="cards_ofertas_ul_beneficios">
+              <li class="cards_ofertas_li_beneficios">
+                <picture class="cards_ofertas_picture_beneficios"><img width="16" height="16"
+                    src=../assets/images/icon-checkmark-light.svg alt="Marca de Seleção" title="Marca de Seleção"
+                    loading="lazy" />
+                </picture>
+                <span class="cards_ofertas_span_beneficios_incluidos">Oi Play Básico</span>
+              </li>
+              <li class="cards_ofertas_li_beneficios">
+                <picture class="cards_ofertas_picture_beneficios"><img width="16" height="16"
+                    src=../assets/images/icon-checkmark-light.svg alt="Marca de Seleção" title="Marca de Seleção"
+                    loading="lazy" />
+                </picture>
+                <span class="cards_ofertas_span_beneficios_incluidos">Oi Livros</span>
+              </li>
+              <li class="cards_ofertas_li_beneficios">
+                <picture class="cards_ofertas_picture_beneficios"><img width="16" height="16"
+                    src=../assets/images/icon-checkmark-light.svg alt="Marca de Seleção" title="Marca de Seleção"
+                    loading="lazy" />
+                </picture>
+                <span class="cards_ofertas_span_beneficios_incluidos">Oi Notícias</span>
+              </li>
+              <li class="cards_ofertas_li_beneficios">
+                <picture class="cards_ofertas_picture_beneficios"><img width="16" height="16"
+                    src=../assets/images/icon-checkmark-light.svg alt="Marca de Seleção" title="Marca de Seleção"
+                    loading="lazy" />
+                </picture>
+                <span class="cards_ofertas_span_beneficios_incluidos">Oi Áudio Livros</span>
+              </li>
+              <li class="cards_ofertas_li_beneficios">
+                <picture class="cards_ofertas_picture_beneficios"><img width="16" height="16"
+                    src=../assets/images/icon-checkmark-light.svg alt="Marca de Seleção" title="Marca de Seleção"
+                    loading="lazy" />
+                </picture>
+                <span class="cards_ofertas_span_beneficios_incluidos">Oi News Meia Hora</span>
+              </li>
+              <li class="cards_ofertas_li_beneficios">
+                <picture class="cards_ofertas_picture_beneficios"><img width="16" height="16"
+                    src=../assets/images/icon-checkmark-light.svg alt="Marca de Seleção" title="Marca de Seleção"
+                    loading="lazy" />
+                </picture>
+                <span class="cards_ofertas_span_beneficios_incluidos">Oi News Marie Claire, Glamour e GQ</span>
+              </li>
+              <li class="cards_ofertas_li_beneficios">
+                <picture class="cards_ofertas_picture_beneficios"><img width="16" height="16"
+                    src=../assets/images/icon-checkmark-light.svg alt="Marca de Seleção" title="Marca de Seleção"
+                    loading="lazy" />
+                </picture>
+                <span class="cards_ofertas_span_beneficios_incluidos">Oi Expert Remoto</span>
+              </li>
+            </ul>
+          </details>
+
+          <div class="cards_ofertas_detalhes">
+            <img width="14" height="14" alt="ícone do símbolo de um sinal de adição"
+              title="ícone do símbolo de um sinal de adição" src="../assets/images/icon-more.svg" />
+            <span class="cards_fertas_span_detalhes">detalhes da oferta</span>
           </div>
-        </div>
-
-        <a class="cards_ofertas_ancora">Eu quero</a>
-
-        <details class="cards_ofertas_beneficios">
-          <summary class="cards_ofertas_sumario">
-            <span class="cards_ofertas_span_beneficios"
-              >Benefícios incluídos</span
-            >
-            <img width="12" height="8" loading="lazy" alt="Seta para baixo" title="Seta para baixo" src="../assets/images/icon-arrow.svg" />
-          </summary>
-          <ul class="cards_ofertas_ul_beneficios">
-            <li class="cards_ofertas_li_beneficios">
-              <picture class="cards_ofertas_picture_beneficios"
-                ><img width="16" height="16" src=../assets/images/icon-checkmark-light.svg alt="Marca de Seleção" title="Marca de Seleção"
-                loading="lazy" />
-              </picture>
-              <span class="cards_ofertas_span_beneficios_incluidos"
-                >Oi Play Básico</span
-              >
-            </li>
-            <li class="cards_ofertas_li_beneficios">
-              <picture class="cards_ofertas_picture_beneficios"
-                ><img width="16" height="16" src=../assets/images/icon-checkmark-light.svg alt="Marca de Seleção" title="Marca de Seleção"
-                loading="lazy" />
-              </picture>
-              <span class="cards_ofertas_span_beneficios_incluidos"
-                >Oi Livros</span
-              >
-            </li>
-            <li class="cards_ofertas_li_beneficios">
-              <picture class="cards_ofertas_picture_beneficios"
-                ><img width="16" height="16" src=../assets/images/icon-checkmark-light.svg alt="Marca de Seleção" title="Marca de Seleção"
-                loading="lazy" />
-              </picture>
-              <span class="cards_ofertas_span_beneficios_incluidos"
-                >Oi Notícias</span
-              >
-            </li>
-            <li class="cards_ofertas_li_beneficios">
-              <picture class="cards_ofertas_picture_beneficios"
-                ><img width="16" height="16" src=../assets/images/icon-checkmark-light.svg alt="Marca de Seleção" title="Marca de Seleção"
-                loading="lazy" />
-              </picture>
-              <span class="cards_ofertas_span_beneficios_incluidos"
-                >Oi Áudio Livros</span
-              >
-            </li>
-            <li class="cards_ofertas_li_beneficios">
-              <picture class="cards_ofertas_picture_beneficios"
-                ><img width="16" height="16" src=../assets/images/icon-checkmark-light.svg alt="Marca de Seleção" title="Marca de Seleção"
-                loading="lazy" />
-              </picture>
-              <span class="cards_ofertas_span_beneficios_incluidos"
-                >Oi News Meia Hora</span
-              >
-            </li>
-            <li class="cards_ofertas_li_beneficios">
-              <picture class="cards_ofertas_picture_beneficios"
-                ><img width="16" height="16" src=../assets/images/icon-checkmark-light.svg alt="Marca de Seleção" title="Marca de Seleção"
-                loading="lazy" />
-              </picture>
-              <span class="cards_ofertas_span_beneficios_incluidos"
-                >Oi News Marie Claire, Glamour e GQ</span
-              >
-            </li>
-            <li class="cards_ofertas_li_beneficios">
-              <picture class="cards_ofertas_picture_beneficios"
-                ><img width="16" height="16" src=../assets/images/icon-checkmark-light.svg alt="Marca de Seleção" title="Marca de Seleção"
-                loading="lazy" />
-              </picture>
-              <span class="cards_ofertas_span_beneficios_incluidos"
-                >Oi Expert Remoto</span
-              >
-            </li>
-          </ul>
-        </details>
-
-        <div class="cards_ofertas_detalhes">
-          <img width="14" height="14" alt="ícone do símbolo de um sinal de adição" title="ícone do símbolo de um sinal de adição" src="../assets/images/icon-more.svg" />
-          <span class="cards_fertas_span_detalhes">Detalhes da oferta</span>
         </div>
       </div>
-    </div>
-    <canvas class="cards_ofertas_borda cards_ofertas_borda_cinza"></canvas>
-    <div class="cards_ofertas_box">
-      <div class="cards_ofertas_card">
-        
-        <div class="cards_ofertas_titulo_container">
-          <h3 class="cards_ofertas_titulo">500 MEGA</h3>
-          <span class="cards_ofertas_titulo_span">+ telefone fixo</span>
+      <canvas class="cards_ofertas_borda cards_ofertas_borda_cinza"></canvas>
+      <div class="cards_ofertas_box">
+        <div class="cards_ofertas_card">
+
+          <div class="cards_ofertas_titulo_container">
+            <h3 class="cards_ofertas_titulo">500 MEGA</h3>
+            <span class="cards_ofertas_titulo_span">+ telefone fixo</span>
           </div>
 
-        <div class="cards_ofertas_infos_container">
-          <div class="cards_ofertas_infos_wifi">
-            <img width="20" height="20" loading="lazy" alt="Wi-Fi" title="Wi-Fi" class="cards_ofertas_icon_wifi_gray" src="../assets/images/icon-wifi.svg" />
-            <img width="20" height="20" loading="lazy" alt="Wi-Fi" title="Wi-Fi" class="cards_ofertas_icon_wifi_green" src="../assets/images/icon-wifi-green.svg" />
-            <span class="cards_ofertas_span_wifi">1 ponto <b>Wi-Fi 5</b></span>
+          <div class="cards_ofertas_infos_container">
+            <div class="cards_ofertas_infos_wifi">
+              <img width="20" height="20" loading="lazy" alt="Wi-Fi" title="Wi-Fi" class="cards_ofertas_icon_wifi_gray"
+                src="../assets/images/icon-wifi.svg" />
+              <img width="20" height="20" loading="lazy" alt="Wi-Fi" title="Wi-Fi" class="cards_ofertas_icon_wifi_green"
+                src="../assets/images/icon-wifi-green.svg" />
+              <span class="cards_ofertas_span_wifi">1 ponto <b>Wi-Fi 5</b></span>
+            </div>
+            <div class="cards_ofertas_infos_cartao">
+              <img width="20" height="20" loading="lazy" alt="Carteira de dineiro" title="Carteira de dineiro"
+                class="cards_ofertas_icon_wallet_gray" src="../assets/images/icon-wallet.svg" />
+              <img width="20" height="20" loading="lazy" alt="Carteira de dineiro" title="Carteira de dineiro"
+                class="cards_ofertas_icon_wallet_green" src="../assets/images/icon-wallet-green.svg" />
+              <span>No cartão de crédito ou débito em conta</span>
+            </div>
           </div>
-          <div class="cards_ofertas_infos_cartao">
-            <img width="20" height="20" loading="lazy" alt="Carteira de dineiro" title="Carteira de dineiro"  class="cards_ofertas_icon_wallet_gray" src="../assets/images/icon-wallet.svg" />
-            <img width="20" height="20" loading="lazy" alt="Carteira de dineiro" title="Carteira de dineiro"  class="cards_ofertas_icon_wallet_green" src="../assets/images/icon-wallet-green.svg" />
-            <span>No cartão de crédito ou débito em conta</span>
+
+          <div class="cards_ofertas_preco">
+            <span class="cards_ofertas_simbolo">R$</span>
+            <span class="cards_ofertas_reais">109</span>
+
+            <div class="cards_ofertas_centavos">
+              <span class="cards_ofertas_centavos_numero">,90</span>
+              <span class="cards_ofertas_centavos_mes">/MÊS</span>
+            </div>
           </div>
-        </div>
 
-        <div class="cards_ofertas_preco">
-          <span class="cards_ofertas_simbolo">R$</span>
-          <span class="cards_ofertas_reais">109</span>
+          <a class="cards_ofertas_ancora">Eu quero</a>
 
-          <div class="cards_ofertas_centavos">
-            <span class="cards_ofertas_centavos_numero">,90</span>
-            <span class="cards_ofertas_centavos_mes">/MÊS</span>
+          <details class="cards_ofertas_beneficios">
+            <summary class="cards_ofertas_sumario">
+              <span class="cards_ofertas_span_beneficios">Benefícios incluídos</span>
+              <img width="12" height="8" loading="lazy" alt="Seta para baixo" title="Seta para baixo"
+                src="../assets/images/icon-arrow.svg" />
+            </summary>
+            <ul class="cards_ofertas_ul_beneficios">
+              <li class="cards_ofertas_li_beneficios">
+                <picture class="cards_ofertas_picture_beneficios"><img width="16" height="16"
+                    src=../assets/images/icon-checkmark-light.svg alt="Marca de Seleção" title="Marca de Seleção"
+                    loading="lazy" />
+                </picture>
+                <span class="cards_ofertas_span_beneficios_incluidos">Oi Play Básico</span>
+              </li>
+              <li class="cards_ofertas_li_beneficios">
+                <picture class="cards_ofertas_picture_beneficios"><img width="16" height="16"
+                    src=../assets/images/icon-checkmark-light.svg alt="Marca de Seleção" title="Marca de Seleção"
+                    loading="lazy" />
+                </picture>
+                <span class="cards_ofertas_span_beneficios_incluidos">Oi Livros</span>
+              </li>
+              <li class="cards_ofertas_li_beneficios">
+                <picture class="cards_ofertas_picture_beneficios"><img width="16" height="16"
+                    src=../assets/images/icon-checkmark-light.svg alt="Marca de Seleção" title="Marca de Seleção"
+                    loading="lazy" />
+                </picture>
+                <span class="cards_ofertas_span_beneficios_incluidos">Oi Notícias</span>
+              </li>
+              <li class="cards_ofertas_li_beneficios">
+                <picture class="cards_ofertas_picture_beneficios"><img width="16" height="16"
+                    src=../assets/images/icon-checkmark-light.svg alt="Marca de Seleção" title="Marca de Seleção"
+                    loading="lazy" />
+                </picture>
+                <span class="cards_ofertas_span_beneficios_incluidos">Oi Áudio Livros</span>
+              </li>
+              <li class="cards_ofertas_li_beneficios">
+                <picture class="cards_ofertas_picture_beneficios"><img width="16" height="16"
+                    src=../assets/images/icon-checkmark-light.svg alt="Marca de Seleção" title="Marca de Seleção"
+                    loading="lazy" />
+                </picture>
+                <span class="cards_ofertas_span_beneficios_incluidos">Oi News Meia Hora</span>
+              </li>
+              <li class="cards_ofertas_li_beneficios">
+                <picture class="cards_ofertas_picture_beneficios"><img width="16" height="16"
+                    src=../assets/images/icon-checkmark-light.svg alt="Marca de Seleção" title="Marca de Seleção"
+                    loading="lazy" />
+                </picture>
+                <span class="cards_ofertas_span_beneficios_incluidos">Oi News Estadão</span>
+              </li>
+              <li class="cards_ofertas_li_beneficios">
+                <picture class="cards_ofertas_picture_beneficios"><img width="16" height="16"
+                    src=../assets/images/icon-checkmark-light.svg alt="Marca de Seleção" title="Marca de Seleção"
+                    loading="lazy" />
+                </picture>
+                <span class="cards_ofertas_span_beneficios_incluidos">Oi News Isto É</span>
+              </li>
+              <li class="cards_ofertas_li_beneficios">
+                <picture class="cards_ofertas_picture_beneficios"><img width="16" height="16"
+                    src=../assets/images/icon-checkmark-light.svg alt="Marca de Seleção" title="Marca de Seleção"
+                    loading="lazy" />
+                </picture>
+                <span class="cards_ofertas_span_beneficios_incluidos">Oi Expert Remoto</span>
+              </li>
+            </ul>
+          </details>
+
+          <div class="cards_ofertas_detalhes">
+            <img width="14" height="14" alt="ícone do símbolo de um sinal de adição"
+              title="ícone do símbolo de um sinal de adição" src="../assets/images/icon-more.svg" />
+            <span class="cards_fertas_span_detalhes">detalhes da oferta</span>
           </div>
-        </div>
-
-        <a class="cards_ofertas_ancora">Eu quero</a>
-
-        <details class="cards_ofertas_beneficios">
-          <summary class="cards_ofertas_sumario">
-            <span class="cards_ofertas_span_beneficios"
-              >Benefícios incluídos</span
-            >
-            <img width="12" height="8" loading="lazy" alt="Seta para baixo" title="Seta para baixo" src="../assets/images/icon-arrow.svg" />
-          </summary>
-          <ul class="cards_ofertas_ul_beneficios">
-            <li class="cards_ofertas_li_beneficios">
-              <picture class="cards_ofertas_picture_beneficios"
-                ><img width="16" height="16" src=../assets/images/icon-checkmark-light.svg alt="Marca de Seleção" title="Marca de Seleção"
-                loading="lazy" />
-              </picture>
-              <span class="cards_ofertas_span_beneficios_incluidos"
-                >Oi Play Básico</span
-              >
-            </li>
-            <li class="cards_ofertas_li_beneficios">
-              <picture class="cards_ofertas_picture_beneficios"
-                ><img width="16" height="16" src=../assets/images/icon-checkmark-light.svg alt="Marca de Seleção" title="Marca de Seleção"
-                loading="lazy" />
-              </picture>
-              <span class="cards_ofertas_span_beneficios_incluidos"
-                >Oi Livros</span
-              >
-            </li>
-            <li class="cards_ofertas_li_beneficios">
-              <picture class="cards_ofertas_picture_beneficios"
-                ><img width="16" height="16" src=../assets/images/icon-checkmark-light.svg alt="Marca de Seleção" title="Marca de Seleção"
-                loading="lazy" />
-              </picture>
-              <span class="cards_ofertas_span_beneficios_incluidos"
-                >Oi Notícias</span
-              >
-            </li>
-            <li class="cards_ofertas_li_beneficios">
-              <picture class="cards_ofertas_picture_beneficios"
-                ><img width="16" height="16" src=../assets/images/icon-checkmark-light.svg alt="Marca de Seleção" title="Marca de Seleção"
-                loading="lazy" />
-              </picture>
-              <span class="cards_ofertas_span_beneficios_incluidos"
-                >Oi Áudio Livros</span
-              >
-            </li>
-            <li class="cards_ofertas_li_beneficios">
-              <picture class="cards_ofertas_picture_beneficios"
-                ><img width="16" height="16" src=../assets/images/icon-checkmark-light.svg alt="Marca de Seleção" title="Marca de Seleção"
-                loading="lazy" />
-              </picture>
-              <span class="cards_ofertas_span_beneficios_incluidos"
-                >Oi News Meia Hora</span
-              >
-            </li>
-            <li class="cards_ofertas_li_beneficios">
-              <picture class="cards_ofertas_picture_beneficios"
-                ><img width="16" height="16" src=../assets/images/icon-checkmark-light.svg alt="Marca de Seleção" title="Marca de Seleção"
-                loading="lazy" />
-              </picture>
-              <span class="cards_ofertas_span_beneficios_incluidos"
-                >Oi News Estadão</span
-              >
-            </li>
-            <li class="cards_ofertas_li_beneficios">
-              <picture class="cards_ofertas_picture_beneficios"
-                ><img width="16" height="16" src=../assets/images/icon-checkmark-light.svg alt="Marca de Seleção" title="Marca de Seleção"
-                loading="lazy" />
-              </picture>
-              <span class="cards_ofertas_span_beneficios_incluidos"
-                >Oi News Isto É</span
-              >
-            </li>
-            <li class="cards_ofertas_li_beneficios">
-              <picture class="cards_ofertas_picture_beneficios"
-                ><img width="16" height="16" src=../assets/images/icon-checkmark-light.svg alt="Marca de Seleção" title="Marca de Seleção"
-                loading="lazy" />
-              </picture>
-              <span class="cards_ofertas_span_beneficios_incluidos"
-                >Oi Expert Remoto</span
-              >
-            </li>
-          </ul>
-        </details>
-
-        <div class="cards_ofertas_detalhes">
-          <img width="14" height="14" alt="ícone do símbolo de um sinal de adição" title="ícone do símbolo de um sinal de adição" src="../assets/images/icon-more.svg" />
-          <span class="cards_fertas_span_detalhes">Detalhes da oferta</span>
         </div>
       </div>
-    </div>
-    <canvas class="cards_ofertas_borda"></canvas>
-    <div class="cards_ofertas_box">
-      <div class="cards_ofertas_card cards_ofertas_oi_expert">
+      <canvas class="cards_ofertas_borda"></canvas>
+      <div class="cards_ofertas_box">
+        <div class="cards_ofertas_card cards_ofertas_oi_expert">
 
-        <div class="cards_ofertas_titulo_container">
-          <h3 class="cards_ofertas_titulo cards_ofertas_oi_expert">700 MEGA</h3>
-          <span class="cards_ofertas_titulo_span cards_ofertas_oi_expert">+ telefone fixo</span>
+          <div class="cards_ofertas_titulo_container">
+            <h3 class="cards_ofertas_titulo cards_ofertas_oi_expert">700 MEGA</h3>
+            <span class="cards_ofertas_titulo_span cards_ofertas_oi_expert">+ telefone fixo</span>
           </div>
 
-        <div class="cards_ofertas_infos_container cards_ofertas_oi_expert">
-          <div class="cards_ofertas_infos_wifi cards_ofertas_oi_expert">
-            <img width="20" height="20" loading="lazy" alt="Wi-Fi" title="Wi-Fi" class="cards_ofertas_img_wifi" src="../assets/images/icon-wifi.svg" />
-            <span class="cards_ofertas_span_wifi cards_ofertas_oi_expert">2 pontos <b>Wi-Fi 5</b></span>
+          <div class="cards_ofertas_infos_container cards_ofertas_oi_expert">
+            <div class="cards_ofertas_infos_wifi cards_ofertas_oi_expert">
+              <img width="20" height="20" loading="lazy" alt="Wi-Fi" title="Wi-Fi" class="cards_ofertas_img_wifi"
+                src="../assets/images/icon-wifi.svg" />
+              <span class="cards_ofertas_span_wifi cards_ofertas_oi_expert">2 pontos <b>Wi-Fi 5</b></span>
+            </div>
+            <div class="cards_ofertas_infos_cartao cards_ofertas_oi_expert">
+              <img width="24" height="24" loading="lazy" alt="ícone do símbolo de uma estrela"
+                title="ícone do símbolo de uma estrela" src="../assets/images/icon-star.svg" />
+              <span class="cards_ofertas_span_wifi cards_ofertas_oi_expert">Oi Expert <b>Pro Care</b></span>
+            </div>
           </div>
-          <div class="cards_ofertas_infos_cartao cards_ofertas_oi_expert">
-            <img width="24" height="24" loading="lazy" alt="ícone do símbolo de uma estrela" title="ícone do símbolo de uma estrela" src="../assets/images/icon-star.svg" />
-            <span class="cards_ofertas_span_wifi cards_ofertas_oi_expert">Oi Expert <b>Pro Care</b></span>
+
+          <div class="cards_ofertas_preco cards_ofertas_oi_expert">
+            <span class="cards_ofertas_simbolo cards_ofertas_oi_expert">R$</span>
+            <span class="cards_ofertas_reais cards_ofertas_oi_expert">169</span>
+
+            <div class="cards_ofertas_centavos cards_ofertas_oi_expert">
+              <span class="cards_ofertas_centavos_numero cards_ofertas_oi_expert">,90</span>
+              <span class="cards_ofertas_centavos_mes cards_ofertas_oi_expert">/MÊS</span>
+            </div>
           </div>
-        </div>
 
-        <div class="cards_ofertas_preco cards_ofertas_oi_expert">
-          <span class="cards_ofertas_simbolo cards_ofertas_oi_expert">R$</span>
-          <span class="cards_ofertas_reais cards_ofertas_oi_expert">169</span>
+          <a class="cards_ofertas_ancora">Eu quero</a>
 
-          <div class="cards_ofertas_centavos cards_ofertas_oi_expert">
-            <span class="cards_ofertas_centavos_numero cards_ofertas_oi_expert">,90</span>
-            <span class="cards_ofertas_centavos_mes cards_ofertas_oi_expert">/MÊS</span>
+          <details class="cards_ofertas_beneficios cards_ofertas_oi_expert">
+            <summary class="cards_ofertas_sumario cards_ofertas_oi_expert">
+              <span class="cards_ofertas_span_beneficios cards_ofertas_oi_expert">Benefícios incluídos</span>
+              <img width="12" height="8" loading="lazy" alt="Seta para baixo" title="Seta para baixo"
+                src="../assets/images/icon-arrow-green.svg" />
+            </summary>
+            <ul class="cards_ofertas_ul_beneficios cards_ofertas_oi_expert">
+              <li class="cards_ofertas_li_beneficios cards_ofertas_oi_expert">
+                <picture class="cards_ofertas_picture_beneficios cards_ofertas_oi_expert"><img width="16" height="16"
+                    src=../assets/images/icon-checkmark-light.svg alt="Marca de Seleção" title="Marca de Seleção"
+                    loading="lazy" />
+                </picture>
+                <span class="cards_ofertas_span_beneficios_incluidos cards_ofertas_oi_expert">Oi Play Básico</span>
+              </li>
+              <li class="cards_ofertas_li_beneficios cards_ofertas_oi_expert">
+                <picture class="cards_ofertas_picture_beneficios cards_ofertas_oi_expert"><img width="16" height="16"
+                    src=../assets/images/icon-checkmark-light.svg alt="Marca de Seleção" title="Marca de Seleção"
+                    loading="lazy" />
+                </picture>
+                <span class="cards_ofertas_span_beneficios_incluidos cards_ofertas_oi_expert">Oi Livros</span>
+              </li>
+              <li class="cards_ofertas_li_beneficios cards_ofertas_oi_expert">
+                <picture class="cards_ofertas_picture_beneficios cards_ofertas_oi_expert"><img width="16" height="16"
+                    src=../assets/images/icon-checkmark-light.svg alt="Marca de Seleção" title="Marca de Seleção"
+                    loading="lazy" />
+                </picture>
+                <span class="cards_ofertas_span_beneficios_incluidos cards_ofertas_oi_expert">Oi Notícias</span>
+              </li>
+              <li class="cards_ofertas_li_beneficios cards_ofertas_oi_expert">
+                <picture class="cards_ofertas_picture_beneficios cards_ofertas_oi_expert"><img width="16" height="16"
+                    src=../assets/images/icon-checkmark-light.svg alt="Marca de Seleção" title="Marca de Seleção"
+                    loading="lazy" />
+                </picture>
+                <span class="cards_ofertas_span_beneficios_incluidos cards_ofertas_oi_expert">Oi Áudio Livros</span>
+              </li>
+              <li class="cards_ofertas_li_beneficios cards_ofertas_oi_expert">
+                <picture class="cards_ofertas_picture_beneficios cards_ofertas_oi_expert"><img width="16" height="16"
+                    src=../assets/images/icon-checkmark-light.svg alt="Marca de Seleção" title="Marca de Seleção"
+                    loading="lazy" />
+                </picture>
+                <span class="cards_ofertas_span_beneficios_incluidos cards_ofertas_oi_expert">Oi News Meia Hora</span>
+              </li>
+              <li class="cards_ofertas_li_beneficios cards_ofertas_oi_expert">
+                <picture class="cards_ofertas_picture_beneficios cards_ofertas_oi_expert"><img width="16" height="16"
+                    src=../assets/images/icon-checkmark-light.svg alt="Marca de Seleção" title="Marca de Seleção"
+                    loading="lazy" />
+                </picture>
+                <span class="cards_ofertas_span_beneficios_incluidos cards_ofertas_oi_expert">Oi News Marie Claire,
+                  Glamour e GQ</span>
+              </li>
+              <li class="cards_ofertas_li_beneficios cards_ofertas_oi_expert">
+                <picture class="cards_ofertas_picture_beneficios cards_ofertas_oi_expert"><img width="16" height="16"
+                    src=../assets/images/icon-checkmark-light.svg alt="Marca de Seleção" title="Marca de Seleção"
+                    loading="lazy" />
+                </picture>
+                <span class="cards_ofertas_span_beneficios_incluidos cards_ofertas_oi_expert">Oi Expert Remoto</span>
+              </li>
+            </ul>
+          </details>
+
+          <div class="cards_ofertas_detalhes cards_ofertas_oi_expert">
+            <img width="14" height="14" alt="ícone do símbolo de um sinal de adição"
+              title="ícone do símbolo de um sinal de adição" src="../assets/images/icon-plus-green.svg" />
+            <span class="cards_fertas_span_detalhes cards_ofertas_oi_expert">detalhes da oferta</span>
           </div>
-        </div>
-
-        <a class="cards_ofertas_ancora">Eu quero</a>
-
-        <details class="cards_ofertas_beneficios cards_ofertas_oi_expert">
-          <summary class="cards_ofertas_sumario cards_ofertas_oi_expert">
-            <span class="cards_ofertas_span_beneficios cards_ofertas_oi_expert"
-              >Benefícios incluídos</span
-            >
-            <img width="12" height="8" loading="lazy" alt="Seta para baixo" title="Seta para baixo" src="../assets/images/icon-arrow-green.svg"/>
-          </summary>
-          <ul class="cards_ofertas_ul_beneficios cards_ofertas_oi_expert">
-            <li class="cards_ofertas_li_beneficios cards_ofertas_oi_expert">
-              <picture class="cards_ofertas_picture_beneficios cards_ofertas_oi_expert"
-                ><img width="16" height="16" src=../assets/images/icon-checkmark-light.svg alt="Marca de Seleção" title="Marca de Seleção"
-                loading="lazy" />
-              </picture>
-              <span class="cards_ofertas_span_beneficios_incluidos cards_ofertas_oi_expert"
-                >Oi Play Básico</span
-              >
-            </li>
-            <li class="cards_ofertas_li_beneficios cards_ofertas_oi_expert">
-              <picture class="cards_ofertas_picture_beneficios cards_ofertas_oi_expert"
-                ><img width="16" height="16" src=../assets/images/icon-checkmark-light.svg alt="Marca de Seleção" title="Marca de Seleção"
-                loading="lazy" />
-              </picture>
-              <span class="cards_ofertas_span_beneficios_incluidos cards_ofertas_oi_expert"
-                >Oi Livros</span
-              >
-            </li>
-            <li class="cards_ofertas_li_beneficios cards_ofertas_oi_expert">
-              <picture class="cards_ofertas_picture_beneficios cards_ofertas_oi_expert"
-                ><img width="16" height="16" src=../assets/images/icon-checkmark-light.svg alt="Marca de Seleção" title="Marca de Seleção"
-                loading="lazy" />
-              </picture>
-              <span class="cards_ofertas_span_beneficios_incluidos cards_ofertas_oi_expert"
-                >Oi Notícias</span
-              >
-            </li>
-            <li class="cards_ofertas_li_beneficios cards_ofertas_oi_expert">
-              <picture class="cards_ofertas_picture_beneficios cards_ofertas_oi_expert"
-                ><img width="16" height="16" src=../assets/images/icon-checkmark-light.svg alt="Marca de Seleção" title="Marca de Seleção"
-                loading="lazy" />
-              </picture>
-              <span class="cards_ofertas_span_beneficios_incluidos cards_ofertas_oi_expert"
-                >Oi Áudio Livros</span
-              >
-            </li>
-            <li class="cards_ofertas_li_beneficios cards_ofertas_oi_expert">
-              <picture class="cards_ofertas_picture_beneficios cards_ofertas_oi_expert"
-                ><img width="16" height="16" src=../assets/images/icon-checkmark-light.svg alt="Marca de Seleção" title="Marca de Seleção"
-                loading="lazy" />
-              </picture>
-              <span class="cards_ofertas_span_beneficios_incluidos cards_ofertas_oi_expert"
-                >Oi News Meia Hora</span
-              >
-            </li>
-            <li class="cards_ofertas_li_beneficios cards_ofertas_oi_expert">
-              <picture class="cards_ofertas_picture_beneficios cards_ofertas_oi_expert"
-                ><img width="16" height="16" src=../assets/images/icon-checkmark-light.svg alt="Marca de Seleção" title="Marca de Seleção"
-                loading="lazy" />
-              </picture>
-              <span class="cards_ofertas_span_beneficios_incluidos cards_ofertas_oi_expert"
-                >Oi News Marie Claire, Glamour e GQ</span
-              >
-            </li>
-            <li class="cards_ofertas_li_beneficios cards_ofertas_oi_expert">
-              <picture class="cards_ofertas_picture_beneficios cards_ofertas_oi_expert"
-                ><img width="16" height="16" src=../assets/images/icon-checkmark-light.svg alt="Marca de Seleção" title="Marca de Seleção"
-                loading="lazy" />
-              </picture>
-              <span class="cards_ofertas_span_beneficios_incluidos cards_ofertas_oi_expert"
-                >Oi Expert Remoto</span
-              >
-            </li>
-          </ul>
-        </details>
-
-        <div class="cards_ofertas_detalhes cards_ofertas_oi_expert">
-          <img width="14" height="14" alt="ícone do símbolo de um sinal de adição" title="ícone do símbolo de um sinal de adição" src="../assets/images/icon-plus-green.svg"/>
-          <span class="cards_fertas_span_detalhes cards_ofertas_oi_expert">Detalhes da oferta</span>
         </div>
       </div>
-    </div>
-    <canvas class="cards_ofertas_borda"></canvas>
+      <canvas class="cards_ofertas_borda"></canvas>
 
-    <a href="#" class="cards_ofertas_ancora_saiba_mais">Saiba mais sobre os benefícios</a>
-    
+      <a href="#" class="cards_ofertas_ancora_saiba_mais">Saiba mais sobre os benefícios</a>
+
     </div>
   </div>
 
@@ -531,37 +470,41 @@
           </div>
           <div class="cards_ofertas_icons_box">
             <div class="cards_ofertas_icons_img">
-              <img width="25" height="24" loading="lazy" alt="Telefone" title="Telefone" src="../assets/images/icon-telefone.svg">
+              <img width="25" height="24" loading="lazy" alt="Telefone" title="Telefone"
+                src="../assets/images/icon-telefone.svg">
+            </div>
+            <label class="cards_ofertas_icons_text">Fixo</label>
           </div>
-        <label class="cards_ofertas_icons_text">Fixo</label>
-        </div>
-        <div class="cards_ofertas_icons_box">
-        <div class="cards_ofertas_icons_img">
-          <img width="25" height="24" loading="lazy" alt="Avatar com telefone" title="Avatar com telefone" src="../assets/images/icon-suporte.svg">
-        </div>
-        <label class="cards_ofertas_icons_text">Suporte</label>
-        </div>
-        <div class="cards_ofertas_icons_box">
-          <div class="cards_ofertas_icons_img">
-            <img width="25" height="25" loading="lazy" alt="Presente embrulhado" title="Presente embrulhado" src="../assets/images/icon-presente.svg">
+          <div class="cards_ofertas_icons_box">
+            <div class="cards_ofertas_icons_img">
+              <img width="25" height="24" loading="lazy" alt="Avatar com telefone" title="Avatar com telefone"
+                src="../assets/images/icon-suporte.svg">
+            </div>
+            <label class="cards_ofertas_icons_text">Suporte</label>
           </div>
-          <label class="cards_ofertas_icons_text">Conteúdos</label>
+          <div class="cards_ofertas_icons_box">
+            <div class="cards_ofertas_icons_img">
+              <img width="25" height="25" loading="lazy" alt="Presente embrulhado" title="Presente embrulhado"
+                src="../assets/images/icon-presente.svg">
+            </div>
+            <label class="cards_ofertas_icons_text">Conteúdos</label>
+          </div>
         </div>
-        </div>
-        <a class="cards_ofertas_meucombo_ancora" href="https://oinovafibra.oi.com.br/fibra/s/?bundle=true">Montar meu combo</a>
-        </div>
+        <a class="cards_ofertas_meucombo_ancora" href="https://oinovafibra.oi.com.br/fibra/s/?bundle=true">Montar meu
+          combo</a>
       </div>
+    </div>
     </div>
     <dialog class="cards_ofertas_modal">
       <div class="cards_ofertas_modal_container">
         <button class="cards_ofertas_close_modal_button">&#x2715</button>
-        <span class="cards_ofertas_modal_name">Detalhes da oferta</span>
+        <span class="cards_ofertas_modal_name">detalhes da oferta</span>
         <div class="cards_ofertas_modal_title">
           <!-- <span class="cards_ofertas_modal_oferta"
             >Internet Oi Fibra X: 700 MEGA</span
           > -->
         </div>
-        
+
         <div class="cards_ofertas_modal_oferta_subtitle_description">
           <!-- <span class="cards_ofertas_modal_oferta_description"
             >700 MEGA com 2 pontos Wi-Fi 5 + Oi Expert Care R$ 199,90/mês</span
@@ -575,7 +518,7 @@
         <canvas class="cards_ofertas_modal_first_line"></canvas>
 
         <!-- <ul class="cards_ofertas_modal_lista"> -->
-          <!-- <li class="cards_ofertas_modal_item">
+        <!-- <li class="cards_ofertas_modal_item">
             <span class="cards_ofertas_modal_item_title">Conexão & Caring</span>
             <p class="cards_ofertas_modal_item_paragraph">
               Solução pra quem quer
