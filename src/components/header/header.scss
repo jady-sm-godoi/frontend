@@ -85,6 +85,8 @@
 .elUl {
 	margin: 8px 0;
 	padding-bottom: 250px;
+	list-style: none;
+	gap: 16px;
 	&:hover {
 		color: #8cc272de;
 		opacity: 0.9;
@@ -93,7 +95,8 @@
 	overflow-y: auto;
 	display: flex;
 	flex-direction: column;
-	height: 100%;
+	align-items: center;
+	height: calc(100% - 86px);
 }
 
 .header-modal_input-content {
@@ -425,7 +428,7 @@
 
 @media screen and (min-width: 1364px) {
 	.elUl {
-		width: 1223px;
+	
 		margin: 8px auto;
 	}
 }
