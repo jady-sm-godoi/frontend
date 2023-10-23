@@ -1,18 +1,18 @@
 // Constants
 const offerProps = {
-    oi_fibra: {
-      amount: 0,
-      offersType: "",
-    },
-    oi_telefone: {
-      amount: 0,
-      offersType: "+ telefone fixo",
-    },
-    oi_playtv: {
-      amount: 0,
-      offersType: "+ oi play tv",
-    },
+  oi_fibra: {
+    amount: 0,
+    offersType: "",
   },
+  oi_telefone: {
+    amount: 0,
+    offersType: "+ telefone fixo",
+  },
+  oi_playtv: {
+    amount: 0,
+    offersType: "+ oi play tv",
+  },
+},
   dataOffersDetails = {
     daccDiscount: null,
   },
@@ -334,11 +334,34 @@ function renderCards(offers, props) {
 
   offers.forEach((element, index) => {
     if (element.attachments) {
+
+      const divCardTituloFibra = document.createElement("div");
+      divCardTituloFibra.classList.add("cards_ofertas_titulo_fibra");
+      const divCard = document.createElement("div");
+      divCard.classList.add("cards_ofertas_titulo_fibra");
+      divCardTituloFibra.classList.add(
+        'cards_ofertas_titulo_fibra'
+      )
+
+      const h4Titulo = document.createElement('h4')
+      h4Titulo.classList.add('cards_ofertas_titulo_fibra')
+      spanWifi.innerHTML = `oi fibra`
+
+      const spanTituloFibra = document.createElement('span')
+      spanTituloFibra.id = 'cards_ofertas_fibra'
+      spanTituloFibra.innerText = `start`
+      spanTituloFibra.classList.add('cards_ofertas_titulo_fibra_span')
+
+      // Finaliza Titulo Oi Fibra
+
+
+
+
       const cardBlack = element.childProducts[0].velocidadeDownload >= 700;
 
       const divCardBox = document.createElement("div");
       divCardBox.classList.add("cards_ofertas_box");
-      const divCard = document.createElement("div");
+      divCard = document.createElement("div");
       divCard.classList.add("cards_ofertas_card");
       const divTituloContainer = document.createElement("div");
       divTituloContainer.classList.add("cards_ofertas_titulo_container");
@@ -474,18 +497,18 @@ function renderCards(offers, props) {
 
       // analytics
       props.offersType == "" &&
-      (verifyGb >= 1
-        ? (ancoraCard.setAttribute("onclick",`appendDataLayer('clicou','b2c_nova_fibra','btn_${verifyGb}_${gbOrMb}')`))
-        : (ancoraCard.setAttribute("onclick",`appendDataLayer('clicou','b2c_nova_fibra','btn_${element.childProducts[0].velocidadeDownload}_${gbOrMb}')`)));
+        (verifyGb >= 1
+          ? (ancoraCard.setAttribute("onclick", `appendDataLayer('clicou','b2c_nova_fibra','btn_${verifyGb}_${gbOrMb}')`))
+          : (ancoraCard.setAttribute("onclick", `appendDataLayer('clicou','b2c_nova_fibra','btn_${element.childProducts[0].velocidadeDownload}_${gbOrMb}')`)));
 
       props.offersType == "+ telefone fixo" &&
-      (ancoraCard.setAttribute("onclick",`appendDataLayer('clicou','b2c_nova_fibra','btn_fixo-${element.code}')`))
+        (ancoraCard.setAttribute("onclick", `appendDataLayer('clicou','b2c_nova_fibra','btn_fixo-${element.code}')`))
 
       props.offersType == "+ oi play tv" &&
-      (verifyGb >= 1
-        ? (ancoraCard.setAttribute("onclick",`appendDataLayer('clicou','b2c_nova_fibra','btn_${verifyGb}_${gbOrMb}+_oi_play_tv')`))
-        : (ancoraCard.setAttribute("onclick",`appendDataLayer('clicou','b2c_nova_fibra','btn_${element.childProducts[0].velocidadeDownload}_${gbOrMb}+_oi_play_tv')`)))
-        
+        (verifyGb >= 1
+          ? (ancoraCard.setAttribute("onclick", `appendDataLayer('clicou','b2c_nova_fibra','btn_${verifyGb}_${gbOrMb}+_oi_play_tv')`))
+          : (ancoraCard.setAttribute("onclick", `appendDataLayer('clicou','b2c_nova_fibra','btn_${element.childProducts[0].velocidadeDownload}_${gbOrMb}+_oi_play_tv')`)))
+
 
       if (cardBlack) {
         spanSimbolo.classList.add("cards_ofertas_oi_expert");
@@ -573,6 +596,13 @@ function renderCards(offers, props) {
       cardBlack && spanDetalhes.classList.add("cards_ofertas_oi_expert");
 
       //Finaliza div Detalhes da oferta
+
+      divCardTituloFibra.appendChild(divCard)
+      divCard.appendChild(divCardTituloFibra)
+      divCardTituloFibra.appendChild(h4Titulo)
+      divCardTituloFibra.appendChild(spanTituloFibra)
+
+      // Finaliza Titulo fibra
 
       container.appendChild(divCardBox);
       divCardBox.appendChild(divCard);
