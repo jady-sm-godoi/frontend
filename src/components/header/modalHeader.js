@@ -33,6 +33,7 @@ const showCitys = (arr) => {
 
 	arr.forEach((city, index) => {
 		const createRowLi = document.createElement('li')
+		createRowLi.setAttribute('class','max_width_container')
 		const createRowButton = document.createElement('button')
 		createRowButton.setAttribute('class', 'header-modal_li_buttons')
 		createRowButton.innerText = `${city.city.toUpperCase()}, ${city.uf.toUpperCase()}`
@@ -112,8 +113,16 @@ const fetchCitysOnBackend = (city) => {
 //     return offers.list[0]
 //   }
 // }
+function overflowHidden(){
+	document.getElementsByTagName("html")[0].style.overflowY= "hidden";
+}
+function overflowShow(){
+	document.getElementsByTagName("html")[0].style.overflowY= "auto";
+}
 
 function openModal() {
+
+	overflowHidden()
 	const createModal = document.createElement('div')
 
 	createModal.id = 'header-modal-container'
@@ -123,7 +132,7 @@ function openModal() {
 	document.body.appendChild(createModal)
 
 	const createUl = document.createElement('ul')
-	createUl.className = 'max_width_container elUl'
+	createUl.className = 'elUl'
 	createUl.id = 'container-city-modal'
 	createModal.appendChild(createUl)
 	showCitys(arrCity)
@@ -135,6 +144,7 @@ function openModal() {
 function destroyModal() {
 	const getModal = document.getElementById('header-modal-container')
 	document.body.removeChild(getModal)
+	overflowShow()
 }
 
 function mappingFocusedButtons() {
