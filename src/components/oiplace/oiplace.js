@@ -1,26 +1,25 @@
-const cardsWrapper = document.getElementById("oiPlaceCardsWrapper");
-const cardSize= cardsWrapper.children[0].offsetWidth;
-const cardSizeWithMargin = cardSize + 40;
-const btnArrowPrev = document.getElementById("oiPlacebtnArrowPrev");
-const btnArrowNext = document.getElementById("oiPlacebtnArrowNext");
+const oiPlaceCardsWrapper = document.getElementById("oiPlaceCardsWrapper");
+const oiPlaceCardSize= oiPlaceCardsWrapper.children[0].offsetWidth;
+const oiPlaceCardSizeWithMargin = oiPlaceCardSize + 40;
+const oiPlaceBtnArrowPrev = document.getElementById("oiPlaceBtnArrowPrev");
+const oiPlaceBtnArrowNext = document.getElementById("oiPlaceBtnArrowNext");
 let screenWidth;
 
-btnArrowPrev.onclick = function () {
+oiPlaceBtnArrowPrev.onclick = function () {
   screenWidth = window.innerWidth;
-  cardsWrapper.scrollLeft -= screenWidth >= 1364 ? cardSize* 3 : cardSize;
+  oiPlaceCardsWrapper.scrollLeft -= screenWidth >= 1364 ? oiPlaceCardSize* 3 : oiPlaceCardSize;
 };
-
-btnArrowNext.onclick = function () {
+oiPlaceBtnArrowNext.onclick = function () {
   screenWidth = window.innerWidth;
-  cardsWrapper.scrollLeft += screenWidth >= 1364 ? cardSize* 3 : cardSize;
+  oiPlaceCardsWrapper.scrollLeft += screenWidth >= 1364 ? oiPlaceCardSize* 3 : oiPlaceCardSize;
 };
 
 const cardsItem = document.querySelectorAll(".oiplace_card_item");
 const arrayCardItem = Array.from(cardsItem);
-const arrayCardWidth = arrayCardItem.map((card, index) => cardSizeWithMargin * index);
+const arrayCardWidth = arrayCardItem.map((card, index) => oiPlaceCardSizeWithMargin * index);
 let timeoutId;
 
-cardsWrapper.addEventListener("scroll", (event) => {
+oiPlaceCardsWrapper.addEventListener("scroll", (event) => {
   const currentCard = arrayCardWidth.indexOf(arrayCardWidth.find((card) => event.target.scrollLeft <= card));
 
   clearTimeout(timeoutId);
@@ -32,10 +31,9 @@ cardsWrapper.addEventListener("scroll", (event) => {
   const scrollWidth = event.target.scrollWidth;
   const containerWidth = event.target.clientWidth;
 
-
   let isScrollEnd = scrollPosition + containerWidth >= scrollWidth;
   const isScrollStart = scrollPosition === 0;
 
-  btnArrowPrev.style.visibility = isScrollStart ? "hidden" : "visible";
-  btnArrowNext.style.visibility = isScrollEnd ? "hidden" : "visible";
+  oiPlaceBtnArrowPrev.style.visibility = isScrollStart ? "hidden" : "visible";
+  oiPlaceBtnArrowNext.style.visibility = isScrollEnd ? "hidden" : "visible";
 });
