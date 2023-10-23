@@ -337,22 +337,23 @@ function renderCards(offers, props) {
   offers.forEach((element, index) => {
     if (element.attachments) {
 
-      const divCardTituloFibra = document.createElement("div");
-      divCardTituloFibra.classList.add("cards_ofertas_titulo_fibra");
-      const divCard = document.createElement("div");
-      divCard.classList.add("cards_ofertas_titulo_fibra");
-      divCardTituloFibra.classList.add(
-        'cards_ofertas_titulo_fibra'
-      )
+      // const divCardTituloFibra = document.createElement("div");
+      // divCardTituloFibra.classList.add("cards_ofertas_titulo_fibra");
 
-      const h4Titulo = document.createElement('h4')
-      h4Titulo.classList.add('cards_ofertas_titulo_fibra')
-      spanWifi.innerHTML = `oi fibra`
+      // const divCard = document.createElement("div");
+      // divCard.classList.add("cards_ofertas_titulo_fibra");
+      // divCardTituloFibra.classList.add(
+      //   'cards_ofertas_titulo_fibra'
+      // )
 
-      const spanTituloFibra = document.createElement('span')
-      spanTituloFibra.id = 'cards_ofertas_fibra'
-      spanTituloFibra.innerText = `start`
-      spanTituloFibra.classList.add('cards_ofertas_titulo_fibra_span')
+      // const h4Titulo = document.createElement('h4')
+      // h4Titulo.classList.add('cards_ofertas_titulo_fibra')
+      // h4Titulo.innerHTML = `oi fibra`
+
+      // const spanTituloFibra = document.createElement('span')
+      // spanTituloFibra.id = 'cards_ofertas_fibra'
+      // spanTituloFibra.innerText = `start`
+      // spanTituloFibra.classList.add('cards_ofertas_titulo_fibra_span')
 
       // Finaliza Titulo Oi Fibra
 
@@ -363,7 +364,7 @@ function renderCards(offers, props) {
 
       const divCardBox = document.createElement("div");
       divCardBox.classList.add("cards_ofertas_box");
-      divCard = document.createElement("div");
+      const divCard = document.createElement("div");
       divCard.classList.add("cards_ofertas_card");
       const divTituloContainer = document.createElement("div");
       divTituloContainer.classList.add("cards_ofertas_titulo_container");
@@ -599,10 +600,10 @@ function renderCards(offers, props) {
 
       //Finaliza div Detalhes da oferta
 
-      divCardTituloFibra.appendChild(divCard)
-      divCard.appendChild(divCardTituloFibra)
-      divCardTituloFibra.appendChild(h4Titulo)
-      divCardTituloFibra.appendChild(spanTituloFibra)
+      // divCardTituloFibra.appendChild(divCard)
+      // divCard.appendChild(divCardTituloFibra)
+      // divCardTituloFibra.appendChild(h4Titulo)
+      // divCardTituloFibra.appendChild(spanTituloFibra)
 
       // Finaliza Titulo fibra
 
