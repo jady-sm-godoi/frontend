@@ -31,7 +31,7 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	min-width: 208px;
+	min-width: 256px;
 	gap: 32px;
 	padding: 24px;
 	margin-right: 40px;
@@ -42,6 +42,13 @@
 	&:last-child {
 		margin-right: 0;
 	}
+}
+
+.oiplace_card_item_promo_line {
+	display: flex;
+	justify-content: flex-end;
+	width: 100%;
+	text-align: right;
 }
 
 .oiplace_card_item_promo {
@@ -55,7 +62,7 @@
 
 .oiplace_card_item_image {
 	overflow: hidden;
-	max-height: 200px;
+	height: 200px;
 }
 
 .oiplace_card_item_info {
@@ -65,7 +72,6 @@
 }
 
 .oiplace_card_item_title {
-	color: #000;
 	font-size: 16px;
 	font-weight: 500;
 	line-height: 20px; /* 125% */
@@ -78,17 +84,18 @@
 .oiplace_card_item_price_old {
 	color: #909090;
 	font-size: 16px;
-	font-weight: 600;
+	font-weight: 500;
 	line-height: 32px;
 }
 .oiplace_card_item_price_new {
 	color: #009e0c;
 	font-size: 24px;
-	font-weight: 600;
+	font-weight: 500;
 	line-height: 32px;
 }
 
 .oiplace_carousel_title {
+	width: 100%;
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
@@ -182,8 +189,7 @@
 	}
 
 	.oiplace_card_item {
-		min-width: 272px;
-		max-width: 272px;
+		min-width: 320px;
 	}
 
 	.oiplace_btn_wrapper {
