@@ -1,6 +1,12 @@
-const offerManager = new (class {
+const offerManager = new (class OfferManager {
 	constructor() {
-		this._offerData = {}
+		this.cookies = new CookiesManager()
+
+		// // this.cookies.set('feijao', "chavesecreta ")
+
+		// console.log(this.cookies.getJson());
+
+		this.offerData = {}
 		this._backendUrl = new URL(
 			'https://homeoifibra-back-dev-hml.hml.ocpcorp.oi.intranet'
 		)
@@ -12,7 +18,7 @@ const offerManager = new (class {
 			resolve(!!cityFromCookies ? cityFromCookies : await this.getDefaultCity())
 		})
 			.then((data) => (this._currentCity = data))
-			// when user load page, execute this funct on finally 
+			// when user load page, execute this funct on finally
 			.finally(() => {
 				this._executeCityCallbacks()
 				this.setCurrentOffer(this._currentCity)
@@ -42,7 +48,8 @@ const offerManager = new (class {
 
 		return await new Promise((res, rej) =>
 			fetch(this._backendUrl)
-				.then(async (data) => res(await data.json()))
+				.then((response) => response.json())
+				.then((data) => res(data))
 				.catch((err) => rej(err))
 		)
 	}
@@ -67,7 +74,8 @@ const offerManager = new (class {
 
 		return await new Promise((res, rej) =>
 			fetch(this._backendUrl)
-				.then(async (data) => res(await data.json()))
+				.then((response) => response.json())
+				.then((data) => res(data))
 				.catch((err) => rej(err))
 		)
 	}
@@ -77,10 +85,12 @@ const offerManager = new (class {
 	 * @returns
 	 */
 	async setCurrentOffer(args) {
-		this._requestOffer(args).then((data) => {
-			this._offerData = data
-			this._executeOfferCallbacks()
-		})
+		this._requestOffer(args)
+			.then((data) => {
+				this.offerData = data
+				this._executeOfferCallbacks()
+			})
+			.catch((err) => this._errorWhenFetchOffer(err))
 	}
 
 	// COOKIES HANDLER
@@ -90,12 +100,29 @@ const offerManager = new (class {
 	 */
 	getCityFromCookies() {
 		// TODO: request city from cookies
-		return {
-			id: 4329,
-			city: 'Salvador das Missões',
-			uf: 'RS',
-			ddd: 55,
-			normalized: 'salvador das missoes'
+		const cookies = this.cookies.getJson()
+
+		if (
+			'estado' in cookies &&
+			'cidade' in cookies &&
+			'cidade-nome' in cookies &&
+			'ddd' in cookies
+		) {
+			return {
+				id: cookies.cidade,
+				city: cookies['cidade-nome'],
+				uf: cookies.estado,
+				ddd: cookies.ddd,
+				normalized: ''
+			}
+		} else {
+			return {
+				id: 4329,
+				city: 'Salvador das Missões',
+				uf: 'RS',
+				ddd: 55,
+				normalized: 'salvador das missoes'
+			}
 		}
 	}
 
@@ -103,11 +130,16 @@ const offerManager = new (class {
 	 * @param {{"id": string,"city": string, "uf": string, "ddd": number, "normalized": string}} value
 	 */
 	setCityOnCookies(value) {
-		// TODO: save city on cookies here
-
-		document.cookie
+		this.cookies.set('estado', value.uf)
+		this.cookies.set('cidade', value.id)
+		this.cookies.set('cidade-nome', value.city)
+		this.cookies.set('ddd', value.ddd)
 	}
 
+	/**
+	 * @param {string} id
+	 * @returns {Promise<{"id": string,"city": string, "uf": string, "ddd": number, "normalized": string}>}
+	 */
 	async getDefaultCity() {
 		return {
 			id: 4329,
@@ -138,11 +170,14 @@ const offerManager = new (class {
 				}
 			})
 			.catch((err) => {
-				this._errorWhenFetchOffer(err)
+				this._errorWhenFetchCity(err)
 			})
 	}
 
 	// created a method to get currentCity to turn as readonly
+	/**
+	 * @returns {{"id": string,"city": string, "uf": string, "ddd": number, "normalized": string}}
+	 */
 	get currentCity() {
 		return this._currentCity
 	}
@@ -161,7 +196,7 @@ const offerManager = new (class {
 		// Execute cities callbacks
 		this._offerCallbacks.forEach((cb) => {
 			try {
-				cb(this._offerData)
+				cb(this.offerData)
 			} catch (error) {
 				console.log('erro ao execurar callback', error)
 			}
@@ -174,6 +209,10 @@ const offerManager = new (class {
 	}
 	_errorWhenFetchOffer(err) {
 		console.log('_errorWhenFetchOffer', err)
+		// put your function here case fetch error
+	}
+	_errorWhenFetchCity(err) {
+		console.log('_errorWhenFetchCity', err)
 		// put your function here case fetch error
 	}
 

@@ -1,7 +1,7 @@
-// offerManager.runWhenCityLoad((city) => {
-//     console.log('city', city)
-// })
+offerManager.runWhenCityLoad((city) => {
+    console.log('city', city)
+})
 
-// offerManager.runWhenOfferLoad((offer) => {
-//     console.log('offer', offer)
-// })
+offerManager.runWhenOfferLoad((offer) => {
+    console.log('offer', offer)
+})
