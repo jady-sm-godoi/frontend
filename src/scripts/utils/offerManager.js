@@ -224,8 +224,91 @@ const offerManager = new (class OfferManager {
 	}
 
 	/**
-	 * @param {() => void} callback
+	 * @typedef {Object} Attachment
+	 * @property {string} title - Título do anexo.
+	 * @property {string} url - URL do anexo.
 	 */
+
+	/**
+	 * @typedef {Object} ChildProduct
+	 * @property {string} name - Nome do produto.
+	 * @property {string} code - Código do produto.
+	 * @property {string} description - Descrição do produto.
+	 * @property {string} endOfLifeDate - Data de fim de vida do produto.
+	 * @property {number} chargeamount - Valor cobrado pelo produto.
+	 * @property {string} downloadSpeed - Velocidade de download do produto.
+	 * @property {string} type - Tipo do produto.
+	 * @property {string} objectTypeName - Nome do tipo do objeto.
+	 * @property {string} amount - Valor do produto.
+	 * @property {Attachment[]} attachments - Anexos do produto.
+	 * @property {string} velocidadeDownload - Velocidade de download do produto (outra propriedade com o mesmo valor que downloadSpeed).
+	 */
+
+	/**
+	 * @typedef {Object} Offer
+	 * @property {string} code - Código da oferta.
+	 * @property {string} name - Nome da oferta.
+	 * @property {string} description - Descrição da oferta.
+	 * @property {number} amount - Valor da oferta.
+	 * @property {number} adherenceFee - Taxa de adesão da oferta.
+	 * @property {string} targetAudience - Público-alvo da oferta.
+	 * @property {string} downloadSpeed - Velocidade de download da oferta.
+	 * @property {ChildProduct[]} childProducts - Produtos relacionados à oferta.
+	 * @property {string} fidelization - Fidelização da oferta.
+	 * @property {string} type - Tipo da oferta.
+	 * @property {string} objectTypeName - Nome do tipo do objeto.
+	 * @property {number} quantity - Quantidade da oferta.
+	 * @property {Attachment[]} attachments - Anexos da oferta.
+	 * @property {number} fixoAmount - Valor fixo da oferta.
+	 */
+
+	/**
+	 * @typedef {Object} Addon
+	 * @property {string} code - Código do addon.
+	 * @property {string} name - Nome do addon.
+	 * @property {string} description - Descrição do addon.
+	 * @property {number} amount - Valor do addon.
+	 * @property {Attachment[]} attachments - Anexos do addon.
+	 */
+
+	/**
+	 * @typedef {Object} Addons
+	 * @property {Addon} OI_PLAY_TV - OI PLAY TV addon.
+	 * @property {Addon} SVOD_GLOBOPLAY - Globoplay addon.
+	 * @property {Addon} EXP_CSA_AV - OI Expert Presencial addon.
+	 * @property {Addon} EXP_RMT_AV - OI Expert Remoto - Avulso addon.
+	 * @property {Addon} SVA_SULAMERICA - SulAmérica Docway Telemedicina addon.
+	 * @property {Addon} VOIP_FIXOILIMITADO - OI Fixo Fibra addon.
+	 * @property {Addon} SVA_TESTE_TI8 - SVA Teste Ti8 addon.
+	 */
+
+	/**
+	 * @typedef {Object} BusinessOffer
+	 * @property {Offer[]} offers - Ofertas disponíveis.
+	 * @property {string} segmentation - Segmentação das ofertas.
+	 * @property {string} heroOffer - Oferta heroica.
+	 * @property {string} featuredCardOffer - Oferta em destaque.
+	 * @property {null} loweredPriceOffer - Oferta com preço reduzido.
+	 * @property {boolean} isUnified - Indica se é unificado.
+	 * @property {number} daccDiscount - Desconto DACC.
+	 * @property {string[]} businessOffers - Ofertas de negócios.
+	 * @property {null} businessOffersPlus - Ofertas de negócios adicionais.
+	 * @property {boolean} isPromotional - Indica se é promocional.
+	 * @property {number} lowestSpeed - Velocidade mínima.
+	 * @property {string} salesforceLink - Link do Salesforce.
+	 * @property {boolean} displayFibraXCard - Indica se deve exibir o cartão Fibra X.
+	 * @property {boolean} whatsappButton - Indica se deve exibir o botão do WhatsApp.
+	 * @property {number} cityId - ID da cidade.
+	 * @property {string[]} grupoDeMenus - Grupos de menus.
+	 * @property {Addons} addons - Addons disponíveis.
+	 */
+
+	/**
+	 * Função que retorna um objeto do tipo BusinessOffer.
+	 * @param {BusinessOffer} offer - Objeto representando uma oferta de negócios.
+	 * @param {(offer: BusinessOffer) => void} callback - Função de callback que recebe um objeto BusinessOffer.
+	 */
+
 	runWhenOfferLoad(callback = () => {}) {
 		this._offerCallbacks.push(callback)
 	}
