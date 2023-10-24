@@ -112,7 +112,7 @@
   align-items: center;
   padding: 2px 40px;
   gap: 8px;
-  width: 312px;
+  max-width: 312px;
   height: 48px;
   border: 2px solid #00a300;
   border-radius: 48px;
@@ -127,6 +127,7 @@
   color: #00a300;
   background-color: #ffffff;
   margin: 40px 0px 0px 0px;
+  width: 100%;
 }
 
 .duvidas__details_mostrarMais{
