@@ -1,35 +1,193 @@
-class offerManager {
+const offerManager = new (class {
 	constructor() {
-		this.offerData = null
-		this._offerUrl = 'fallbacks/data.json'
+		this._offerData = {}
+		this._backendUrl = new URL(
+			'https://homeoifibra-back-dev-hml.hml.ocpcorp.oi.intranet'
+		)
+		this._cityCallbacks = []
+		this._offerCallbacks = []
 
-		// fetch offers when instance
-		this._fetchOffer()
-
-		this._currentCity = {}
+		new Promise(async (resolve) => {
+			const cityFromCookies = this.getCityFromCookies()
+			resolve(!!cityFromCookies ? cityFromCookies : await this.getDefaultCity())
+		})
+			.then((data) => (this._currentCity = data))
+			// when user load page, execute this funct on finally 
+			.finally(() => {
+				this._executeCityCallbacks()
+				this.setCurrentOffer(this._currentCity)
+			})
 	}
-	_fetchOffer() {
-		fetch(this._offerUrl)
-			.then(async (data) => _runWhenFetchSuccessful(await data.json()))
-			.catch((err) => this._errorWhenFetchOffer(err))
+
+	/**
+	 * @param {string} name
+	 * @returns {Promise<{"id": string,"city": string, "uf": string, "ddd": number, "normalized": string}[]>}
+	 */
+	async searchCityByName(name) {
+		this._backendUrl.pathname = ['cities', 'name', name].join('/')
+
+		return await new Promise((res, rej) =>
+			fetch(this._backendUrl)
+				.then(async (data) => res(await data.json()))
+				.catch((err) => rej(err))
+		)
+	}
+
+	/**
+	 * @param {string} id
+	 * @returns {Promise<{"id": string,"city": string, "uf": string, "ddd": number, "normalized": string}>}
+	 */
+	async searchCityById(id) {
+		this._backendUrl.pathname = ['cities', 'id', id].join('/')
+
+		return await new Promise((res, rej) =>
+			fetch(this._backendUrl)
+				.then(async (data) => res(await data.json()))
+				.catch((err) => rej(err))
+		)
+	}
+
+	/**
+	 * @param {{city: string, uf:string}} args
+	 * @returns
+	 */
+	async _requestOffer(args) {
+		this._backendUrl.pathname = [
+			'offers',
+			'v2',
+			'offers-cities',
+			args.uf,
+			args.city,
+			'Web',
+			'CREDIT',
+			'YEARLY',
+			'NOVA_FIBRA',
+			'1033422'
+		].join('/')
+
+		return await new Promise((res, rej) =>
+			fetch(this._backendUrl)
+				.then(async (data) => res(await data.json()))
+				.catch((err) => rej(err))
+		)
+	}
+
+	/**
+	 * @param {{city: string, uf:string}} args
+	 * @returns
+	 */
+	async setCurrentOffer(args) {
+		this._requestOffer(args).then((data) => {
+			this._offerData = data
+			this._executeOfferCallbacks()
+		})
+	}
+
+	// COOKIES HANDLER
+
+	/**
+	 * @returns {{"id": string,"city": string, "uf": string, "ddd": number, "normalized": string}}
+	 */
+	getCityFromCookies() {
+		// TODO: request city from cookies
+		return {
+			id: 4329,
+			city: 'Salvador das Missões',
+			uf: 'RS',
+			ddd: 55,
+			normalized: 'salvador das missoes'
+		}
 	}
 
 	/**
 	 * @param {{"id": string,"city": string, "uf": string, "ddd": number, "normalized": string}} value
 	 */
-	set currentCity(value) {
-		this._currentCity = value
+	setCityOnCookies(value) {
+		// TODO: save city on cookies here
+
+		document.cookie
 	}
+
+	async getDefaultCity() {
+		return {
+			id: 4329,
+			city: 'Salvador das Missões',
+			uf: 'RS',
+			ddd: 55,
+			normalized: 'salvador das missoes'
+		}
+	}
+
+	/**
+	 * @param {{"id": string,"city": string, "uf": string, "ddd": number, "normalized": string}} value
+	 */
+	setCurrentCityById(id) {
+		this.searchCityById(id)
+			.then(async (response) => {
+				this.setCityOnCookies(response)
+				this._currentCity = response
+				this._executeCityCallbacks()
+
+				try {
+					// set currentOffer
+					this.setCurrentOffer(response)
+
+					// Execute offer callbacks
+				} catch (error) {
+					console.log('erro ao requisitar oferta', error)
+				}
+			})
+			.catch((err) => {
+				this._errorWhenFetchOffer(err)
+			})
+	}
+
+	// created a method to get currentCity to turn as readonly
 	get currentCity() {
 		return this._currentCity
 	}
 
+	_executeCityCallbacks() {
+		// Execute cities callbacks
+		this._cityCallbacks.forEach((cb) => {
+			try {
+				cb(this._currentCity)
+			} catch (error) {
+				console.log('erro ao execurar callback', error)
+			}
+		})
+	}
+	_executeOfferCallbacks() {
+		// Execute cities callbacks
+		this._offerCallbacks.forEach((cb) => {
+			try {
+				cb(this._offerData)
+			} catch (error) {
+				console.log('erro ao execurar callback', error)
+			}
+		})
+	}
+
 	_runWhenFetchSuccessful(data) {
-		// put yours function here to run when fetch runned
+		console.log('_runWhenFetchSuccessful', data)
+		// u can insert any function to run when success fetch here
 	}
 	_errorWhenFetchOffer(err) {
+		console.log('_errorWhenFetchOffer', err)
 		// put your function here case fetch error
 	}
-}
 
-// const a = new offerManager()
+	/**
+	 * @param {({"id": string,"city": string, "uf": string, "ddd": number, "normalized": string}) => void} callback
+	 */
+	runWhenCityLoad(callback = () => {}) {
+		this._cityCallbacks.push(callback)
+	}
+
+	/**
+	 * @param {() => void} callback
+	 */
+	runWhenOfferLoad(callback = () => {}) {
+		this._offerCallbacks.push(callback)
+	}
+})()

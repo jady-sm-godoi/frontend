@@ -20,10 +20,12 @@ const modalStructure = `
 `
 
 const selectCity = (city) => {
-	const fetchCity = arrCity.find((mapcity) => mapcity.id == city.dataset.cityid)
-	const getHeaderText = document.getElementById('changeLocalization')
-	getHeaderText.dataset['normalized'] = city.dataset.normalized
-	getHeaderText.innerHTML = `${fetchCity.city}, ${fetchCity.uf}`
+	// const fetchCity = arrCity.find((mapcity) => mapcity.id == city.dataset.cityid)
+	// const getHeaderText = document.getElementById('changeLocalization')
+	// getHeaderText.dataset['normalized'] = city.dataset.normalized
+	// getHeaderText.innerHTML = `${fetchCity.city}, ${fetchCity.uf}`
+
+	offerManager.setCurrentCityById(city.dataset.cityid)
 	destroyModal()
 }
 
@@ -33,7 +35,7 @@ const showCitys = (arr) => {
 
 	arr.forEach((city, index) => {
 		const createRowLi = document.createElement('li')
-		createRowLi.setAttribute('class','max_width_container')
+		createRowLi.setAttribute('class', 'max_width_container')
 		const createRowButton = document.createElement('button')
 		createRowButton.setAttribute('class', 'header-modal_li_buttons')
 		createRowButton.innerText = `${city.city.toUpperCase()}, ${city.uf.toUpperCase()}`
@@ -80,19 +82,13 @@ class DebounceSearchRequest {
 const debounceSearchRequest = new DebounceSearchRequest()
 const fetchCitysOnBackend = (city) => {
 	// instance api url handler
-	const apiUrl = new URL(
-		'https://homeoifibra-back-dev-hml.hml.ocpcorp.oi.intranet'
-	)
-
-	// set pathname
-	apiUrl.pathname = '/cities/name/' + city
 
 	debounceSearchRequest.deployPromisse(
 		() => {
 			console.log('Fazendo request')
-			fetch(apiUrl.href)
+			offerManager
+				.searchCityByName(city)
 				.then(async (request) => {
-					request = await request.json()
 					request.length > 0 && showCitys(request)
 				})
 				.catch(() => showCitys(arrCity))
@@ -101,27 +97,14 @@ const fetchCitysOnBackend = (city) => {
 	)
 }
 
-// HOW TO GET OFFER
-
-// const getHeroBannerOffer = () => {
-//   const foundOffer = offers.list.find(
-//     (offer) => offer.offerCode === offers.heroOffer
-//   )
-//   if (foundOffer) {
-//     return foundOffer
-//   } else {
-//     return offers.list[0]
-//   }
-// }
-function overflowHidden(){
-	document.getElementsByTagName("html")[0].style.overflowY= "hidden";
+function overflowHidden() {
+	document.getElementsByTagName('html')[0].style.overflowY = 'hidden'
 }
-function overflowShow(){
-	document.getElementsByTagName("html")[0].style.overflowY= "auto";
+function overflowShow() {
+	document.getElementsByTagName('html')[0].style.overflowY = 'auto'
 }
 
 function openModal() {
-
 	overflowHidden()
 	const createModal = document.createElement('div')
 
