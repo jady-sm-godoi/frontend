@@ -1,125 +1,122 @@
 <header class="section_header_container" id="header-container">
-  <section class="section_header_top_acessibility_hidden">
-    <div class="max_width_container">
-      <div class="header_anchor_acessibility">
-        <a href="#main" accesskey="1">Ir para o corpo do site</a>
-        <a href="#header-container" accesskey="2"
-          >Ir para o cabeçalho da página</a
-        >
-        <a href="#footer-fibra" accesskey="3">Ir para o rodapé da página</a>
-      </div>
-    </div>
-  </section>
-  <section class="section_header_top">
-    <div class="max_width_container">
-      <div class="header_top">
-        <a href="https://www.oi.com.br">Ir para o site da Oi</a>
-        <div class="header_top_accessibility">
-          <a href="https://www.oi.com.br/acessibilidade/">Acessibilidade</a>
-          <button id="button_accessibility_subtraction">A-</button>
-          <button id="button_accessibility_sum">A+</button>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="section_header_middle">
-    <div class="max_width_container">
-      <div class="header_middle">
-        <a href="https://www.oi.com.br/internet">
-          <picture>
-            <source
-              media="(min-width: 768px)"
-              srcset="../assets/images/logo-oi-verde-certa.svg"
-              alt="Logo da oi"
-              title="Logo da oi"
-              loading="lazy"
-              width="48px"
-              height="48px"
-            />
-            <img
-              src="../assets/images/logo-oi-mobile.png"
-              alt="Logo da oi"
-              title="Logo da oi"
-              loading="lazy"
-              width="39px"
-              height="32px"
-            />
-          </picture>
-        </a>
-        <div class="header_middle_button">
-          <span class="header_middle_button_p">Ofertas válidas para</span>
-          <button onclick="openModal()" id="changeLocalization">
-              Rio de Janeiro, RJ
-          </button>
+	<section class="section_header_top_acessibility_hidden">
+		<div class="max_width_container">
+			<div class="header_anchor_acessibility">
+				<a href="#main" accesskey="1">Ir para o corpo do site</a>
+				<a href="#header-container" accesskey="2"
+					>Ir para o cabeçalho da página</a
+				>
+				<a href="#footer-fibra" accesskey="3">Ir para o rodapé da página</a>
+			</div>
+		</div>
+	</section>
+	<section class="section_header_top">
+		<div class="max_width_container">
+			<div class="header_top">
+				<a href="https://www.oi.com.br">Ir para o site da Oi</a>
+				<div class="header_top_accessibility">
+					<a href="https://www.oi.com.br/acessibilidade/">Acessibilidade</a>
+					<button id="button_accessibility_subtraction">A-</button>
+					<button id="button_accessibility_sum">A+</button>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="section_header_middle">
+		<div class="max_width_container">
+			<div class="header_middle">
+				<a href="https://www.oi.com.br/internet">
+					<picture>
+						<source
+							media="(min-width: 768px)"
+							srcset="../assets/images/logo-oi-verde-certa.svg"
+							alt="Logo da oi"
+							title="Logo da oi"
+							loading="lazy"
+							width="48px"
+							height="48px"
+						/>
+						<img
+							src="../assets/images/logo-oi-mobile.png"
+							alt="Logo da oi"
+							title="Logo da oi"
+							loading="lazy"
+							width="39px"
+							height="32px"
+						/>
+					</picture>
+				</a>
+				<div class="header_middle_button">
+					<span class="header_middle_button_p">Ofertas válidas para</span>
+					<button onclick="openModal()" id="changeLocalization"></button>
 
-          <a
-            href="https://oinovafibra.oi.com.br/fibra/s/?productCode=BL_400MB_VAR_MAI23_NW_119_90_109_90&speed=400&skipshopWindow=true"
-            id="consultar-disponibilidade-header-id"
-            data-gtmButton="btn_header_consultar-disponibilidade"
-            >Consultar disponibilidade</a
-          >
-        </div>
-      </div>
-    </div>
-  </section>
-  <nav class="header_bottom">
-    <div class="max_width_container">
-      <div class="header_bottom_anchors_img">
-        <ul>
-          <li>
-            <a
-              class="header_bottom_anchor"
-              id="oi-fibra-id"
-              href="https://www.oi.com.br/internet"
-              data-gtmButton="link_item_menu_secao_oi_fibra"
-              >Oi Fibra</a
-            >
-          </li>
-          <li>
-            <a
-              class="header_bottom_anchor"
-              id="oi-play-id"
-              href="https://www.oi.com.br/internet/oi-play"
-              data-gtmButton="link_item_menu_secao_oi_play"
-              >Oi Play</a
-            >
-          </li>
-          <li>
-            <a
-              class="header_bottom_anchor"
-              id="beneficios-id"
-              href="https://www.oi.com.br/internet/beneficios"
-              data-gtmButton="link_item_menu_secao_beneficios"
-              >Benefícios</a
-            >
-          </li>
-          <li>
-            <!--VERIFICAR COM JOAOOOOO-->
-            <a
-              class="header_bottom_anchor"
-              id="teste-velocidade-id"
-              href="https://www.oi.com.br/internet/teste-de-velocidade"
-              data-gtmButton="link_item_menu_secao_teste_de_velocidade"
-              >Teste de velocidade</a
-            >
-          </li>
-        </ul>
-        <button
-          data-gtmButton="atendimento-button"
-          onclick="changeWhatsappModalState(this);"
-        >
-          <img
-            src="../assets/images/icon-whatsapp.png"
-            alt="Ícone do whatsapp"
-            title="Ícone do whatsapp"
-            width="22px"
-            height="22px"
-            loading="lazy"
-          />
-          <span id="header_bottom_span">Fale com a Oi</span>
-        </button>
-      </div>
-    </div>
-  </nav>
+					<a
+						href="https://oinovafibra.oi.com.br/fibra/s/?productCode=BL_400MB_VAR_MAI23_NW_119_90_109_90&speed=400&skipshopWindow=true"
+						id="consultar-disponibilidade-header-id"
+						data-gtmButton="btn_header_consultar-disponibilidade"
+						>Consultar disponibilidade</a
+					>
+				</div>
+			</div>
+		</div>
+	</section>
+	<nav class="header_bottom">
+		<div class="max_width_container">
+			<div class="header_bottom_anchors_img">
+				<ul>
+					<li>
+						<a
+							class="header_bottom_anchor"
+							id="oi-fibra-id"
+							href="https://www.oi.com.br/internet"
+							data-gtmButton="link_item_menu_secao_oi_fibra"
+							>Oi Fibra</a
+						>
+					</li>
+					<li>
+						<a
+							class="header_bottom_anchor"
+							id="oi-play-id"
+							href="https://www.oi.com.br/internet/oi-play"
+							data-gtmButton="link_item_menu_secao_oi_play"
+							>Oi Play</a
+						>
+					</li>
+					<li>
+						<a
+							class="header_bottom_anchor"
+							id="beneficios-id"
+							href="https://www.oi.com.br/internet/beneficios"
+							data-gtmButton="link_item_menu_secao_beneficios"
+							>Benefícios</a
+						>
+					</li>
+					<li>
+						<!--VERIFICAR COM JOAOOOOO-->
+						<a
+							class="header_bottom_anchor"
+							id="teste-velocidade-id"
+							href="https://www.oi.com.br/internet/teste-de-velocidade"
+							data-gtmButton="link_item_menu_secao_teste_de_velocidade"
+							>Teste de velocidade</a
+						>
+					</li>
+				</ul>
+				<button
+					data-gtmButton="atendimento-button"
+					onclick="changeWhatsappModalState(this);"
+				>
+					<img
+						src="../assets/images/icon-whatsapp.png"
+						alt="Ícone do whatsapp"
+						title="Ícone do whatsapp"
+						width="22px"
+						height="22px"
+						loading="lazy"
+					/>
+					<span id="header_bottom_span">Fale com a Oi</span>
+				</button>
+			</div>
+		</div>
+	</nav>
 </header>
-

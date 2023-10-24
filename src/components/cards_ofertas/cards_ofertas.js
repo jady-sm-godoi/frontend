@@ -22,25 +22,27 @@ const offerProps = {
 let offers_card_ofertas,
   reciveOfferBundle = "";
 
-// Request data to back
-(async () => {
-  const reciveFetchOffers = await fetchOffers();
+offerManager.runWhenOfferLoad(oferta =>{
 
-  offers_card_ofertas = reciveFetchOffers.data.offers;
+  const arrayDeOfertas = oferta.offers
+  // TODO: arrumar esse b.o com voip fixo 👇👇👇👇
 
-  // TODO: arrumar esse b.o com voip fixo
+  // offerProps.oi_telefone.amount = reciveFetchOffers.addons.VOIP_FIXOILIMITADO.amount;
 
-  // offerProps.oi_telefone.amount =
-  //   reciveFetchOffers.addons.VOIP_FIXOILIMITADO.amount;
-  offerProps.oi_playtv.amount = reciveFetchOffers.addons.OI_PLAY_TV.amount;
 
-  dataOffersDetails.daccDiscount = reciveFetchOffers.daccDiscount;
+  offerProps.oi_playtv.amount = oferta.addons.OI_PLAY_TV.amount;
+  dataOffersDetails.daccDiscount = oferta.daccDiscount;
 
   reciveOfferBundle = "oi_fibra";
-  renderCards(offers_card_ofertas, offerProps[reciveOfferBundle]);
-})();
+  renderCards(arrayDeOfertas, offerProps[reciveOfferBundle]);
 
-// upload
+})
+
+
+offerManager.runWhenCityLoad((city) => {
+	const element = document.getElementById('cards_oferta_city')
+	element.innerText = `${city.city}, ${city.uf}`
+})
 
 const valoresUpload = [
   { downloadSpeed: 100, uploadSpeed: 40 },

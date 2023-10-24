@@ -11,6 +11,12 @@ aSum.addEventListener('click', function (e) {
 	resize('increase')
 })
 
+offerManager.runWhenCityLoad((city) => {
+	const element = document.getElementById('changeLocalization')
+
+	element.innerText = `${city.city}, ${city.uf}`
+})
+
 function resize(action) {
 	const html = document.querySelector('html')
 	html.style.fontSize = window.getComputedStyle(
