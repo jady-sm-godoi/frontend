@@ -121,12 +121,13 @@
         max-width: 480px;
     }
 
-    .oi_saude__assine {
-        max-width: 222px;
-    }
 
     .oi_saude__carousel {
         justify-content: center;
+    }
+
+    .oi_saude__assine {
+        max-width: 388px;
     }
 }
 
@@ -147,5 +148,9 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
+    }
+
+    .oi_saude__assine {
+        max-width: 210px;
     }
 }
