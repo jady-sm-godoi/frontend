@@ -1,35 +1,23 @@
-'use strict'
-
-let arrCity = []
-
-// fetch city array
-const cityRegionalizationFallback =
-	'fallbacks/default-city-regionalization.json'
-
-fetch(cityRegionalizationFallback)
-	.then(async (request) => (arrCity = await request.json()))
-	.catch(() => {})
-
-const modalStructure = `
-<div class="header-modal_search_bar">
-    <div class="max_width_container header-modal_input-content">
-      <input oninput="searchCity(this)" placeholder="ONDE VOCÊ ESTÁ?" id="header-modal_inputcontent">
-      <button onclick="destroyModal()">CANCELAR</button>
-    </div>
-</div>
-`
-
-const selectCity = (city) => {
-	// const fetchCity = arrCity.find((mapcity) => mapcity.id == city.dataset.cityid)
-	// const getHeaderText = document.getElementById('changeLocalization')
-	// getHeaderText.dataset['normalized'] = city.dataset.normalized
-	// getHeaderText.innerHTML = `${fetchCity.city}, ${fetchCity.uf}`
-
-	offerManager.setCurrentCityById(city.dataset.cityid)
+function selectCity(city) {
+	offerManager.setCurrentCityByIndex(city.dataset.cityindex)
 	destroyModal()
 }
 
-const showCitys = (arr) => {
+class DebounceSearchRequest {
+	constructor() {
+		this.timer
+		this.delayToDeploy = 500
+	}
+	deployPromisse(callback, { autokill = false }) {
+		autokill && this.kill()
+		this.timer = setTimeout(callback, this.delayToDeploy)
+	}
+	kill() {
+		this.timer && clearTimeout(this.timer)
+	}
+}
+
+function showCitys(arr) {
 	const getUlContent = document.getElementById('container-city-modal')
 	getUlContent.innerHTML = ''
 
@@ -39,7 +27,7 @@ const showCitys = (arr) => {
 		const createRowButton = document.createElement('button')
 		createRowButton.setAttribute('class', 'header-modal_li_buttons')
 		createRowButton.innerText = `${city.city.toUpperCase()}, ${city.uf.toUpperCase()}`
-		createRowButton.dataset['cityid'] = city.id
+		createRowButton.dataset['cityindex'] = index
 		createRowButton.dataset['normalized'] = city.normalized
 
 		createRowButton.autofocus = true
@@ -58,25 +46,11 @@ const searchCity = (e) => {
 
 	// making a fetch on backend
 	getSearchInput.length <= 2
-		? showCitys(arrCity)
+		? showCitys(offerManager.defaultCities)
 		: fetchCitysOnBackend(getSearchInput)
 
 	// mapping focused buttons
 	mappingFocusedButtons()
-}
-
-class DebounceSearchRequest {
-	constructor() {
-		this.timer
-		this.delayToDeploy = 500
-	}
-	deployPromisse(callback, { autokill = false }) {
-		autokill && this.kill()
-		this.timer = setTimeout(callback, this.delayToDeploy)
-	}
-	kill() {
-		this.timer && clearTimeout(this.timer)
-	}
 }
 
 const debounceSearchRequest = new DebounceSearchRequest()
@@ -88,10 +62,8 @@ const fetchCitysOnBackend = (city) => {
 			console.log('Fazendo request')
 			offerManager
 				.searchCityByName(city)
-				.then(async (request) => {
-					request.length > 0 && showCitys(request)
-				})
-				.catch(() => showCitys(arrCity))
+				.then((request) => showCitys(request))
+				.catch(() => showCitys(offerManager.defaultCities))
 		},
 		{ autokill: true }
 	)
@@ -105,6 +77,15 @@ function overflowShow() {
 }
 
 function openModal() {
+	const modalStructure = `
+<div class="header-modal_search_bar">
+    <div class="max_width_container header-modal_input-content">
+      <input oninput="searchCity(this)" placeholder="ONDE VOCÊ ESTÁ?" id="header-modal_inputcontent">
+      <button onclick="destroyModal()">CANCELAR</button>
+    </div>
+</div>
+`
+
 	overflowHidden()
 	const createModal = document.createElement('div')
 
@@ -118,7 +99,7 @@ function openModal() {
 	createUl.className = 'elUl'
 	createUl.id = 'container-city-modal'
 	createModal.appendChild(createUl)
-	showCitys(arrCity)
+	showCitys(offerManager.defaultCities)
 	document.getElementById('header-modal_inputcontent').focus()
 
 	mappingFocusedButtons()

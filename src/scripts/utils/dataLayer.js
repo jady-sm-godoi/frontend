@@ -12,7 +12,7 @@ function debounce(functionCallback, timeout = 300) {
 ////////////////////////////////////
 
 document.addEventListener("DOMContentLoaded", () => {
-  window.dataLayer.push({
+  window?.dataLayer && window.dataLayer.push({
     event: "pageview",
     path: "/internet",
   });
@@ -218,7 +218,7 @@ const mappedButtons = [
 // })();
 
 function appendDataLayer(label, category, action, altern = undefined) {
-  window.dataLayer.push({
+  window?.dataLayer && window.dataLayer.push({
     event: "internet_event",
     eventLabel: label,
     eventCategory: category,
@@ -246,7 +246,9 @@ function appendDataLayer(label, category, action, altern = undefined) {
  * 
  */
 
-document.querySelectorAll("[data-gtmButton]").forEach((e) => {
+
+// TODO: fix gtm push items
+false && document.querySelectorAll("[data-gtmButton]").forEach((e) => {
   mappedButtons.find((elem) => {
     if (elem.name == e.dataset.gtmbutton) {
       // save button on array
