@@ -1,0 +1,151 @@
+.section_oi_saude {
+    background-color: #F5F5F5;
+    padding: 40px 0px;
+}
+
+.oi_saude__content {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.oi_saude__icons {
+    gap: 32px;
+    display: flex;
+}
+
+.oi_saude__carousel {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+}
+
+.oi_saude__backgroundMobile {
+    min-width: 256px;
+}
+
+.oi_saude__backgroundDesktop {
+    display: none;
+}
+
+.oi_saude__assine {
+    color: #1F1F1F;
+    font-family: Simplon BP;
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 32px;
+    max-width: 210px;
+}
+
+.specialColor {
+    color: #006B00;
+}
+
+.oi_saude__icons,
+.oi_saude__title,
+.oi_saude__solucoes {
+    margin-bottom: 32px;
+}
+
+.oi_saude__oferecimentos {
+    color: #1F1F1F;
+    font-family: Simplon BP;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.oi_saude__explicacao {
+    color: #F5F5F5;
+    text-align: center;
+    font-family: Simplon BP;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 24px;
+}
+
+.oi_saude__logos,
+.oi_saude__descricao_planos {
+    margin-bottom: 24px;
+}
+
+.oi_saude__ancora {
+    display: flex;
+    flex-direction: row;
+    width: 212px;
+    height: 48px;
+    padding: 12px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    border-radius: 50px;
+    background: #A5E114;
+
+}
+
+.oi_saude__text {
+    color: #000;
+    text-align: center;
+    font-family: Simplon BP;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 24px;
+}
+
+.oi_saude__imageBackground {
+    position: relative;
+}
+
+.oi_saude__cardContent {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 24px;
+
+}
+
+@media screen and (min-width: 768px) {
+
+    .oi_saude__backgroundMobile {
+        display: none;
+    }
+
+    .oi_saude__backgroundDesktop {
+        display: flex;
+        min-width: 312px;
+    }
+
+    .oi_saude__solucoes {
+        max-width: 480px;
+    }
+
+    .oi_saude__assine {
+        max-width: 222px;
+    }
+
+    .oi_saude__carousel {
+        justify-content: center;
+    }
+}
+
+
+@media screen and (min-width: 1920px) {
+
+    .oi_saude__content {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .oi_saude__solucoes {
+        margin-bottom: 32px;
+        max-width: 266px;
+    }
+
+    .oi_saude__description {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
