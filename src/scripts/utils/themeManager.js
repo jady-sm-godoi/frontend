@@ -3,14 +3,19 @@ const themeManager = new (class {
 		/** @private */
 		this._htmlElement = document.body
 
-		/** @private */
-		this._currentTheme = 'light'
-
 		/** @readonly @private*/
 		this.themeKeys = {
 			dark: 'dark',
 			light: 'light'
 		}
+
+		/**
+		 * @private
+		 * @type {"light" | "dark"}
+		 *
+		 * - default theme is light
+		 */
+		this._currentTheme = this.themeKeys.light
 
 		/** @private */
 		this.callbacks = []
@@ -47,6 +52,7 @@ const themeManager = new (class {
 		this._htmlElement.classList.add(this._currentTheme)
 
 		this._runCallbacksList()
+		this._setImagePaths()
 	}
 	/** @private */
 	_runCallbacksList() {
@@ -77,5 +83,19 @@ const themeManager = new (class {
 				'tentado adicionar um elemento que nao é uma função na callback de themas'
 			)
 	}
-})()
+	/** @private */
+	_setImagePaths() {
+		const getImages = document.getElementsByTagName('img')
 
+		for (const img of getImages) {
+			const imgThemeAttribute = {
+				light: img.attributes.getNamedItem('src-light'),
+				dark: img.attributes.getNamedItem('src-dark')
+			}
+
+			if (imgThemeAttribute.light && imgThemeAttribute.dark) {
+				img.src = imgThemeAttribute[this._currentTheme].textContent
+			}
+		}
+	}
+})()

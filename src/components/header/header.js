@@ -41,3 +41,15 @@ function resize(action) {
 		html.style.fontSize = +html.style.fontSize.slice(0, 2) - 1 + 'px'
 	}
 }
+
+// themeManager.runWhenChangeTheme((theme) => {
+// 	console.log('theme', theme)
+
+// 	const img = document.getElementById('imagemtest')
+
+// 	img.src =
+// 		theme == 'light'
+// 			? '../assets/images/icon-whatsapp.png'
+// 			: '../assets/images/logo-oi-mobile.png'
+// })
+ 
