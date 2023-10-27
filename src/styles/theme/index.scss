@@ -123,9 +123,17 @@
 }
 
 .dark {
-	--jatemoifibra-background:var(--color-black-full);
+	--jatemoifibra-background: var(--color-black-full);
+
+	--body-background: var(--color-black-full);
 }
 
 .light {
-	--jatemoifibra-background:var(--color-success-200);
+	--jatemoifibra-background: var(--color-success-200);
+	
+	--body-background: var(--color-white-full);
+}
+
+body {
+	background-color: var(--body-background);
 }
