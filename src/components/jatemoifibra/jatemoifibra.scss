@@ -1,150 +1,94 @@
-.section_jatemoifibra {
-    background: #C2FFCA;
+.profitability_section {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: #72d489;
+	padding: 40px 24px;
 }
 
-.jatemoifibra__container {
-    padding: 32px 24px;
+.profitability_icon_text_content {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-bottom: 24px;
+}
+.profitability_icon {
+	width: 76px;
+	height: 76px;
+	margin-bottom: 16px;
 }
 
-.jatemoifibra__content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.profitability_title {
+	font-family: var(--font-SimplonOi-Medium);
+	font-size: 1.5rem;
+	font-weight: 500;
+	line-height: 30px;
+	text-align: center;
+	margin: 0px;
+	margin-bottom: 4px;
+}
+.profitability_subtitle {
+	font-family: var(--font-SimplonOi-regular);
+	font-size: 1rem;
 }
 
-.jatemoifibra__image_icon_fibra {
-    margin-bottom: 24px;
+.profitability_anchor {
+	font-family: var(--font-SimplonOi-Medium);
+	text-decoration: none;
+	font-size: 1rem;
+	font-weight: 500;
+	padding: 12px 64px;
+	border-radius: 50px;
+	display: flex;
+	line-height: 24px;
+	background-color: #1f1f1f;
 }
 
-.jatemoifibra__title {
-    margin-bottom: 24px;
+.profitability_anchor,
+.profitability_anchor:hover {
+	color: #fff;
 }
 
-.jatemoifibra__ancoras {
-    gap: 16px;
-    display: flex;
-    flex-direction: column;
+.profitability_moi_anchor {
+	margin-top: 16px;
+	background-color: transparent;
+	border: 1px solid #1f1f1f;
 }
 
-.jatemoifibra__cta,
-.ancora_whatsapp {
-    background: #1F1F1F;
-    display: flex;
-    width: 312px;
-    height: 48px;
-    padding: 8px 40px;
-    justify-content: center;
-    align-items: center;
-    gap: 8px;
-    border-radius: 50px;
+.profitability_moi_anchor,
+.profitability_moi_anchor:hover {
+	color: #1f1f1f;
 }
 
-.jatemoifibra__ancora_text,
-.confira_whatsapp {
-    color: #FFF;
-    font-family: Simplon BP;
-    font-size: 1rem;
-    font-weight: 500;
-    line-height: 150%;
+.profitability_btn_icon {
+	width: 24px;
+	height: 24px;
+	margin-left: 8px;
 }
 
-.confira_minhaoi {
-    color: #1F1F1F;
-}
-
-.ancora_minhaoi {
-    border: 2px solid var(--functional-neutral-darkest, #1F1F1F);
-    background: transparent;
-}
-
-.jatemoifibra__title {
-    color: #1F1F1F;
-    font-family: Simplon BP;
-    font-size: 2rem;
-    font-weight: 500;
-    line-height: 125%;
-    text-align: center;
-}
-
-.jatemoifibra__confira_ofertas {
-    color: #1F1F1F;
-    font-family: Simplon BP;
-    font-size: 1.25rem;
-    font-weight: 400;
-    line-height: 120%;
-    text-align: center;
-    min-width: 312px;
-}
-
-.jatemoifibra__ofertas_fibra {
-    margin-bottom: 24px;
-}
-
-@media screen and (min-width: 768px) {
-    .jatemoifibra__content {
-        flex-direction: row;
-        display: flex;
-        justify-content: space-between;
-        position: relative;
-    }
-
-    .jatemoifibra__container {
-        padding: 32px 0px;
-    }
-
-    .jatemoifibra__ofertas_fibra {
-        margin-bottom: 0px;
-        position: absolute;
-        left: 102px;
-    }
-
-    .jatemoifibra__title {
-        margin-bottom: 4px;
-    }
-
-    .jatemoifibra__title {
-        text-align: left;
-    }
-
-    .jatemoifibra__confira_ofertas {
-        text-align: left;
-        width: 232px;
-        min-width: 0px;
-    }
-
-    .jatemoifibra__cta {
-        width: 284px;
-    }
-
-    .jatemoifibra__image_icon_fibra {
-        margin-bottom: 0px;
-    }
-}
-
-@media screen and (min-width: 1024px) {
-    .jatemoifibra__ancoras {
-        flex-direction: column;
-
-    }
-
-    .jatemoifibra__confira_ofertas {
-        min-width: 388px;
-    }
-}
-
-@media screen and (min-width: 1366px) {
-    .jatemoifibra__ancoras {
-        flex-direction: row;
-    }
-
-    .jatemoifibra__confira_ofertas {
-        min-width: 388px;
-    }
-}
-
-@media screen and (min-width: 1920px) {
-
-    .jatemoifibra__cta {
-        width: 312px;
-    }
+@media (min-width: 1024px) {
+	.profitability_section {
+		flex-direction: row;
+		justify-content: center;
+	}
+	.profitability_icon {
+		margin-bottom: 0px;
+		margin-right: 16px;
+	}
+	.profitability_icon_text_content {
+		flex-direction: row;
+		margin-bottom: 0;
+		margin-right: 80px;
+	}
+	.profitability_title {
+		text-align: left;
+	}
+	.profitability_title {
+		font-size: 2rem;
+		line-height: 40px;
+	}
+	.profitability_subtitle {
+		font-size: 1.25rem;
+		line-height: 30px;
+	}
 }
