@@ -12,6 +12,9 @@ const themeManager = new (class {
 			light: 'light'
 		}
 
+		/** @private */
+		this.callbacks = []
+
 		/**
 		 * - apply theme when user load page
 		 */
@@ -42,5 +45,40 @@ const themeManager = new (class {
 
 		// append theme classes on body
 		this._htmlElement.classList.add(this._currentTheme)
+
+		this._runCallbacksList()
+	}
+	/** @private */
+	_runCallbacksList() {
+		this.callbacks.forEach(async (cb) =>
+			this._runCallback(cb, this._currentTheme)
+		)
+	}
+
+	/**
+	 *  @param {Function} callback
+	 *  @param {string} params
+	 *  @private
+	 *
+	 * */
+	_runCallback(callback, params) {
+		try {
+			params ? callback(params) : callback
+		} catch (error) {
+			console.log('erro ao executar callback de temas da funcao', error)
+		}
+	}
+
+	/** @param {(theme: "dark" | "light") => } callback */
+	runWhenChangeTheme(callback = () => {}) {
+		if (typeof callback == 'function') this.callbacks.push(callback)
+		else
+			console.log(
+				'tentado adicionar um elemento que nao é uma função na callback de themas'
+			)
 	}
 })()
+
+themeManager.runWhenChangeTheme((theme) => {
+	console.log('tema trocado para', theme)
+})
