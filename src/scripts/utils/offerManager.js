@@ -34,7 +34,7 @@ globalThis.offerManager = new (class OfferManager {
 		})
 
 		/**  @private  * @type {cityObject}  */
-		this._currentCity
+		this._currentCity = {}
 		// case not found
 		if (!!cityFromCookies) {
 			console.log('cityFromCookies', cityFromCookies)
