@@ -79,6 +79,3 @@ const themeManager = new (class {
 	}
 })()
 
-themeManager.runWhenChangeTheme((theme) => {
-	console.log('tema trocado para', theme)
-})
