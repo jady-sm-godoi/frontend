@@ -24,10 +24,14 @@
                 </div>
             </div>
 
-            <!-- oi play tv -->
+
 
             <div class="oi_saude__servicos">
                 <div class="oi_saude__carousel">
+
+
+                    <!-- oi play tv -->
+
                     <div class="oi_saude__card">
                         <div class="oi_saude__imageBackground">
                             <img class="oi_saude__backgroundMobile" id=""
@@ -128,13 +132,50 @@
                 </div>
 
                 <div class="oi_saude__carousel_dots">
-                    <button class="oi_saude__card-radio-1 oi_saude__card-radio-active" onclick="servicoAtivo"
-                        value="0"></button>
-                    <button class="oi_saude__card-radio-2" onclick="servicoAtivo" value="1"></button>
-                    <button class="oi_saude__card-radio-3" onclick="servicoAtivo" value="3"></button>
+                    <div class="oi_saude__card_dot oi_saude__card_dot_active"></div>
+                    <div class="oi_saude__card_dot"></div>
+                    <div class="oi_saude__card_dot"></div>
                 </div>
 
             </div>
         </div>
     </div>
+
+    <script>
+        const carousel = document.querySelector('.oi_saude__carousel');
+        const slides = document.querySelectorAll('.oi_saude__card');
+        const dots = document.querySelectorAll('.oi_saude__card_dot');
+
+        let currentIndex = 0;
+
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                goToSlide(index);
+            });
+        });
+
+        function goToSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.style.transform = `translateX(-${index * 100}%)`;
+                dots[i].classList.remove('oi_saude__card_dot_active');
+            });
+            dots[index].classList.add('oi_saude__card_dot_active');
+            currentIndex = index;
+        }
+
+        function nextSlide() {
+            currentIndex = (currentIndex + 1) % slides.length;
+            goToSlide(currentIndex);
+        }
+
+        function prevSlide() {
+            currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+            goToSlide(currentIndex);
+        }
+
+        setInterval(nextSlide, 5000); // Automatic slide change every 3 seconds
+
+
+
+    </script>
 </section>
