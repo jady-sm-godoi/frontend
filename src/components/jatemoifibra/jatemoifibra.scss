@@ -41,7 +41,7 @@
 	border-radius: 50px;
 	display: flex;
 	line-height: 24px;
-	background-color: #1f1f1f;
+	background-color: var(--jatemoifibra-background-button);
 }
 
 .profitability_anchor,
@@ -52,12 +52,12 @@
 .profitability_moi_anchor {
 	margin-top: 16px;
 	background-color: transparent;
-	border: 1px solid #1f1f1f;
+	border: 1px solid var(--jatemoifibra-background-button);
 }
 
 .profitability_moi_anchor,
 .profitability_moi_anchor:hover {
-	color: #1f1f1f;
+	color: var(--jatemoifibra-background-button);
 }
 
 .profitability_btn_icon {
