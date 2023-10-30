@@ -123,6 +123,9 @@
 }
 
 .dark {
+	--vantagensfibra-background-section:var(--color-black-full);
+	--vantagensfibra-color-text:var(--color-white-full);
+	--vantagensfibra-background-button-whats:var(--color-black-full);
 	--jatemoifibra-background: var(--color-black-full);
 	--jatemoifibra-background-button:var(--color-primary-300);
 
@@ -130,6 +133,9 @@
 }
 
 .light {
+	--vantagensfibra-background-section: var(--color-neutral-100);
+	--vantagensfibra-color-text:var(--color-neutral-600);
+	--vantagensfibra-background-button-whats:var(--color-neutral-100);
 	--jatemoifibra-background: var(--color-success-200);
 	--jatemoifibra-background-button:var(--color-neutral-600);
 	
