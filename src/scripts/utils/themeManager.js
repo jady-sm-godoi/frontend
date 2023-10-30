@@ -89,8 +89,8 @@ const themeManager = new (class {
 
 		for (const img of getImages) {
 			const imgThemeAttribute = {
-				light: img.attributes.getNamedItem('src-light'),
-				dark: img.attributes.getNamedItem('src-dark')
+				light: img.attributes.getNamedItem('data-src-' + this.themeKeys.light),
+				dark: img.attributes.getNamedItem('data-src-' + this.themeKeys.dark)
 			}
 
 			if (imgThemeAttribute.light && imgThemeAttribute.dark) {
