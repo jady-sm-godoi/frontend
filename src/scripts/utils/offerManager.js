@@ -1,4 +1,4 @@
-globalThis.offerManager = new (class OfferManager {
+const offerManager = new (class OfferManager {
 	constructor() {
 		/**  @private  */
 		this._cookies = new CookiesManager()
@@ -22,7 +22,7 @@ globalThis.offerManager = new (class OfferManager {
 		/**  @private @type {cityObject[]}   */
 		this._lastCitySearch = []
 
-		/**  @type {cityObject[]}  */
+		/**  @type {cityObject[]}  - retorna lista de cidades padrão */
 		this.defaultCities = []
 
 		const cityFromCookies = this.getCityFromCookies()
@@ -393,3 +393,4 @@ globalThis.offerManager = new (class OfferManager {
  * @property {number} ddd
  * @property {number} normalized
  */
+
