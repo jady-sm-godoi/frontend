@@ -99,196 +99,160 @@ themeManager.currentTheme = 'dark';
 
 Esta documentação fornece uma descrição detalhada da classe ThemeManager, incluindo suas propriedades, métodos públicos e privados, bem como exemplos de uso para cada método público.
 
-# Documentação da Classe OfferManager
 
-A classe OfferManager é responsável por gerenciar ofertas de negócios e funcionalidades relacionadas. Ela contém vários métodos e propriedades para interagir com dados de cidades, ofertas e addons. Abaixo está uma visão geral dos métodos públicos e privados na classe, com exemplos de como usá-los.
+# Documentação da Classe `OfferManager`
 
-## Propriedades
+A classe `OfferManager` é responsável por gerenciar dados relacionados a ofertas de negócios, cidades e configurações padrão em uma aplicação web. Ela oferece métodos para buscar informações sobre cidades, configurar ofertas padrão e oferece funcionalidades para adicionar callbacks que serão executados quando dados de cidade ou ofertas são alterados.
 
-### `defaultCities`
+## Construtor
 
-- Tipo: `cityObject[]`
-- Descrição: Array de objetos de cidade representando cidades padrão.
+### `constructor()`
 
-### `currentCity`
-
-- Tipo: `cityObject`
-- Descrição: Representa a cidade atualmente selecionada.
-
-### `offerData`
-
-- Tipo: `BusinessOffer`
-- Descrição: Representa os dados da oferta de negócios atual.
+- **Descrição:** Construtor da classe `OfferManager`.
+- **Propriedades Privadas:**
+  - `_cookies`: Instância de `CookiesManager` para gerenciar cookies.
+  - `offerData`: Objeto contendo dados sobre ofertas de negócios.
+  - `_backendUrl`: URL base para fazer requisições ao backend.
+  - `_cityCallbacks`: Array de callbacks para dados de cidade.
+  - `_offerCallbacks`: Array de callbacks para dados de ofertas.
+  - `_defaultCityUrl`: URL para buscar cidades padrão em caso de falha.
+  - `_lastCitySearch`: Última pesquisa de cidades realizada.
+  - `defaultCities`: Lista de cidades padrão.
+  - `_currentCity`: Objeto contendo dados da cidade atual.
+- **Métodos Privados Utilizados:**
+  - `searchCityByName(name: string): Promise<cityObject[]>`
+  - `searchCityById(id: string): Promise<cityObject>`
+  - `requestDefaultCities(): Promise<cityObject[]>`
+  - `setDefaultConfigs(): void`
+  - `_requestOffer(args: { city: string, uf: string }): Promise<BusinessOffer>`
+- **Exemplo de Uso:**
+  ```javascript
+  const offerManager = new OfferManager();
+  ```
 
 ## Métodos Públicos
 
-### `searchCityByName(name: string): Promise<cityObject[]>`
+### `async searchCityByName(name: string): Promise<cityObject[]>`
 
-- Parâmetros: `name` (string) - O nome da cidade a ser pesquisado.
-- Retorna: Promise que resolve para um array de objetos de cidade correspondendo ao nome fornecido ou cidades padrão se não houver correspondência.
-- Descrição: Procura cidades pelo nome e retorna objetos de cidade correspondentes.
+- **Descrição:** Busca cidades pelo nome.
+- **Parâmetros:**
+  - `name`: Nome da cidade a ser buscado.
+- **Retorno:** Promise resolvida com um array de objetos `cityObject`.
+- **Exemplo de Uso:**
+  ```javascript
+  const cities = await offerManager.searchCityByName("São Paulo");
+  console.log(cities);
+  ```
 
-**Exemplo de Uso:**
+### `async searchCityById(id: string): Promise<cityObject>`
 
-```javascript
-offerManager.searchCityByName('São Paulo').then(cities => {
-    console.log(cities);
-});
-```
+- **Descrição:** Busca uma cidade pelo ID.
+- **Parâmetros:**
+  - `id`: ID da cidade a ser buscado.
+- **Retorno:** Promise resolvida com um objeto `cityObject`.
+- **Exemplo de Uso:**
+  ```javascript
+  const city = await offerManager.searchCityById("12345");
+  console.log(city);
+  ```
 
-### `searchCityById(id: string): Promise<cityObject>`
+### `async setCurrentOffer(args: { city: string, uf: string }): Promise<BusinessOffer>`
 
-- Parâmetros: `id` (string) - O ID da cidade a ser pesquisado.
-- Retorna: Promise que resolve para um objeto de cidade com o ID fornecido.
-- Descrição: Procura uma cidade pelo ID e retorna o objeto de cidade.
+- **Descrição:** Define a oferta atual com base na cidade e UF fornecidas.
+- **Parâmetros:**
+  - `args`: Objeto contendo `city` (nome da cidade) e `uf` (sigla do estado).
+- **Retorno:** Promise resolvida com um objeto `BusinessOffer`.
+- **Exemplo de Uso:**
+  ```javascript
+  const offer = await offerManager.setCurrentOffer({ city: "São Paulo", uf: "SP" });
+  console.log(offer);
+  ```
 
-**Exemplo de Uso:**
+### `async setCurrentCityById(id: string): void`
 
-```javascript
-offerManager.searchCityById('123').then(city => {
-    console.log(city);
-});
-```
-
-### `setDefaultConfigs(): void`
-
-- Descrição: Define as configurações padrão de cidade e oferta. Usado quando nenhuma cidade é encontrada nos cookies.
-
-**Exemplo de Uso:**
-
-```javascript
-offerManager.setDefaultConfigs();
-```
-
-### `setCurrentCityById(id: string): void`
-
-- Parâmetros: `id` (string) - O ID da cidade a ser definido como a cidade atual.
-- Descrição: Define a cidade atual usando o ID fornecido e busca os dados da oferta correspondentes.
-
-**Exemplo de Uso:**
-
-```javascript
-offerManager.setCurrentCityById('456');
-```
+- **Descrição:** Define a cidade atual pelo seu ID.
+- **Parâmetros:**
+  - `id`: ID da cidade a ser definido como a cidade atual.
+- **Exemplo de Uso:**
+  ```javascript
+  offerManager.setCurrentCityById("12345");
+  ```
 
 ### `setCurrentCityByIndex(index: string | number): void`
 
-- Parâmetros: `index` (string | number) - Índice da cidade no último array de pesquisa de cidade.
-- Descrição: Define a cidade atual com base no índice fornecido e busca os dados da oferta correspondentes.
+- **Descrição:** Define a cidade atual com base no índice da última pesquisa de cidades.
+- **Parâmetros:**
+  - `index`: Índice da cidade na última pesquisa de cidades.
+- **Exemplo de Uso:**
+  ```javascript
+  offerManager.setCurrentCityByIndex(0);
+  ```
 
-**Exemplo de Uso:**
+### `runWhenCityLoad(callbackType: callbackType, callback: (city: cityObject, isLoading: boolean) => void): void`
 
-```javascript
-offerManager.setCurrentCityByIndex(0);
-```
+- **Descrição:** Adiciona um callback para ser executado quando os dados da cidade são alterados.
+- **Parâmetros:**
+  - `callbackType`: Tipo de callback ("data" para dados, "loading" para indicar que os dados estão sendo carregados).
+  - `callback`: Função de callback que recebe um objeto `cityObject` e um booleano indicando se os dados estão sendo carregados.
+- **Exemplo de Uso:**
+  ```javascript
+  offerManager.runWhenCityLoad("data", (city, isLoading) => {
+    console.log(`Dados da cidade: ${JSON.stringify(city)}`);
+  });
 
-### `runWhenCityLoad(callback: (cityObject) => void): void`
+  offerManager.runWhenCityLoad("loading", (city, isLoading) => {
+    console.log(`Dados estão sendo carregados: ${isLoading}`);
+  });
+  ```
 
-- Parâmetros: `callback` ((cityObject) => void) - Função de callback a ser executada quando a cidade atual for carregada.
-- Descrição: Adiciona uma função de callback para ser executada quando a cidade atual for carregada.
+### `runWhenOfferLoad(callbackType: callbackType, callback: (offer: BusinessOffer, isLoading: boolean) => void): void`
 
-**Exemplo de Uso:**
+- **Descrição:** Adiciona um callback para ser executado quando os dados da oferta são alterados.
+- **Parâmetros:**
+  - `callbackType`: Tipo de callback ("data" para dados, "loading" para indicar que os dados estão sendo carregados).
+  - `callback`: Função de callback que recebe um objeto `BusinessOffer` e um booleano indicando se os dados estão sendo carregados.
+- **Exemplo de Uso:**
+  ```javascript
+  offerManager.runWhenOfferLoad("data", (offer, isLoading) => {
+    console.log(`Dados da oferta: ${JSON.stringify(offer)}`);
+    console.log(`Dados estão sendo carregados: ${isLoading}`);
+  });
+  ```
 
-```javascript
-offerManager.runWhenCityLoad(city => {
-    console.log('Cidade carregada:', city);
-});
-```
-
-### `runWhenOfferLoad(callback: (offer: BusinessOffer) => void): void`
-
-- Parâmetros: `callback` ((offer: BusinessOffer) => void) - Função de callback a ser executada quando os dados da oferta forem carregados.
-- Descrição: Adiciona uma função de callback para ser executada quando os dados da oferta forem carregados.
-
-**Exemplo de Uso:**
-
-```javascript
-offerManager.runWhenOfferLoad(offer => {
-    console.log('Oferta carregada:', offer);
-});
-```
-
-## Métodos Privados
-
-### `_requestOffer(args: { city: string, uf: string }): Promise<BusinessOffer>`
-
-- Parâmetros: `args` ({ city: string, uf: string }) - Objeto contendo informações de cidade e UF (estado).
-- Retorna: Promise que resolve para um objeto BusinessOffer.
-- Descrição: Envia uma solicitação à API de backend para buscar dados da oferta para a cidade e UF especificadas.
-
-### `_executeCityCallbacks(): void`
-
-- Descrição: Executa os callbacks de cidade registrados com os dados da cidade atual.
-
-### `_executeOfferCallbacks(): void`
-
-- Descrição: Executa os callbacks de oferta registrados com os dados da oferta atual.
-
-### `_errorWhenFetchCity(err: any): void`
-
-- Parâmetros: `err` (any) - Objeto de erro recebido ao buscar dados da cidade.
-- Descrição: Trata erros que ocorrem durante operações de busca de dados da cidade.
-
-## Getters e Setters
-
-### `getCityFromCookies(): cityObject`
-
-- Retorna: cityObject
-- Descrição: Recupera dados da cidade dos cookies e retorna um objeto de cidade.
-
-### `setCityOnCookies(value: cityObject): void`
-
-- Parâmetros: `value` (cityObject) - Objeto de cidade contendo informações de cidade, ID, UF e DDD.
-- Descrição: Define dados da cidade nos cookies usando o objeto de cidade fornecido.
-
-## Tipos de Dados
+## Tipos Utilizados
 
 ### `cityObject`
 
-- Propriedades:
-  - `id` (string) - ID da cidade.
-  - `city` (string) - Nome da cidade.
-  - `uf` (string) - Abreviação do estado.
-  - `ddd` (number) - Código de área.
-  - `normalized` (number) - Valor normalizado (não especificado).
+- **Descrição:** Objeto representando uma cidade.
+- **Propriedades:**
+  - `id`: ID da cidade.
+  - `city`: Nome da cidade.
+  - `uf`: Sigla do estado.
+  - `ddd`: Código DDD da cidade.
+  - `normalized`: Propriedade não especificada na documentação.
+
+### `callbackType`
+
+- **Descrição:** Tipo de callback, indicando se os dados estão sendo carregados ("loading") ou se os dados estão prontos para serem usados ("data").
 
 ### `Attachment`
 
-- Propriedades:
-  - `title` (string) - Título do anexo.
-  - `url` (string) - URL do anexo.
+- **Descrição:** Objeto representando um anexo.
+- **Propriedades:**
+  - `title`: Título do anexo.
+  - `url`: URL do anexo.
 
 ### `ChildProduct`
 
-- Propriedades:
-  - Várias propriedades representando detalhes do produto, como nome, código, descrição, etc.
-
-### `Addon`
-
-- Propriedades:
-  - Várias propriedades representando detalhes do addon, como código, nome, descrição, etc.
-
-### `Addons`
-
-- Propriedades:
-  - Propriedades representando diferentes tipos de addons (por exemplo, OI_PLAY_TV, SVOD_GLOBOPLAY, etc.).
-
-### `Offer`
-
-- Propriedades:
-  - Várias propriedades representando detalhes da oferta, como código, nome, descrição, etc.
-
-### `BusinessOffer`
-
-- Propriedades:
-  - `offers` (Offer[]) - Array de ofertas.
-  - Várias outras propriedades representando diferentes aspectos da oferta de negócios.
-
----
-
-Esta documentação fornece uma visão abrangente da classe OfferManager, incluindo seus métodos, propriedades e tipos de dados, permit
-
-indo que os desenvolvedores entendam e utilizem a classe de forma eficaz.
+- **Descrição:** Objeto representando um produto relacionado a uma oferta.
+- **Propriedades:**
+  - `name`: Nome do produto.
+  - `code`: Código do produto.
+  - `description`: Descrição do produto.
+  - `endOfLifeDate`: Data de fim de vida do produto.
+  - `chargeamount`: Valor cobrado pelo produto.
+  - `downloadSpeed`: Velocidade de download do produto.
+  - `type`:
 
 # Documentação da Classe CookiesManager
 
@@ -410,8 +374,6 @@ document.getElementById('inputField').addEventListener('input', (event) => {
 ```
 
 Neste exemplo, a função `handleInput` será chamada apenas quando o usuário parar de digitar por 500 milissegundos, evitando chamadas excessivas durante a entrada contínua. O intervalo de tempo pode ser ajustado passando um valor diferente como segundo argumento para a função `debounce`.
-
-
 
 # Documentação da Classe `VLibrasManager`
 
