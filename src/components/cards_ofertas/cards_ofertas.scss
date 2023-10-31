@@ -1,5 +1,4 @@
 .cards_ofertas_section {
-  background-color: #ffffff;
   font-family: "Simplon BP";
 }
 
@@ -15,7 +14,7 @@
   font-weight: 400;
   font-size: 1.25rem;
   line-height: 24px;
-  color: #1f1f1f;
+  color:var(--cardsofertas-title);
   text-align: center;
   margin-bottom: 24px;
 }
