@@ -163,17 +163,12 @@
         max-width: 480px;
     }
 
-
-    // .oi_saude__carousel {
-    //     justify-content: center;
-    // }
-
     .oi_saude__assine {
         max-width: 388px;
     }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 994px) {
     .oi_saude__carousel_dots {
         display: none;
     }
@@ -182,6 +177,13 @@
     .oi_saude__card_dot_active {
         transition: none;
     }
+
+
+    .oi_saude__carousel {
+        justify-content: center;
+    }
+
+
 }
 
 @media screen and (min-width: 1920px) {

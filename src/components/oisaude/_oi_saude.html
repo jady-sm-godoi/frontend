@@ -145,8 +145,8 @@
         const carousel = document.querySelector('.oi_saude__carousel');
         const slides = document.querySelectorAll('.oi_saude__card');
         const dots = document.querySelectorAll('.oi_saude__card_dot');
-
         let currentIndex = 0;
+        let autoPlayInterval;
 
         dots.forEach((dot, index) => {
             dot.addEventListener('click', () => {
@@ -173,9 +173,21 @@
             goToSlide(currentIndex);
         }
 
-        setInterval(nextSlide, 5000); // Automatic slide change every 3 seconds
+        function checkScreenWidth() {
+            if (window.innerWidth >= 992) {
+                currentIndex = 0; // Volte ao primeiro slide
+                clearInterval(autoPlayInterval); // Pausa a reprodução automática
+                goToSlide(currentIndex); // Atualize o slide visível
+            }
+        }
 
+        //Função de verificação de largura da tela quando a página é carregada
+        window.addEventListener('load', checkScreenWidth);
+        window.addEventListener('resize', checkScreenWidth);
 
+        if (window.innerWidth < 992) {
+            autoPlayInterval = setInterval(nextSlide, 3000);
+        }
 
     </script>
 </section>
