@@ -153,6 +153,7 @@
 	--profitability-text-color: var(--color-white-full);
 
 	--section-oisaude-background: var(--color-black-full);
+	--section-oisaude-text-color: var(--color-white-full);
 }
 
 .light {
@@ -184,7 +185,8 @@
 
 	--profitability-text-color: var(--color-neutral-600);
 
-	--section-oisaude-background: var(var(--color-neutral-100));
+	--section-oisaude-background: var(--color-neutral-100);
+	--section-oisaude-text-color: var(--color-neutral-600);
 }
 
 body {

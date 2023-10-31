@@ -30,7 +30,7 @@
 }
 
 .oi_saude__assine {
-    color: #1F1F1F;
+    color: var(--section-oisaude-text-color);
     font-family: Simplon BP;
     font-size: 1.5rem;
     font-weight: 500;
@@ -39,7 +39,7 @@
 }
 
 .specialColor {
-    color: #006B00;
+    color: var(--color-primary-400);
 }
 
 .oi_saude__icons,
@@ -49,7 +49,7 @@
 }
 
 .oi_saude__oferecimentos {
-    color: #1F1F1F;
+    color: var(--section-oisaude-text-color);
     font-family: Simplon BP;
     font-size: 1rem;
     font-weight: 400;
