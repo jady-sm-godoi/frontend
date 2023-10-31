@@ -124,9 +124,18 @@
 
 .dark {
 	--cardsofertascombo-background-section:var(--color-black-full);
+	--cardsofertascombo-background-img:var(--color-black-full);
+	--cardsofertascombo-border-color-img:var(--color-primary-300);
+	--cardsofertascombo-text-color-img:var(--color-white-full);
+	--cardsofertascombo-title-color:var(--color-white-full);
+	--cardsofertascombo-text-color-button:var(--color-black-full);
+	--cardsofertascombo-background-button:var(--color-primary-300);
+
 	--vantagensfibra-background-section:var(--color-black-full);
 	--vantagensfibra-color-text:var(--color-white-full);
 	--vantagensfibra-background-button-whats:var(--color-black-full);
+
+
 	--jatemoifibra-background: var(--color-black-full);
 	--jatemoifibra-background-button:var(--color-primary-300);
 	--jatemoifibra-color-text-button:var(--color-black-full);
@@ -136,9 +145,18 @@
 
 .light {
 	--cardsofertascombo-background-section:var(--color-neutral-200);
+	--cardsofertascombo-background-img:var(--color-white-full);
+	--cardsofertascombo-border-color-img:var(--color-white-full);
+	--cardsofertascombo-text-color-img:var(--color-black-full);
+	--cardsofertascombo-title-color:var(--color-neutral-550);
+	--cardsofertascombo-text-color-button:var(--color-white-full);
+	--cardsofertascombo-background-button:var(--color-primary-410);
+
 	--vantagensfibra-background-section: var(--color-neutral-100);
 	--vantagensfibra-color-text:var(--color-neutral-600);
 	--vantagensfibra-background-button-whats:var(--color-neutral-100);
+
+
 	--jatemoifibra-background: var(--color-success-200);
 	--jatemoifibra-background-button:var(--color-neutral-600);
 	--jatemoifibra-color-text-button:var(--color-white-full);

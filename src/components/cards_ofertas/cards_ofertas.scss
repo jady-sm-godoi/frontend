@@ -332,7 +332,7 @@ li.cards_ofertas_li_beneficios:first-child {
   font-size: 1.5rem;
   font-weight: 400;
   line-height: 24px;
-  color: #303030;
+  color: var(--cardsofertascombo-title-color);
 }
 
 .cards_ofertas_outros_produtos {
@@ -376,7 +376,8 @@ li.cards_ofertas_li_beneficios:first-child {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #ffffff;
+  background-color: var(--cardsofertascombo-background-img);
+  border: 1px solid var(--cardsofertascombo-border-color-img);
   border-radius: 100%;
 }
 
@@ -385,7 +386,7 @@ li.cards_ofertas_li_beneficios:first-child {
   font-weight: 500;
   font-size: 1rem;
   line-height: 24px;
-  color: #000000;
+  color: var(--cardsofertascombo-text-color-img);
   margin-top: 9px;
 }
 
@@ -393,8 +394,8 @@ li.cards_ofertas_li_beneficios:first-child {
   width: 100%;
   max-width: 331px;
   padding: 20px 0;
-  background-color: #009e0c;
-  color: #ffffff;
+  background-color: var(--cardsofertascombo-background-button);
+  color: var(--cardsofertascombo-text-color-button);
   font-size: 1rem;
   font-weight: 500;
   display: flex;
