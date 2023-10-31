@@ -21,9 +21,17 @@ const themeManager = new (class {
 		this.callbacks = []
 
 		/**
+		 * - readded images to toggle theme
+		 * @type {{nodeElement: HTMLElement, src:{light:string, dark:string}}[]}
+		 * @private
+		 */
+		this._images = []
+		this._readImages()
+
+		/**
 		 * - apply theme when user load page
 		 */
-		this._applyTheme()
+		this._applyTheme({ runApplyImagePaths: false, runCallbacks: true })
 	}
 
 	/** @param {"light" | "dark"} value */
@@ -40,7 +48,7 @@ const themeManager = new (class {
 	}
 
 	/** @private */
-	_applyTheme() {
+	_applyTheme(args = { runCallbacks: true, runApplyImagePaths: true }) {
 		// get theme classnames
 		const classNames = Object.keys(this.themeKeys).map(
 			(el) => this.themeKeys[el]
@@ -51,8 +59,8 @@ const themeManager = new (class {
 		// append theme classes on body
 		this._htmlElement.classList.add(this._currentTheme)
 
-		this._runCallbacksList()
-		this._setImagePaths()
+		args.runCallbacks && this._runCallbacksList()
+		args.runApplyImagePaths && this._setImagePaths()
 	}
 	/** @private */
 	_runCallbacksList() {
@@ -84,18 +92,30 @@ const themeManager = new (class {
 			)
 	}
 	/** @private */
-	_setImagePaths() {
+	_readImages() {
 		const getImages = document.getElementsByTagName('img')
 
 		for (const img of getImages) {
-			const imgThemeAttribute = {
-				light: img.attributes.getNamedItem('data-src-' + this.themeKeys.light),
-				dark: img.attributes.getNamedItem('data-src-' + this.themeKeys.dark)
-			}
+			const imageSrcDark = img.dataset['srcDark']
+			if (imageSrcDark) {
+				// append image on array
+				this._images.push({
+					nodeElement: img,
+					src: {
+						dark: imageSrcDark,
+						light: img.src
+					}
+				})
 
-			if (imgThemeAttribute.light && imgThemeAttribute.dark) {
-				img.src = imgThemeAttribute[this._currentTheme].textContent
+				// remove src-dark attribute
+				img.removeAttribute('data-src-dark')
 			}
+		}
+	}
+	/** @private */
+	_setImagePaths() {
+		for (const img of this._images) {
+			img.nodeElement.src = img.src[this._currentTheme]
 		}
 	}
 })()

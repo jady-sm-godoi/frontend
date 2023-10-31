@@ -10,7 +10,6 @@ aSubtraction.addEventListener('click', function (e) {
 aTheme.addEventListener('click', function (e) {
 	themeManager.currentTheme =
 		themeManager.currentTheme == 'dark' ? 'light' : 'dark'
-	// console.log('themeManager.currentTheme', themeManager.currentTheme == '')
 })
 
 aSum.addEventListener('click', function (e) {
@@ -52,4 +51,3 @@ function resize(action) {
 // 			? '../assets/images/icon-whatsapp.png'
 // 			: '../assets/images/logo-oi-mobile.png'
 // })
- 
