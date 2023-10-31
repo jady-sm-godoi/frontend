@@ -10,10 +10,18 @@ const offerManager = new (class OfferManager {
 		this._backendUrl = new URL(
 			'https://homeoifibra-back-dev-hml.hml.ocpcorp.oi.intranet'
 		)
-		/**  @private */
-		this._cityCallbacks = []
 
-		/**  @private  */
+		// callbacks de execucoes
+		/**
+		 *  @private
+		 *  @type {{callback: (city: cityObject, isLoading: boolean) => void , callbackType: callbackType}[]}
+		 *
+		 * */
+		this._cityCallbacks = []
+		/**
+		 *  @private
+		 *	@type {{callback: (offer: BusinessOffer, isLoading: boolean) => void, callbackType: callbackType}[]}
+		 * */
 		this._offerCallbacks = []
 
 		/**  @private  */
@@ -28,21 +36,19 @@ const offerManager = new (class OfferManager {
 		const cityFromCookies = this.getCityFromCookies()
 
 		this.requestDefaultCities().then((city) => {
-			console.log('city-geted', city)
 			this.defaultCities = city
 			this._lastCitySearch = city
 		})
+
 
 		/**  @private  * @type {cityObject}  */
 		this._currentCity = {}
 		// case not found
 		if (!!cityFromCookies) {
-			console.log('cityFromCookies', cityFromCookies)
 			this._currentCity = cityFromCookies
-			this._executeCityCallbacks()
+			this._executeCityCallbacks('data')
 			this.setCurrentOffer(this._currentCity)
 		} else {
-			console.log('pegando cidades default', cityFromCookies)
 			this.setDefaultConfigs()
 		}
 	}
@@ -89,8 +95,6 @@ const offerManager = new (class OfferManager {
 	}
 
 	async setDefaultConfigs() {
-		console.log('setando cidade default')
-
 		this._backendUrl.pathname = [
 			'offers',
 			'v2',
@@ -121,11 +125,12 @@ const offerManager = new (class OfferManager {
 			id: defaultOffer.cityId,
 			uf: defaultOffer.uf
 		}
-		this._executeCityCallbacks()
+		this._executeCityCallbacks('data')
 
 		// set default offer
 		this.offerData = defaultOffer
-		this._executeOfferCallbacks()
+		this._executeOfferCallbacks('data')
+
 	}
 
 	/**
@@ -159,11 +164,12 @@ const offerManager = new (class OfferManager {
 	 * @param {{city: string, uf:string}} args
 	 */
 	async setCurrentOffer(args) {
+		this._executeOfferCallbacks('loading')
 		return new Promise((res, rej) =>
 			this._requestOffer(args)
 				.then((data) => {
 					this.offerData = data
-					this._executeOfferCallbacks()
+					this._executeOfferCallbacks('data')
 					res(data)
 				})
 				.catch(rej)
@@ -210,11 +216,12 @@ const offerManager = new (class OfferManager {
 	 * @returns {Promise<cityObject>}
 	 */
 	setCurrentCityById(id) {
+		this._executeCityCallbacks('loading')
 		this.searchCityById(id)
 			.then(async (response) => {
 				this.setCityOnCookies(response)
 				this._currentCity = response
-				this._executeCityCallbacks()
+				this._executeCityCallbacks('data')
 
 				try {
 					// set currentOffer
@@ -226,7 +233,7 @@ const offerManager = new (class OfferManager {
 				}
 			})
 			.catch((err) => {
-				this._errorWhenFetchCity(err)
+				console.log('erro ao requisitar cidade pelo id', id)
 			})
 	}
 
@@ -236,7 +243,7 @@ const offerManager = new (class OfferManager {
 
 		this.setCityOnCookies(city)
 		this._currentCity = city
-		this._executeCityCallbacks()
+		this._executeCityCallbacks('data')
 
 		try {
 			// set currentOffer
@@ -248,55 +255,65 @@ const offerManager = new (class OfferManager {
 		}
 	}
 
-	// created a method to get currentCity to turn as readonly
 	/** @returns {cityObject} */
 	get currentCity() {
 		return this._currentCity
 	}
 
-	/**  @private  */
-	_executeCityCallbacks() {
+	/**
+	 *	@param {callbackType} callbackType
+	 *  @private
+	 */
+	_executeCityCallbacks(callbackType) {
 		// Execute cities callbacks
-		console.log('Executando callback de cidades', this._cityCallbacks)
 		this._cityCallbacks.forEach(async (cb) => {
 			try {
-				cb(this._currentCity)
+				if (cb.callbackType == callbackType)
+					cb.callback(this._currentCity, callbackType == "loading")
 			} catch (error) {
 				console.log('erro ao execurar callback', error)
 			}
 		})
 	}
 
-	/**  @private  */
-	_executeOfferCallbacks() {
+	/**
+	 *	@param {callbackType} callbackType
+	 *  @private
+	 */
+	_executeOfferCallbacks(callbackType) {
 		// Execute cities callbacks
 		this._offerCallbacks.forEach(async (cb) => {
 			try {
-				cb(this.offerData)
+				if (cb.callbackType == callbackType)
+					cb.callback(this.offerData, callbackType == "loading")
 			} catch (error) {
 				console.log('erro ao execurar callback', error)
 			}
 		})
 	}
 
-	/**  @private  */
-	_errorWhenFetchCity(err) {
-		console.log('_errorWhenFetchCity', err)
-		// put your function here case fetch error
+	/**
+	 * @param {(city: cityObject, isLoading: boolean) => void  } callback - Funcao que retorna estados de carregamento
+	 * @param { callbackType } callbackType - Tipo de callback ( "data" | "loading" )
+	 * */
+	runWhenCityLoad(callbackType, callback) {
+		// depoloy callback if currentCity already loadded
+		if (Object.keys(this._currentCity).length > 0 && callbackType == 'data')
+			callback(this._currentCity, false)
+
+		this._cityCallbacks.push({ callbackType, callback })
 	}
 
-	/** @param {(cityObject) => void} callback*/
-	runWhenCityLoad(callback = () => {}) {
+	/**
+	 * @param { callbackType } callbackType - Tipo de callback ( "data" | "loading" )
+	 * @param {(offer: BusinessOffer, isLoading: boolean) => void } callback - Função de callback que recebe um objeto BusinessOffer.
+	 * */
+	runWhenOfferLoad(callbackType, callback) {
 		// depoloy callback if currentCity already loadded
-		Object.keys(this._currentCity).length > 0 && callback(this._currentCity)
-		this._cityCallbacks.push(callback)
-	}
+		if (Object.keys(this.offerData).length > 0 && callbackType == 'data')
+			callback(this.offerData, false)
 
-	/** @param {(offer: BusinessOffer) => void} callback - Função de callback que recebe um objeto BusinessOffer. */
-	runWhenOfferLoad(callback = () => {}) {
-		// depoloy callback if currentCity already loadded
-		Object.keys(this.offerData).length > 0 && callback(this.offerData)
-		this._offerCallbacks.push(callback)
+		this._offerCallbacks.push({ callbackType, callback })
 	}
 })()
 
@@ -394,3 +411,6 @@ const offerManager = new (class OfferManager {
  * @property {number} normalized
  */
 
+/**
+ * @typedef {"loading" | "data"} callbackType - listeners data or loading
+ */

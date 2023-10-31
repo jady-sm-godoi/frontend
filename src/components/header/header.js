@@ -17,12 +17,12 @@ aSum.addEventListener('click', function (e) {
 	resize('increase')
 })
 
-offerManager.runWhenCityLoad((city) => {
-	console.log('city', city)
+offerManager.runWhenCityLoad('data', (city) => {
 	const element = document.getElementById('changeLocalization')
 
 	element.innerText = `${city.city}, ${city.uf}`
 })
+
 
 function resize(action) {
 	const html = document.querySelector('html')

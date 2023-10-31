@@ -22,23 +22,40 @@ const offerProps = {
 let offers_card_ofertas,
 	reciveOfferBundle = ''
 
-offerManager.runWhenOfferLoad((oferta) => {
-	const arrayDeOfertas = oferta.offers
-	// TODO: arrumar esse b.o com voip fixo 👇👇👇👇
+offerManager.runWhenOfferLoad('data', (oferta, isloading) => {
 
+	offers_card_ofertas = oferta.offers
+	// TODO: arrumar esse b.o com voip fixo 👇👇👇👇
 	// offerProps.oi_telefone.amount = reciveFetchOffers.addons.VOIP_FIXOILIMITADO.amount;
 
 	offerProps.oi_playtv.amount = oferta.addons.OI_PLAY_TV.amount
 	dataOffersDetails.daccDiscount = oferta.daccDiscount
 
 	reciveOfferBundle = 'oi_fibra'
-	renderCards(arrayDeOfertas, offerProps[reciveOfferBundle])
+	renderCards(offers_card_ofertas, offerProps[reciveOfferBundle])
 })
 
-offerManager.runWhenCityLoad((city) => {
+offerManager.runWhenOfferLoad('loading', (oferta, isloading) => {
+	offers_card_ofertas = ''
+	setOfferLoading()
+})
+
+offerManager.runWhenCityLoad('data', (city) => {
 	const element = document.getElementById('cards_oferta_city')
 	element.innerText = `${city.city}, ${city.uf}`
 })
+
+function setOfferLoading() {
+	const component = document.createElement('div')
+	component.setAttribute('class', 'cards_oferta__loadingcomponent')
+
+	const container = document.querySelector('.cards_ofertas_container')
+	container.innerHTML = ''
+
+	container.appendChild(component)
+}
+
+setOfferLoading() // execute para mostrar carregamento quando a pagina estiver sendo carregada
 
 const valoresUpload = [
 	{ downloadSpeed: 100, uploadSpeed: 40 },
@@ -77,8 +94,6 @@ function renderModalInfos(eventClick) {
 		getProps.velocity = getProps.velocity / 1000
 	}
 
-	console.log('getProps', getProps.velocity)
-	console.log('getProps', getProps)
 
 	document.body.style.overflowY = 'hidden'
 
@@ -472,7 +487,7 @@ function renderCards(offers, props) {
 			const valor = element.amount + props.amount
 			const prefixo = Math.trunc(valor)
 			const decimalPart = valor - Math.trunc(valor)
-			const sufixo = parseFloat(decimalPart.toFixed(2) * 100)
+			const sufixo = parseInt(decimalPart.toFixed(2) * 100)
 			spanReais.innerText = `${prefixo}`
 
 			const divCentavos = document.createElement('div')
