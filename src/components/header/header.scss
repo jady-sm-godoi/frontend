@@ -19,7 +19,6 @@
 }
 
 .header_top {
-	background-color: #ffffff;
 	display: flex;
 	margin: 10px 0;
 	justify-content: center;
@@ -32,7 +31,7 @@
 	font-weight: 400;
 	font-size: 0.75rem;
 	line-height: 16px;
-	color: #595959;
+	color: var(--header-acessibility);
 }
 
 .header_top > a {
@@ -199,7 +198,7 @@
 
 .header_middle_button > span {
 	display: none;
-	color: #1f1f1f;
+	color: var(--header-middle-button); 
 	font-weight: 400;
 	font-size: 1rem;
 	line-height: 150%;
@@ -254,7 +253,7 @@
 }
 
 .header_bottom {
-	background-color: #1f1f1f;
+	background-color: var(--header-bottom-background);
 	padding: 24px 0;
 }
 
