@@ -19,9 +19,6 @@
     flex-direction: row;
     gap: 24px;
     margin-bottom: 24px;
-    scroll-snap-type: x mandatory;
-    overflow: scroll;
-    scroll-behavior: smooth;
 }
 
 .oi_saude__backgroundMobile {
@@ -116,7 +113,7 @@
     gap: 8px;
 }
 
-.oi_saude__card-radio-active {
+.oi_saude__card_dot.oi_saude__card_dot_active {
     width: 42px;
     height: 8.4px;
     background-color: #1F1F1F;
@@ -126,15 +123,21 @@
     border-radius: 10px;
 }
 
-.oi_saude__card-radio-1,
-.oi_saude__card-radio-2,
-.oi_saude__card-radio-3 {
+.oi_saude__card_dot {
     border: none;
     width: 16px;
     height: 8px;
     border-radius: 999px;
     background-color: #dbdbdb;
+}
+
+.oi_saude__card_dot,
+.oi_saude__card_dot_active {
     transition: background-color 0.3s ease;
+}
+
+.oi_saude__card_dot:hover {
+    background-color: #1F1F1F;
 }
 
 .saude_ancora {
@@ -161,15 +164,25 @@
     }
 
 
-    .oi_saude__carousel {
-        justify-content: center;
-    }
+    // .oi_saude__carousel {
+    //     justify-content: center;
+    // }
 
     .oi_saude__assine {
         max-width: 388px;
     }
 }
 
+@media screen and (min-width: 1200px) {
+    .oi_saude__carousel_dots {
+        display: none;
+    }
+
+    .oi_saude__card_dot,
+    .oi_saude__card_dot_active {
+        transition: none;
+    }
+}
 
 @media screen and (min-width: 1920px) {
 
