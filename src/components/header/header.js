@@ -1,6 +1,7 @@
 const aSubtraction = document.getElementById('button_accessibility_subtraction')
 const aSum = document.getElementById('button_accessibility_sum')
 const aTheme = document.getElementById('button_accessibility_theme')
+const aVlibras = document.getElementById('button_accessibility_vlibras')
 
 aSubtraction.addEventListener('click', function (e) {
 	e.preventDefault()
@@ -11,6 +12,9 @@ aTheme.addEventListener('click', function (e) {
 	themeManager.currentTheme =
 		themeManager.currentTheme == 'dark' ? 'light' : 'dark'
 })
+aVlibras.addEventListener('click', function (e) {
+	vlibasManager.currentState = !vlibasManager.currentState
+})
 
 aSum.addEventListener('click', function (e) {
 	e.preventDefault()
@@ -19,7 +23,6 @@ aSum.addEventListener('click', function (e) {
 
 offerManager.runWhenCityLoad('data', (city) => {
 	const element = document.getElementById('changeLocalization')
-
 	element.innerText = `${city.city}, ${city.uf}`
 })
 
