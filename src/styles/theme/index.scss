@@ -148,6 +148,11 @@
 	--carousel-container-background: var(--color-black-full);
 	--carousel-card-background-color:  var(--color-neutral-600);
 	--carousel-card-text-color: var(--color-white-full);
+	--carouser-card-item-border: border
+
+	--profitability-text-color: var(--color-white-full);
+
+	--section-oisaude-background: var(--color-black-full);
 }
 
 .light {
@@ -155,7 +160,7 @@
 	--vantagensfibra-color-text:var(--color-neutral-600);
 	--vantagensfibra-background-button-whats:var(--color-neutral-100);
 	
-	--jatemoifibra-background: var(--color-success-200);
+	--jatemoifibra-background: var(--color-primary-100);
 	--jatemoifibra-background-button:var(--color-neutral-600);
 	
 	--header-acessibility: var(--color-neutral-450);
@@ -176,6 +181,10 @@
 	--carousel-container-background: var(--color-neutral-100);
 	--carousel-card-background-color: var(--color-white-full);
 	--carousel-card-text-color: var(--color-neutral-600);
+
+	--profitability-text-color: var(--color-neutral-600);
+
+	--section-oisaude-background: var(var(--color-neutral-100));
 }
 
 body {
