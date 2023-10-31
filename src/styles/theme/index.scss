@@ -143,6 +143,11 @@
 	--cardsofertas-peca-oi: var(--color-white-full);
 	--cardsofertas-ancora-background: var(--color-primary-300);
 	--cardsofertas-ancora-text: var(--color-black-full);
+
+	--carousel-title: var(--color-white-full);
+	--carousel-container-background: var(--color-black-full);
+	--carousel-card-background-color:  var(--color-neutral-600);
+	--carousel-card-text-color: var(--color-white-full);
 }
 
 .light {
@@ -166,6 +171,11 @@
 	--cardsofertas-peca-oi: var(--color-neutral-550);
 	--cardsofertas-ancora-background: var(--color-primary-410);
 	--cardsofertas-ancora-text: var(--color-white-full);
+
+	--carousel-title: var(--color-neutral-600);
+	--carousel-container-background: var(--color-neutral-100);
+	--carousel-card-background-color: var(--color-white-full);
+	--carousel-card-text-color: var(--color-neutral-600);
 }
 
 body {
