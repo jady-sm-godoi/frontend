@@ -116,6 +116,7 @@
 	--color-purple-400: #6525d0;
 	--color-purple-500: #43198b;
 	--color-purple-600: #220c45;
+	--color-grey:#DBDBDB;
 
 	// full colors
 	--color-black-full: #000;
@@ -166,6 +167,8 @@
 	--faq-paragraph-color:var(--color-white-full);
 	--faq-button-text-color:var(--color-primary-300);
 	--faq-button-background:var(--color-black-full);
+	--faq-border-color:var(--color-white-full);
+	--faq-anchor-color:var(--color-primary-300);
 
 	--profitability-text-color: var(--color-white-full);
 
@@ -216,6 +219,8 @@
 	--faq-paragraph-color:var(--color-neutral-400);
 	--faq-button-text-color:var(--color-primary-400);
 	--faq-button-background:var(--color-white-full);
+	--faq-border-color:var(--color-grey);
+	--faq-anchor-color:var(--color-primary-400);
 
 	--profitability-text-color: var(--color-neutral-600);
 

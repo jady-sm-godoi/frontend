@@ -45,7 +45,7 @@
 }
 
 .duvidas__details {
-  border-bottom: 1px solid #dbdbdb;
+  border-bottom: 1px solid var(--faq-border-color);
   padding: 24px 0px 24px 0px;
 
   h3 {
@@ -69,7 +69,7 @@
     margin: 0px;
   }
   a {
-    color: #00a300;
+    color: var(--faq-anchor-color);
     font-weight: 400;
   }
 
