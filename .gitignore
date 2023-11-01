@@ -2,4 +2,3 @@ node_modules
 www
 package-lock.json
 .env
-tests
