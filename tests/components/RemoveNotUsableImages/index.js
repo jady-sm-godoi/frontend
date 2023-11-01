@@ -34,11 +34,6 @@ module.exports = function RemoveNotUsableImages() {
 		getSrc && pageUsablePaths.push(getSrc)
 	})
 
-
-
-
-
-
 	// filter paths to get image name only
 
 	pageUsablePaths = pageUsablePaths.map((img) => {
@@ -55,7 +50,7 @@ module.exports = function RemoveNotUsableImages() {
 	})
 
 	// show notusableImages
-	console.log('notUsableImages')
+	console.log('IMAGENS NAO UTILIZADAS NO PROJETO: ')
 	console.log(notUsableImages.join('\r\n'))
 
 	// images not usables
