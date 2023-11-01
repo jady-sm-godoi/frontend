@@ -409,6 +409,19 @@ li.cards_ofertas_li_beneficios:first-child {
 }
 
 .cards_ofertas_meucombo_ancora {
+	width: 100%;
+	max-width: 331px;
+	padding: 20px 0;
+	background-color: var(--cardsofertas-ancora-background);
+	color: var(--cardsofertas-ancora-text);
+	font-size: 1rem;
+	font-weight: 500;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 48px;
+	text-decoration: none;
+	cursor: pointer;
   width: 100%;
   max-width: 331px;
   padding: 20px 0;
