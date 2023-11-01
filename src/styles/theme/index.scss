@@ -65,7 +65,6 @@
 	--color-energy-600: #513201;
 
 	/* 	FUNCTIONAL */
-	--functional-pure-white: #fff;
 	--color-neutral-90: #f9f9f9;
 	--color-neutral-95: #f2f2f2;
 	--color-neutral-100: #f5f5f5;
@@ -74,6 +73,7 @@
 	--color-neutral-300: #b8b8b8;
 	--color-neutral-399: #909090;
 	--color-neutral-400: #8f8f8f;
+	--color-neutral-450: #595959;
 	--color-neutral-500: #3d3d3d;
 	--color-neutral-550: #303030;
 	--color-neutral-580: #282828;
@@ -140,7 +140,30 @@
 	--jatemoifibra-background-button:var(--color-primary-300);
 	--jatemoifibra-color-text-button:var(--color-black-full);
 
+	--header-acessibility: var(--color-white-full);
+	--header-middle-button: var(--color-white-full);
+	--header-bottom-background: var(--color-black-full);
+	
 	--body-background: var(--color-black-full);
+
+	--cardsofertas-title:var(--color-white-full);
+	--cardsofertas-busca: var(--color-white-full);
+	--cardsofertas-botoes: var(--color-white-full);
+	--cardsofertas-combo-section-background: var(--color-black-full);
+	--cardsofertas-peca-oi: var(--color-white-full);
+	--cardsofertas-ancora-background: var(--color-primary-300);
+	--cardsofertas-ancora-text: var(--color-black-full);
+
+	--carousel-title: var(--color-white-full);
+	--carousel-container-background: var(--color-black-full);
+	--carousel-card-background-color:  var(--color-neutral-600);
+	--carousel-card-text-color: var(--color-white-full);
+	--carouser-card-item-border: border
+
+	--profitability-text-color: var(--color-white-full);
+
+	--section-oisaude-background: var(--color-black-full);
+	--section-oisaude-text-color: var(--color-white-full);
 }
 
 .light {
@@ -161,7 +184,29 @@
 	--jatemoifibra-background-button:var(--color-neutral-600);
 	--jatemoifibra-color-text-button:var(--color-white-full);
 	
+	--header-acessibility: var(--color-neutral-450);
+	--header-middle-button: var(--color-neutral-580);
+	--header-bottom-background: var(--color-neutral-600);
+
 	--body-background: var(--color-white-full);
+
+	--cardsofertas-title: var(--color-neutral-600);
+	--cardsofertas-busca: var(--color-neutral-600);
+	--cardsofertas-botoes: var(--color-neutral-400);
+	--cardsofertas-combo-section-background: var(--color-neutral-200);
+	--cardsofertas-peca-oi: var(--color-neutral-550);
+	--cardsofertas-ancora-background: var(--color-primary-410);
+	--cardsofertas-ancora-text: var(--color-white-full);
+
+	--carousel-title: var(--color-neutral-600);
+	--carousel-container-background: var(--color-neutral-100);
+	--carousel-card-background-color: var(--color-white-full);
+	--carousel-card-text-color: var(--color-neutral-600);
+
+	--profitability-text-color: var(--color-neutral-600);
+
+	--section-oisaude-background: var(--color-neutral-100);
+	--section-oisaude-text-color: var(--color-neutral-600);
 }
 
 body {
