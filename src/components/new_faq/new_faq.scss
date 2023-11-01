@@ -28,7 +28,7 @@
     font-weight: 500;
     font-size: 1.5rem;
     line-height: 32px;
-    color: #1f1f1f;
+    color: var(--faq-title-color);
     margin: 0px 0px 22px 0px;
     max-width: 332px;
   }
@@ -45,7 +45,7 @@
 }
 
 .duvidas__details {
-  border-bottom: 1px solid #dbdbdb;
+  border-bottom: 1px solid var(--faq-border-color);
   padding: 24px 0px 24px 0px;
 
   h3 {
@@ -54,7 +54,7 @@
     font-weight: 400;
     font-size: 1.25rem;
     line-height: 32px;
-    color: #1f1f1f;
+    color: var(--faq-title-color);
   }
 
   img {
@@ -69,7 +69,7 @@
     margin: 0px;
   }
   a {
-    color: #00a300;
+    color: var(--faq-anchor-color);
     font-weight: 400;
   }
 
@@ -100,7 +100,7 @@
     font-weight: 400;
     font-size: 1rem;
     line-height: 24px;
-    color: #8f8f8f;
+    color: var(--faq-paragraph-color);
   }
 }
 
@@ -113,7 +113,7 @@
   gap: 8px;
   max-width: 312px;
   height: 48px;
-  border: 2px solid #00a300;
+  border: 2px solid var(--faq-button-text-color);
   border-radius: 48px;
   font-family: "Simplon BP";
   font-style: normal;
@@ -123,8 +123,8 @@
   display: flex;
   align-items: center;
   text-align: center;
-  color: #00a300;
-  background-color: #ffffff;
+  color: var(--faq-button-text-color);
+  background-color: var(--faq-button-background);
   margin: 40px 0px 0px 0px;
   width: 100%;
 }

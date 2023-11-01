@@ -37,7 +37,7 @@
   font-size: 1.5rem;
   line-height: 32px;
   margin-bottom: 24px;
-  color: red;
+  color: var(--oie-text-color); 
 }
 
 .oi_e_content_p {
@@ -45,6 +45,7 @@
   font-size: 1rem;
   line-height: 150%;
   margin-bottom: 40px;
+  color: var(--oie-text-color);
 }
 
 .oi_e_anchor_container_mobile {
