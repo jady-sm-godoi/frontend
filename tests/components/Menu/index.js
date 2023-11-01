@@ -1,19 +1,19 @@
 const jumpLine = `\r\n`
 
-function Menu() {
+/**
+ *
+ * @param {(() => void)[]} props
+ */
+function Menu(props) {
 	return (
-		jumpLine + options.map((s, i) => `${i + 1}. ${s}`).join(jumpLine) + footer
+		jumpLine + props.map((s, i) => `${i}. ${s.name}`).join(jumpLine) + footer
 	)
 }
 
-const options = [
-	'Removedor de imagens não utilizadas',
-]
+const options = ['Removedor de imagens não utilizadas', 'Sair']
 
 const footer = `
-
-how use:  node ./tests  [option]
-exemple:  node ./tests  1
+insert the number of a option to run
 `
 
 module.exports = Menu

@@ -1,11 +1,12 @@
+const PromptSync = require('prompt-sync')()
 const Menu = require('./components/Menu')
-const RemoveNotUsableImages = require('./components/RemoveNotUsableImages')
+const components = require("./components")
 
-switch (parseInt(process.argv[2])) {
-	case 1:
-		RemoveNotUsableImages()
-		break
-	default:
-		console.log(Menu())
-		break
+while (true) {
+	console.log(Menu(components))
+	try {
+		components[parseInt(PromptSync('Select a option: '))]()
+	} catch (error) {
+		console.log('Invalid option!!!!')
+	}
 }

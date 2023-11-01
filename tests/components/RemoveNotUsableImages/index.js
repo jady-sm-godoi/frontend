@@ -13,11 +13,10 @@ module.exports = function RemoveNotUsableImages() {
 	const htmlPage = fs.readFileSync('./www/index.html')
 	const intancePage = cheerio.load(htmlPage)
 
-    // GET SRC FROM IMAGES
+	// GET SRC FROM IMAGES
 	/** @type {string[]} */
 	let pageUsablePaths = []
-    
-    
+
 	const pageImages = intancePage('img')
 	pageImages.map((el) => {
 		const elem = pageImages[el]
@@ -27,7 +26,7 @@ module.exports = function RemoveNotUsableImages() {
 		getSrc && pageUsablePaths.push(getSrc)
 		darkSrc && pageUsablePaths.push(darkSrc)
 	})
-    
+
 	const pageSources = intancePage('source')
 	pageSources.map((el) => {
 		const getSrc = pageSources[el].attribs.srcset
@@ -49,18 +48,20 @@ module.exports = function RemoveNotUsableImages() {
 		}
 	})
 
-	// show notusableImages
-	console.log('IMAGENS NAO UTILIZADAS NO PROJETO: ')
-	console.log(notUsableImages.join('\r\n'))
-
-	// images not usables
-	// console.log('notUsableImages', notUsableImages)
+	if (notUsableImages.length == 0) {
+		console.log('any image to remove')
+		return 0
+	} else {
+		// show notusableImages
+		console.log('Usable images on project: ')
+		console.log(notUsableImages.join('\r\n'))
+	}
 
 	const userResponse = PromptSync(
-		`Deseja mover imagens para o diretorio ${ImagewsPath}/not-usable-images? [sim/nao] `
+		`You want move not usable images to ${ImagewsPath}/not-usable-images? [s/n] `
 	)
 
-	if (userResponse == 'sim') {
+	if (userResponse == 's') {
 		try {
 			fs.mkdirSync(ImagewsPath + '/not-usable-images')
 		} catch (error) {}
