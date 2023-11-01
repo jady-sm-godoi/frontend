@@ -337,20 +337,20 @@ li.cards_ofertas_li_beneficios:first-child {
 }
 
 .cards_ofertas_combo_section {
-	margin-top: 60px;
-	width: 100%;
-	background-color: var(--cardsofertas-combo-section-background);
-	padding-block: 25px;
+  margin-top: 60px;
+  width: 100%;
+  background-color: var(--cardsofertascombo-background-section);
+  padding-block: 25px;
 }
 
 .cards_ofertas_peca_oi {
-	display: flex;
-	font-family: 'Simplon BP';
-	flex-direction: column;
-	font-size: 1.5rem;
-	font-weight: 400;
-	line-height: 24px;
-	color: var(--cardsofertas-peca-oi);
+  display: flex;
+  font-family: "Simplon BP";
+  flex-direction: column;
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 24px;
+  color: var(--cardsofertascombo-title-color);
 }
 
 .cards_ofertas_outros_produtos {
@@ -389,38 +389,39 @@ li.cards_ofertas_li_beneficios:first-child {
 }
 
 .cards_ofertas_icons_img {
-	width: 56px;
-	aspect-ratio: 1;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	background-color: #ffffff;
-	border-radius: 100%;
+  width: 56px;
+  aspect-ratio: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--cardsofertascombo-background-img);
+  border: 1px solid var(--cardsofertascombo-border-color-img);
+  border-radius: 100%;
 }
 
 .cards_ofertas_icons_text {
-	font-family: 'Simplon BP';
-	font-weight: 500;
-	font-size: 1rem;
-	line-height: 24px;
-	color: #000000;
-	margin-top: 9px;
+  font-family: "Simplon BP";
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 24px;
+  color: var(--cardsofertascombo-text-color-img);
+  margin-top: 9px;
 }
 
 .cards_ofertas_meucombo_ancora {
-	width: 100%;
-	max-width: 331px;
-	padding: 20px 0;
-	background-color: var(--cardsofertas-ancora-background);
-	color: var (--cardsofertas-ancora-text);
-	font-size: 1rem;
-	font-weight: 500;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	border-radius: 48px;
-	text-decoration: none;
-	cursor: pointer;
+  width: 100%;
+  max-width: 331px;
+  padding: 20px 0;
+  background-color: var(--cardsofertascombo-background-button);
+  color: var(--cardsofertascombo-text-color-button);
+  font-size: 1rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 48px;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .cards_ofertas_botao_internet_mobile,
