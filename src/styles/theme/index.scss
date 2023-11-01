@@ -69,6 +69,7 @@
 	--color-neutral-95: #f2f2f2;
 	--color-neutral-100: #f5f5f5;
 	--color-neutral-200: #e0e0e0;
+	--color-neutral-225: #DBDBDB;
 	--color-neutral-250: #cccccc;
 	--color-neutral-300: #b8b8b8;
 	--color-neutral-399: #909090;
@@ -78,6 +79,7 @@
 	--color-neutral-550: #303030;
 	--color-neutral-580: #282828;
 	--color-neutral-600: #1f1f1f;
+	--color-neutral-650: #121212;
 	--color-success-100: #d9ece3;
 	--color-success-200: #72d489;
 	--color-success-300: #34ad51;
@@ -120,6 +122,10 @@
 	// full colors
 	--color-black-full: #000;
 	--color-white-full: #fff;
+
+	//project borders
+	--carousel-card-border-light: none;
+	--carousel-card-border-dark: 2px solid var(--color-neutral-400);
 }
 
 .dark {
@@ -148,7 +154,9 @@
 	--carousel-container-background: var(--color-black-full);
 	--carousel-card-background-color:  var(--color-neutral-600);
 	--carousel-card-text-color: var(--color-white-full);
-	--carouser-card-item-border: border
+	--carousel-dots-active: var(--color-primary-300);
+	--carousel-dots: var(--color-neutral-100);
+	--carousel-card-item-border: var(--carousel-card-border-dark);
 
 	--profitability-text-color: var(--color-white-full);
 
@@ -182,6 +190,9 @@
 	--carousel-container-background: var(--color-neutral-100);
 	--carousel-card-background-color: var(--color-white-full);
 	--carousel-card-text-color: var(--color-neutral-600);
+	--carousel-dots-active: var(--color-neutral-650);
+	--carousel-dots: var(--color-neutral-225);
+	--carousel-card-item-border: var(--carousel-card-border-light);
 
 	--profitability-text-color: var(--color-neutral-600);
 
