@@ -1,10 +1,10 @@
 .footer_fibra_container {
 	padding: 48px 0px;
-	background-color: #f2f2f2;
+	background-color: var(--footer-background);
 }
 
 .footer_fibra_container_logo_links {
-	border-bottom: 1px solid #e0e0e0;
+	border-bottom: 1px solid var(--footer-bordercenter);
 	padding-bottom: 24px;
 }
 
@@ -31,7 +31,7 @@
 
 .footer_fibra_ancora_list {
 	text-decoration: none;
-	color: #000000;
+	color:  var(--footer-text);
 	font-weight: 300;
 }
 
@@ -42,7 +42,7 @@
 }
 
 .footer_fibra_apps_paragrafo {
-	color: #000000;
+	color: var(--footer-text);
 	font-family: 'Simplon BP';
 	font-weight: 300;
 	font-size: 1rem;
@@ -76,7 +76,7 @@
 
 .footer_fibra_ancora_social {
 	text-decoration: none;
-	color: #000000;
+	color: var(--footer-text);
 	font-family: 'Simplon BP';
 	font-weight: 300;
 	font-size: 1rem;
@@ -84,7 +84,7 @@
 }
 
 .footer_fibra_container_regulamentos {
-	color: #000000;
+	color: var(--footer-text);
 	font-family: 'Simplon BP';
 	font-weight: 300;
 	font-size: 1rem;
@@ -101,7 +101,7 @@
 }
 
 .footer_fibra_ancora_paragrafo {
-	color: #000000;
+	color: var(--footer-text);
 	text-decoration: underline;
 }
 
