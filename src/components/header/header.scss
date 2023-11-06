@@ -42,16 +42,28 @@
 	display: flex;
 	flex-direction: row;
 	align-items: center;
+	gap: 1rem;
 
-	:first-child {
+	a {
 		border-right: 1px solid #dbdbdb;
 		padding-right: 16px;
 	}
 
-	:nth-child(2),
-	:nth-child(3) {
-		margin-left: 16px;
+	button {
+		width: 20px;
+		padding: 0;
+		img {
+			max-width: 100%;
+			max-height: 100%;
+		}
 	}
+
+	
+
+	// :nth-child(2),
+	// :nth-child(3) {
+	// 	margin-left: 16px;
+	// }
 }
 
 .header_top_accessibility > button,
@@ -81,8 +93,7 @@
 	border-bottom: 1px solid #8cc272de;
 }
 
-.button_accessibility_fontsize{
-
+.button_accessibility_fontsize {
 	background-color: red;
 	padding: 5px;
 }
@@ -198,7 +209,7 @@
 
 .header_middle_button > span {
 	display: none;
-	color: var(--header-middle-button); 
+	color: var(--header-middle-button);
 	font-weight: 400;
 	font-size: 1rem;
 	line-height: 150%;
@@ -433,7 +444,6 @@
 
 @media screen and (min-width: 1364px) {
 	.elUl {
-	
 		margin: 8px auto;
 	}
 }
