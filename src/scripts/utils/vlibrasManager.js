@@ -78,8 +78,11 @@ const vlibasManager = new (class {
 
 		// vlibrasElement.innerHTML = vlibrasContent
 		document.body.appendChild(this.vlibrasContainer)
-
-		new window.VLibras.Widget('https://vlibras.gov.br/app')
+		try {
+			new window.VLibras.Widget('https://vlibras.gov.br/app')
+		} catch (error) {
+			console.log("Erro ao instanciar vlibras");
+		}
 	}
 
 	/**

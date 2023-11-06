@@ -34,8 +34,14 @@ class CookiesManager {
 	 * @param {string} key
 	 * @param {string} value
 	 */
-	set(key, value) {
-		document.cookie = `${key}=${encodeURIComponent(value)}`
+	set(key, value, days = 365) {
+		var expirationDate = new Date()
+		expirationDate.setTime(
+			expirationDate.getTime() + days * 24 * 60 * 60 * 1000
+		)
+		document.cookie = `${key}=${encodeURIComponent(
+			value
+		)}; expires=${expirationDate.toUTCString()}; path=/`
 		this.refreshCookieList()
 	}
 

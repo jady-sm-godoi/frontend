@@ -34,6 +34,7 @@ const offerManager = new (class OfferManager {
 		this.defaultCities = []
 
 		const cityFromCookies = this.getCityFromCookies()
+		console.log('cityFromCookies', cityFromCookies)
 
 		this.requestDefaultCities().then((city) => {
 			this.defaultCities = city
@@ -186,14 +187,13 @@ const offerManager = new (class OfferManager {
 		if (
 			'estado' in cookies &&
 			'cidade' in cookies &&
-			'cidade-nome' in cookies &&
-			'ddd' in cookies
+			'cidade-nome' in cookies
 		) {
 			return {
 				id: cookies.cidade,
 				city: cookies['cidade-nome'],
 				uf: cookies.estado,
-				ddd: cookies.ddd,
+				ddd: cookies.ddd || "",
 				normalized: ''
 			}
 		} else {
