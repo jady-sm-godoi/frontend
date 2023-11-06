@@ -110,6 +110,10 @@ const changeWhatsappModalState = (e) => {
   getBackgroudMask.style.top = CONFIG_VARS.modalState ? "0" : "unset";
   getBackgroudMask.style.opacity = CONFIG_VARS.modalState ? "100%" : "0%";
 
+
+  // change page scroll when modal is open
+  CONFIG_VARS.modalState ? overflowHidden() : overflowShow()
+
   CONFIG_VARS.modalState &&
     CONFIG_VARS.mapFocusedScreens[
       CONFIG_VARS.defaultCurrentScreenShowing
