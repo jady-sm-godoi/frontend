@@ -66,6 +66,7 @@
 
 	/* 	FUNCTIONAL */
 	--color-neutral-90: #f9f9f9;
+	--color-neutral-94: #F1F1F1;
 	--color-neutral-95: #f2f2f2;
 	--color-neutral-100: #f5f5f5;
 	--color-neutral-200: #e0e0e0;
@@ -186,6 +187,12 @@
 	--footer-background: var(--color-black-full);
 	--footer-text: var(--color-white-full);
 	--footer-bordercenter: var(--color-white-full);
+
+	--cttbtn-text-color: var(--color-white-full);
+	--cttbtn-close-button-color: var(--color-white-full);
+	--cttbtn-background-color: var(--color-neutral-500);
+	--cttbtn-child-2-background-color: var(--color-neutral-600);
+	--cttbtn-child-2-border-top: none;
 }
 
 .light {
@@ -244,6 +251,12 @@
 	--footer-background: var(--color-neutral-95);
 	--footer-text: var(--color-black-full);
 	--footer-bordercenter: var(--color-neutral-399);
+
+	--cttbtn-text-color: var(--color-black-full);
+	--cttbtn-close-button-color: var(--color-neutral-600);
+	--cttbtn-background-color: var(--color-white-full);
+	--cttbtn-child-2-background-color: var(--color-neutral-94);
+	--cttbtn-child-2-border-top: var(--color-neutral-200);
 }
 
 body {

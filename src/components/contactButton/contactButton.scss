@@ -69,11 +69,11 @@
 }
 
 .cttbtn_cardButtons {
-    color: black;
+    color: var(--cttbtn-text-color);
     position: fixed;
     bottom: 2rem;
     right: 8rem;
-    background-color: white;
+    background-color: var(--cttbtn-background-color);
     height: 0;
     width: 372px;
     -webkit-transition: all 0.3s;
@@ -89,6 +89,7 @@
     right: 1rem;
 
     button {
+        color: var(--cttbtn-close-button-color);
         background-color: transparent;
         border: none;
         width: 1rem;
@@ -107,8 +108,8 @@
     height: 220px;
 
     &:nth-child(2) {
-        background-color: #F1F1F1;
-        border-top: 1px solid #E0E0E0;
+        background-color: var(--cttbtn-child-2-background-color);
+        border-top: 1px solid var(--cttbtn-child-2-border-top);
     }
 
     p {
@@ -125,7 +126,7 @@
 
         a {
             text-decoration: none;
-            color: black;
+            color: indianred; //
         }
 
         span {
