@@ -126,7 +126,7 @@
 
         a {
             text-decoration: none;
-            color: indianred; //
+            color: var(--cttbtn-button-text-color);
         }
 
         span {
@@ -144,6 +144,7 @@
         button {
             background-color: transparent;
             border: none;
+            color: var(--cttbtn-button-text-color);
         }
 
         div {
@@ -175,7 +176,7 @@
 
         &_primary {
             margin-bottom: 1rem;
-            background-color: #00A300;
+            background-color: #00A300; //aq
 
             &::after {
                 font-size: 1rem;
@@ -189,7 +190,7 @@
 
         &_secundary {
             margin-bottom: 1rem;
-            border: 1px solid #E0E0E0;
+            border: 1px solid var(--cttbtn-secundary-button-border-color);
         }
     }
 }

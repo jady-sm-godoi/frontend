@@ -193,6 +193,10 @@
 	--cttbtn-background-color: var(--color-neutral-500);
 	--cttbtn-child-2-background-color: var(--color-neutral-600);
 	--cttbtn-child-2-border-top: none;
+	--cttbtn-button-text-color: var(--color-white-full);
+	--cttbtn-button-primary-background-color: var();
+	--cttbtn-secundary-button-border-color: var(--color-primary-200);
+
 }
 
 .light {
@@ -257,6 +261,8 @@
 	--cttbtn-background-color: var(--color-white-full);
 	--cttbtn-child-2-background-color: var(--color-neutral-94);
 	--cttbtn-child-2-border-top: var(--color-neutral-200);
+	--cttbtn-button-text-color: var(--color-black-full);
+	--cttbtn-secundary-button-border-color: var(--color-neutral-200);
 }
 
 body {
