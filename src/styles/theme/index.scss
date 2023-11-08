@@ -167,9 +167,9 @@
 	--carousel-card-background-color: var(--color-neutral-500);
 	--carousel-card-text-color: var(--color-white-full);
 	--carousel-card-item-border: var(--carousel-card-border-dark);
-	--carousel-dots-active: var(--color-primary-300);	
+	--carousel-dots-active: var(--color-primary-300);
 	--carousel-dots: var(--color-neutral-100);
-	
+
 	--oie-text-color: var(--color-white-full);
 
 	--faq-title-color: var(--color-white-full);
@@ -197,6 +197,11 @@
 	--cttbtn-button-primary-background-color: var();
 	--cttbtn-secundary-button-border-color: var(--color-primary-200);
 
+	--cttbtn-v2-button-border-color: var(--color-primary-300);
+	--cttbtn-v2-background-color: var(--color-black-full);
+	--cttbtn-v2-title-text-color: var(--color-white-full);
+	--cttbtn-v2-anchor-color: var(--color-primary-300);
+	--cttbtn-v2-anchor-text-color: var(--color-black-full);
 }
 
 .light {
@@ -209,13 +214,13 @@
 	--cardsofertascombo-background-button: var(--color-primary-410);
 
 	--vantagensfibra-background-section: var(--color-neutral-100);
-	--vantagensfibra-color-text:var(--color-neutral-600);
-	--vantagensfibra-background-button-whats:var(--color-neutral-100);
+	--vantagensfibra-color-text: var(--color-neutral-600);
+	--vantagensfibra-background-button-whats: var(--color-neutral-100);
 
 	--jatemoifibra-background: var(--color-success-150);
-	--jatemoifibra-background-button:var(--color-neutral-600);
-	--jatemoifibra-color-text-button:var(--color-white-full);
-	
+	--jatemoifibra-background-button: var(--color-neutral-600);
+	--jatemoifibra-color-text-button: var(--color-white-full);
+
 	--header-acessibility: var(--color-neutral-450);
 	--header-middle-button: var(--color-neutral-580);
 	--header-bottom-background: var(--color-neutral-600);
@@ -235,7 +240,7 @@
 	--carousel-card-background-color: var(--color-white-full);
 	--carousel-card-text-color: var(--color-neutral-600);
 	--carousel-card-item-border: var(--carousel-card-border-light);
-	--carousel-dots-active: var(--color-neutral-650);	
+	--carousel-dots-active: var(--color-neutral-650);
 	--carousel-dots: var(--color-neutral-225);
 
 	--oie-text-color: var(--color-neutral-600);
@@ -263,6 +268,12 @@
 	--cttbtn-child-2-border-top: var(--color-neutral-200);
 	--cttbtn-button-text-color: var(--color-black-full);
 	--cttbtn-secundary-button-border-color: var(--color-neutral-200);
+
+	--cttbtn-v2-button-border-color: var(--color-primary-400);
+	--cttbtn-v2-background-color: var(--color-white-full);
+	--cttbtn-v2-title-text-color: var(--color-neutral-600);
+	--cttbtn-v2-anchor-color: var(--color-primary-400);
+	--cttbtn-v2-anchor-text-color: var(--color-white-full);
 }
 
 body {

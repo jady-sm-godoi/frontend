@@ -5,18 +5,19 @@
 	padding: 2px 16px;
 	align-items: center;
 	gap: 8px;
-    background-color: #00a300;
-    width: 100%;
+	background-color: var(--cttbtn-v2-anchor-color);
+	width: 100%;
 	border-radius: 999px;
 	display: flex;
 	justify-content: center;
 
 	span {
 		text-decoration: none;
-		color: white;
+		color: var(--cttbtn-v2-anchor-text-color);
 		text-align: center;
 		font-size: 16px;
 		font-weight: 500;
-		line-height: 150%; /* 24px */
+		line-height: 150%;
+		/* 24px */
 	}
 }

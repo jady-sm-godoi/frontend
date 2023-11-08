@@ -5,19 +5,20 @@
 	padding: 2px 16px;
 	align-items: center;
 	gap: 8px;
-    background-color: transparent;
+	background-color: transparent;
 
-    width: 100%;
+	width: 100%;
 
 	border-radius: 999px;
-	border: 2px solid #00a300;
+	border: 2px solid var(--cttbtn-v2-button-border-color);
 
 	span {
-		color: #00a300;
+		color: var(--cttbtn-v2-button-border-color);
 		text-align: center;
 
 		font-size: 16px;
 		font-weight: 500;
-		line-height: 150%; /* 24px */
+		line-height: 150%;
+		/* 24px */
 	}
 }
