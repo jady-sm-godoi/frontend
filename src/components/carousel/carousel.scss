@@ -85,7 +85,7 @@
   cursor: pointer;
   min-width: 56px;
   height: 256px;
-  background: #e0e0e0;
+  background:var(--carousel-card-background-color);
   border-radius: 8px;
   display: flex;
   align-items: center;
