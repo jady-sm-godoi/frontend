@@ -1,4 +1,4 @@
-.modal-whatsappv2-components__button-green {
+.modal-whatsappv2-components__anchor-green {
 	display: flex;
 	min-width: 232px;
 	height: 48px;
@@ -10,9 +10,10 @@
     width: 100%;
 
 	border-radius: 999px;
-	border: 2px solid #00a300;
+	border: 2px solid  #00a300;
 
 	span {
+		text-decoration: none;
 		color: #00a300;
 		text-align: center;
 

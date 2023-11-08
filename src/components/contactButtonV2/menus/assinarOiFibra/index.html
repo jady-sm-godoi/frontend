@@ -1,3 +1,14 @@
-<section data-whatsappmodalv2-menuname="assinarOiFibra">
-assinar oi fibra page
+<section
+	data-whatsappmodalv2-menuname="assinarOiFibra"
+	class="modal-whatsappv2-menu__assinarOiFibra"
+>
+	@@include("../../components/header-normal/index.html", {title: "Como você quer assinar?"})
+
+	<div class="modal-whatsappv2__buttons-container">
+		<!-- @@loop("../../components/button-green/index.html", "./components/contactButtonV2/menus/assinarOiFibra/buttons.json") -->
+		@@include("../../components/anchor-green/index.html", {"iconSrc": "","iconAlt": "","text": "Por WhatsApp","href": "https://api.whatsapp.com/send?phone=553180013131&text=Ol%C3%A1!%20Quero%20conhecer%20as%20ofertas%20da%20Oi*"})
+		@@include("../../components/button-green/index.html", {"iconSrc": "","iconAlt": "","text": "Pelo 0800 031 0453","changeMenu": "telefone08000310453"})
+
+
+	</div>
 </section>

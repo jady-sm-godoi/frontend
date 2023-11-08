@@ -1,0 +1,14 @@
+[
+	{
+		"iconSrc": "",
+		"iconAlt": "",
+		"text": "Atendimento",
+		"changeMenu": "pessoaFisicaAtendimento"
+	},
+	{
+		"iconSrc": "",
+		"iconAlt": "",
+		"text": "Ofertas especiais",
+		"changeMenu": "#"
+	}
+]

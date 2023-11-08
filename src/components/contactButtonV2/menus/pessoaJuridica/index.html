@@ -1,0 +1,10 @@
+<section
+	data-whatsappmodalv2-menuname="pessoaJuridica"
+	class="modal-whatsappv2-menu__pessoaJuridica"
+>
+	@@include("../../components/header-normal/index.html", {title: "Qual é o tamanho da empresa?"})
+
+	<div class="modal-whatsappv2__buttons-container">
+		@@loop("../../components/button-green/index.html", "./components/contactButtonV2/menus/pessoaJuridica/buttons.json")
+	</div>
+</section>

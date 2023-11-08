@@ -47,8 +47,13 @@ class ContactButtonV2 {
 	 */
 	set menuIsOpen(value) {
 		this._menuIsOpen = value
+
+		 
 		// this._menuIsOpen ? overflowHidden() : overflowShow()
 		this.containerHtmlElement.style.display = this._menuIsOpen ? 'flex' : 'none'
+
+		// set defaults menu when modal closed
+		if(!this._menuIsOpen) this.setMenu(this.defaultMenu)
 	}
 
 	get menuIsOpen() {

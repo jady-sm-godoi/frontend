@@ -5,6 +5,6 @@
 	@@include("../../components/header-normal/index.html", {title: "O que você deseja?"})
 
 	<div class="modal-whatsappv2__buttons-container">
-		@@includes("../../components/button-green/index.html", {iconSrc: "", iconAlt:"", text:"icone"})
+		@@loop("../../components/button-green/index.html", "./components/contactButtonV2/menus/main/buttons.json")
 	</div>
 </section>

@@ -1,0 +1,14 @@
+[
+	{
+		"iconSrc": "",
+		"iconAlt": "",
+		"text": "Pessoa física",
+		"changeMenu": "pessoaFisica"
+	},
+	{
+		"iconSrc": "",
+		"iconAlt": "",
+		"text": "Pessoa jurídica",
+		"changeMenu": "pessoaJuridica"
+	}
+]

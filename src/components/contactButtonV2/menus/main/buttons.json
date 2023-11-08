@@ -1,0 +1,14 @@
+[
+	{
+		"iconSrc": "",
+		"iconAlt": "",
+		"text": "Assinar Oi Fibra",
+		"changeMenu": "assinarOiFibra"
+	},
+	{
+		"iconSrc": "",
+		"iconAlt": "",
+		"text": "Já sou cliente",
+		"changeMenu": "jaSouCliente"
+	}
+]
