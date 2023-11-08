@@ -1,4 +1,4 @@
-const vlibasManager = new (class {
+class VlibasManager {
 	constructor() {
 		/**
 		 * @private
@@ -107,8 +107,12 @@ const vlibasManager = new (class {
 			}
 		})
 	}
-})()
+}
 
 /**
  * @typedef {(state:boolean) => void} vlibrasCallback
  */
+
+
+// INSTANCE VLIBRAS HERE
+const vlibasManager = classInstancer(VlibasManager)

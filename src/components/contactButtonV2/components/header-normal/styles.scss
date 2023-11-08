@@ -1,0 +1,18 @@
+.modal-whatsappv2-components__header-normal {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+	span {
+		font-size: 16px;
+		font-style: normal;
+		font-weight: 500;
+		line-height: 150%; /* 24px */
+	}
+	button {
+		background-color: transparent;
+		border: none;
+		padding: 0;
+		font-weight: 900;
+	}
+}

@@ -1,0 +1,20 @@
+.modal-whatsappv2-components__button-green {
+	display: flex;
+	min-width: 232px;
+	height: 48px;
+	padding: 2px 16px;
+	align-items: center;
+	gap: 8px;
+
+	border-radius: 999px;
+	border: 2px solid var(--main-brand-primary-mid-accent, #00a300);
+
+	span {
+		color: #00a300;
+		text-align: center;
+
+		font-size: 16px;
+		font-weight: 500;
+		line-height: 150%; /* 24px */
+	}
+}

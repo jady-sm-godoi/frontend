@@ -6,5 +6,6 @@
   "jsxBracketSameLine": true,
   "trailingComma": "none",
   "bracketSpacing": true,
+  "rangeEnd": 120,
   "files": ["./components/**/*.jsx","./pages/**/*.{js, jsx}", "./widgets/**/*.{js, jsx}", "./utils/**/*.{js, jsx}"]
 }
