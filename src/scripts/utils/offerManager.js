@@ -1,4 +1,4 @@
-const offerManager = new (class OfferManager {
+class OfferManager {
 	constructor() {
 		/**  @private  */
 		this._cookies = new CookiesManager()
@@ -315,7 +315,7 @@ const offerManager = new (class OfferManager {
 
 		this._offerCallbacks.push({ callbackType, callback })
 	}
-})()
+}
 
 /**
  * @typedef {Object} Attachment
@@ -414,3 +414,8 @@ const offerManager = new (class OfferManager {
 /**
  * @typedef {"loading" | "data"} callbackType - listeners data or loading
  */
+
+
+
+// INSTANCE OFFER HERE
+const offerManager = classInstancer(OfferManager)

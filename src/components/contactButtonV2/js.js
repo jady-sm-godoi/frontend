@@ -1,0 +1,76 @@
+const modalManager = classInstancer(
+	KeepFocusManager,
+	'#modal-whatsapp-v2',
+	'main'
+)
+// modalManager.attachFocus()
+
+class ContactButtonV2 {
+	/**
+	 * @param {HTMLElementTagNameMap} containerSelector
+	 * */
+	constructor(containerSelector) {
+		/** @private */
+		this.containerSelector = containerSelector
+
+		/** @private */
+		this.containerHtmlElement = document.querySelector(this.containerSelector)
+
+		/** @private */
+		this.attributes = {
+			menu: {
+				attibuteDatasetTag: 'data-whatsappmodalv2-menuname'
+			}
+		}
+
+		/** @private */
+		this.defaultMenu = 'main'
+
+		this.setMenu(this.defaultMenu)
+
+		/** @private */
+		this._menuIsOpen = false
+	}
+
+	openModal() {
+		this.menuIsOpen = true
+	}
+	toggleModal() {
+		this.menuIsOpen = !this.menuIsOpen
+	}
+	closeModal() {
+		this.menuIsOpen = false
+	}
+
+	/**
+	 * @param {boolean} value
+	 */
+	set menuIsOpen(value) {
+		this._menuIsOpen = value
+		// this._menuIsOpen ? overflowHidden() : overflowShow()
+		this.containerHtmlElement.style.display = this._menuIsOpen ? 'flex' : 'none'
+	}
+
+	get menuIsOpen() {
+		return this._menuIsOpen
+	}
+	/**
+	 * @param {string} menu
+	 */
+	setMenu(menu) {
+		const menuArray = this.containerHtmlElement.querySelectorAll(
+			`[${this.attributes.menu.attibuteDatasetTag}]`
+		)
+
+		// show only selected menu
+		menuArray.forEach((element) => {
+			const menuName = element.attributes.getNamedItem(
+				this.attributes.menu.attibuteDatasetTag
+			)
+
+			element.style.display = menuName.value == menu ? 'flex' : 'none'
+		})
+	}
+}
+
+const contactButtonV2 = classInstancer(ContactButtonV2, '#modal-whatsapp-v2')

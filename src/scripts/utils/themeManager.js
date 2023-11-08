@@ -1,4 +1,4 @@
-const themeManager = new (class {
+class ThemeManager {
 	constructor() {
 		/** @private */
 		this._htmlElement = document.body
@@ -118,4 +118,8 @@ const themeManager = new (class {
 			img.nodeElement.src = img.src[this._currentTheme]
 		}
 	}
-})()
+}
+
+
+// INSTANCE THEME HERE
+const themeManager = classInstancer(ThemeManager)
