@@ -132,17 +132,17 @@
 }
 
 .dark {
-	--cardsofertascombo-background-section: var(--color-black-full);
-	--cardsofertascombo-background-img: var(--color-black-full);
+	--cardsofertascombo-background-section: var(--color-neutral-500);
+	--cardsofertascombo-background-img: var(--color-neutral-500);
 	--cardsofertascombo-border-color-img: var(--color-primary-300);
 	--cardsofertascombo-text-color-img: var(--color-white-full);
 	--cardsofertascombo-title-color: var(--color-white-full);
 	--cardsofertascombo-text-color-button: var(--color-black-full);
 	--cardsofertascombo-background-button: var(--color-primary-300);
 
-	--vantagensfibra-background-section: var(--color-black-full);
+	--vantagensfibra-background-section: var(--color-neutral-600);
 	--vantagensfibra-color-text: var(--color-white-full);
-	--vantagensfibra-background-button-whats: var(--color-black-full);
+	--vantagensfibra-background-button-whats: var(--color-neutral-600);
 
 	--jatemoifibra-background: var(--color-black-full);
 	--jatemoifibra-background-button: var(--color-primary-300);
@@ -163,8 +163,8 @@
 	--cardsofertas-ancora-text: var(--color-black-full);
 
 	--carousel-title: var(--color-white-full);
-	--carousel-container-background: var(--color-black-full);
-	--carousel-card-background-color: var(--color-neutral-600);
+	--carousel-container-background: var(--color-neutral-600);
+	--carousel-card-background-color: var(--color-neutral-500);
 	--carousel-card-text-color: var(--color-white-full);
 	--carousel-card-item-border: var(--carousel-card-border-dark);
 	--carousel-dots-active: var(--color-primary-300);	
