@@ -113,11 +113,10 @@
     gap: 8px;
 }
 
-.oi_saude__card_dot
 .oi_saude__card_dot_active {
-    width: 42px;
+    width: 42px !important;
     height: 8.4px;
-    background-color: #1F1F1F;
+    background-color: #1F1F1F !important;
     transition: all ease 0.1s;
     box-shadow: none;
     border: none;
@@ -135,10 +134,6 @@
 .oi_saude__card_dot,
 .oi_saude__card_dot_active {
     transition: background-color 0.3s ease;
-}
-
-.oi_saude__card_dot:hover {
-    background-color: #1F1F1F;
 }
 
 .saude_ancora {
@@ -169,7 +164,7 @@
     }
 }
 
-@media screen and (min-width: 994px) {
+@media screen and (min-width: 992px) {
     .oi_saude__carousel_dots {
         display: none;
     }
@@ -183,8 +178,6 @@
     .oi_saude__carousel {
         justify-content: center;
     }
-
-
 }
 
 @media screen and (min-width: 1920px) {
