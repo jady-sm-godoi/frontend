@@ -661,7 +661,7 @@ li.cards_ofertas_li_beneficios:first-child {
 	.cards_ofertas_botao_telefone_desktop.selecionado,
 	.cards_ofertas_botao_telefone_mobile.selecionado,
 	.cards_ofertas_botao_tv.selecionado {
-		color: #00a300;
+		color: var(--cardsofertascombo-nav-bar-color-mobile-select);
 		border-bottom: 3px solid #00a300;
 	}
 
@@ -807,7 +807,7 @@ li.cards_ofertas_li_beneficios:first-child {
 		min-width: 156px;
 		text-transform: uppercase;
 		font-size: 1.25rem;
-		color: #303030;
+		color: var(cards_ofertas_botao_telefone_mobile);
 		border-bottom: 1px solid #7f7f7f;
 		padding-bottom: 12px;
 	}
@@ -817,7 +817,7 @@ li.cards_ofertas_li_beneficios:first-child {
 		min-width: 130px;
 		text-transform: uppercase;
 		font-size: 1.25rem;
-		color: #303030;
+		color: var(cards_ofertas_botao_telefone_mobile);
 		border-bottom: 1px solid #7f7f7f;
 		padding-bottom: 12px;
 	}
@@ -832,7 +832,7 @@ li.cards_ofertas_li_beneficios:first-child {
 		display: block;
 		text-transform: uppercase;
 		font-size: 1.25rem;
-		color: #303030;
+		color: var(--cardsofertascombo-nav-bar-color-mobile);
 		border-bottom: 1px solid #7f7f7f;
 		padding-bottom: 12px;
 	}
