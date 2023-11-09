@@ -1,13 +1,15 @@
 [
 	{
-		"iconSrc": "",
-		"iconAlt": "",
+		"iconSrcLight": "./assets/images/contactbuttonv2-whatsapp-light.svg",
+		"iconSrcDark": "./assets/images/contactbuttonv2-whatsapp-dark.svg",
+		"iconAlt": "icone de whatsapp",
 		"text": "Por WhatsApp",
 		"changeMenu": "assinarOiFibra"
 	},
 	{
-		"iconSrc": "",
-		"iconAlt": "",
+		"iconSrcLight": "./assets/images/contactbuttonv2-usersupport-light.svg",
+		"iconSrcDark": "./assets/images/contactbuttonv2-usersupport-dark.svg",
+		"iconAlt": "icone de suporte",
 		"text": "Pelo 0800 031 0453",
 		"changeMenu": "telefone08000310453"
 	}

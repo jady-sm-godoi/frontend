@@ -1,13 +1,17 @@
 [
 	{
-		"iconSrc": "",
-		"iconAlt": "",
+	
+		"iconSrcLight": "./assets/images/contactbuttonv2-user-light.svg",
+		"iconSrcDark": "./assets/images/contactbuttonv2-user-dark.svg",
+		"iconAlt": "icone de usuário",
 		"text": "Pessoa física",
 		"changeMenu": "pessoaFisica"
 	},
 	{
-		"iconSrc": "",
-		"iconAlt": "",
+		
+		"iconSrcLight": "./assets/images/contactbuttonv2-briefcase-light.svg",
+		"iconSrcDark": "./assets/images/contactbuttonv2-briefcase-dark.svg",
+		"iconAlt": "icone de maleta",
 		"text": "Pessoa jurídica",
 		"changeMenu": "pessoaJuridica"
 	}
