@@ -71,6 +71,7 @@
 .header-modal_li_buttons {
 	background: none;
 	border: none;
+	padding-right: 8px;
 }
 
 //estilos modal
@@ -194,6 +195,7 @@
 }
 
 .header_middle_button {
+	margin-right: 24px;
 	display: flex;
 	flex-direction: row;
 	align-items: center;
@@ -236,7 +238,7 @@
 }
 
 .header_middle_button > button {
-	color: #282828;
+	color: var(--header-middle-button);
 	display: flex;
 	align-items: center;
 	font-weight: 500;
