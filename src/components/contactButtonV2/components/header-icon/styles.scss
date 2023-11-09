@@ -9,7 +9,7 @@
 
 	color: var(--cttbtnv2-headericon);
 
-	&__title{
+	&__title {
 		display: flex;
 		align-items: center;
 		gap: 12px;
@@ -21,6 +21,7 @@
 		font-weight: 500;
 		// line-height: 150%; /* 24px */
 	}
+
 	button {
 		background-color: transparent;
 		border: none;
