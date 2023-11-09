@@ -33,6 +33,10 @@ module.exports = function RemoveNotUsableImages() {
 		getSrc && pageUsablePaths.push(getSrc)
 	})
 
+	const imagesWhiteList = JSON.parse(fs.readFileSync(__dirname + "/../../assets/usable-images-whitelist.json"))
+
+	// insert whitelist images on usable images
+	pageUsablePaths = [...pageUsablePaths, ...imagesWhiteList]
 	// filter paths to get image name only
 
 	pageUsablePaths = pageUsablePaths.map((img) => {
