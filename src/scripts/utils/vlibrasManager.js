@@ -23,8 +23,10 @@ class VlibasManager {
 
 		/**
 		 * @private
+		 * 
+		 * > VLIBRAS ARE DEPLOIED ONLY WHEN PAGE END LOAD
 		 */
-		this.deployVlibras()
+		// this.deployVlibras()
 	}
 
 	/**
@@ -47,9 +49,6 @@ class VlibasManager {
 		return this._currentState
 	}
 
-	/**
-	 * @private
-	 */
 	deployVlibras() {
 		// Cria o elemento <div> com a classe "enabled"
 		this.vlibrasContainer = document.createElement('div')
