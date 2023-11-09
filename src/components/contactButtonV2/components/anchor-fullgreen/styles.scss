@@ -5,7 +5,7 @@
 	padding: 2px 16px;
 	align-items: center;
 	gap: 8px;
-	background-color: var(--cttbtn-v2-anchor-color);
+	background-color: var(--cttbtnv2-anchor);
 	width: 100%;
 	border-radius: 999px;
 	display: flex;
@@ -13,7 +13,7 @@
 
 	span {
 		text-decoration: none;
-		color: var(--cttbtn-v2-anchor-text-color);
+		color: var(--cttbtnv2-anchor-text);
 		text-align: center;
 		font-size: 16px;
 		font-weight: 500;
