@@ -1,15 +1,17 @@
 .modal-whatsappv2-components__anchor-fullgreen {
 	display: flex;
-	min-width: 232px;
 	height: 48px;
 	padding: 2px 16px;
-	align-items: center;
+	
 	gap: 8px;
 	background-color: var(--cttbtnv2-anchor);
 	width: 100%;
 	border-radius: 999px;
 	display: flex;
 	justify-content: center;
+	align-items: center;
+	
+	margin-inline: 16px;
 
 	span {
 		text-decoration: none;

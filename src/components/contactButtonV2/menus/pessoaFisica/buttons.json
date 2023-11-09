@@ -1,13 +1,17 @@
 [
 	{
-		"iconSrc": "",
-		"iconAlt": "",
+		
+		"iconSrcLight": "./assets/images/contactbuttonv2-chatmessages-light.svg",
+		"iconSrcDark": "./assets/images/contactbuttonv2-chatmessages-dark.svg",
+		"iconAlt": "icone de balão de conversa",
 		"text": "Atendimento",
 		"changeMenu": "pessoaFisicaAtendimento"
 	},
 	{
-		"iconSrc": "",
-		"iconAlt": "",
+		
+		"iconSrcLight": "./assets/images/contactbuttonv2-star-light.svg",
+		"iconSrcDark": "./assets/images/contactbuttonv2-star-dark.svg",
+		"iconAlt": "icone de estrela",
 		"text": "Ofertas especiais",
 		"changeMenu": "#"
 	}
