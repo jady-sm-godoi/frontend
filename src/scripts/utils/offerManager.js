@@ -34,7 +34,6 @@ class OfferManager {
 		this.defaultCities = []
 
 		const cityFromCookies = this.getCityFromCookies()
-		console.log('cityFromCookies', cityFromCookies)
 
 		this.requestDefaultCities().then((city) => {
 			this.defaultCities = city
