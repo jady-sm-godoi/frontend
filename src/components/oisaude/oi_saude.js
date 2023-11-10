@@ -1,50 +1,111 @@
-// const carousel = document.querySelector('.oi_saude__carousel');
-// const slides = document.querySelectorAll('.oi_saude__card');
-// const dots = document.querySelectorAll('.oi_saude__card_dot');
-// let currentIndex = 0;
-// let autoPlayInterval;
+function oiSaudeHandler() {
+	const carousel = document.querySelector('.oi_saude__carousel')
+	const slides = document.querySelectorAll('.oi_saude__card')
+	const dots = document.querySelectorAll('.oi_saude__card_dot')
+	let currentIndex = 0
+	let startX
+	let isDragging = false
 
-// dots.forEach((dot, index) => {
-//     dot.addEventListener('click', () => {
-//         goToSlide(index);
-//     });
-// });
+	dots.forEach((dot, index) => {
+		dot.addEventListener('click', () => {
+			goToSlide(index)
+		})
+	})
 
-// function goToSlide(index) {
-//     slides.forEach((slide, i) => {
-//         slide.style.transform = `translateX(-${index * 100}%)`;
-//         dots[i].classList.remove('oi_saude__card_dot_active');
-//     });
-//     dots[index].classList.add('oi_saude__card_dot_active');
-//     currentIndex = index;
-//     console.log("index", index);
-// }
+	// let lastUpdateSlide = new Date().getTime()
 
-// function nextSlide() {
-//     currentIndex = (currentIndex + 1) % slides.length;
-//     console.log("index", index);
-//     goToSlide(currentIndex);
+	carousel.addEventListener('touchstart', touchStart)
+	carousel.addEventListener('touchmove', touchMove)
+	carousel.addEventListener('touchend', touchEnd)
 
-// }
+	function touchStart(e) {
+		startX = e.touches[0].clientX
+		isDragging = true
+	}
 
-// function prevSlide() {
-//     currentIndex = (currentIndex - 1 + slides.length) % slides.length;
-//     goToSlide(currentIndex);
-// }
+	function touchMove(e) {
+		if (!isDragging) return
 
-// function checkScreenWidth() {
-//     if (window.innerWidth >= 992) {
-//         currentIndex = 0; // Volte ao primeiro slide
-//         clearInterval(autoPlayInterval); // Pausa a reprodução automática
-//         goToSlide(currentIndex); // Atualize o slide visível
-//     }
-// }
+		const touchX = e.touches[0].clientX
+		const diff = startX - touchX
 
-// //Função de verificação de largura da tela quando a página é carregada
-// window.addEventListener('load', checkScreenWidth);
-// window.addEventListener('resize', checkScreenWidth);
+		// Impede a rolagem da página enquanto o usuário desliza
+		e.preventDefault()
 
-// if (window.innerWidth < 992) {
-//     autoPlayInterval = setInterval(nextSlide, 3000);
+		// Ajuste o valor para controlar a sensibilidade do movimento
+		const sensitivity = 0.5 // Ajuste conforme necessário
+		const moveAmount = diff * sensitivity
 
-// }
+		// Atualiza a posição do carrossel
+		carousel.style.transform = `translateX(-${
+			currentIndex * 100 + moveAmount
+		}%)`
+	}
+
+	function touchEnd(e) {
+		isDragging = false
+
+		// Determina se o usuário deslizou para a esquerda ou para a direita
+		if (startX - e.changedTouches[0].clientX > 0) {
+			nextSlide()
+		} else {
+			prevSlide()
+		}
+	}
+
+	function goToSlide(index) {
+		slides.forEach((slide, i) => {
+			slide.style.transform = `translateX(-${index * 100}%)`
+			dots[i].classList.remove('oi_saude__card_dot_active')
+		})
+		dots[index].classList.add('oi_saude__card_dot_active')
+		currentIndex = index
+	}
+
+	function nextSlide() {
+		currentIndex = Math.min(currentIndex + 1, slides.length - 1)
+		updateCarousel()
+	}
+
+	function prevSlide() {
+		currentIndex = Math.max(currentIndex - 1, 0)
+		updateCarousel()
+	}
+
+	function updateCarousel() {
+		const slideWidth = 100 // Largura de cada slide em porcentagem
+		const maxTranslate = -((slides.length - 1) * slideWidth) + 24 // Limite de 24px para o último slide
+		const translateValue = Math.max(
+			maxTranslate,
+			Math.min(-currentIndex * slideWidth, 0)
+		)
+
+		carousel.style.transform = `translateX(${translateValue}%)`
+
+		dots.forEach((dot, i) => {
+			dot.classList.toggle('oi_saude__card_dot_active', i === currentIndex)
+		})
+	}
+
+	function checkScreenWidth() {
+		if (window.innerWidth >= 992) {
+			currentIndex = 0
+			updateCarousel()
+		}
+	}
+
+	async function autoNextSlide(delay) {
+		// for (let slideIndex = 0; slideIndex < dots.length - 1; slideIndex++) {
+		// 	goToSlide(slideIndex)
+		// 	await new Promise((resolve) => setTimeout(resolve, delay))
+		// 	console.log('pulando slide')
+		// }
+	}
+
+	// autoNextSlide(2000)
+
+	window.addEventListener('load', checkScreenWidth)
+	window.addEventListener('resize', checkScreenWidth)
+}
+
+oiSaudeHandler()
