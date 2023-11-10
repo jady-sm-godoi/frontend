@@ -194,6 +194,7 @@
 }
 
 .header_middle_button {
+	margin-right: 24px;
 	display: flex;
 	flex-direction: row;
 	align-items: center;
@@ -236,7 +237,7 @@
 }
 
 .header_middle_button > button {
-	color: #282828;
+	color: var(--header-middle-button);
 	display: flex;
 	align-items: center;
 	font-weight: 500;
@@ -368,7 +369,6 @@
 	.header_top_accessibility > a,
 	.header_top_accessibility > button {
 		height: 20px;
-		font-weight: 400;
 		font-size: 0.875rem;
 		line-height: 140%;
 	}
