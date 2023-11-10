@@ -1,71 +1,6 @@
 // -----------------------------------------------------------------------------
 // This file contains very basic styles.
 // -----------------------------------------------------------------------------
-
-:root {
-	--main-bg-color: #fff;
-	--main-bg-parceiros-color: #282828;
-	--main-bg-banner-color: #0CC04C;
-	--main-bg-card-color: #F2F2F2;
-	--main-bg-submenu-color: #282828;
-	--main-bg-a-maior-rede-color: #0CC04C;
-	--main-border-card-color: 1px solid #DBDBDB;
-	--main-border-submenu-color: 1px solid #000;
-	--main-border-submenu-item-color: 1px solid #009E0B;
-	--main-button-color: #282828;
-	--sub-footer-text: #000;
-	--main-title-color: #282828;
-	--main-text-color: #000;
-	--main-text-gray-color: #595959;
-	--main-subinput-text-color: #909090;
-	--main-submenu-text-color: #222222;
-	--main-subtitle-color: #282828;
-	--main-bt-primary-color: #A5E114;
-	--main-text-primary-color: #98D318;
-	--main-cta-primary-color: #FBD84B;
-	--main-button-primary-color: #0CC04C;
-	--color-orange: #F8562C;
-	--modal-atendimento-svg: invert(59%) sepia(86%) saturate(1818%) hue-rotate(82deg) brightness(91%) contrast(121%);
-	--cards-image-svg: #000;
-	--icon-help-svg: invert(48%) sepia(77%) saturate(1986%) hue-rotate(93deg) brightness(104%) contrast(112%);
-	--links-footer-hover: #009e0c;
-	--modal-a-z: linear-gradient(135deg, #92b80f 47%, #008a0c);
-	--modal-az-title: rgba(34, 34, 34, 0.3);
-	--modal-az-links: hsla(0,0%,100%,.7);
-}
-
-[data-theme="dark"] {
-	--main-bg-color: #000;
-	--main-bg-parceiros-color: #000;
-	--main-bg-banner-color: #000;
-	--main-bg-card-color: #000;
-	--main-bg-submenu-color: #FBD84B;
-	--main-bg-a-maior-rede-color: #000;
-	--main-border-card-color: 1px solid #FFF;
-	--main-border-submenu-color: 1px solid #FFF;
-	--main-border-submenu-item-color: 1px solid #fff;
-	--main-button-color: #FBD84B;
-	--sub-footer-text: #FBD84B;
-	--main-title-color: #fff;
-	--main-subtitle-color: #fff;
-	--main-text-color: #fff;
-	--main-text-gray-color: #fff;
-	--main-subinput-text-color: #fff;
-	--main-submenu-text-color: #FBD84B;
-	--main-text-primary-color: #FBD84B;
-	--main-bt-primary-color: #FBD84B;
-	--main-cta-primary-color: #FBD84B;
-	--main-button-primary-color: #FBD84B;
-	--color-orange: #f1dc3a;
-	--modal-atendimento-svg: invert(89%) sepia(78%) saturate(2406%) hue-rotate(328deg) brightness(108%) contrast(89%);
-	--cards-image-svg: invert(100%) sepia(74%) saturate(85%) hue-rotate(133deg) brightness(111%) contrast(101%);
-	--icon-help-svg: invert(100%) sepia(100%) saturate(28%) hue-rotate(24deg) brightness(105%) contrast(100%);
-	--links-footer-hover: #fff;
-	--modal-a-z: #000000;
-	--modal-az-title: #FFF;
-	--modal-az-links: #f1dc3a;
-}
-
 * {
 	margin: 0;
 	padding: 0;
@@ -92,21 +27,7 @@ body {
 	display: flex;
 	flex-direction: column;
 	min-height: 100vh;
-	color: var(--main-bg-color);
-	background-color: var(--main-bg-color);
 	overflow-x:hidden;
-}
-
-
-.title,
-.paragraph {
-	color: var(--main-text-color);
-}
-
-#main {
-	flex: 1;
-	display: flex;
-	flex-direction: column;
 }
 
 button {

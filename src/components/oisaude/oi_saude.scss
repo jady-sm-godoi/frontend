@@ -97,6 +97,10 @@
     position: relative;
 }
 
+.oi_saude__card{
+    -webkit-transition: all 1s;
+}
+
 .oi_saude__cardContent {
     position: absolute;
     bottom: 0;
