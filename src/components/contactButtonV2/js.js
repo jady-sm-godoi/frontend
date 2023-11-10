@@ -29,7 +29,7 @@ class ContactButtonV2 {
 		this.setMenu(this.defaultMenu)
 
 		/** @private */
-		this._menuIsOpen = false
+		this.menuIsOpen = false
 	}
 
 	openModal() {
@@ -50,7 +50,9 @@ class ContactButtonV2 {
 
 		 
 		// this._menuIsOpen ? overflowHidden() : overflowShow()
-		this.containerHtmlElement.style.display = this._menuIsOpen ? 'flex' : 'none'
+
+		this.containerHtmlElement.setAttribute("data-whatsappmodalv2-status", this._menuIsOpen? "open":"close")
+		// this.containerHtmlElement.style.display = this._menuIsOpen ? 'flex' : 'none'
 
 		// set defaults menu when modal closed
 		if(!this._menuIsOpen) this.setMenu(this.defaultMenu)
