@@ -5,14 +5,13 @@ function oiSaudeHandler() {
 	let currentIndex = 0
 	let startX
 	let isDragging = false
+	let lastUpdateSlide = new Date().getTime()
 
 	dots.forEach((dot, index) => {
 		dot.addEventListener('click', () => {
 			goToSlide(index)
 		})
 	})
-
-	// let lastUpdateSlide = new Date().getTime()
 
 	carousel.addEventListener('touchstart', touchStart)
 	carousel.addEventListener('touchmove', touchMove)
@@ -54,6 +53,8 @@ function oiSaudeHandler() {
 	}
 
 	function goToSlide(index) {
+		lastUpdateSlide = new Date().getTime()
+
 		slides.forEach((slide, i) => {
 			slide.style.transform = `translateX(-${index * 100}%)`
 			dots[i].classList.remove('oi_saude__card_dot_active')
@@ -94,15 +95,24 @@ function oiSaudeHandler() {
 		}
 	}
 
-	async function autoNextSlide(delay) {
-		// for (let slideIndex = 0; slideIndex < dots.length - 1; slideIndex++) {
-		// 	goToSlide(slideIndex)
-		// 	await new Promise((resolve) => setTimeout(resolve, delay))
-		// 	console.log('pulando slide')
-		// }
+	async function autoSkipSlide(delay) {
+		let index = 0
+		while (true) {
+			await new Promise((resolve) => setTimeout(resolve, delay))
+			index = (index + 1) % dots.length
+
+			const currentUpdateSlite = new Date().getTime()
+
+			if (currentUpdateSlite - lastUpdateSlide >= delay) {
+				goToSlide(index)
+			} else {
+				index = currentIndex
+			}
+		}
+
 	}
 
-	// autoNextSlide(2000)
+	autoSkipSlide(5000)
 
 	window.addEventListener('load', checkScreenWidth)
 	window.addEventListener('resize', checkScreenWidth)
