@@ -6,7 +6,6 @@
 	"jsxBracketSameLine": false,
 	"trailingComma": "none",
 	"bracketSpacing": false,
-	"rangeEnd": 120,
 	"files": [
 		"./components/**/*.jsx",
 		"./pages/**/*.{js, jsx}",
