@@ -43,12 +43,29 @@
 
 		flex-direction: column;
 		display: none;
+
+
 	}
 
 	&__buttons-container {
 		display: flex;
 		flex-direction: column;
 		gap: 8px;
+
+		&__desktop {
+			display: block;
+		}
+		&__mobile {
+			display: none;
+		}
+		@media (max-width: 420px) {
+			&__desktop {
+				display: none;
+			}
+			&__mobile {
+				display: block;
+			}
+		}
 	}
 }
 

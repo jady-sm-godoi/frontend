@@ -4,7 +4,12 @@
 >
 	@@include("../../components/header-icon/index.html", {title: "Atendimento por telefone"})
 
-	<div class="modal-whatsappv2__buttons-container">
+	<!-- incluide __mobile or __desktop on end classname to show only device on 420px -->
+	<div class="modal-whatsappv2__buttons-container__mobile">
 		@@include("../../components/anchor-fullgreen/index.html", {href: "tel:+08000310800", text:"0800 031 0800"})
+	</div>
+
+	<div class="modal-whatsappv2__buttons-container__desktop">
+		@@include("../../components/anchor-phone-desktop/index.html", { text:"0800 031 0800"})
 	</div>
 </section>
