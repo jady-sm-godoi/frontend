@@ -13,7 +13,7 @@ class ContactButtonV2 {
 		containerSelector,
 		options = {closeModalWhenClickInBackground: true}
 	) {
-
+		/** @private */
 		this.options = options
 
 		/** @private */
@@ -37,7 +37,7 @@ class ContactButtonV2 {
 		/** @private */
 		this.menuIsOpen = false
 
-		if(this.options.closeModalWhenClickInBackground){
+		if (this.options.closeModalWhenClickInBackground) {
 			this.closeModalWhenClickInBackground()
 		}
 	}
@@ -54,7 +54,7 @@ class ContactButtonV2 {
 	closeModalWhenClickInBackground() {
 		// deploy listener
 		this.containerHtmlElement.addEventListener('click', (click) => {
-			if(click.target.id == this.containerHtmlElement.id){
+			if (click.target.id == this.containerHtmlElement.id) {
 				this.closeModal()
 			}
 		})
