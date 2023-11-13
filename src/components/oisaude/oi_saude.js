@@ -36,9 +36,8 @@ function oiSaudeHandler() {
 		const moveAmount = diff * sensitivity
 
 		// Atualiza a posição do carrossel
-		carousel.style.transform = `translateX(-${
-			currentIndex * 100 + moveAmount
-		}%)`
+		carousel.style.transform = `translateX(-${currentIndex * 100 + moveAmount
+			}%)`
 	}
 
 	function touchEnd(e) {
@@ -74,18 +73,25 @@ function oiSaudeHandler() {
 	}
 
 	function updateCarousel() {
-		const slideWidth = 100 // Largura de cada slide em porcentagem
-		const maxTranslate = -((slides.length - 1) * slideWidth) + 24 // Limite de 24px para o último slide
+		const slideWidth = 100; // Largura de cada slide em porcentagem
+		const maxTranslate = -((slides.length - 1) * slideWidth) + 24; // Limite de 24px para o último slide
 		const translateValue = Math.max(
 			maxTranslate,
 			Math.min(-currentIndex * slideWidth, 0)
-		)
+		);
 
-		carousel.style.transform = `translateX(${translateValue}%)`
+		carousel.style.transform = `translateX(${translateValue}%)`;
 
 		dots.forEach((dot, i) => {
-			dot.classList.toggle('oi_saude__card_dot_active', i === currentIndex)
-		})
+			dot.classList.toggle('oi_saude__card_dot_active', i === currentIndex);
+		});
+
+		// Verifica se a largura da tela é maior ou igual a 992 pixels
+		if (window.innerWidth >= 992) {
+			// Reposiciona o carrossel para o primeiro slide quando acima de 992 pixels
+			const newTranslateValue = Math.max(0, translateValue);
+			carousel.style.transform = `translateX(-${newTranslateValue}%)`;
+		}
 	}
 
 	function checkScreenWidth() {
@@ -96,26 +102,30 @@ function oiSaudeHandler() {
 	}
 
 	async function autoSkipSlide(delay) {
-		let index = 0
+		let index = 0;
+
 		while (true) {
-			await new Promise((resolve) => setTimeout(resolve, delay))
-			index = (index + 1) % dots.length
+			await new Promise((resolve) => setTimeout(resolve, delay));
+			index = (index + 1) % dots.length;
 
-			const currentUpdateSlite = new Date().getTime()
+			const currentUpdateSlide = new Date().getTime();
 
-			if (currentUpdateSlite - lastUpdateSlide >= delay) {
-				goToSlide(index)
+			if (window.innerWidth <= 992) {
+				if (currentUpdateSlide - lastUpdateSlide >= delay) {
+					goToSlide(index);
+				}
 			} else {
-				index = currentIndex
+				// Se a largura da tela for maior que 992 pixels, volte para o primeiro slide
+				goToSlide(0);
+				index = 0;
 			}
 		}
-
 	}
 
-	autoSkipSlide(5000)
+	autoSkipSlide(5000);
 
-	window.addEventListener('load', checkScreenWidth)
-	window.addEventListener('resize', checkScreenWidth)
+	window.addEventListener('load', checkScreenWidth);
+	window.addEventListener('resize', checkScreenWidth);
 }
 
 oiSaudeHandler()
