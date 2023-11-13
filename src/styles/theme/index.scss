@@ -204,11 +204,11 @@
 	--cttbtnv2-title-text: var(--color-white-full);
 	--cttbtnv2-anchor: var(--color-primary-300);
 	--cttbtnv2-anchor-text: var(--color-black-full);
-
 	--cttbtnv2-headernormal: var(--color-white-full);
 	--cttbtnv2-headericon: var(--color-white-full);
 	--cttbtnv2-whtsapp-icon: var(--color-primary-300);
-
+	--cttbtnv2-border: solid;
+	--cttbtnv2-bordercolor: var(--color-neutral-300);
 }
 
 .light {
@@ -283,10 +283,12 @@
 	--cttbtnv2-title-text: var(--color-neutral-600);
 	--cttbtnv2-anchor: var(--color-primary-400);
 	--cttbtnv2-anchor-text: var(--color-white-full);
-
 	--cttbtnv2-headernormal: var(--color-neutral-600);
 	--cttbtnv2-headericon: var(--color-neutral-600);
 	--cttbtnv2-whtsapp-icon: var(--color-primary-410);
+	--cttbtnv2-border: none;
+	--cttbtnv2-bordercolor: transparent;
+
 }
 
 body {

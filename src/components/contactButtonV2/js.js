@@ -9,7 +9,13 @@ class ContactButtonV2 {
 	/**
 	 * @param {HTMLElementTagNameMap} containerSelector
 	 * */
-	constructor(containerSelector) {
+	constructor(
+		containerSelector,
+		options = {closeModalWhenClickInBackground: true}
+	) {
+
+		this.options = options
+
 		/** @private */
 		this.containerSelector = containerSelector
 
@@ -30,6 +36,10 @@ class ContactButtonV2 {
 
 		/** @private */
 		this.menuIsOpen = false
+
+		if(this.options.closeModalWhenClickInBackground){
+			this.closeModalWhenClickInBackground()
+		}
 	}
 
 	openModal() {
@@ -40,6 +50,14 @@ class ContactButtonV2 {
 	}
 	closeModal() {
 		this.menuIsOpen = false
+	}
+	closeModalWhenClickInBackground() {
+		// deploy listener
+		this.containerHtmlElement.addEventListener('click', (click) => {
+			if(click.target.id == this.containerHtmlElement.id){
+				this.closeModal()
+			}
+		})
 	}
 
 	/**
