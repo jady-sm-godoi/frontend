@@ -94,3 +94,13 @@
 		line-height: 30px;
 	}
 }
+@media (min-width: 1840px) {
+	.profitability_anchors_content{
+		display: flex;
+		flex-direction: row;
+		gap: 24px;
+	}
+	.profitability_anchor{
+		margin-top: 16px;
+	}
+}
