@@ -1,0 +1,155 @@
+.carrousel-handler-v1 {
+	display: flex;
+	position: relative;
+
+	&__carrousel {
+		-webkit-transition: all 1s;
+		display: flex;
+		width: 100%;
+
+		&__background {
+			position: absolute;
+			inset: 0;
+			z-index: -1;
+			display: flex;
+			justify-content: flex-start;
+
+			img {
+				height: 100%;
+				object-fit: cover;
+			}
+		}
+
+		&__container {
+			position: relative;
+			min-width: 100%;
+		}
+
+		&__content {
+			display: flex;
+			flex-direction: column;
+
+			max-width: min(1080px, calc(100vw - 140px));
+
+			@media (max-width: 768px) {
+				max-width: 100%;
+			}
+		}
+	}
+
+	&__footer {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		position: absolute;
+		inset: auto 0 0;
+		margin: auto;
+
+		gap: 1rem;
+		margin-bottom: 1rem;
+
+		&__outside-buttons-container {
+			display: flex;
+			gap: 8px;
+			align-items: center;
+
+			&__slide-arrow {
+				@media (max-width: 768px) {
+					&__left,
+					&__right {
+						display: block !important;
+					}
+				}
+
+				&__left,
+				&__right {
+					display: none;
+
+					width: 1rem;
+					height: 1rem;
+					background: transparent;
+					border: none;
+
+					border-style: solid;
+					border-color: #f5f5f5;
+
+					border-width: 2px 2px 0px 0px;
+					border-radius: 0px 4px 0 0;
+				}
+
+				&__left {
+					// 360 - 45
+					transform: rotate(225deg);
+				}
+				&__right {
+					transform: rotate(45deg);
+				}
+			}
+
+			&__text {
+				color: white;
+				font-weight: 500;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+
+				&__arrow {
+					width: 1rem;
+					height: 1rem;
+					transform: rotate(45deg);
+					background-color: transparent;
+					border: none;
+					border-color: white;
+					border-style: solid;
+					border-width: 0px 2px 2px 0px;
+					border-radius: 0 0 4px 0;
+				}
+			}
+
+			&__dots-container {
+				display: flex;
+				gap: 12px;
+				&__dot {
+					border: none;
+					width: 24px;
+					height: 8px;
+
+					-webkit-transition: all 1s;
+
+					background-color: #300d0d;
+					border-radius: 14px;
+					// opacity: 0.24;
+				}
+
+				&__is-active {
+					width: 64px;
+					position: relative;
+					overflow: hidden;
+
+					&::before {
+						content: '';
+						position: absolute;
+						left: 0;
+						top: 0;
+						bottom: 0;
+						animation-name: carrousel-handler-v1__dot-load;
+						animation-timing-function: linear;
+						animation-duration: inherit;
+						animation-fill-mode: forwards;
+						background-color: #cccccc;
+					}
+				}
+			}
+		}
+	}
+}
+
+@keyframes carrousel-handler-v1__dot-load {
+	0% {
+		width: 0%;
+	}
+	100% {
+		width: 100%;
+	}
+}
