@@ -5,24 +5,15 @@
 	&__background {
 		justify-content: center;
 		position: relative;
-		background-color: #00211f;
 		&::before {
 			content: '';
 			inset: 0 auto 0 auto;
 			width: 100%;
 			position: absolute;
 			max-width: 1366px;
-
-			background: linear-gradient(
-					271deg,
-					#00211f 10.48%,
-					rgba(0, 33, 31, 0) 36.32%
-				),
-				linear-gradient(86deg, #00211f 29.33%, rgba(0, 33, 31, 0) 60.17%);
 		}
 		img {
 			width: 100%;
-			max-width: 1366px;
 		}
 	}
 }
