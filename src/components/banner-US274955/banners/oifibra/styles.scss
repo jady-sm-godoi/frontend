@@ -1,3 +1,24 @@
 .banner-274955__oifibra {
-    &__background{}
+	&__background {
+		justify-content: flex-end;
+		position: relative;
+		background-color: #00211f;
+		&::before {
+			content: '';
+			inset: 0 auto 0 auto;
+			width: 100%;
+			position: absolute;
+            max-width: 1700px;
+
+			background: linear-gradient(
+					90deg,
+					#00211f 10.35%,
+					rgba(0, 33, 31, 0) 38.25%
+				)
+		}
+		img {
+			width: 100%;
+		    max-width: 1700px;
+		}
+	}
 }

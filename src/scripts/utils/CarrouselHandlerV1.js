@@ -2,9 +2,9 @@ class CarrouselHandlerV1 {
 	/** @private */
 	defaultOptions = {
 		enableDots: true,
-		enableArrows: true,
 		enableAutoSkip: true,
-		autoSkipDelay: 10000
+		autoSkipDelay: 10000,
+		enableArrows: true
 	}
 
 	/**  @param {string} containerSelector */
@@ -33,7 +33,12 @@ class CarrouselHandlerV1 {
 		this.mobileSlideArrows = this.deploySkipArrowsToMobile()
 
 		/** @private */
-		this.desktopSlideArrows = this.deploySkipArrowsToDesktop()
+
+		if (this.options.enableArrows) {
+			this.desktopSlideArrows = this.deploySkipArrowsToDesktop()
+
+			this.disableArrow('left')
+		}
 
 		// set first carrousel view
 		/** @private */
@@ -44,8 +49,6 @@ class CarrouselHandlerV1 {
 		 * @private
 		 */
 		this.timeoutAutoSkip = null
-
-		this.disableArrow('left')
 	}
 
 	/** @returns {Element}
@@ -157,11 +160,15 @@ class CarrouselHandlerV1 {
 			'outside-buttons-container'
 		)
 
-		outsideButtonsContainer.appendChild(leftArrowMobile)
-		outsideButtonsContainer.appendChild(this.dotsContainer)
-		outsideButtonsContainer.appendChild(rightArrowMobile)
-
+		this.options.enableArrows &&
+			outsideButtonsContainer.appendChild(leftArrowMobile)
 		// insert dots on footer
+		this.options.enableDots &&
+			outsideButtonsContainer.appendChild(this.dotsContainer)
+
+		this.options.enableArrows &&
+			outsideButtonsContainer.appendChild(rightArrowMobile)
+
 		footerContainer.appendChild(outsideButtonsContainer)
 
 		// insert offerContainer on footer
@@ -210,12 +217,13 @@ class CarrouselHandlerV1 {
 		if (index < 0) index = this.dotsContainer.children.length - 1
 		if (index >= this.dotsContainer.children.length) index = 0
 
-
-		// disable arrows 
-		this.disableArrow(
-			(index == 0 && 'left') ||
-				(index == this.dotsContainer.children.length - 1 && 'right')
-		)
+		if (this.options.enableArrows) {
+			// disable arrows
+			this.disableArrow(
+				(index == 0 && 'left') ||
+					(index == this.dotsContainer.children.length - 1 && 'right')
+			)
+		}
 
 		// scroll slide container to position
 		this.carrouselSlides.style.transform = `translateX(-${index * 100}%)`

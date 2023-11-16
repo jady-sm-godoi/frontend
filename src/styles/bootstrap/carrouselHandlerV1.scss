@@ -75,7 +75,6 @@
 			inset: 0;
 			z-index: -1;
 			display: flex;
-			justify-content: flex-start;
 
 			img {
 				height: 100%;
@@ -180,8 +179,9 @@
 
 					-webkit-transition: all 1s;
 
-					background-color: #300d0d;
+					background-color: rgb(245, 245, 245, 0.24);
 					border-radius: 14px;
+					backdrop-filter: blur(2px);
 					// opacity: 0.24;
 				}
 
@@ -200,7 +200,7 @@
 						animation-timing-function: linear;
 						animation-duration: inherit;
 						animation-fill-mode: forwards;
-						background-color: #cccccc;
+						background-color: #F5F5F5;
 					}
 				}
 			}
