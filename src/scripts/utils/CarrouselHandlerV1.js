@@ -54,7 +54,6 @@ class CarrouselHandlerV1 {
 	 */
 	getCarrousel() {
 		const selector = this.buildClass('.' + this.carrouselClassName, 'carrousel')
-		console.log('selector', selector)
 		return this.containerHtml.querySelector(selector)
 	}
 
