@@ -30,7 +30,10 @@ class CarrouselHandlerV1 {
 		this.dotsContainer = this.createDots()
 
 		/** @private */
-		this.deployFooter()
+		this.mobileSlideArrows = this.deploySkipArrowsToMobile()
+
+		/** @private */
+		this.desktopSlideArrows = this.deploySkipArrowsToDesktop()
 
 		// set first carrousel view
 		/** @private */
@@ -41,6 +44,8 @@ class CarrouselHandlerV1 {
 		 * @private
 		 */
 		this.timeoutAutoSkip = null
+
+		this.disableArrow('left')
 	}
 
 	/** @returns {Element}
@@ -53,8 +58,45 @@ class CarrouselHandlerV1 {
 		return this.containerHtml.querySelector(selector)
 	}
 
+	deploySkipArrowsToDesktop() {
+		const skipDotsDesktopContainer = document.createElement('div')
+
+		skipDotsDesktopContainer.className = this.buildClass(
+			this.carrouselClassName,
+			'slide-arrow-desktop'
+		)
+
+		const leftArrowDesktop = document.createElement('button')
+		const rightArrowDesktop = document.createElement('button')
+
+		leftArrowDesktop.className = this.buildClass(
+			this.carrouselClassName,
+			'slide-arrow-desktop',
+			'left'
+		)
+
+		rightArrowDesktop.className = this.buildClass(
+			this.carrouselClassName,
+			'slide-arrow-desktop',
+			'right'
+		)
+
+		// add listeners
+		leftArrowDesktop.addEventListener('click', () => this.currentSlide--)
+		rightArrowDesktop.addEventListener('click', () => this.currentSlide++)
+
+		skipDotsDesktopContainer.appendChild(leftArrowDesktop)
+		skipDotsDesktopContainer.appendChild(rightArrowDesktop)
+
+		skipDotsDesktopContainer.classList.add('max_width_container')
+
+		this.containerHtml.appendChild(skipDotsDesktopContainer)
+
+		return {left: leftArrowDesktop, right: rightArrowDesktop}
+	}
+
 	/** @private */
-	deployFooter() {
+	deploySkipArrowsToMobile() {
 		const footerContainer = document.createElement('div')
 
 		// create "veja outras ofertas"
@@ -81,7 +123,8 @@ class CarrouselHandlerV1 {
 		// insert arrow on text container
 		otherOffersContainer.appendChild(otherOffersArrow)
 
-		//Create arrows to skip slide on mobile
+		/** ------------------------------------------------------------------ */
+		//Create arrows to skip slide on mobile / desktop
 
 		// create arrow mobile
 		const leftArrowMobile = document.createElement('button')
@@ -125,6 +168,8 @@ class CarrouselHandlerV1 {
 		// insert offerContainer on footer
 		footerContainer.appendChild(otherOffersContainer)
 
+		/** ------------------------------------------------------------------ */
+
 		// insert classname on footer
 		footerContainer.className = this.buildClass(
 			this.carrouselClassName,
@@ -133,6 +178,8 @@ class CarrouselHandlerV1 {
 
 		// insert footer on banner
 		this.containerHtml.appendChild(footerContainer)
+
+		return {left: leftArrowMobile, right: rightArrowMobile}
 	}
 
 	/** @private */
@@ -140,10 +187,36 @@ class CarrouselHandlerV1 {
 		return classes.join('__')
 	}
 
+	disableArrow(arrow = 'left' || 'right' || 'none') {
+		// enable all arrows
+		;[
+			this.desktopSlideArrows.left,
+			this.desktopSlideArrows.right,
+			this.mobileSlideArrows.left,
+			this.mobileSlideArrows.right
+		].forEach((e) => (e.style.visibility = null))
+
+		if (arrow == 'left') {
+			this.desktopSlideArrows.left.style.visibility = 'hidden'
+			this.mobileSlideArrows.left.style.visibility = 'hidden'
+		}
+		if (arrow == 'right') {
+			this.desktopSlideArrows.right.style.visibility = 'hidden'
+			this.mobileSlideArrows.right.style.visibility = 'hidden'
+		}
+	}
+
 	set currentSlide(index) {
 		// block to inset index above the children length
 		if (index < 0) index = this.dotsContainer.children.length - 1
 		if (index >= this.dotsContainer.children.length) index = 0
+
+
+		// disable arrows 
+		this.disableArrow(
+			(index == 0 && 'left') ||
+				(index == this.dotsContainer.children.length - 1 && 'right')
+		)
 
 		// scroll slide container to position
 		this.carrouselSlides.style.transform = `translateX(-${index * 100}%)`

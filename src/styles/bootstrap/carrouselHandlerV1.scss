@@ -2,6 +2,69 @@
 	display: flex;
 	position: relative;
 
+	&__slide-arrow-desktop {
+		display: flex;
+		justify-content: space-between;
+		position: absolute;
+		inset: auto 0;
+		align-self: center;
+		justify-self: flex-end;
+
+		@media (max-width: 1365px) {
+			inset: auto 24px;
+			width: auto !important;
+		}
+
+		@media (max-width: 768px) {
+			display: none;
+		}
+
+		&__right,
+		&__left {
+			width: 55px;
+			height: 55px;
+			border-radius: 999rem;
+			border: none;
+			position: absolute;
+			background-color: #ffffff;
+			margin: auto;
+
+			&::before {
+				position: absolute;
+
+				margin: auto;
+				border: none;
+				content: '';
+
+				border-style: solid;
+				border-color: #1f1f1f;
+
+				width: 16px;
+				height: 16px;
+
+				border-width: 2px 2px 0px 0px;
+				border-radius: 0px 4px 0 0;
+			}
+		}
+
+		&__left {
+			inset: 0 auto 0 0;
+
+			&::before {
+				inset: 0 14px 0 auto;
+				transform: rotate(225deg);
+			}
+		}
+		&__right {
+			inset: 0 0 0 auto;
+
+			&::before {
+				inset: 0 auto 0 14px;
+				transform: rotate(45deg);
+			}
+		}
+	}
+
 	&__carrousel {
 		-webkit-transition: all 1s;
 		display: flex;
