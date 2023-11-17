@@ -96,8 +96,7 @@ function oiSaudeHandler() {
 
 	function checkScreenWidth() {
 		if (window.innerWidth >= 992) {
-			currentIndex = 0
-			updateCarousel()
+			goToSlide(0); // Vai direto para o primeiro slide sem esperar os 5 segundos
 		}
 	}
 

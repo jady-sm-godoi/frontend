@@ -2,35 +2,24 @@
 	&__background {
 		justify-content: center;
 		position: relative;
+		background-color: #00211f;
 		&::before {
 			content: '';
 			inset: 0 auto 0 auto;
 			width: 100%;
 			position: absolute;
 			max-width: 1366px;
+
+			background: linear-gradient(
+					271deg,
+					#00211f 10.48%,
+					rgba(0, 33, 31, 0) 36.32%
+				),
+				linear-gradient(86deg, #00211f 29.33%, rgba(0, 33, 31, 0) 60.17%);
 		}
-		
+		img {
+			width: 100%;
+			max-width: 1366px;
+		}
 	}
-
-
-	
-	// &__title {
-	// 	font-family: Simplon BP;
-	// 	margin-left: 157px;
-	// 	// color: white;
-	// }
-	// &__title-h3{
-	// 	font-size: 59.298px;
-	// 	font-weight: 500;
-	// 	line-height: 85.38px;
-
-	// 		&__span{
-	// 			background: linear-gradient(69deg, #00F06E 31.27%, #70FF84 52.79%);
-	// 			background-clip: text;
-	// 			-webkit-background-clip: text;
-	// 			-webkit-text-fill-color: transparent;
-	// 			filter: blur(3.97727632522583px);
-	// 		}
-	// }
-		
 }
