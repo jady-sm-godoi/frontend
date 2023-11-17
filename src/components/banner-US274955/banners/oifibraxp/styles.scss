@@ -9,21 +9,25 @@
 			max-width: 1366px;
 		}
 	}
-	&__title{
-		font-family: 'Simplon Oi';
-		font-size: 59.298px;
-		font-weight: 500;
-		color: var(--banneroifibra-text-color);
-		display: flex;
-
-		&__span{
-			text-shadow: 0px 0px 11px rgba(112, 255, 132, 0.60);
-			background: linear-gradient(69deg, #00F06E 26.33%, #B5FFBF 61%);
-			background-clip: text;
-			-webkit-background-clip: text;
-			-webkit-text-fill-color: transparent;
+	&__titles-container{
+		//add mobile-first display: flex flex-direction: colum revers
+		&__title{
+			font-family: 'Simplon Oi';
+			font-size: 59.298px;
+			font-weight: 500;
+			color: var(--banneroifibra-text-color);
+			margin-bottom: 4px;
+	
+			&__span{
+				text-shadow: 0px 0px 11px rgba(112, 255, 132, 0.60);
+				background: linear-gradient(69deg, #00F06E 26.33%, #B5FFBF 61%);
+				background-clip: text;
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+			}
 		}
 	}
+	
 	&__callout{
 		font-size: 12px;
 		font-weight: 500px;
@@ -39,5 +43,21 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
+	}
+	&__details-container{
+		margin-top: 24px;
+		display: flex;
+		flex-direction: row;
+		font-size: 16px;
+		color: var(--color-neutral-100);
+		gap: 25px;
+
+		&__offer{
+			font-weight: 700;
+			width: 172px;
+			height: 84px;
+			line-height: 140%;
+			letter-spacing: 1px;
+		}
 	}
 }
