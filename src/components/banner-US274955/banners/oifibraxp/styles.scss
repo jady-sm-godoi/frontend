@@ -3,9 +3,41 @@
 		justify-content: center;
 		position: relative;
 		background-color: #00211f;
+		font-family: 'Simplon BP';
 		img {
 			width: 100%;
 			max-width: 1366px;
 		}
+	}
+	&__title{
+		font-family: 'Simplon Oi';
+		font-size: 59.298px;
+		font-weight: 500;
+		color: var(--banneroifibra-text-color);
+		display: flex;
+
+		&__span{
+			text-shadow: 0px 0px 11px rgba(112, 255, 132, 0.60);
+			background: linear-gradient(69deg, #00F06E 26.33%, #B5FFBF 61%);
+			background-clip: text;
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+		}
+	}
+	&__callout{
+		font-size: 12px;
+		font-weight: 500px;
+		color: var(--color-success-400);
+
+		background-color: var(--color-success-100);
+		border-radius: 999px;
+		box-shadow: 0px 0px 10.9px 0px rgba(112, 255, 132, 0.30);
+		width: 182px;
+		height: 20px;
+		padding: 2px 8px;
+
+		display: flex;
+		justify-content: center;
+		align-items: center;
 	}
 }
