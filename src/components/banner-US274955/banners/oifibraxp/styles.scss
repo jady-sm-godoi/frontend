@@ -1,7 +1,4 @@
 .banner-274955__oifibraxp {
-	&__title {
-		color: white;
-	}
 	&__background {
 		justify-content: center;
 		position: relative;
@@ -12,8 +9,28 @@
 			position: absolute;
 			max-width: 1366px;
 		}
-		img {
-			width: 100%;
-		}
+		
 	}
+
+
+	
+	// &__title {
+	// 	font-family: Simplon BP;
+	// 	margin-left: 157px;
+	// 	// color: white;
+	// }
+	// &__title-h3{
+	// 	font-size: 59.298px;
+	// 	font-weight: 500;
+	// 	line-height: 85.38px;
+
+	// 		&__span{
+	// 			background: linear-gradient(69deg, #00F06E 31.27%, #70FF84 52.79%);
+	// 			background-clip: text;
+	// 			-webkit-background-clip: text;
+	// 			-webkit-text-fill-color: transparent;
+	// 			filter: blur(3.97727632522583px);
+	// 		}
+	// }
+		
 }
