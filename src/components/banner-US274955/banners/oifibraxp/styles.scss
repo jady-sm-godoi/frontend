@@ -1,4 +1,4 @@
-.banner-274955__oifibraxp {
+.banner-274955__oifibraxp {	
 	&__background {
 		justify-content: center;
 		position: relative;
@@ -9,86 +9,230 @@
 			max-width: 1366px;
 		}
 	}
+
 	&__titles-container{
-		//add mobile-first display: flex flex-direction: colum revers
+		display: flex;
+        flex-direction: column-reverse;
+        gap: 9px;
+
 		&__title{
-			font-family: 'Simplon Oi';
-			font-size: 59.298px;
-			font-weight: 500;
-			color: var(--banneroifibra-text-color);
-			margin-bottom: 4px;
+            font-family: 'Simplon Oi';
+            font-size: 40.358px;
+            font-weight: 500;
+            color: var(--banneroifibra-text-color);
+            margin-bottom: 4px;
+       
+            &__span{
+                text-shadow: 0px 0px 11px rgba(112, 255, 132, 0.60);
+                background: linear-gradient(69deg, #00F06E 26.33%, #B5FFBF 61%);
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+        }
+
+		&__callout{
+			font-family: 'Simplon BP'; //Simplon BP Medium
+			font-size: 12px;
+			font-weight: 500px;
+			color: var(--color-success-400);
 	
-			&__span{
-				text-shadow: 0px 0px 11px rgba(112, 255, 132, 0.60);
-				background: linear-gradient(69deg, #00F06E 26.33%, #B5FFBF 61%);
-				background-clip: text;
-				-webkit-background-clip: text;
-				-webkit-text-fill-color: transparent;
-			}
+			background-color: var(--color-success-100);
+			border-radius: 999px;
+			box-shadow: 0px 0px 10.9px 0px rgba(112, 255, 132, 0.30);
+			width: 165px;
+			height: 20px;
+			padding: 2px 8px;
+	
+			display: flex;
+			justify-content: center;
+			align-items: center;
 		}
-	}
-	
-	&__callout{
-		font-size: 12px;
-		font-weight: 500px;
-		color: var(--color-success-400);
-
-		background-color: var(--color-success-100);
-		border-radius: 999px;
-		box-shadow: 0px 0px 10.9px 0px rgba(112, 255, 132, 0.30);
-		width: 182px;
-		height: 20px;
-		padding: 2px 8px;
-
-		display: flex;
-		justify-content: center;
-		align-items: center;
-	}
+    }
 	&__details-container{
-		margin-top: 24px;
 		display: flex;
-		flex-direction: row;
-		font-size: 16px;
-		color: var(--color-neutral-100);
-		gap: 25px;
+		flex-direction: column;
+		gap: 20px;
 
 		&__offer{
+			font-size: 14px;
 			font-weight: 700;
-			width: 172px;
-			height: 84px;
 			line-height: 140%;
-			letter-spacing: 1px;
+			color: var(--color-neutral-100);
+			display: flex;
+			flex-direction: column;
 		}
-
+		&__vector{
+			display: none;
+		}
 		&__price{
+			color: var(--color-neutral-100);
 			font-weight: 500;
+			display: flex;
+			align-items: center;
+			gap: 2px;
 
 			&__text{
-				font-size: 16px;
+				display: flex;
+				flex-direction: column;
+				&__por{
+					font-size: 10px;
+				}
+				&__rs{
+					font-size: 16px;
+				}
 			}
-
 			&__value{
 				display: flex;
+				flex-direction: row;
+				align-items: center;
 
 				&__number{
 					font-family: 'Simplon Oi';
-					font-size: 60px;
+					font-size: 38px;
 				}
-
 				&__per-month{
 					display: flex;
 					flex-direction: column;
-					justify-content: center;
-					
+					font-size: 14px;
+
 					&__cents{
-						font-size: 22px;
-					}
-					&__month{
-						font-size: 16px;
+						font-family: 'Simplon Oi';
 					}
 				}
-				
 			}
 		}
+	}
+	&__button{
+		width: 301px;
+        height: 48px;
+        border-radius: 48px;
+        padding: 16px 24px;
+        background-color: var(--color-secondary-300);
+           
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+
+        font-family: 'Simplon BP';
+        font-weight: 500;
+        font-size: 16px;
+        color: var(--color-neutral-600);
+        margin-top: 12px;
+	}
+}
+
+@media screen and (min-width: 1920px) {
+	.banner-274955__oifibraxp{	
+		&__titles-container{
+			display: flex;
+			flex-direction: column;
+			gap: 14px;
+
+			&__title{
+				font-family: 'Simplon Oi';
+				font-size: 59.298px;
+				font-weight: 500;
+				color: var(--banneroifibra-text-color);
+				margin-bottom: 4px;
+		   
+				&__span{
+					text-shadow: 0px 0px 11px rgba(112, 255, 132, 0.60);
+					background: linear-gradient(69deg, #00F06E 26.33%, #B5FFBF 61%);
+					background-clip: text;
+					-webkit-background-clip: text;
+					-webkit-text-fill-color: transparent;
+				}
+			}
+			
+			&__callout{
+				font-size: 12px;
+				font-weight: 500px;
+				color: var(--color-success-400);
+		   
+				background-color: var(--color-success-100);
+				border-radius: 999px;
+				box-shadow: 0px 0px 10.9px 0px rgba(112, 255, 132, 0.30);
+				width: 182px;
+				height: 20px;
+				padding: 2px 8px;
+		   
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}		
+		}
+
+		&__details-container{
+			margin-top: 24px;
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			font-size: 16px;
+			color: var(--color-neutral-100);
+			gap: 25px;
+	   
+			&__offer{
+				font-weight: 700;
+				width: 172px;
+				height: 84px;
+				line-height: 140%;
+				letter-spacing: 1px;
+			}
+			&__vector{
+				display: block;
+			}
+			&__price{
+				font-weight: 500;
+				margin-bottom: 7px;
+			   
+				&__text{
+					font-size: 16px;
+				}
+	   
+				&__value{
+					display: flex;
+	   
+					&__number{
+						font-family: 'Simplon Oi';
+						font-size: 60px;
+					}
+	   
+					&__per-month{
+						display: flex;
+						flex-direction: column;
+						justify-content: center;
+						margin-left: 6px;
+	   
+						&__cents{
+							font-size: 22px;
+						}
+						&__month{
+							font-size: 16px;
+						}
+					}
+				}
+			}
+		}
+
+		&__button{
+			width: 312px;
+			height: 48px;
+			border-radius: 999px;
+			padding: 8px 12px;
+			background-color: var(--color-secondary-300);
+			   
+			display: flex;
+			justify-content: center;
+			align-items: center;
+	
+	
+			font-family: 'Simplon BP';
+			font-weight: 500;
+			font-size: 16px;
+			color: var(--color-neutral-600);
+			margin-top: 21px;
+		}	
 	}
 }
