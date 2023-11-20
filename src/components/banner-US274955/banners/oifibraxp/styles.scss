@@ -59,5 +59,36 @@
 			line-height: 140%;
 			letter-spacing: 1px;
 		}
+
+		&__price{
+			font-weight: 500;
+
+			&__text{
+				font-size: 16px;
+			}
+
+			&__value{
+				display: flex;
+
+				&__number{
+					font-family: 'Simplon Oi';
+					font-size: 60px;
+				}
+
+				&__per-month{
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+					
+					&__cents{
+						font-size: 22px;
+					}
+					&__month{
+						font-size: 16px;
+					}
+				}
+				
+			}
+		}
 	}
 }
