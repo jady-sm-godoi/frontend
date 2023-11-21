@@ -1,13 +1,65 @@
 <div class="carrousel-handler-v1__carrousel__container">
-	<div
-		class="carrousel-handler-v1__carrousel__background banner-274955__oifibraxp__background"
-	>
-		<!-- <img class="banner-274955__oifibraxp__img-mobile" src="assets/images/banner_eofpav-b3-mobile.webp" alt="" />  -->
-		<img src="assets/images/banner_eofpav-b3-desktop.webp" alt="" />
-	</div>
+	<picture class="carrousel-handler-v1__carrousel__background banner-274955__oifibraxp__background">
+		<source
+			media="(min-width: 1920px)"
+			srcset="assets/images/banner_eofpav-b3-desktop.webp"
+		/>
+		<source
+			media="(min-width: 1024px)"
+			srcset="assets/images/banner_eofpav-b3-desktop-1024.webp"
+		/>
+		<source
+			media="(min-width: 768px)"
+			srcset="assets/images/banner_eofpav-b3-desktop-768.webp"
+		/>
+		<source
+			media="(min-width: 360px)"
+			srcset="assets/images/banner_eofpav-b3-mobile.webp"
+		/>
+		<img 
+			src="assets/images/banner_eofpav-b3-mobile.webp"
+		>
+	</picture>
 	<div class="carrousel-handler-v1__carrousel__content max_width_container">
 		<div class="banner-274955 banner-274955__oifibraxp">
-			<!-- CONTEUDO AQUI -->
+			<section class="banner-274955__oifibraxp__titles-container">
+				<div class="banner-274955__oifibraxp__titles-container__title">
+					OI <span class="banner-274955__oifibraxp__titles-container__title__span">FIBRA X<br>PREMIUM </span>
+				</div>
+				<div class="banner-274955__oifibraxp__titles-container__callout">
+					A melhor experiência Wi-Fi
+				</div>
+			</section>
+			<section class="banner-274955__oifibraxp__details-container">
+				<div class="banner-274955__oifibraxp__details-container__offer">
+					<div class="banner-274955__oifibraxp__details-container__offer__mobile">
+						<span>1 Giga de velocidade com 2 pontos</span> Wi-Fi 6 FTTR e gerenciamento proativo da rede
+					</div>
+					<div class="banner-274955__oifibraxp__details-container__offer__desktop">
+						<span>1 Giga de velocidade</span> 2 pontos Wi-Fi 6 FTTR <span>Gerenciamento proativo da rede</span>
+					</div>
+				</div>
+				<svg class="banner-274955__oifibraxp__details-container__vector" 
+					width="2" height="94" viewBox="0 0 2 94" fill="none">
+					<path d="M1 94V0" stroke="#F5F5F5"/>
+				</svg>
+				<div class="banner-274955__oifibraxp__details-container__price">
+					<div class="banner-274955__oifibraxp__details-container__price__text">
+						POR 
+						<span class="banner-274955__oifibraxp__details-container__price__text__real"> R$</span>
+					</div>
+					<div class="banner-274955__oifibraxp__details-container__price__value">
+						<span class="banner-274955__oifibraxp__details-container__price__value__number">249</span>
+						<div class="banner-274955__oifibraxp__details-container__price__value__per-month">
+							<span class="banner-274955__oifibraxp__details-container__price__value__per-month__cents">, 90</span>
+							<span class="banner-274955__oifibraxp__details-container__price__value__per-month__month">/MÊS</span>
+						</div>
+					</div>
+				</div>
+			</section>
+			<a class="banner-274955__oifibraxp__button" href="">
+				Consultar disponibilidade
+			</a>
 		</div>
 	</div>
 </div>
