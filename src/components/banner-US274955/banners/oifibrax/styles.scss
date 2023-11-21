@@ -1,27 +1,49 @@
-
 .banner-274955__oifibrax {
 	&__background {
 		justify-content: center;
 		position: relative;
 		background-color: #001413;
+
 		&::before {
 			content: '';
 			inset: 0 auto 0 auto;
 			width: 100%;
 			position: absolute;
-			max-width: 1366px;
+			max-width: 1920px;
 
-			background: linear-gradient(
-					271deg,
+			background: linear-gradient(271deg,
 					#001413 10.48%,
-					rgba(0, 33, 31, 0) 36.32%
-				),
+					rgba(0, 33, 31, 0) 36.32%),
 				linear-gradient(86deg, #001413 29.33%, rgba(0, 30, 28, 0) 60.17%),
 				#1b602b00 75.932px -200.951px / 87.187% 198.137% no-repeat;
 		}
+
 		img {
 			width: 100%;
-			max-width: 1366px;
+			max-width: 1920px;
+		}
+	}
+}
+
+.banner-274955__oifibrax {
+	&__description-plan {
+		background-color: red;
+
+		&__title {
+			color: #FFF;
+			text-align: left;
+			font-family: Simplon Oi;
+			font-size: 3.75rem;
+			font-weight: 500;
+			line-height: 144%;
+		}
+
+		&__span {
+			background: linear-gradient(69deg, #40D802 11.73%, #90D604 88.27%);
+			background-clip: text;
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			filter: blur(1px);
 		}
 	}
 }
