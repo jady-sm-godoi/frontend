@@ -28,6 +28,7 @@
 		font-weight: 500;
 		font-family: 'Simplon Oi';
 		color: var(--banneroifibra-text-color);
+		margin-bottom: 45px;
 		&__bold {
 			// background: linear-gradient(69deg, #40d802 26.33%, #90d604 61%);
 			// background-clip: text;
@@ -76,7 +77,7 @@
 
 			&__text {
 				font-family: 'Simplon Oi';
-				font-size: 1.75rem;
+				font-size: 1.68rem;
 				font-style: normal;
 				font-weight: 500;
 				color: var(--banneroifibra-text-color);
@@ -86,6 +87,7 @@
 				display: flex;
 				flex-direction: row;
 				align-items: center;
+				gap: 14px;
 				color: var(--banneroifibra-text-color);
 				&__reais {
 					font-family: 'Simplon Oi';
@@ -97,11 +99,17 @@
 					display: flex;
 					flex-direction: column;
 					align-items: center;
-					font-family: 'Simplon Oi';
-					font-size: 3.563rem;
+					font-family: "Simplon Oi";
+					
 					font-style: normal;
 					font-weight: 500;
 					margin-left: -15px;
+					&__text{
+						font-size: 2.125rem;
+					}
+					&__centavos{
+						font-size: 3.563rem;
+					}
 				}
 			}
 			&__card {
@@ -115,7 +123,7 @@
 		}
 	}
 	&__button {
-		background: #fbd84b;
+		background: var(--banneroifibra-background-button);
 		border-radius: 2.875em;
 		padding: 16px 24px;
 		margin-top: 4px;
@@ -125,7 +133,7 @@
 		text-align: center;
 		text-decoration: none;
 		white-space: nowrap;
-		color: #071b13;
+		color: var(--banneroifibra-text-color-button);
 		max-width: 410px;
 		cursor: pointer;
 	}
