@@ -13,11 +13,11 @@
 			position: absolute;
 			max-width: 1920px;
 
-			background: linear-gradient(271deg,
-					#001413 10.48%,
-					rgba(0, 33, 31, 0) 36.32%),
-				linear-gradient(86deg, #001413 29.33%, rgba(0, 30, 28, 0) 60.17%),
-				#1b602b00 75.932px -200.951px / 87.187% 198.137% no-repeat;
+			// background: linear-gradient(271deg,
+			// 		#001413 10.48%,
+			// 		rgba(0, 33, 31, 0) 36.32%),
+			// 	linear-gradient(86deg, #001413 29.33%, rgba(0, 30, 28, 0) 60.17%),
+			// 	#1b602b00 75.932px -200.951px / 87.187% 198.137% no-repeat;
 		}
 
 		img {
@@ -29,7 +29,7 @@
 	&__titles-container {
 		&__callout {
 			font-family: 'Simplon BP'; //Simplon BP Medium
-			font-size: 12px;
+			font-size: 0.75rem;
 			font-weight: 500px;
 			color: var(--color-success-400);
 
@@ -42,12 +42,12 @@
 
 			display: flex;
 			justify-content: center;
-			align-items: center;
+			align-items: flex-end;
 		}
 
 		&__title {
 			font-family: 'Simplon Oi';
-			font-size: 40.358px;
+			font-size: 2.5rem;
 			font-weight: 500;
 			line-height: 58.11px;
 			color: var(--color-white-full);
@@ -67,7 +67,7 @@
 		&__offer {
 
 			&__mobile {
-				font-size: 14px;
+				font-size: 0.875rem;
 				font-weight: 700;
 				line-height: 140%;
 				color: var(--color-neutral-100);
@@ -83,5 +83,63 @@
 				display: none;
 			}
 		}
+
+		&__price {
+			color: var(--color-neutral-100);
+			font-weight: 500;
+			display: flex;
+			align-items: center;
+			margin-top: 20px;
+
+			&__text {
+				display: flex;
+				flex-direction: column;
+				font-size: 0.625rem;
+				margin: 0px 4px 0px 4px;
+
+				&__real {
+					font-size: 1rem;
+				}
+			}
+
+			&__value {
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+
+				&__number {
+					font-family: 'Simplon Oi';
+					font-size: 2.375rem;
+				}
+
+				&__per-month {
+					display: flex;
+					flex-direction: column;
+					font-size: 0.875rem;
+
+					&__cents {
+						font-family: 'Simplon Oi';
+					}
+				}
+			}
+		}
+	}
+
+	&__anchor {
+		width: 300px;
+		height: 48px;
+		border-radius: 50px;
+		padding: 16px 24px;
+		background-color: var(--color-secondary-300);
+
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-top: 20px;
+
+		font-family: 'Simplon BP';
+		font-size: 1rem;
+		font-weight: 500;
+		color: var(--color-neutral-600);
 	}
 }
