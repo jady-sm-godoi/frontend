@@ -132,6 +132,11 @@
 }
 
 .dark {
+	--banneroifibra-text-color:var(--color-white-full);
+	--banneroifibra-background-button:var(--color-warning-300);
+	--banneroifibra-text-color-button:var(--color-neutral-600);
+	
+
 	--cardsofertascombo-background-section: var(--color-neutral-500);
 	--cardsofertascombo-background-img: var(--color-neutral-500);
 	--cardsofertascombo-border-color-img: var(--color-primary-300);
@@ -212,6 +217,10 @@
 }
 
 .light {
+	--banneroifibra-text-color:var(--color-white-full);
+	--banneroifibra-background-button:var(--color-warning-300);
+	--banneroifibra-text-color-button:var(--color-neutral-600);
+
 	--cardsofertascombo-background-section: var(--color-neutral-200);
 	--cardsofertascombo-background-img: var(--color-white-full);
 	--cardsofertascombo-border-color-img: var(--color-white-full);

@@ -1,6 +1,26 @@
-.banner-274955{
-    height: 566px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+.banner-274955 {
+	height: 566px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+
+	&__utils {
+		&__text-neon {
+			background: linear-gradient(69deg, #40d802 26.33%, #90d604 61%);
+			background-clip: text;
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+
+			position: relative;
+			max-width: fit-content;
+			&::before {
+				content: attr(data-blur-content);
+				position: absolute;
+				background-image: inherit;
+				background-clip: text;
+				color: transparent;
+				filter: blur(4px);
+			}
+		}
+	}
 }

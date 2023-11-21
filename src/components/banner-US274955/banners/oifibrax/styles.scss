@@ -1,4 +1,6 @@
 .banner-274955__oifibrax {
+	max-width: fit-content;
+
 	&__background {
 		justify-content: center;
 		position: relative;
@@ -20,30 +22,66 @@
 
 		img {
 			width: 100%;
-			max-width: 1920px;
+			max-width: 1366px;
 		}
 	}
-}
 
-.banner-274955__oifibrax {
-	&__description-plan {
-		background-color: red;
+	&__titles-container {
+		&__callout {
+			font-family: 'Simplon BP'; //Simplon BP Medium
+			font-size: 12px;
+			font-weight: 500px;
+			color: var(--color-success-400);
 
-		&__title {
-			color: #FFF;
-			text-align: left;
-			font-family: Simplon Oi;
-			font-size: 3.75rem;
-			font-weight: 500;
-			line-height: 144%;
+			background-color: var(--color-success-100);
+			border-radius: 999px;
+			box-shadow: 0px 0px 10.9px 0px rgba(112, 255, 132, 0.30);
+			width: 157px;
+			height: 20px;
+			padding: 2px 8px;
+
+			display: flex;
+			justify-content: center;
+			align-items: center;
 		}
 
-		&__span {
-			background: linear-gradient(69deg, #40D802 11.73%, #90D604 88.27%);
-			background-clip: text;
-			-webkit-background-clip: text;
-			-webkit-text-fill-color: transparent;
-			filter: blur(1px);
+		&__title {
+			font-family: 'Simplon Oi';
+			font-size: 40.358px;
+			font-weight: 500;
+			line-height: 58.11px;
+			color: var(--color-white-full);
+
+			&__span {
+				text-shadow: 0px 0px 11px rgba(112, 255, 132, 0.60);
+				background: linear-gradient(69deg, #40D802 26.33%, #90D604 61%);
+				background-clip: text;
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+			}
+		}
+
+	}
+
+	&__details-container {
+		&__offer {
+
+			&__mobile {
+				font-size: 14px;
+				font-weight: 700;
+				line-height: 140%;
+				color: var(--color-neutral-100);
+				display: flex;
+				flex-direction: column;
+
+				p>span {
+					font-weight: 400;
+				}
+			}
+
+			&__desktop {
+				display: none;
+			}
 		}
 	}
 }

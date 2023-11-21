@@ -1,6 +1,9 @@
 .banner-274955__oifibra {
+	max-width: fit-content;
+
 	&__background {
-		justify-content: flex-end;
+		justify-content: center;
+		// justify-content: flex-end;
 		position: relative;
 		background-color: #00211f;
 		&::before {
@@ -8,17 +11,118 @@
 			inset: 0 auto 0 auto;
 			width: 100%;
 			position: absolute;
-			max-width: 1700px;
-
-			background: linear-gradient(
-				90deg,
-				#00211f 10.35%,
-				rgba(0, 33, 31, 0) 38.25%
-			);
+			@media (min-width: 2550px) {
+				max-width: 2550px;
+				background: linear-gradient(
+						271deg,
+						#00211f 0%,
+						rgba(0, 33, 31, 0) 30%
+					),
+					linear-gradient(86deg, #00211f 0%, rgba(0, 33, 31, 0) 10%),
+					rgba(211, 211, 211, 0) 141.964px -164.85px / 83.96% 149.591% no-repeat;
+			}
 		}
 		img {
+			max-width: 2550px;
 			width: 100%;
-			max-width: 1700px;
 		}
+	}
+	&__title {
+		font-size: 3.75rem;
+		font-weight: 500;
+		font-family: 'Simplon Oi';
+		color: var(--banneroifibra-text-color);
+		margin-bottom: 45px;
+	}
+	&__oferta {
+		display: flex;
+		flex-direction: row;
+		gap: 12px;
+		&__megas {
+			display: flex;
+			flex-direction: column;
+			font-family: 'Simplon Oi';
+			font-size: 7.25rem;
+			font-style: normal;
+			font-weight: 500;
+			max-width: 190px;
+			margin-top: -20px;
+
+			&__text {
+				font-family: 'Simplon BP';
+				font-size: 1.875rem;
+				font-style: normal;
+				font-weight: 500;
+				line-height: 46px;
+				text-align: end;
+				margin-top: -30px;
+				margin-left: auto;
+			}
+		}
+		&__preços {
+			display: flex;
+			flex-direction: column;
+
+			&__text {
+				font-family: 'Simplon Oi';
+				font-size: 1.68rem;
+				font-style: normal;
+				font-weight: 500;
+				color: var(--banneroifibra-text-color);
+				margin-bottom: -10px;
+			}
+			&__number {
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				gap: 14px;
+				color: var(--banneroifibra-text-color);
+				&__reais {
+					font-family: 'Simplon Oi';
+					font-size: 8.625rem;
+					font-style: normal;
+					font-weight: 500;
+				}
+				&__months {
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					font-family: 'Simplon Oi';
+
+					font-style: normal;
+					font-weight: 500;
+					margin-left: -15px;
+					&__text {
+						font-size: 2.125rem;
+					}
+					&__centavos {
+						font-size: 3.563rem;
+					}
+				}
+			}
+			&__card {
+				color: var(--banneroifibra-text-color);
+				font-family: 'Simplon BP';
+				font-size: 0.938rem;
+				font-style: normal;
+				font-weight: 500;
+				margin-top: -28px;
+			}
+		}
+	}
+	&__button {
+		background: var(--banneroifibra-background-button);
+		border-radius: 2.875em;
+		padding: 16px 24px;
+		margin-top: 4px;
+		font-family: 'Simplon BP';
+		font-weight: 600;
+		font-size: 1em;
+		text-align: center;
+		text-decoration: none;
+		white-space: nowrap;
+		color: var(--banneroifibra-text-color-button);
+		max-width: 410px;
+		cursor: pointer;
 	}
 }
