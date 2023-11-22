@@ -5,7 +5,8 @@
 		"iconSrcDark": "./assets/images/contactbuttonv2-chatmessages-dark.svg",
 		"iconAlt": "icone de balão de conversa",
 		"text": "Atendimento",
-		"changeMenu": "pessoaFisicaAtendimento"
+		"changeMenu": "pessoaFisicaAtendimento",
+		"menuName": "pessoaFisica"
 	},
 	{
 		
@@ -13,6 +14,7 @@
 		"iconSrcDark": "./assets/images/contactbuttonv2-star-dark.svg",
 		"iconAlt": "icone de estrela",
 		"text": "Ofertas especiais",
-		"changeMenu": "#"
+		"changeMenu": "#",
+		"menuName": "pessoaFisica"
 	}
 ]

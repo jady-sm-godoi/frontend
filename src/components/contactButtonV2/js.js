@@ -3,6 +3,7 @@ const modalManager = classInstancer(
 	'#modal-whatsapp-v2',
 	'main'
 )
+
 // modalManager.attachFocus()
 
 class ContactButtonV2 {
@@ -40,13 +41,21 @@ class ContactButtonV2 {
 		if (this.options.closeModalWhenClickInBackground) {
 			this.closeModalWhenClickInBackground()
 		}
+
+		this.selectItemWhenEnterKeyDown()
 	}
 
 	openModal() {
 		this.menuIsOpen = true
+
+		modalManager.currentMenu = this.defaultMenu
 	}
 	toggleModal() {
 		this.menuIsOpen = !this.menuIsOpen
+
+		if (this.menuIsOpen) {
+			modalManager.currentMenu = this.defaultMenu
+		}
 	}
 	closeModal() {
 		this.menuIsOpen = false
@@ -56,6 +65,15 @@ class ContactButtonV2 {
 		this.containerHtmlElement.addEventListener('click', (click) => {
 			if (click.target.id == this.containerHtmlElement.id) {
 				this.closeModal()
+			}
+		})
+	}
+
+	selectItemWhenEnterKeyDown() {
+		this.containerHtmlElement.addEventListener('keydown', (key) => {
+			if (key.key == 'Enter') {
+				const getNextMenu = key.target.onclick
+				if (getNextMenu) getNextMenu()
 			}
 		})
 	}
@@ -84,6 +102,7 @@ class ContactButtonV2 {
 	 * @param {string} menu
 	 */
 	setMenu(menu) {
+		
 		const menuArray = this.containerHtmlElement.querySelectorAll(
 			`[${this.attributes.menu.attibuteDatasetTag}]`
 		)
@@ -96,6 +115,8 @@ class ContactButtonV2 {
 
 			element.style.display = menuName.value == menu ? 'flex' : 'none'
 		})
+
+		modalManager.currentMenu = menu
 	}
 }
 
