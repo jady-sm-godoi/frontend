@@ -63,13 +63,9 @@
 			font-weight: 500;
 
 			&__arrow {
-				margin-top: 2px;
-				width: 8px;
-				height: 8px;
-				border-width: 1px 1px 0 0;
-				transform: rotate(45deg);
-				border-color: var(--color-primary-200);
-				border-style: solid;
+				width: 15px; 
+				height: 14px;
+				fill: var(--color-primary-200);					
 			}
 		}
 	}
@@ -77,8 +73,8 @@
 	&__img { //imagem do banner
 		&__computador{
 			margin-top: 44px;
-			max-width: 125px;
-			height: 105px;
+			min-width: 125px;
+			min-height: 105px;
 		}
 	}
 
@@ -132,15 +128,17 @@
 				font-size: 16px;
 	
 				&__arrow {
-					margin-top: 2px;
-					width: 8px;
-					height: 8px;
-					border-width: 1px 1px 0 0;
-					transform: rotate(45deg);
-					border-color: var(--color-primary-200);
-					border-style: solid;
+					width: 24px; 
+					height: 24px;			
 				}
 			}
-		}	
+		}
+		// &__img { 
+		// 	&__computador{
+		// 		margin-top: 84px;
+		// 		width: 276px;
+		// 		height: 276px;
+		// 	}
+		// }	
 	}
 }
