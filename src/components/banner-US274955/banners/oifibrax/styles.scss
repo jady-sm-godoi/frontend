@@ -22,7 +22,7 @@
 
 		img {
 			width: 100%;
-			max-width: 1366px;
+			max-width: 1920px;
 		}
 	}
 
@@ -34,11 +34,12 @@
 			color: var(--color-success-400);
 
 			background-color: var(--color-success-100);
-			border-radius: 999px;
+			border-radius: 50px;
 			box-shadow: 0px 0px 10.9px 0px rgba(112, 255, 132, 0.30);
 			width: 160px;
 			height: 20px;
 			padding: 2px 8px;
+			margin-bottom: 10px;
 
 			display: flex;
 			justify-content: center;
@@ -64,6 +65,10 @@
 	}
 
 	&__details-container {
+		display: flex;
+		flex-direction: column;
+		margin-bottom: 20px;
+
 		&__offer {
 
 			&__mobile {
@@ -73,6 +78,7 @@
 				color: var(--color-neutral-100);
 				display: flex;
 				flex-direction: column;
+				margin-bottom: 20px;
 
 				p>span {
 					font-weight: 400;
@@ -82,6 +88,10 @@
 			&__desktop {
 				display: none;
 			}
+
+			&__stroke {
+				display: none;
+			}
 		}
 
 		&__price {
@@ -89,13 +99,14 @@
 			font-weight: 500;
 			display: flex;
 			align-items: center;
-			margin-top: 20px;
 
 			&__text {
 				display: flex;
 				flex-direction: column;
 				font-size: 0.625rem;
-				margin: 0px 4px 0px 4px;
+				margin-right: 2px;
+
+
 
 				&__real {
 					font-size: 1rem;
@@ -110,6 +121,7 @@
 				&__number {
 					font-family: 'Simplon Oi';
 					font-size: 2.375rem;
+					margin-right: 2px;
 				}
 
 				&__per-month {
@@ -135,11 +147,124 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		margin-top: 20px;
 
 		font-family: 'Simplon BP';
 		font-size: 1rem;
 		font-weight: 500;
 		color: var(--color-neutral-600);
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.banner-274955__oifibrax {
+
+		&__background {
+
+			&::before {
+
+				background: linear-gradient(271deg,
+						#001413 10.48%,
+						rgba(0, 33, 31, 0) 36.32%),
+					linear-gradient(86deg, #001413 29.33%, rgba(0, 30, 28, 0) 60.17%),
+					#1b602b00 75.932px -200.951px / 87.187% 198.137% no-repeat;
+			}
+		}
+
+		&__titles-container {
+			display: flex;
+			flex-direction: column-reverse;
+			gap: 28px;
+			margin-bottom: 28px;
+
+			&__callout {
+				color: var(--color-success-200);
+				background-color: var(--color-success-500);
+				width: 176px;
+				height: 20px;
+			}
+
+			&__title {
+				font-size: 3.75rem;
+			}
+		}
+
+		&__details-container {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: space-around;
+			margin-bottom: 28px;
+
+			&__offer {
+
+				&__mobile {
+					display: none;
+				}
+
+				&__desktop {
+					display: flex;
+					flex-direction: column;
+					font-size: 1rem;
+					font-weight: 700;
+					line-height: 140%;
+					color: var(--color-neutral-100);
+					display: flex;
+					flex-direction: column;
+
+					p>span {
+						font-weight: 400;
+					}
+
+					&__gerenciamento {
+						max-width: 140px;
+					}
+				}
+
+				&__stroke {
+					display: flex;
+					margin: 0px 15px 0px 15px;
+				}
+			}
+
+			&__price {
+				margin-top: 0px;
+				flex-direction: column;
+				align-items: flex-start;
+
+				&__text {
+					display: flex;
+					flex-direction: row;
+					margin: 0px;
+					font-size: 1rem;
+
+					&__por {
+						margin-right: 4px;
+					}
+				}
+
+				&__value {
+					&__number {
+						font-size: 3.125rem;
+					}
+
+					&__per-month {
+						align-items: flex-end;
+
+						&__cents {
+							font-size: 1.375rem;
+						}
+
+						&__month {
+							font-size: 1rem;
+						}
+					}
+				}
+			}
+		}
+
+		&__anchor {
+			width: 335px;
+			height: 48px;
+		}
 	}
 }
