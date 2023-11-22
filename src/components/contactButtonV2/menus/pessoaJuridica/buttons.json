@@ -5,7 +5,8 @@
 		"iconSrcDark": "./assets/images/contactbuttonv2-chatmessages-dark.svg",
 		"iconAlt": "icone de balão de conversa",
 		"text": "Pequena ou média",
-		"changeMenu": "telefone08000310800"
+		"changeMenu": "telefone08000310800",
+		"menuName": "pessoaJuridica"
 	},
 	{
 		
@@ -13,6 +14,7 @@
 		"iconSrcDark": "./assets/images/contactbuttonv2-chatmessages-dark.svg",
 		"iconAlt": "icone de balão de conversa",
 		"text": "Grande",
-		"changeMenu": "telefone08000318031"
+		"changeMenu": "telefone08000318031",
+		"menuName": "pessoaJuridica"
 	}
 ]

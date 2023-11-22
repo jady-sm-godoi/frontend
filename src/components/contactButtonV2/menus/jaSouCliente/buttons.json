@@ -5,7 +5,8 @@
 		"iconSrcDark": "./assets/images/contactbuttonv2-user-dark.svg",
 		"iconAlt": "icone de usuário",
 		"text": "Pessoa física",
-		"changeMenu": "pessoaFisica"
+		"changeMenu": "pessoaFisica",
+		"menuName": "jaSouCliente"
 	},
 	{
 		
@@ -13,6 +14,7 @@
 		"iconSrcDark": "./assets/images/contactbuttonv2-briefcase-dark.svg",
 		"iconAlt": "icone de maleta",
 		"text": "Pessoa jurídica",
-		"changeMenu": "pessoaJuridica"
+		"changeMenu": "pessoaJuridica",
+		"menuName": "jaSouCliente"
 	}
 ]

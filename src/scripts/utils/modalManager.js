@@ -48,7 +48,7 @@ class KeepFocusManager {
 					...document.querySelectorAll(
 						[
 							this.containerSelector,
-							`[${this.menuDatasetKey}=${this.menuName}]`
+							`[${this.menuDatasetKey}="${this.menuName}"]`
 						].join(' ')
 					)
 				]
@@ -130,15 +130,20 @@ class KeepFocusManager {
 	 */
 	deployEventListener() {
 		this.containerHtmlElement.addEventListener('keydown', (keydown) => {
-			keydown.preventDefault()
-			if (keydown.key == 'Shift') this.shiftIsPressed = true
+			const getFocusableNodeByDataset = keydown.target.attributes[this.menuDatasetKey]
 
-			if (keydown.key == 'Tab') {
-				const elementHandler = this.mappedFocusableItens[this._currentMenu]
-
-				if (this.shiftIsPressed) elementHandler.back()
-				else elementHandler.next()
+			if(getFocusableNodeByDataset){
+				keydown.preventDefault()
+				if (keydown.key == 'Shift') this.shiftIsPressed = true
+	
+				if (keydown.key == 'Tab') {
+					const elementHandler = this.mappedFocusableItens[this._currentMenu]
+	
+					if (this.shiftIsPressed) elementHandler.back()
+					else elementHandler.next()
+				}
 			}
+		
 		})
 		this.containerHtmlElement.addEventListener('keyup', (keyup) => {
 			keyup.preventDefault()

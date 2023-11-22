@@ -2,7 +2,7 @@
 	data-whatsappmodalv2-menuname="pessoaFisica"
 	class="modal-whatsappv2-menu__pessoaFisica"
 >
-	@@include("../../components/header-normal/index.html", {title: "Você quer:"})
+	@@include("../../components/header-normal/index.html", {title: "Você quer:", "menuName": "pessoaFisica"})
 
 	<div class="modal-whatsappv2__buttons-container">
 
@@ -11,7 +11,8 @@
 			"iconSrcDark": "./assets/images/contactbuttonv2-chatmessages-dark.svg",
 			"iconAlt": "icone de balão de conversa",
 			"text": "Atendimento",
-			"changeMenu": "pessoaFisicaAtendimento"
+			"changeMenu": "pessoaFisicaAtendimento",
+			"menuName": "pessoaFisica"
 		})
 
 		@@include("../../components/anchor-green/index.html", {
@@ -19,7 +20,8 @@
 			"iconSrcDark": "./assets/images/contactbuttonv2-star-dark.svg",
 			"iconAlt": "icone de estrela",
 			"text": "Ofertas especiais",
-			"href": "https://api.whatsapp.com/send?phone=553131313131&campanha=%22Botaoofertasespec%22&origem=%22Botaositeofertasespec%22&text=Ola!%20Quero%20mudar%20o%20plano%20da%20minha%20internet."
+			"href": "https://api.whatsapp.com/send?phone=553131313131&campanha=%22Botaoofertasespec%22&origem=%22Botaositeofertasespec%22&text=Ola!%20Quero%20mudar%20o%20plano%20da%20minha%20internet.",
+			"menuName": "pessoaFisica"
 		})
 	</div>
 </section>
