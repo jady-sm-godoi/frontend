@@ -69,7 +69,7 @@
 				font-style: normal;
 				font-weight: 500;
 				color: var(--banneroifibra-text-color);
-				margin-bottom: -10px;
+				margin-bottom: -30px;
 			}
 			&__number {
 				display: flex;
@@ -124,5 +124,69 @@
 		color: var(--banneroifibra-text-color-button);
 		max-width: 410px;
 		cursor: pointer;
+	}
+	@media screen and (max-width: 768px) {
+		&__title {
+			font-size: 2.625rem;
+			margin-bottom: 16px;
+		}
+		&__oferta {
+			flex-direction: column;
+			gap: 4px;
+			&__megas {
+				font-size: 4.438rem;
+				max-width: 190px;
+				
+	
+				&__text {
+					font-size: 1.875rem;
+					text-align: end;
+					margin-top: -50px;
+					margin-right: -6px;
+				}
+			}
+			&__preços {
+				flex-direction: row;
+				flex-wrap: wrap;
+				max-width: 336px;
+				&__text{
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+					margin-bottom: -10px;
+					&__paragraph{
+						font-size: 1.063rem;
+						margin-bottom: 4px;
+					}
+					&__reais{
+						font-size: 1.875rem;
+						margin-top: -5px;
+					}
+				}
+				&__number{
+					&__reais{
+						font-size: 5.375rem;
+					}
+					&__months{
+						margin-bottom: 15px;
+						&__centavos {
+							font-size: 2.563rem;
+						}
+						&__text {
+							font-size: 1.438rem;
+							margin-left: -6px;
+						}
+					}
+				}
+				&__card{
+					margin-top: -5px;
+					margin-bottom: 5px;
+				}
+			}
+		}
+		&__button {
+			max-width: 246px;
+			min-height: 56px;
+		}
 	}
 }
