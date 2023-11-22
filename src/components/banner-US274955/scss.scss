@@ -6,8 +6,8 @@
 
 	&__utils {
 		&__text-neon {
-			background: linear-gradient(69deg, #40d802 26.33%, #90d604 61%);
-			background-clip: text;
+			background: inherit;
+			background-clip: text !important;
 			-webkit-background-clip: text;
 			-webkit-text-fill-color: transparent;
 
