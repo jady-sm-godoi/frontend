@@ -29,6 +29,10 @@
 		font-family: 'Simplon Oi';
 		color: var(--banneroifibra-text-color);
 		margin-bottom: 45px;
+
+		&__bold{
+			background: linear-gradient(69deg, #40d802 26.33%, #90d604 61%);
+		}
 	}
 	&__oferta {
 		display: flex;
@@ -53,6 +57,12 @@
 				text-align: end;
 				margin-top: -30px;
 				margin-left: auto;
+
+				background: linear-gradient(69deg, #40d802 26.33%, #90d604 61%);
+			}
+
+			&__number {
+				background: linear-gradient(69deg, #40d802 26.33%, #90d604 61%);
 			}
 		}
 		&__preços {
