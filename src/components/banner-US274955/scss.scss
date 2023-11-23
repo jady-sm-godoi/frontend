@@ -8,7 +8,7 @@
 		&__text-neon {
 			background: inherit;
 			background-clip: text !important;
-			-webkit-background-clip: text;
+			-webkit-background-clip: text !important;
 			-webkit-text-fill-color: transparent;
 
 			position: relative;

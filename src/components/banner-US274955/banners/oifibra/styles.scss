@@ -28,7 +28,7 @@
 		font-weight: 500;
 		font-family: 'Simplon Oi';
 		color: var(--banneroifibra-text-color);
-		margin-bottom: 45px;
+		margin-bottom: 38px;
 
 		&__bold{
 			background: linear-gradient(69deg, #40d802 26.33%, #90d604 61%);
@@ -75,7 +75,7 @@
 				font-style: normal;
 				font-weight: 500;
 				color: var(--banneroifibra-text-color);
-				margin-bottom: -30px;
+				margin-bottom: -20px;
 			}
 			&__number {
 				display: flex;
@@ -186,6 +186,7 @@
 				&__card {
 					margin-top: -5px;
 					margin-bottom: 5px;
+					font-size: 0.75rem;
 				}
 			}
 		}
@@ -200,6 +201,7 @@
 			margin-bottom: 16px;
 		}
 		&__oferta {
+			gap: 15px;
 			&__megas {
 				font-size: 3.875rem;
 				max-width: 190px;
@@ -208,7 +210,7 @@
 					font-size: 1.125rem;
 					text-align: end;
 					margin-top: -50px;
-					margin-right: -2px;
+					margin-right: 45px;
 				}
 			}
 			&__preços {
