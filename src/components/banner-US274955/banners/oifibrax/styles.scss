@@ -12,12 +12,6 @@
 			width: 100%;
 			position: absolute;
 			max-width: 1920px;
-
-			// background: linear-gradient(271deg,
-			// 		#001413 10.48%,
-			// 		rgba(0, 33, 31, 0) 36.32%),
-			// 	linear-gradient(86deg, #001413 29.33%, rgba(0, 30, 28, 0) 60.17%),
-			// 	#1b602b00 75.932px -200.951px / 87.187% 198.137% no-repeat;
 		}
 
 		img {
@@ -38,7 +32,7 @@
 			box-shadow: 0px 0px 10.9px 0px rgba(112, 255, 132, 0.3);
 			height: 20px;
 			padding: 2px 8px;
-			margin-bottom: 10px;
+			margin-bottom: 20px;
 
 			display: flex;
 			justify-content: center;
@@ -51,8 +45,9 @@
 			font-family: 'Simplon Oi';
 			font-size: 2.5rem;
 			font-weight: 500;
-			line-height: 58.11px;
+			//line-height: 58.11px;
 			color: var(--color-white-full);
+			margin-bottom: 14px;
 
 			&__span {
 				text-shadow: 0px 0px 11px rgba(112, 255, 132, 0.6);
@@ -67,7 +62,7 @@
 	&__details-container {
 		display: flex;
 		flex-direction: column;
-		margin-bottom: 20px;
+		margin-bottom: 15px;
 
 		&__offer {
 			&__mobile {
@@ -79,16 +74,12 @@
 				flex-direction: column;
 				margin-bottom: 20px;
 
-				p > span {
+				p>span {
 					font-weight: 400;
 				}
 			}
 
 			&__desktop {
-				display: none;
-			}
-
-			&__stroke {
 				display: none;
 			}
 		}
@@ -152,36 +143,41 @@
 	}
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 420px) {
 	.banner-274955__oifibrax {
 		&__background {
 			&::before {
-				background: linear-gradient(
-						271deg,
+				background: linear-gradient(271deg,
 						#001413 10.48%,
-						rgba(0, 33, 31, 0) 36.32%
-					),
+						rgba(0, 33, 31, 0) 36.32%),
 					linear-gradient(86deg, #001413 29.33%, rgba(0, 30, 28, 0) 60.17%),
 					#1b602b00 75.932px -200.951px / 87.187% 198.137% no-repeat;
 			}
 		}
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.banner-274955__oifibrax {
+
 
 		&__titles-container {
 			display: flex;
 			flex-direction: column-reverse;
-			gap: 28px;
+			gap: 14px;
 			margin-bottom: 28px;
 
 			&__callout {
 				color: var(--color-success-200);
 				background-color: var(--color-success-500);
 				height: 20px;
-				align-items: center;
+				align-items: flex-end;
 				margin-bottom: 0px;
 			}
 
 			&__title {
 				font-size: 3.75rem;
+				margin-bottom: 0px;
 			}
 		}
 
@@ -189,7 +185,7 @@
 			display: flex;
 			flex-direction: row;
 			align-items: center;
-			justify-content: space-around;
+			gap: 24px;
 			margin-bottom: 28px;
 
 			&__offer {
@@ -206,19 +202,16 @@
 					color: var(--color-neutral-100);
 					display: flex;
 					flex-direction: column;
+					border-right: 1px solid var(--color-neutral-100);
+					padding-right: 24px;
 
-					p > span {
+					p>span {
 						font-weight: 400;
 					}
 
 					&__gerenciamento {
 						max-width: 140px;
 					}
-				}
-
-				&__stroke {
-					display: flex;
-					margin: 0px 15px 0px 15px;
 				}
 			}
 
