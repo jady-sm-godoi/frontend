@@ -14,12 +14,13 @@
   display: flex;
   flex-direction: column;
 }
-.oi_play_titulo_imagem{
+
+.oi_play_titulo_imagem {
   margin-bottom: 40px;
 }
 
 .texto_oi_play>.texto_oi_play_heading {
-  font-size: 32px;
+  font-size: 2rem;
   line-height: 32px;
   font-family: 'Simplon BP';
   font-weight: 500;
@@ -92,7 +93,7 @@
   border-radius: 48px;
   border: 2px solid #a5e114;
   font-family: 'Simplon BP';
-  font-weight: 500 !important; 
+  font-weight: 500 !important;
   font-size: 1rem;
 }
 

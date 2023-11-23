@@ -4,6 +4,7 @@
 		position: relative;
 		background-color: #00211f;
 		font-family: 'Simplon BP';
+
 		img {
 			width: 100%;
 			max-width: 1366px;
@@ -50,6 +51,7 @@
 			align-items: center;
 		}
 	}
+
 	&__details-container {
 		display: flex;
 		flex-direction: column;
@@ -64,13 +66,16 @@
 				display: flex;
 				flex-direction: column;
 			}
+
 			&__desktop {
 				display: none;
 			}
 		}
+
 		&__vector {
 			display: none;
 		}
+
 		&__price {
 			color: var(--color-neutral-100);
 			font-weight: 500;
@@ -82,10 +87,12 @@
 				flex-direction: column;
 				font-size: 0.625rem;
 				margin: 0px 4px 0px 4px;
+
 				&__real {
 					font-size: 1rem;
 				}
 			}
+
 			&__value {
 				display: flex;
 				flex-direction: row;
@@ -93,8 +100,9 @@
 
 				&__number {
 					font-family: 'Simplon Oi';
-					font-size: 38px;
+					font-size: 2.375rem;
 				}
+
 				&__per-month {
 					display: flex;
 					flex-direction: column;
@@ -107,6 +115,7 @@
 			}
 		}
 	}
+
 	&__button {
 		width: 301px;
 		height: 48px;
@@ -188,13 +197,16 @@
 					display: flex;
 					flex-direction: column;
 				}
+
 				&__mobile {
 					display: none;
 				}
 			}
+
 			&__vector {
 				display: block;
 			}
+
 			&__price {
 				display: flex;
 				flex-direction: column;
@@ -226,6 +238,7 @@
 						&__cents {
 							font-size: 1.375rem;
 						}
+
 						&__month {
 							font-size: 1rem;
 						}

@@ -6,12 +6,15 @@
 	padding-inline: 16px;
 
 	color: var(--cttbtnv2-headernormal);
+
 	span {
-		font-size: 16px;
+		font-size: 1rem;
 		font-style: normal;
 		font-weight: 500;
-		line-height: 150%; /* 24px */
+		line-height: 150%;
+		/* 24px */
 	}
+
 	button {
 		background-color: transparent;
 		border: none;

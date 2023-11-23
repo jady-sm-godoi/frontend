@@ -5,22 +5,23 @@
 	padding: 2px 16px;
 	align-items: center;
 	gap: 8px;
-    background-color: transparent;
+	background-color: transparent;
 
-    max-width: 100%;
+	max-width: 100%;
 
 	margin-inline: 16px;
 
 	border-radius: 999px;
-	border: 2px solid  #00a300;
+	border: 2px solid #00a300;
 
 	span {
 		text-decoration: none;
 		color: #00a300;
 		text-align: center;
 
-		font-size: 16px;
+		font-size: 1rem;
 		font-weight: 500;
-		line-height: 150%; /* 24px */
+		line-height: 150%;
+		/* 24px */
 	}
 }
