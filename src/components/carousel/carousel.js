@@ -13,9 +13,6 @@ const hideLastDotToTabletSize = () => {
 
 hideLastDotToTabletSize();
 
-window.addEventListener("resize", function () {
-  hideLastDotToTabletSize();
-});
 
 
 btnArrowPrev.onclick = function () {
@@ -44,9 +41,15 @@ function goToCardIndex(e) {
 }
 
 const cardsItem = document.querySelectorAll(".card_item");
-const arrayCardItem = Array.from(cardsItem);
-const arrayCardWidth = arrayCardItem.map((card, index) => cardSizeWithMargin * index);
+let arrayCardWidth = [...cardsItem].map((card, index) => cardSizeWithMargin * index);
 let timeoutId;
+
+window.addEventListener("resize", function () {
+  hideLastDotToTabletSize();
+  
+  arrayCardWidth = [...cardsItem].map((card, index) => cardSizeWithMargin * index);
+});
+
 
 cardsWrapper.addEventListener("scroll", (event) => {
   const currentCard = arrayCardWidth.indexOf(arrayCardWidth.find((card) => event.target.scrollLeft <= card));
