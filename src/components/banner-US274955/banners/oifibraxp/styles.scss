@@ -17,7 +17,7 @@
 
 		&__title{
             font-family: 'Simplon Oi';
-            font-size: 40.358px;
+            font-size: 2.5rem;
             font-weight: 500;
             color: var(--banneroifibra-text-color);
             margin-bottom: 4px;
@@ -33,7 +33,7 @@
 
 		&__callout{
 			font-family: 'Simplon BP'; //Simplon BP Medium
-			font-size: 12px;
+			font-size: 0.75rem;
 			font-weight: 500px;
 			color: var(--color-success-400);
 	
@@ -56,7 +56,7 @@
 
 		&__offer{
 			&__mobile{
-				font-size: 14px;
+				font-size: 0.875rem;
 				font-weight: 700;
 				line-height: 140%;
 				color: var(--color-neutral-100);
@@ -79,10 +79,10 @@
 			&__text{
 				display: flex;
 				flex-direction: column;
-				font-size: 10px;
+				font-size: 0.625rem;
 				margin: 0px 4px 0px 4px;
 				&__real{
-					font-size: 16px;
+					font-size: 1rem;
 				}
 			}
 			&__value{
@@ -97,7 +97,7 @@
 				&__per-month{
 					display: flex;
 					flex-direction: column;
-					font-size: 14px;
+					font-size: 0.875rem;
 
 					&__cents{
 						font-family: 'Simplon Oi';
@@ -120,7 +120,7 @@
 
         font-family: 'Simplon BP';
         font-weight: 500;
-        font-size: 16px;
+        font-size: 1rem;
         color: var(--color-neutral-600);
         margin-top: 12px;
 	}
@@ -134,7 +134,7 @@
 
 			&__title{
 				font-family: 'Simplon Oi';
-				font-size: 59.298px;
+				font-size: 3.75rem;
 				font-weight: 500;
 				color: var(--banneroifibra-text-color);
 				margin-bottom: 4px;
@@ -149,7 +149,7 @@
 			}
 			
 			&__callout{
-				font-size: 12px;
+				font-size: 0.75rem;
 				font-weight: 500px;
 				color: var(--color-success-400);
 				text-transform: uppercase;
@@ -172,7 +172,7 @@
 			display: flex;
 			flex-direction: row;
 			align-items: center;
-			font-size: 16px;
+			font-size: 1rem;
 			color: var(--color-neutral-100);
 			gap: 25px;
 	   
@@ -202,7 +202,7 @@
 				align-items: flex-start;
 
 				&__text{
-					font-size: 16px;
+					font-size: 1rem;
 					flex-direction: row;
 					gap: 4px;
 				}
@@ -212,7 +212,7 @@
 	   
 					&__number{
 						font-family: 'Simplon Oi';
-						font-size: 60px;
+						font-size: 3.75rem;
 					}
 	   
 					&__per-month{
@@ -222,10 +222,10 @@
 						margin-left: 6px;
 	   
 						&__cents{
-							font-size: 22px;
+							font-size: 1.375rem;
 						}
 						&__month{
-							font-size: 16px;
+							font-size: 1rem;
 						}
 					}
 				}
@@ -246,7 +246,7 @@
 	
 			font-family: 'Simplon BP';
 			font-weight: 500;
-			font-size: 16px;
+			font-size: 1rem;
 			color: var(--color-neutral-600);
 		}	
 	}
