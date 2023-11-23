@@ -16,6 +16,8 @@
 			&::before {
 				content: attr(data-blur-content);
 				position: absolute;
+				// inset: 0;
+				min-width: 100%;
 				background-image: inherit;
 				background-clip: text;
 				color: transparent;
