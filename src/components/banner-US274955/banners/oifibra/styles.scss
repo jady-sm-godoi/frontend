@@ -1,5 +1,5 @@
 .banner-274955__oifibra {
-	max-width: fit-content;
+	// max-width: fit-content;
 
 	&__background {
 		justify-content: center;
@@ -17,10 +17,22 @@
 					linear-gradient(86deg, #00211f 0%, rgba(0, 33, 31, 0) 10%),
 					rgba(211, 211, 211, 0) 141.964px -164.85px / 83.96% 149.591% no-repeat;
 			}
+
+			@media (max-width: 1366px) {
+				background: linear-gradient(
+						92deg,
+						rgba(0, 19, 0, 0.85) 10.43%,
+						rgba(0, 0, 0, 0) 82.53%
+					),
+					rgba(211, 211, 211, 0) 00% / cover no-repeat;
+			}
 		}
 		img {
 			max-width: 2550px;
 			width: 100%;
+			@media (min-width: 1920px) {
+				object-position: 20%;
+			}
 		}
 	}
 	&__title {
@@ -28,9 +40,9 @@
 		font-weight: 500;
 		font-family: 'Simplon Oi';
 		color: var(--banneroifibra-text-color);
-		margin-bottom: 38px;
+		margin-bottom: 20px;
 
-		&__bold{
+		&__bold {
 			background: linear-gradient(69deg, #40d802 26.33%, #90d604 61%);
 		}
 	}
@@ -45,8 +57,8 @@
 			font-size: 7.25rem;
 			font-style: normal;
 			font-weight: 500;
-			max-width: 190px;
-			margin-top: -20px;
+			margin-top: 18px;
+			// max-width: 190px;
 
 			&__text {
 				font-family: 'Simplon BP';
@@ -54,14 +66,14 @@
 				font-style: normal;
 				font-weight: 500;
 				line-height: 46px;
-				text-align: end;
-				margin-top: -30px;
-				margin-left: auto;
+				align-self: flex-end;
+				line-height: 100%;
 
 				background: linear-gradient(69deg, #40d802 26.33%, #90d604 61%);
 			}
 
 			&__number {
+				line-height: 80%;
 				background: linear-gradient(69deg, #40d802 26.33%, #90d604 61%);
 			}
 		}
@@ -69,50 +81,52 @@
 			display: flex;
 			flex-direction: column;
 
-			&__text {
-				font-family: 'Simplon Oi';
-				font-size: 1.68rem;
-				font-style: normal;
-				font-weight: 500;
-				color: var(--banneroifibra-text-color);
-				margin-bottom: -20px;
-			}
-			&__number {
-				display: flex;
-				flex-direction: row;
-				align-items: center;
-				gap: 14px;
-				color: var(--banneroifibra-text-color);
-				&__reais {
+			&__preco-container {
+				&__text {
 					font-family: 'Simplon Oi';
-					font-size: 8.625rem;
+					font-size: 1.68rem;
 					font-style: normal;
 					font-weight: 500;
+					color: var(--banneroifibra-text-color);
 				}
-				&__months {
+				&__number {
 					display: flex;
-					flex-direction: column;
+					flex-direction: row;
 					align-items: center;
-					font-family: 'Simplon Oi';
-
-					font-style: normal;
-					font-weight: 500;
-					margin-left: -15px;
-					&__text {
-						font-size: 2.125rem;
+					gap: 14px;
+					color: var(--banneroifibra-text-color);
+					&__reais {
+						font-family: 'Simplon Oi';
+						font-size: 8.625rem;
+						font-style: normal;
+						font-weight: 500;
+						line-height: 90%;
 					}
-					&__centavos {
-						font-size: 3.563rem;
+					&__months {
+						display: flex;
+						flex-direction: column;
+						align-items: center;
+						font-family: 'Simplon Oi';
+
+						font-style: normal;
+						font-weight: 500;
+						margin-left: -15px;
+						&__text {
+							font-size: 2.125rem;
+						}
+						&__centavos {
+							font-size: 3.563rem;
+						}
 					}
 				}
 			}
+
 			&__card {
 				color: var(--banneroifibra-text-color);
 				font-family: 'Simplon BP';
 				font-size: 0.938rem;
 				font-style: normal;
 				font-weight: 500;
-				margin-top: -28px;
 			}
 		}
 	}
@@ -128,64 +142,73 @@
 		text-decoration: none;
 		white-space: nowrap;
 		color: var(--banneroifibra-text-color-button);
-		max-width: 410px;
+		max-width: 434px;
 		cursor: pointer;
+		margin-top: 12px;
 	}
 	@media screen and (max-width: 768px) {
 		&__title {
 			font-size: 2.625rem;
-			margin-bottom: 16px;
+			margin-bottom: 0px;
 		}
 		&__oferta {
 			flex-direction: column;
-			gap: 4px;
+			gap: 16px;
 			&__megas {
 				font-size: 4.438rem;
 				max-width: 190px;
+				flex-direction: row;
+				align-items: flex-end;
+				
+
+				&__number {
+					line-height: 80%;
+				}
 
 				&__text {
 					font-size: 1.875rem;
 					text-align: end;
-					margin-top: -50px;
-					margin-right: -6px;
 				}
 			}
 			&__preços {
 				flex-direction: row;
 				flex-wrap: wrap;
 				max-width: 336px;
-				&__text {
+
+				&__preco-container {
 					display: flex;
-					flex-direction: column;
-					justify-content: center;
-					margin-bottom: -10px;
-					&__paragraph {
-						font-size: 1.063rem;
-						margin-bottom: 4px;
-					}
-					&__reais {
-						font-size: 1.875rem;
-						margin-top: -5px;
-					}
-				}
-				&__number {
-					&__reais {
-						font-size: 5.375rem;
-					}
-					&__months {
-						margin-bottom: 15px;
-						&__centavos {
-							font-size: 2.563rem;
+					align-items: flex-end;
+					&__text {
+						display: flex;
+						flex-direction: column;
+						justify-content: flex-end;
+						&__paragraph {
+							font-size: 1.063rem;
 						}
-						&__text {
-							font-size: 1.438rem;
-							margin-left: -6px;
+						&__reais {
+							font-size: 1.875rem;
+							line-height: 80%;
 						}
 					}
+					&__number {
+						&__reais {
+							font-size: 5.375rem;
+							line-height: 70%;
+						}
+						&__months {
+							&__centavos {
+								font-size: 2.563rem;
+								line-height: 80%;
+							}
+							&__text {
+								font-size: 1.438rem;
+							}
+						}
+					}
 				}
+
 				&__card {
-					margin-top: -5px;
-					margin-bottom: 5px;
+					margin-top: 12px;
 					font-size: 0.75rem;
 				}
 			}
@@ -198,53 +221,51 @@
 	@media screen and (max-width: 414px) {
 		&__title {
 			font-size: 2.625rem;
-			margin-bottom: 16px;
 		}
 		&__oferta {
-			gap: 15px;
+			// margin-bottom: 20px;
 			&__megas {
 				font-size: 3.875rem;
 				max-width: 190px;
+				display: flex;
+				flex-direction: row;
+				gap: 0rem;
 
 				&__text {
-					font-size: 1.125rem;
-					text-align: end;
-					margin-top: -50px;
-					margin-right: 45px;
+					font-size: 1.4rem;
 				}
 			}
 			&__preços {
-				max-width: 336px;
-				&__text {
-					margin-bottom: -10px;
-					&__paragraph {
-						font-size: 0.75rem;
-						margin-bottom: 4px;
-					}
-					&__reais {
-						font-size: 1.25rem;
-						margin-top: -6px;
-					}
-				}
-				&__number {
-					&__reais {
-						font-size: 3.5rem;
-					}
-					&__months {
-						margin-bottom: 3px;
-						&__centavos {
-							font-size: 1.25rem;
+				&__preco-container {
+					&__text {
+						&__paragraph {
+							font-size: 1rem;
 						}
-						&__text {
-							font-size: 1.25rem;
-							margin-left: -6px;
+						&__reais {
+							font-size: 1.9rem;
+						}
+					}
+					&__number {
+						&__reais {
+							font-size: 5.375rem;
+						}
+						&__months {
+							margin-bottom: 3px;
+							&__centavos {
+								font-size: 2.5rem;
+								line-height: 100%;
+							}
+							&__text {
+								font-size: 1.25rem;
+							}
 						}
 					}
 				}
 			}
 		}
 		&__button {
-			max-width: 302px;
+			margin-top: 30px;
+			max-width: 100%;
 		}
 	}
 }
