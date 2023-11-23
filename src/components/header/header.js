@@ -26,31 +26,17 @@ offerManager.runWhenCityLoad('data', (city) => {
 	element.innerText = `${city.city}, ${city.uf}`
 })
 
-
 function resize(action) {
 	const html = document.querySelector('html')
 	html.style.fontSize = window.getComputedStyle(
 		document.querySelector('html'),
 		null
 	).fontSize
-	console.log(html.style.fontSize)
 
-	let size = html.style.fontSize.slice(0, 2)
-
+	let size = parseInt(html.style.fontSize)
 	if (action == 'increase' && size <= 18) {
-		html.style.fontSize = +html.style.fontSize.slice(0, 2) + 1 + 'px'
+		html.style.fontSize = size + 1 + 'px'
 	} else if (action == 'decrease' && size >= 13) {
-		html.style.fontSize = +html.style.fontSize.slice(0, 2) - 1 + 'px'
+		html.style.fontSize = size - 1 + 'px'
 	}
 }
-
-// themeManager.runWhenChangeTheme((theme) => {
-// 	console.log('theme', theme)
-
-// 	const img = document.getElementById('imagemtest')
-
-// 	img.src =
-// 		theme == 'light'
-// 			? '../assets/images/icon-whatsapp.png'
-// 			: '../assets/images/logo-oi-mobile.png'
-// })
