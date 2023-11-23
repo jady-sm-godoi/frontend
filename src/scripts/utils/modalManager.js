@@ -132,7 +132,7 @@ class KeepFocusManager {
 		this.containerHtmlElement.addEventListener('keydown', (keydown) => {
 			const getFocusableNodeByDataset = keydown.target.attributes[this.menuDatasetKey]
 
-			if(getFocusableNodeByDataset){
+			if(keydown.key != "Enter" && getFocusableNodeByDataset){
 				keydown.preventDefault()
 				if (keydown.key == 'Shift') this.shiftIsPressed = true
 	

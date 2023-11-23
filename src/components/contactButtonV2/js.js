@@ -41,8 +41,6 @@ class ContactButtonV2 {
 		if (this.options.closeModalWhenClickInBackground) {
 			this.closeModalWhenClickInBackground()
 		}
-
-		this.selectItemWhenEnterKeyDown()
 	}
 
 	openModal() {
@@ -69,14 +67,6 @@ class ContactButtonV2 {
 		})
 	}
 
-	selectItemWhenEnterKeyDown() {
-		this.containerHtmlElement.addEventListener('keydown', (key) => {
-			if (key.key == 'Enter') {
-				const getNextMenu = key.target.onclick
-				if (getNextMenu) getNextMenu()
-			}
-		})
-	}
 
 	/**
 	 * @param {boolean} value
