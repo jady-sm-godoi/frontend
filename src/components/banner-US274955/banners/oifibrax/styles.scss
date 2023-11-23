@@ -35,8 +35,7 @@
 
 			background-color: var(--color-success-100);
 			border-radius: 50px;
-			box-shadow: 0px 0px 10.9px 0px rgba(112, 255, 132, 0.30);
-			width: 160px;
+			box-shadow: 0px 0px 10.9px 0px rgba(112, 255, 132, 0.3);
 			height: 20px;
 			padding: 2px 8px;
 			margin-bottom: 10px;
@@ -44,6 +43,8 @@
 			display: flex;
 			justify-content: center;
 			align-items: flex-end;
+			text-wrap: nowrap;
+			max-width: fit-content;
 		}
 
 		&__title {
@@ -54,14 +55,13 @@
 			color: var(--color-white-full);
 
 			&__span {
-				text-shadow: 0px 0px 11px rgba(112, 255, 132, 0.60);
-				background: linear-gradient(69deg, #40D802 26.33%, #90D604 61%);
+				text-shadow: 0px 0px 11px rgba(112, 255, 132, 0.6);
+				background: linear-gradient(69deg, #40d802 26.33%, #90d604 61%);
 				background-clip: text;
 				-webkit-background-clip: text;
 				-webkit-text-fill-color: transparent;
 			}
 		}
-
 	}
 
 	&__details-container {
@@ -70,7 +70,6 @@
 		margin-bottom: 20px;
 
 		&__offer {
-
 			&__mobile {
 				font-size: 0.875rem;
 				font-weight: 700;
@@ -80,7 +79,7 @@
 				flex-direction: column;
 				margin-bottom: 20px;
 
-				p>span {
+				p > span {
 					font-weight: 400;
 				}
 			}
@@ -105,8 +104,6 @@
 				flex-direction: column;
 				font-size: 0.625rem;
 				margin-right: 2px;
-
-
 
 				&__real {
 					font-size: 1rem;
@@ -157,14 +154,13 @@
 
 @media screen and (min-width: 768px) {
 	.banner-274955__oifibrax {
-
 		&__background {
-
 			&::before {
-
-				background: linear-gradient(271deg,
+				background: linear-gradient(
+						271deg,
 						#001413 10.48%,
-						rgba(0, 33, 31, 0) 36.32%),
+						rgba(0, 33, 31, 0) 36.32%
+					),
 					linear-gradient(86deg, #001413 29.33%, rgba(0, 30, 28, 0) 60.17%),
 					#1b602b00 75.932px -200.951px / 87.187% 198.137% no-repeat;
 			}
@@ -179,7 +175,6 @@
 			&__callout {
 				color: var(--color-success-200);
 				background-color: var(--color-success-500);
-				width: 176px;
 				height: 20px;
 				align-items: center;
 				margin-bottom: 0px;
@@ -198,7 +193,6 @@
 			margin-bottom: 28px;
 
 			&__offer {
-
 				&__mobile {
 					display: none;
 				}
@@ -213,7 +207,7 @@
 					display: flex;
 					flex-direction: column;
 
-					p>span {
+					p > span {
 						font-weight: 400;
 					}
 
