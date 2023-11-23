@@ -113,15 +113,12 @@
 		&__box {
 			max-width: 696px;
 			max-height: 352px;
-			// display: flex;
-			// position: relative;
 			padding: 34px 33px 36px 61px;
 			gap: 49px;
 		}
 		&__textcontainer {
-			// display: flex;
-			// flex-direction: column;
 			gap: 12px;
+			margin-top: 20px;
 			
 			&__title{	
 				font-size: 1rem;
@@ -144,9 +141,6 @@
 				&__arrow {
 					width: 12px;
 					height: 12px;
-					// border: none;
-					// border-style: solid;
-					// border-color: var(--color-primary-200);
 					border-width: 1.9px 1.9px 0 0;
 					border-radius: 0 2.4px 0 0;			
 				}
@@ -154,9 +148,9 @@
 		}
 		&__imgdiscount{ 
 			&__img{
-				// margin-top: 84px;
 				min-width: 276px;
 				height: 232px;
+				margin-top: 51px;
 			}
 			&__tagdiscount {
 				position: absolute;
@@ -174,48 +168,23 @@
 		&__box {
 			max-width: 786px;
 			max-height: 352px;
-			// display: flex;
-			// position: relative;
-			padding: 36px 41px 21px 61px;
+			padding: 36px 41px 54px 61px;
 			gap: 23px;
 		}
 		&__textcontainer {
 			gap: 14px;
-			// display: flex;
-			// flex-direction: column;
-			
-			// &__title{	
-			// 	font-size: 1rem;
-			// }
-			// &__bodytext {
-			// 	font-size: 1.75rem;
-			// 	line-height: 120%;
-			// }
+			margin-top: 18px;
+
 			&__anchorbutton {
 				width: 264px;
 				height: 58px;
 				
 				margin-top: 12px;
 				position: unset;
-				
-				// &__text{
-				// 	font-size: 1rem;
-				// }
-	
-				// &__arrow {
-				// 	width: 12px;
-				// 	height: 12px;
-				// 	border: none;
-				// 	border-style: solid;
-				// 	border-color: var(--color-primary-200);
-				// 	border-width: 1.9px 1.9px 0 0;
-				// 	border-radius: 0 2.4px 0 0;			
-				// }
 			}
 		}
 		&__imgdiscount{ 
 			&__img{
-				// margin-top: 84px;
 				min-width: 305px;
 				height: 257px;
 				margin-top: 38px;
@@ -237,18 +206,24 @@
 		&__box {
 			max-width: 939px;
 			max-height: 352px;
-			// display: flex;
-			// position: relative;
-			padding: 54px 33px 0 61px;
+			padding: 36px 36px 54px 61px;
 			gap: 49px;
+		}
+		&__textcontainer{
+			width: 277px;
+			&__anchorbutton{
+				width: 264px;
+				height: 58px;
+			}
 		}
 		&__imgdiscount{ 
 			&__img{
-				// margin-top: 84px;
 				min-width: 383px;
 				height: 323px;
-				margin-right: 114px;
+				margin-top: -7px;
+				margin-right: 78px;
 			}
 		}
+		
 	}
 }
