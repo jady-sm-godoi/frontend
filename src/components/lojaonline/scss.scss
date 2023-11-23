@@ -50,7 +50,7 @@
 			height: 32px;
 			border-radius: 999px;
 
-			box-shadow: 0px 0px 3px 0px #9cfca7;
+			box-shadow: 0px 0px 3px 0px var(--color-primary-150);
 			border: 1px solid var(--color-primary-200);
 			
 			position: absolute;
@@ -65,6 +65,7 @@
 				font-weight: 500;
 			}
 			&__arrow {
+				display: none;
 				transform: rotate(45deg);
 				width: 8px;
 				height: 8px;
@@ -113,7 +114,7 @@
 		&__box {
 			max-width: 696px;
 			max-height: 352px;
-			padding: 34px 33px 36px 61px;
+			padding: 34px 33px 54px 61px;
 			gap: 49px;
 		}
 		&__textcontainer {
@@ -128,11 +129,12 @@
 				line-height: 120%;
 			}
 			&__anchorbutton {
-				width: 264px;
-				height: 58px;
+				min-width: 264px;
+				min-height: 58px;
 				
 				margin-top: 24px;
 				position: unset;
+				box-shadow: 0px 0px 12px 0px var(--color-primary-150);
 				
 				&__text{
 					font-size: 1rem;
@@ -178,9 +180,11 @@
 			&__anchorbutton {
 				width: 264px;
 				height: 58px;
+				margin-top: 10px;
 				
-				margin-top: 12px;
-				position: unset;
+				&__arrow{
+					display: block;
+				}
 			}
 		}
 		&__imgdiscount{ 
@@ -208,6 +212,34 @@
 			max-height: 352px;
 			padding: 36px 36px 54px 61px;
 			gap: 49px;
+		}
+		&__textcontainer{
+			width: 277px;
+			&__anchorbutton{
+				width: 264px;
+				height: 58px;
+			}
+		}
+		&__imgdiscount{ 
+			&__img{
+				min-width: 383px;
+				height: 323px;
+				margin-top: -7px;
+				margin-right: 78px;
+			}
+		}
+		
+	}
+}
+
+@media screen and (min-width: 1920px){
+	.lojaonline{
+		&__box {
+			width: 964px;
+			height: 352px;
+			padding: 36px 61px 54px 61px;
+			
+			gap: 104px;
 		}
 		&__textcontainer{
 			width: 277px;
