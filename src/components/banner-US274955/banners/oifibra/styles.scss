@@ -146,6 +146,56 @@
 		cursor: pointer;
 		margin-top: 12px;
 	}
+	@media screen and (min-width: 1360px) {
+		&__title {
+			font-size: 2.625rem;
+		}
+		&__oferta {
+			&__megas {
+				font-size: 4.438rem;
+				&__number {
+					line-height: 80%;
+				}
+
+				&__text {
+					font-size: 1.875rem;
+					text-align: end;
+				}
+			}
+			&__preços {
+				&__preco-container {
+					&__text {
+						&__paragraph {
+							font-size: 1.063rem;
+						}
+						&__reais {
+							font-size: 1.875rem;
+							line-height: 80%;
+						}
+					}
+					&__number {
+						&__reais {
+							font-size: 5.375rem;
+							line-height: 70%;
+						}
+						&__months {
+							&__centavos {
+								font-size: 2.563rem;
+								line-height: 80%;
+							}
+							&__text {
+								font-size: 1.438rem;
+							}
+						}
+					}
+				}
+				&__card {
+					margin-top: 12px;
+					font-size: 0.75rem;
+				}
+			}
+		}
+	}
 	@media screen and (max-width: 768px) {
 		&__title {
 			font-size: 2.625rem;
