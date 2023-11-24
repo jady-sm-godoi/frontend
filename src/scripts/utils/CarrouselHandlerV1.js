@@ -26,6 +26,14 @@ class CarrouselHandlerV1 {
 		/** @private */
 		this.carrouselSlides = this.getCarrousel()
 
+
+		// disable arrows, auto-skip and dots when exists only one banner
+		if (this.carrouselSlides.children.length <= 1) {
+			this.options.enableArrows = false
+			this.options.enableAutoSkip = false
+			this.options.enableDots = false
+		}
+
 		/** @private */
 		this.dotsContainer = this.createDots()
 
@@ -50,6 +58,7 @@ class CarrouselHandlerV1 {
 		 */
 		this.timeoutAutoSkip = null
 	}
+	
 
 	/** @returns {Element}
 	 *
