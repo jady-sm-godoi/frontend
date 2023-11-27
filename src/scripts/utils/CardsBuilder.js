@@ -2,7 +2,7 @@ class CardsBuilderUtility {
 	/**  @param  {string} handlerClassName */
 	constructor(handlerClassName) {
 		/** @private */
-		this.handlerClassName = handlerClassName|| ""
+		this.handlerClassName = handlerClassName || ''
 	}
 	/**
 	 * @param  {string[]} classes
@@ -15,84 +15,17 @@ class CardsBuilderUtility {
 	}
 }
 
-
-class CardsBuilder extends CardsBuilderUtility {
-	constructor() {
-		/** @private */
-		super('cards-builder')
-	}
-
-	/**
-	 * @param {HTMLElement} head
-	 * @param {...(HTMLElement)} params
-	 */
-	cardDefault(head, ...params) {
-		const cardContainer = document.createElement('div')
-		const headContainer = document.createElement('div')
-		const cardContent = document.createElement('div')
-
-		if (head) headContainer.appendChild(head)
-
-		params.forEach((element) => {
-			cardContent.appendChild(element)
-		})
-
-		// insert classes
-		cardContainer.className = this.utilsClassBuilder('container', 'default')
-		headContainer.className = this.utilsClassBuilder('head')
-		cardContent.className = this.utilsClassBuilder(
-			'container',
-			'default',
-			'content'
-		)
-
-		cardContainer.appendChild(headContainer)
-		cardContainer.appendChild(cardContent)
-
-		return cardContainer
-	}
-
-	/**
-	 * @param {HTMLElement} head
-	 * @param {...(HTMLElement)} params
-	 */
-	cardPlus(head, ...params) {
-		const cardContainer = document.createElement('div')
-		const headContainer = document.createElement('div')
-		const cardContent = document.createElement('div')
-
-		if (head) headContainer.appendChild(head)
-
-		params.forEach((element) => {
-			cardContent.appendChild(element)
-		})
-
-		// insert classes
-		cardContainer.className = this.utilsClassBuilder('container', 'plus')
-		headContainer.className = this.utilsClassBuilder('head')
-		cardContent.className = this.utilsClassBuilder(
-			'container',
-			'plus',
-			'content'
-		)
-
-		cardContainer.appendChild(headContainer)
-		cardContainer.appendChild(cardContent)
-
-		return cardContainer
-	}
-}
-
-
-
 class CardsBuilderHead extends CardsBuilderUtility {
 	constructor() {
 		/** @private */
 		super('cards-builder-head')
 	}
 
-	/** @param {string} text  */
-	headPlus(text) {
+	/**
+	 * @param {string} text
+	 * @public
+	 * */
+	headPlus(text = '') {
 		const container = document.createElement('span')
 		container.classList = this.utilsClassBuilder('plus')
 		container.innerText = text
@@ -101,7 +34,7 @@ class CardsBuilderHead extends CardsBuilderUtility {
 	}
 
 	/** @param {string} text  */
-	headDefault(text) {
+	headDefault(text = '') {
 		const container = document.createElement('span')
 		container.classList = this.utilsClassBuilder('default')
 		container.innerText = text
@@ -131,7 +64,10 @@ class CardsBuilderHeader extends CardsBuilderUtility {
 
 		// description
 		const descriptionComponent = document.createElement('span')
-		titleComponent.className = this.utilsClassBuilder('plus', 'description')
+		descriptionComponent.className = this.utilsClassBuilder(
+			'plus',
+			'description'
+		)
 
 		const descriptionSpeedAmount = document.createElement('span')
 		descriptionSpeedAmount.className = this.utilsClassBuilder(
@@ -163,7 +99,7 @@ class CardsBuilderHeader extends CardsBuilderUtility {
 	 * @param {string} description
 	 * @param {string} bonus
 	 */
-	headerDefault(title, description, bonus) {
+	headerDefault(title = '', description = '', bonus = '') {
 		const container = document.createElement('div')
 		container.classList = this.utilsClassBuilder('default')
 
@@ -228,6 +164,11 @@ class CardsBuilderAddons extends CardsBuilderUtility {
 			'icon'
 		)
 
+		learnMoreIcon.src = 'assets/images/cardsbuilder-addon-arrow-plus.svg'
+
+		addonContainer.className = this.utilsClassBuilder('plus')
+		addonContent.className = this.utilsClassBuilder('plus', 'list')
+
 		addons.forEach((addon) => {
 			addonContent.appendChild(addon)
 		})
@@ -241,6 +182,9 @@ class CardsBuilderAddons extends CardsBuilderUtility {
 	addonsContainerDefault(...addons) {
 		const addonContainer = document.createElement('div')
 		const addonContent = document.createElement('ul')
+
+		addonContainer.className = this.utilsClassBuilder('default')
+		addonContent.className = this.utilsClassBuilder('default', 'list')
 
 		addons.forEach((addon) => {
 			addonContent.appendChild(addon)
@@ -264,12 +208,12 @@ class CardsBuilderAddons extends CardsBuilderUtility {
 		addonImg.src = imgPath
 
 		const addonText = document.createElement('span')
-		addonText.innerText = text
+		addonText.innerHTML = text
 
 		// deploy classnames
-		addonRow.className = this.utilsClassBuilder(model)
-		addonImg.className = this.utilsClassBuilder(model, 'icon')
-		addonText.className = this.utilsClassBuilder(model, 'text')
+		addonRow.className = this.utilsClassBuilder(model, 'list', 'row')
+		addonImg.className = this.utilsClassBuilder(model, 'list', 'row', 'icon')
+		addonText.className = this.utilsClassBuilder(model, 'list', 'row', 'text')
 
 		addonRow.appendChild(addonImg)
 		addonRow.appendChild(addonText)
@@ -302,16 +246,16 @@ class CardsBuilderAddons extends CardsBuilderUtility {
 	addonPresentationPlus(text = '') {
 		return this.addonGeneric(
 			text,
-			'assets/images/cardsbuilder-house-plus.svg',
+			'assets/images/cardsbuilder-presentation-plus.svg',
 			'plus'
 		)
 	}
 
 	// default addons
-	addonSpeedDefault(text = '') {
+	addonWifiDefault(text = '') {
 		return this.addonGeneric(
 			text,
-			'assets/images/cardsbuilder-speed-default.svg',
+			'assets/images/cardsbuilder-wifi-default.svg',
 			'default'
 		)
 	}
@@ -404,6 +348,7 @@ class CardsBuilderMarketcart extends CardsBuilderUtility {
 	/**
 	 * @param {string} text
 	 * @param {string} url
+	 * @public
 	 */
 	marketcartButton(text, url) {
 		const marketcartContainer = document.createElement('div')
@@ -414,6 +359,8 @@ class CardsBuilderMarketcart extends CardsBuilderUtility {
 
 		marketcartContainer.classList = this.utilsClassBuilder()
 		marketcartAnchor.classList = this.utilsClassBuilder('anchor')
+
+		marketcartContainer.appendChild(marketcartAnchor)
 
 		return marketcartContainer
 	}
@@ -436,6 +383,9 @@ class CardsBuilderModal extends CardsBuilderUtility {
 		// inside button
 		const modalText = document.createElement('span')
 		const modalImg = document.createElement('img')
+
+		modalText.innerText = text
+		modalImg.src = imgPath
 
 		modalContainer.classList = this.utilsClassBuilder()
 		modalButton.classList = this.utilsClassBuilder(model)
@@ -470,5 +420,72 @@ class CardsBuilderModal extends CardsBuilderUtility {
 			'plus',
 			callback
 		)
+	}
+}
+
+class CardsBuilder extends CardsBuilderUtility {
+	constructor() {
+		/** @private */
+		super('cards-builder')
+	}
+
+	/**
+	 * @param {HTMLElement} head
+	 * @param {...(HTMLElement)} params
+	 */
+	cardDefault(head, ...params) {
+		const cardContainer = document.createElement('div')
+		const headContainer = document.createElement('div')
+		const cardContent = document.createElement('div')
+
+		if (head) headContainer.appendChild(head)
+
+		params.forEach((element) => {
+			cardContent.appendChild(element)
+		})
+
+		// insert classes
+		cardContainer.className = this.utilsClassBuilder('container', 'default')
+		headContainer.className = this.utilsClassBuilder('head')
+		cardContent.className = this.utilsClassBuilder(
+			'container',
+			'default',
+			'content'
+		)
+
+		cardContainer.appendChild(headContainer)
+		cardContainer.appendChild(cardContent)
+
+		return cardContainer
+	}
+
+	/**
+	 * @param {HTMLElement} head
+	 * @param {...(HTMLElement)} params
+	 */
+	cardPlus(head, ...params) {
+		const cardContainer = document.createElement('div')
+		const headContainer = document.createElement('div')
+		const cardContent = document.createElement('div')
+
+		if (head) headContainer.appendChild(head)
+
+		params.forEach((element) => {
+			cardContent.appendChild(element)
+		})
+
+		// insert classes
+		cardContainer.className = this.utilsClassBuilder('container', 'plus')
+		headContainer.className = this.utilsClassBuilder('head')
+		cardContent.className = this.utilsClassBuilder(
+			'container',
+			'plus',
+			'content'
+		)
+
+		cardContainer.appendChild(headContainer)
+		cardContainer.appendChild(cardContent)
+
+		return cardContainer
 	}
 }

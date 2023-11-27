@@ -61,17 +61,34 @@
 }
 .cards-builder-addons {
 	&__default {
-		&__icon {
-		}
-		&__text {
+		// background
+		&__list {
+			// ul style
+			&__row {
+				// li style
+				&__icon {
+					// li img
+				}
+				&__text {
+					// li span
+				}
+			}
 		}
 	}
 	&__plus {
-		&__icon {
+		// background
+		&__list {
+			// ul style
+			&__row {
+				// li style
+				&__icon {
+					// li img
+				}
+				&__text {
+					// li span
+				}
+			}
 		}
-		&__text {
-		}
-
 		&__lean-more-anchor {
 			// text style here
 			&__icon {
