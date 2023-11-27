@@ -1,0 +1,124 @@
+.cards-builder {
+	&__head {
+	}
+
+	&__container {
+		&__default,
+		&__plus {
+			&__content {
+				width: 280px;
+				padding: 24px 16px;
+				display: flex;
+				flex-direction: column;
+				gap: 24px;
+			}
+		}
+
+		&__default {
+			&__content {
+				background-color: #ffffff;
+			}
+		}
+		&__plus {
+			&__content {
+				background-color: #1f1f1f;
+			}
+		}
+	}
+}
+.cards-builder-head {
+	&__plus {
+		background-color: #1f1f1f;
+		color: #fbd84b;
+	}
+	&__default {
+		background-color: #ffffff;
+		color: #1f1f1f;
+		border: 1px solid black;
+	}
+}
+.cards-builder-header {
+	&__plus {
+		&__title {
+		}
+		&__description {
+			&__speed-amount {
+			}
+			&__bonus {
+			}
+		}
+	}
+	&__default {
+		&__title {
+		}
+		&__description {
+			&__speed-amount {
+			}
+			&__bonus {
+			}
+		}
+	}
+}
+.cards-builder-addons {
+	&__default {
+		&__icon {
+		}
+		&__text {
+		}
+	}
+	&__plus {
+		&__icon {
+		}
+		&__text {
+		}
+
+		&__lean-more-anchor {
+			// text style here
+			&__icon {
+			}
+		}
+	}
+}
+
+.cards-builder-price {
+	// container here
+
+	&__plus {
+		&__price {
+		}
+		&__frequency {
+		}
+		&__details {
+		}
+	}
+	&__default {
+		&__price {
+		}
+		&__frequency {
+		}
+	}
+}
+
+.cards-builder-marketcart {
+	// container here
+	&__anchor {
+	}
+}
+
+.cards-builder-modal {
+	// container here
+	&__plus {
+		// button style here
+		&__text {
+		}
+		&__icon {
+		}
+	}
+	&__default {
+		// button style here
+		&__text {
+		}
+		&__icon {
+		}
+	}
+}
