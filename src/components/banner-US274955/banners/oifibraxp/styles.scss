@@ -29,6 +29,9 @@
 				background-clip: text;
 				-webkit-background-clip: text;
 				-webkit-text-fill-color: transparent;
+				br{
+					display: unset;
+				}
 			}
 		}
 
@@ -140,6 +143,7 @@
 		&__titles-container {
 			flex-direction: column;
 			gap: 14px;
+			max-width: 320px;
 
 			&__title {
 				font-family: 'Simplon Oi';
@@ -154,6 +158,9 @@
 					background-clip: text;
 					-webkit-background-clip: text;
 					-webkit-text-fill-color: transparent;
+					br{
+						display: none;
+					}
 				}
 			}
 
