@@ -46,7 +46,7 @@
     font-family: "Simplon BP";
     font-style: normal;
     font-weight: 400;
-    font-size: 1.125rem;
+    font-size: 1.25rem;
     line-height: 32px;
     color: var(--vantagensfibra-color-text);
     margin: 0px 0px 32px 0px;
@@ -120,7 +120,7 @@
   }
 
   .vantagensFibra__content {
-    padding: 48px 0px 80px 0px;
+    padding: 64px 0px;
     flex-direction: row;
     // gap: 136px;
     gap: 24px;
@@ -150,7 +150,7 @@
       line-height: 40px;
       letter-spacing: -1px;
       color: var(--vantagensfibra-color-text);
-      margin: 0px 0px 40px 0px;
+      margin: 0px 0px 32px 0px;
     }
 
     &__paragraph {

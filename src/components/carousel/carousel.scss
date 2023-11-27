@@ -17,7 +17,7 @@
 .cards_wrapper {
   display: flex;
   overflow-x: auto;
-  scroll-snap-type: x mandatory ;
+  scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
   scrollbar-width: none;
 
@@ -47,15 +47,15 @@
   font-family: "Simplon BP";
   font-style: normal;
   font-weight: 500;
-  font-size: 1.5rem;
+  font-size: 2rem;
   line-height: 32px;
   color: var(--carousel-title);
-  margin: 0px 0px 24px 0px;
+  margin: 0px 0px 32px 0px;
 }
 
 .card_img {
-  width: 100%;
-  height: 100%;
+  min-width: 385px;
+  max-height: 188px; //fica achatado - min-height o valor vai p 216.56px
   border-radius: 24px 24px 0 0;
 }
 
@@ -74,7 +74,7 @@
 .card_title {
   font-weight: 500;
   font-size: 1.5rem;
-  line-height: 32px;
+  line-height: 36px;
   margin-bottom: 8px;
   display: inline-block;
   color: var(--carousel-card-text-color);
@@ -121,7 +121,7 @@
 }
 
 .card_item {
-  min-width: 256px;
+  min-width: 382px;
   // min-width: 71%;
 }
 
