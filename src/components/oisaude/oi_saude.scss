@@ -1,6 +1,6 @@
 .section_oi_saude {
     background-color: var(--section-oisaude-background);
-    padding: 40px 0px;
+    padding: 84px 0px;
 }
 
 .oi_saude__content {
@@ -32,9 +32,9 @@
 .oi_saude__assine {
     color: var(--section-oisaude-text-color);
     font-family: Simplon BP;
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: 500;
-    line-height: 32px;
+    line-height: 40px;
     max-width: 210px;
 }
 
@@ -45,15 +45,15 @@
 .oi_saude__icons,
 .oi_saude__title,
 .oi_saude__solucoes {
-    margin-bottom: 32px;
+    margin-bottom: 24px;
 }
 
 .oi_saude__oferecimentos {
     color: var(--section-oisaude-text-color);
     font-family: Simplon BP;
-    font-size: 1rem;
+    font-size: 1.25rem;
     font-weight: 400;
-    line-height: 24px;
+    line-height: 32px;
 }
 
 .oi_saude__explicacao {
