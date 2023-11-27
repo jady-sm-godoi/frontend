@@ -1,3 +1,21 @@
+class CardsBuilderUtility {
+	/**  @param  {string} handlerClassName */
+	constructor(handlerClassName) {
+		/** @private */
+		this.handlerClassName = handlerClassName|| ""
+	}
+	/**
+	 * @param  {string[]} classes
+	 * @protected
+	 */
+	utilsClassBuilder(...classes) {
+		if (this.handlerClassName) classes = [this.handlerClassName, ...classes]
+
+		return classes.join('__')
+	}
+}
+
+
 class CardsBuilder extends CardsBuilderUtility {
 	constructor() {
 		/** @private */
@@ -65,22 +83,7 @@ class CardsBuilder extends CardsBuilderUtility {
 	}
 }
 
-class CardsBuilderUtility {
-	/**  @param  {string} handlerClassName */
-	constructor(handlerClassName) {
-		/** @private */
-		this.handlerClassName = handlerClassName
-	}
-	/**
-	 * @param  {string[]} classes
-	 * @protected
-	 */
-	utilsClassBuilder(...classes) {
-		if (this.handlerClassName) classes = [this.handlerClassName, ...classes]
 
-		return classes.join('__')
-	}
-}
 
 class CardsBuilderHead extends CardsBuilderUtility {
 	constructor() {
