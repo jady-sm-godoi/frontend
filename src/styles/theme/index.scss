@@ -130,6 +130,9 @@
 	//project borders
 	--carousel-card-border-light: none;
 	--carousel-card-border-dark: 2px solid var(--color-neutral-400);
+
+	--card-lojaonline-border-light: none;
+	--card-lojaonline-border-dark: 1px solid var(--color-neutral-100);
 }
 
 .dark {
@@ -188,6 +191,8 @@
 	--faq-anchor-color: var(--color-primary-300);
 
 	--profitability-text-color: var(--color-white-full);
+
+	--card-lojaonline-border: var(--card-lojaonline-border-dark);
 
 	--section-oisaude-background: var(--color-neutral-600);
 	--section-oisaude-text-color: var(--color-white-full);
@@ -272,6 +277,8 @@
 	--faq-anchor-color: var(--color-primary-400);
 
 	--profitability-text-color: var(--color-neutral-600);
+
+	--card-lojaonline-border: var(--card-lojaonline-border-light);
 
 	--section-oisaude-background: var(--color-neutral-100);
 	--section-oisaude-text-color: var(--color-neutral-600);

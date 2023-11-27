@@ -12,6 +12,8 @@
 		display: flex;
 		position: relative;
 		padding: 20px 5px 24px 29px;
+		border: var(--card-lojaonline-border);
+		border-radius: 32px;
 	}
 
 	&__background {
