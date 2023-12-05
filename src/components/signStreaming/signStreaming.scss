@@ -1,0 +1,173 @@
+.signStreaming__section{
+    background-color: var(--newhome-max-contrast-background);
+}
+.signStreaming__flexbox{
+    display: flex;
+    flex-direction: column;
+    padding: 64px 0px;
+    width: 100%;
+}
+
+.signStreaming__title{
+    font-size: 1.25rem;
+    line-height: 120%;
+    color: var(--newhome-gray-500-text);
+    letter-spacing: 0.01px;
+    font-weight: 400;
+    margin-bottom: 8px;
+}
+
+.signStreaming__subtitle{
+    font-size: 2rem;
+    line-height: 125%;
+    font-weight: 700;
+    color: var(--newhome-green-contrast);
+    max-width: 65%;
+    margin-bottom: 8px;
+}
+
+.signStreaming__subtitle b{
+    color: var(--newhome-semi-black);
+}
+
+.signStreaming__description{
+    font-size: 1rem;
+    line-height: 150%;
+    color: var(--newhome-gray-500-text);
+    margin-bottom: 48px;
+    max-width: 90%;
+}
+
+
+// CAROUSEL
+.signStreaming__carouselContainer{
+    width: 100%;
+}
+.signStreaming__carousel-wrapper{
+    width: 100%;
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    scroll-snap-type: x mandatory   ;
+    overflow: scroll;
+    scroll-behavior: smooth;
+    padding-right: 24px;
+    position: relative;
+    margin-bottom: 48px;
+}
+.signStreaming__carousel-wrapper::-webkit-scrollbar {
+    display: none;             
+}
+
+.signStreaming__dotsContainer{
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+}
+.signStreaming__dot{
+    transition: all ease 0.2s;
+    background-color: var(--newhome-semi-black);
+    border: none;
+    width: 16px;
+    height: 4px;
+    opacity: 16%;
+    border-radius: 999px;
+}
+.signStreaming__dot.active{
+    opacity: 100%;
+}
+
+.signStreaming__card{
+    overflow: hidden;
+    position: relative;
+    width: 246px;
+    min-width: 246px;
+    max-width: 246px;
+    height: 320px;
+    border-radius: 24px;
+    scroll-snap-align: start;
+    border: var(--newhome-section-contrast-border-height) solid #FFF;
+}
+
+.signStreaming__cardBackground{
+    width: 100%;
+}
+
+.signStreaming__cardContent{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 19.5px 15px;
+    display: flex;
+    height: fit-content;
+    align-items: center;
+    flex-direction: column;
+}
+
+.signStreaming__cardContentIcon{
+    width: 60px;
+    height: 60px;   
+    margin-bottom: 16px;
+    border: var(--newhome-section-contrast-border-height) solid #fff;
+    border-radius: 1rem;
+}
+
+.signStreaming__cardContentDescription{
+    color: var(--color-white-full);
+    font-size: 1rem;
+    line-height: 150%;
+    text-align: center;
+    margin-bottom: 16px;
+    height: 83px;
+}
+
+.signStreaming__cardContentCTA{
+    gap: 8px;
+    color: var(--color-primary-200);
+}
+
+@media screen and (min-width: 768px) {
+    .signStreaming__card{
+        width: 336px;
+        min-width: 336px;
+        max-width: 336px;
+        height: 416px;
+    }
+
+    .signStreaming__carousel-wrapper{
+        gap: 24px;
+    }
+
+    .signStreaming__cardContent{
+        padding: 32px;
+    }
+
+    .signStreaming__cardContentIcon{
+        height: 80px;
+        width: 80px;
+    }
+
+    .signStreaming__cardContentDescription{
+        height: 58px;
+    }
+}
+
+@media screen and (min-width: 1366px) {
+    .signStreaming__card{
+        width: 312px;
+        min-width: 312px;
+        max-width: 312px;
+        height: 416px;
+    }
+
+    .signStreaming__carousel-wrapper{
+        padding: 0px;
+        margin-bottom: 0px;
+    }
+
+    .signStreaming__dotsContainer{
+        display: none;
+    }
+   
+}

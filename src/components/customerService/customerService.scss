@@ -1,0 +1,480 @@
+body {
+	position: relative;
+}
+
+.customerService__section {
+    background-image: url(../assets/images/customer-service/customer-service-background.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    background-position-x: 50%;
+}
+.customerService__section::before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: var(--newhome-customer-service-background-before-desktop, inherit);
+    filter: grayscale(var(--newhome-grayscale-background-before));
+}
+@media screen and (max-width: 767px) {
+    .customerService__section::before{
+        background: var(--newhome-customer-service-background-before-mobile, inherit);
+    }    
+}
+
+.customerService__flexbox {
+    position: relative;
+	padding: 64px 0px;
+	display: flex;
+	width: 100%;
+	flex-direction: column;
+}
+
+.customerService__header {
+	display: flex;
+	flex-direction: column;
+	color: var(--color-white-full);
+	margin-bottom: 48px;
+}
+.customerService__header b {
+	color: var(--color-primary-200);
+	font-weight: inherit;
+}
+
+.customerService__headerTitle {
+	font-size: 1.25rem;
+	font-weight: 400;
+	line-height: 120%;
+	margin-bottom: 8px;
+}
+
+.customerService__headerSlogan {
+	font-size: 32px;
+	line-height: 125%;
+	font-weight: bold;
+	max-width: 80%;
+	margin-bottom: 16px;
+}
+
+.customerService__headerSubtitle {
+	font-size: 1rem;
+	line-height: 150%;
+	max-width: 90%;
+}
+
+.customerService__cardsGrid {
+	display: grid;
+	gap: 16px;
+	grid-template-columns: repeat(2, 1fr);
+	margin-bottom: 64px;
+}
+
+.customerService__card {
+	width: 100%;
+	background-color: var(--color-neutral-100);
+	border-radius: 24px;
+	height: 144px;
+	padding: 24px;
+	position: relative;
+}
+
+.customerService__cardHeader {
+	display: flex;
+	flex-direction: row;
+	margin-bottom: 16px;
+}
+.customerService__cardHeader svg {
+	width: 32px;
+	height: 32px;
+}
+.customerService__cardHeaderFlag {
+	font-size: 0.75rem;
+	line-height: 100%;
+	padding: 4px 0px;
+	background-color: var(--color-success-100);
+	color: var(--color-primary-400);
+	letter-spacing: 0.5px;
+	border-radius: 999px;
+	font-weight: 500;
+	width: fit-content;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 76px;
+}
+
+.customerService__cardTitle {
+	font-size: 1rem;
+	color: var(--color-neutral-600);
+	line-height: 150%;
+	font-weight: 500;
+	display: flex;
+	max-width: 100px;
+}
+
+.customerService__black-card {
+	grid-column: span 2;
+	background-color: var(--newhome-semi-black-background);
+	padding: 24px 24px 0px 24px;
+	box-shadow: 0px 4px 32px 0px rgba(112, 255, 131, 0.4);
+}
+
+.customerService__black-card .customerService__cardTitle {
+	color: var(--color-white-full);
+	display: initial;
+}
+
+.customerService__black-card .customerService__cardHeaderFlag {
+	color: var(--color-neutral-600);
+	background-color: var(--color-primary-200);
+	padding: 4.5px 8px;
+	height: 21px;
+	letter-spacing: 0px;
+	align-self: flex-start;
+	margin-left: auto;
+	width: auto;
+}
+
+.customerService__cardCTA {
+	display: flex;
+	position: absolute;
+	bottom: 10px;
+	color: var(--color-primary-200);
+	gap: 8px;
+	align-items: center;
+}
+.customerService__cardCTA span {
+	line-height: 150%;
+	font-size: 1rem;
+	font-weight: 500;
+}
+
+.customerService__joice {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 28px;
+	margin-bottom: 64px;
+}
+
+@keyframes joice-live-anim {
+    0%{
+        filter: drop-shadow(0px 0px 32px #70ff8466);
+    }
+    50%{
+        filter: drop-shadow(0px 0px 64px #70ff8466);
+    }
+    100%{
+        filter: drop-shadow(0px 0px 32px #70ff8466);
+    }
+}
+
+.customer-service__joiceLogoContainer {
+    animation: joice-live-anim 7s ease infinite;
+	// filter: drop-shadow(0px 0px 64px #70ff8466);
+}
+.customerService__joiceLogo {
+	width: 206px;
+	height: 206px;
+	filter: drop-shadow(0px 4px 4px #000);
+}
+
+.customerService__joiceContent {
+	background-color: var(--color-neutral-100);
+	padding: 24px;
+	border-radius: 24px;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	position: relative;
+}
+.customerService__joiceContent::before {
+	content: '';
+	position: absolute;
+	top: -12px;
+	left: 50%;
+	transform: translate(-50%, 0%);
+
+	width: 0px;
+	height: 0px;
+	border-style: solid;
+	border-width: 0 11.5px 12px 11.5px;
+	border-color: transparent transparent var(--color-neutral-100) transparent;
+}
+
+.customerService__joiceTitle {
+	color: var(--newhome-joice-green-color);
+	font-weight: bold;
+	font-size: 1.75rem;
+	line-height: 130%;
+}
+.customerService__joiceTitle b {
+	color: var(--newhome-joice-semi-black-color);
+}
+
+.customerService__joiceSubtitle {
+	display: block;
+	font-size: 1rem;
+	line-height: 150%;
+	color: var(--color-neutral-600);
+}
+
+.customerService__joiceCTA {
+	background-color: var(--newhome-joice-green-color);
+	color: var(--color-white-full);
+	gap: 8px;
+}
+.customerService__joiceCTA:hover {
+	transition: all ease 0.2s;
+	background-color: var(--newhome-joice-cta-hover);
+}
+.customerService__joiceCTA svg {
+	height: 24px;
+	width: 24px;
+}
+
+.customerService__contactArea {
+	display: flex;
+	flex-direction: column;
+	gap: 24px;
+}
+
+.customerService__helpCenter {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+}
+
+.customerService__helpCenterTitle,
+.customerService__socialMediaTitle {
+	color: var(--color-neutral-100);
+	font-size: 1rem;
+	line-height: 150%;
+	max-width: 80%;
+}
+
+.customerService__helpCenterLink {
+	color: var(--color-primary-200);
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	font-size: 1rem;
+	line-height: 150%;
+	font-weight: 500;
+	width: fit-content;
+}
+
+.customerService__socialMedia {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+}
+
+.customerService__socialMediaList {
+	list-style: none;
+	display: flex;
+	flex-direction: row;
+	gap: 8px;
+}
+
+.customerService__socialMediaLink {
+	width: 32px;
+	height: 32px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: var(--color-neutral-600);
+	border: 1px solid var(--color-neutral-500);
+	border-radius: 8px;
+}
+
+.customerService__socialMediaLink svg {
+	width: 16px;
+	height: 16px;
+}
+
+@media screen and (min-width: 768px) {
+	.customerService__headerSubtitle {
+		max-width: none;
+	}
+
+	.customerService__cardsGrid {
+		gap: 24px;
+		grid-template-columns: repeat(3, 1fr);
+	}
+
+	.customerService__card {
+		height: 176px;
+	}
+	.customerService__card:nth-child(5) {
+		grid-column: 3;
+		grid-row: 1;
+	}
+	.customerService__black-card {
+		grid-column: span 1;
+	}
+
+	.customerService__cardTitle {
+		max-width: 152px;
+	}
+
+	.customerService__cardCTA {
+		bottom: 12px;
+	}
+
+	.customerService__black-card .customerService__cardTitle {
+		display: flex;
+	}
+
+	.customerService__cardHeaderFlag {
+		width: 82px;
+		margin-left: auto;
+	}
+	.customerService__black-card .customerService__cardHeaderFlag {
+		width: 89px;
+		height: 30px;
+		text-align: start;
+		padding: 3px 14px;
+	}
+
+	.customerService__joice {
+		flex-direction: row;
+		gap: 40px;
+		justify-content: space-between;
+		max-width: 696px;
+		margin-inline: auto;
+	}
+
+	.customerService__joiceLogo {
+		width: 224px;
+		height: 224px;
+	}
+
+	.customerService__joiceContent {
+		max-width: 418px;
+	}
+
+	.customerService__joiceCTA {
+		max-width: 300px;
+	}
+
+	.customerService__joiceContent::before {
+		left: -16px;
+		top: 117px;
+		transform: rotate(270deg);
+	}
+
+	.customerService__helpCenterTitle,
+	.customerService__socialMediaTitle {
+		max-width: none;
+	}
+
+	.customerService__contactArea {
+		position: relative;
+	}
+
+	.customerService__socialMedia {
+		position: absolute;
+		top: 0px;
+		right: 21px;
+		// left: 440px;
+	}
+}
+
+@media screen and (min-width: 1366px) {
+	.customerService__flexbox {
+		height: 797px;
+	}
+
+    .customerService__contactArea{
+        gap: 12px;
+        width: fit-content;
+    }
+
+	.customerService__joice {
+		position: absolute;
+		bottom: 0px;
+        left: 50%;
+        transform: translate(-50%, 0px);
+        max-width: 828px;
+        width: 100%;
+	}
+
+    .customerService__joiceContent::before{
+        top: 50%;
+        transform: translate(0px, -50%) rotate(270deg);
+    }
+
+	.customerService__cardsGrid {
+		position: absolute;
+		max-width: 758px;
+        width: 100%;
+        top: 64px;
+        right: 0px;
+        row-gap: 24px;
+        column-gap: 18px;
+        grid-template-columns: repeat(4,1fr);
+	}
+    .customerService__card:nth-child(5){
+        grid-row: initial;
+        grid-column: span 2;
+    }
+
+    .customerService__card{
+        height: 168px;
+    }
+    .customerService__black-card{
+        grid-column: span 2;
+        height: 176px;
+    }
+
+    .customerService__cardTitle{
+        max-width: 100px;
+    }
+    .customerService__black-card .customerService__cardTitle{
+        max-width: 160px;
+    }
+
+    .customerService__black-card .customerService__cardHeaderFlag{
+        width: 132px;
+        height: 21px;
+        padding-inline: 8px;
+    }
+
+    .customerService__cardCTA{
+        bottom: 24px;
+    }
+
+	.customerService__socialMedia {
+		position: initial;
+	}
+    
+    .customerService__headerSlogan, .customerService__headerSubtitle{
+        max-width: 300px;
+    }
+
+    .customerService__header{
+        margin-bottom: 12px;
+        width: fit-content;
+    }
+
+    .customerService__joiceLogo{
+        width: 212px;
+        height: 212px;
+    }
+
+    .customerService__joiceContent{
+        max-width: 514px;
+    }
+    .customerService__joiceSubtitle{
+        max-width: 85%;
+    }
+
+    .customerService__joiceTitle br{
+        display: none;
+    }
+
+
+}

@@ -1,0 +1,446 @@
+.heroBanner__section{
+    background: rgb(0,0,0);
+    background: var(--newhome-banner-hero-background-gradient);
+}
+.heroBanner__width-container{
+    flex-direction: column;
+    position: relative;
+}
+
+// BACKGROUND IMAGE
+.heroBanner__backgroundImage{
+    position: absolute;
+    max-width: none;
+    width: 436px;
+    left: 50%;
+    transform: translate(-50%, 0px);
+    bottom: 63.5%;
+}
+@media screen and (min-width: 768px) {
+    .heroBanner__backgroundImage{
+        width: 910px;
+        bottom: 49.7%;
+    }
+}
+@media screen and (min-width: 1366px) {
+    .heroBanner__backgroundImage{
+        width: 845px;
+        bottom: auto;
+        left: auto;
+        transform: translate(0, 0);
+        top: 18px;
+        right: -100px;
+    }
+}
+
+// TOP PART
+.heroBanner__flexbox-top{
+    display: flex;
+    flex-direction: column;
+    padding-top: 23.5px;
+    width: 100%;
+    position: relative;
+}
+
+.heroBanner__topicTitle{
+    font-size: 1rem;
+    line-height: 150%;
+    margin-bottom: 32px;
+    color: var(--color-white-full);
+    font-weight: 400;
+}
+.heroBanner__topicTitle b{
+    color: var(--color-primary-200);
+    font-weight: 400;
+}
+
+.heroBanner__title{
+    font-size: 2rem;
+    line-height: 125%;
+    color: var(--color-white-full);
+    margin-bottom: 32px;
+}
+.heroBanner__title b{
+    color: var(--color-primary-200);
+}
+
+.heroBanner__description{
+    font-size: 1rem;
+    line-height: 150%;
+    color: var(--color-white-full);
+    font-weight: 400;
+    margin-bottom: 357px;
+}
+
+.heroBanner__signFiberContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.heroBanner__signFiberTitle{
+    font-size: 1rem;
+    line-height: 150%;
+    color: var(--color-white-full);
+    font-weight: 400;
+    margin-bottom: 24px;
+}
+
+.heroBanner__signFiberOffer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.heroBanner__signFiberVelocity{
+    font-size: 2rem;
+    line-height: 100%;
+    color: var(--color-primary-200);
+    font-weight: 500;
+    margin-bottom: 24px;
+
+}
+.heroBanner__signFiberVelocity b{
+    font-weight: 500;
+    color: var(--color-primary-100) ;
+}
+
+.heroBanner__signFiberPriceArea{
+    display: flex;
+    flex-direction: row;
+    height: 69px;
+    font-family: 'Simplon Oi';
+    color: var(--color-primary-200);
+    align-items: flex-start;
+
+    margin-bottom: 12px;
+}
+
+.heroBanner__priceCifrao{
+    font-size: 2rem;
+    line-height: 100%;
+    font-weight: 500;
+    width: 42px;
+}
+
+.heroBanner__priceIntValue{
+    font-size: 5.25rem;
+    line-height: 69px;
+    font-weight: 500;
+    width: 140px;
+}
+
+.heroBanner__decimalValueAndDeadlineArea{
+    display: flex;
+    flex-direction: column;
+}
+
+.heroBanner__decimalValue{
+    font-size: 32px;
+    line-height: 100%;
+    font-weight: 500;
+}
+
+.heroBanner__deadline{
+    font-size: 1.75rem;
+    line-height: 100%;
+    font-family: "Simplon BP", sans-serif;
+}
+
+.heroBanner__paymentInfo{
+    color: var(--color-white-full);
+    font-size: .75rem;
+    line-height: 135%;
+    margin-bottom: 12px;
+}
+
+.heroBanner__signFiberCTA{
+    color: var(--color-neutral-600);
+    max-width: 259px;
+    background-color: var(--color-primary-200);
+    gap: 8px;
+}
+// TOP PART
+
+
+
+// BOTTOM PART
+.heroBanner__flexbox-bottom{
+    display: flex;
+    flex-direction: column;
+    padding: 24px 0px 48px 0px;
+    position: relative;
+}
+
+.heroBanner__knowPlans{
+    display: flex;
+    flex-direction: column;
+    color: var(--color-neutral-100);
+}
+
+.heroBanner__knowPlans__topicTitle{
+    font-size: 1rem;
+    line-height: 1.5rem;
+    margin-bottom: 8px;
+}
+.heroBanner__knowPlans__topicTitle b{
+    color: var(--color-primary-200);
+    font-weight: 400;
+}
+
+.heroBanner__knowPlans__title{
+    font-size: 2rem;
+    line-height: 125%;
+    margin-bottom: 16px;
+    font-weight: 700;
+    max-width: 70%;
+}
+.heroBanner__knowPlans__title b{
+    color: var(--color-primary-200);
+}
+
+.heroBanner__knowPlans__description{
+    font-size: 1rem;
+    line-height: 150%;
+    color: var(--color-neutral-100);
+    margin-bottom: 24px;
+}
+
+.heroBanner__knowPlans__CTA{
+    max-width: 226px;
+    gap: 8px;
+    background-color: var(--color-primary-200);
+    margin-bottom: 3px;
+    margin-inline: auto;
+    color: var(--color-neutral-600);
+}
+
+.heroBanner__benefitsArea{
+    grid-template-columns: repeat(2, 1fr);
+    display: grid;
+    list-style: none;
+    column-gap: 16px;
+    row-gap: 24px;
+}
+
+.heroBanner__benefitCard{
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+    padding: 24px 0px 0px 16px;
+    height: 137px;
+}
+.heroBanner__benefitCard img{
+    width: 33px;
+    height: 33px;
+}
+
+.heroBanner__benefitCardDescription{
+    color: var(--color-white-full);
+    font-size: 1rem;
+    line-height: 150%;
+    height: 72px;
+} 
+
+.heroBanner__showWordOnlyDesktop{
+    display: none;
+}
+
+// TEXTOS DOS CARDS DO BANNER
+.heroBanner__benefitCardItem:nth-child(1) .heroBanner__benefitCardDescription,
+.heroBanner__benefitCardItem:nth-child(4) .heroBanner__benefitCardDescription
+{
+    max-width: 90px;
+}
+.heroBanner__benefitCardItem:nth-child(1) .heroBanner__benefitCardDescription b,
+.heroBanner__benefitCardItem:nth-child(6) .heroBanner__benefitCardDescription b:nth-child(3)
+{
+    white-space: nowrap;
+}
+
+.heroBanner__benefitCardItem:nth-child(2) .heroBanner__benefitCardDescription{
+    max-width: 134px;
+}
+.heroBanner__benefitCardItem:nth-child(3) .heroBanner__benefitCardDescription,
+.heroBanner__benefitCardItem:nth-child(5) .heroBanner__benefitCardDescription
+{
+    max-width: 115px;
+}
+
+// TEXTOS DOS CARDS DO BANNER
+
+
+
+
+// BOTTOM PART
+
+
+
+
+
+@media screen and (min-width: 768px) {
+
+    // TOP PART
+    .heroBanner__flexbox-top{
+        padding: 39px 0px;
+    }
+
+    .heroBanner__topicTitle{
+        font-size: 1.25rem;
+        line-height: 120%;
+        font-weight: 300;
+    }
+    .heroBanner__topicTitle{
+        font-weight: 300;
+    }
+
+    .heroBanner__title{
+        font-size: 3rem;
+        line-height: 115%;
+    }
+
+    .heroBanner__description{
+        font-size: 1.25rem;
+        line-height: 120%;
+        margin-bottom: 665px;
+    }
+
+    .heroBanner__signFiberContainer{
+        align-items: flex-start;
+    }
+
+    .heroBanner__signFiberOffer{
+        align-items: flex-start;
+    }
+
+    .heroBanner__signFiberTitle, .heroBanner__signFiberVelocity{
+        margin-bottom: 12px;
+    }
+
+    .heroBanner__signFiberCTA{
+        max-width: 276px;
+    }
+    // TOP PART
+
+    // BOTTOM PART
+    .heroBanner__knowPlans{
+        max-width: 417px;
+    }
+
+    .heroBanner__knowPlans__topicTitle{
+        font-size: 1.25rem;
+    }
+
+    .heroBanner__knowPlans__title{
+        max-width: none;
+    }
+
+    .heroBanner__knowPlans__description br{
+        display: none;
+    }
+
+    .heroBanner__benefitsArea{
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 78px;
+        row-gap: 24px;
+    }
+    
+    .heroBanner__knowPlans__CTA{
+        margin-left: 0px;
+        margin-bottom: 58px;
+    }
+
+    .heroBanner__flexbox-bottom{
+        padding-bottom: 80px;
+    }
+
+    .heroBanner__benefitCard{
+        height: 168px;
+        gap: 16px;
+        padding: 24px;
+        padding-right: 0px;
+    }
+
+    .heroBanner__showWordOnlyDesktop{
+        display: initial;
+    }
+    // BOTTOM PART
+    
+    // TEXTOS DOS CARDS DO BANNER
+    .heroBanner__benefitCardItem:nth-child(2) .heroBanner__benefitCardDescription
+    {
+        max-width: 140px;
+    }
+    .heroBanner__benefitCardItem:nth-child(3) .heroBanner__benefitCardDescription
+    {
+        max-width: 124px;
+    }
+    .heroBanner__benefitCardItem:nth-child(6) .heroBanner__benefitCardDescription
+    {
+        max-width: 144px;
+    }
+    .heroBanner__benefitCardItem:nth-child(6) .heroBanner__benefitCardDescription b:nth-child(3)
+    {
+        white-space: initial;
+    }
+     // TEXTOS DOS CARDS DO BANNER
+
+}
+
+@media screen and (min-width: 1366px) {
+
+    // TOP PART
+    .heroBanner__flexbox-top{
+        padding: 120px 0px;
+        max-width: 648px;
+    }
+
+    .heroBanner__title{
+        font-size: 5.25rem;
+        height: 170px;
+        margin-bottom: 32px;
+    }
+
+    .heroBanner__description{
+        margin-bottom: 32px;
+        max-width: 563px;
+    }
+
+    .heroBanner__signFiberCTA{
+        max-width: 312px;
+    }
+
+    .heroBanner__decimalValueAndDeadlineArea{
+        margin-left: -5px;
+    }
+    // TOP PART
+
+    // BOTTOM PART
+    .heroBanner__flexbox-bottom{
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 32px 0px;
+    }
+
+    .heroBanner__knowPlans{
+        padding-top: 24px;
+        margin: auto 0px;
+        height: fit-content;
+    }
+
+    .heroBanner__knowPlans__CTA{
+        margin-bottom: 0px;
+    }
+
+    .heroBanner__benefitCard{
+        width: 200px;
+    }
+
+    .heroBanner__benefitsArea{
+        column-gap: 80px;
+        row-gap: 0px;
+    }
+    // BOTTOM PART
+
+}

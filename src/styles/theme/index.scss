@@ -136,178 +136,133 @@
 }
 
 .dark {
-	--banneroifibra-text-color:var(--color-white-full);
-	--banneroifibra-background-button:var(--color-warning-300);
-	--banneroifibra-text-color-button:var(--color-neutral-600);
+	// GLOBALS
+	--newhome-section-contrast-border-height: 1px;
+	--newhome-light-gray-background: var(--color-black-full);
+	--newhome-gray-text: var(--color-white-full);
+	--newhome-gray-500-text: var(--color-white-full);
+	--newhome-semi-black: var(--color-white-full);
+	--newhome-semi-black-background: var(--color-black-full);
+	--newhome-max-contrast-background: var(--color-black-full);
+	--newhome-green-contrast: var(--color-primary-200);
+	--newhome-grayscale-background-before: 1;
+	--newhome-green-contrast-600: var(--color-primary-200);
+
+	// JOICE
+	--newhome-joice-green-color:  var(--color-black-full);
+	--newhome-joice-semi-black-color: var(--color-black-full);
+	--newhome-joice-cta-hover: var(--color-black-full);
+
+	// OISAUDE E ENERGIA COLOR
+	--newhome-oi-saude-text-color: var(--color-primary-200);
+	--newhome-oi-energia-text-color: var(--color-primary-200);
 	
+	// NOTICIAS OI
+	--newhome-oinews-cta-green-color: var(--color-black-full);
+	--newhome-transparent-and-green-cta: var(--color-primary-200);
+	--newhome-oinews-topic-flag-1-color: var(--color-white-full);
+	--newhome-oinews-topic-flag-2-color: var(--color-white-full);
+	--newhome-oinews-topic-flag-3-color: var(--color-white-full);
+	--newhome-oinews-arrow-filter: brightness(0) saturate(100%) invert(81%) sepia(81%) saturate(371%) hue-rotate(58deg) brightness(100%) contrast(102%);
+	--newhome-oinews-white-topic-flag: var(--color-neutral-600);
 
-	--cardsofertascombo-background-section: var(--color-neutral-500);
-	--cardsofertascombo-background-img: var(--color-neutral-500);
-	--cardsofertascombo-border-color-img: var(--color-primary-300);
-	--cardsofertascombo-text-color-img: var(--color-white-full);
-	--cardsofertascombo-title-color: var(--color-white-full);
-	--cardsofertascombo-text-color-button: var(--color-black-full);
-	--cardsofertascombo-background-button: var(--color-primary-300);
-	--cardsofertascombo-nav-bar-color-mobile: var(--color-neutral-100);
-	--cardsofertascombo-nav-bar-color-mobile-select: var(--color-primary-300);
+	// BANNER HERO
+	--newhome-banner-hero-background-gradient: var(--color-black-full);
 
-	--vantagensfibra-background-section: var(--color-neutral-600);
-	--vantagensfibra-color-text: var(--color-white-full);
-	--vantagensfibra-background-button-whats: var(--color-neutral-600);
 
-	--jatemoifibra-background: var(--color-primary-200);
-	--jatemoifibra-background-button: var(--color-neutral-600);
-	--jatemoifibra-color-text-button: var(--color-white-full);
+	// FOOTER
+	--global_information_background: var(--color-neutral-600);
+	--global_information_text: var(--color-white-full);
+	--global_information_line-divider: var(--color-white-full);
+	--global_information_link-colored: var(--color-primary-200);
+	--global_information_link-uncolored: var(--color-white-full);
+	
+	--global_footer_background: var( --color-black-full);
+	--global_footer_title-menu: var(--color-primary-200);
+	--global_footer_title-menu-item: var(--color-white-full);
+	--global_footer_title-menu-item_border-mobile: var(--color-neutral-400);
+	--global_footer_social-icon-background: var(--color-neutral-600);
+	--global_footer_social-icon-border: var(--color-neutral-500);
+	
+	--global_footer-cta-filled_background: var(--color-primary-200);
+	--global_footer-cta-filled_text: var(--color-black-full);
+	--global_footer-cta-stroke_border: var(--color-smarthouse-300);
+	--global_footer-cta-stroke_border: var(--color-smarthouse-300);
+	
+	--global_footer-copyright_text: var(--color-white-full);
 
-	--header-acessibility: var(--color-white-full);
-	--header-middle-button: var(--color-white-full);
-	--header-bottom-background: var(--color-black-full);
+	// HEADER
+	--newhome-header-acessibility-border: var(--color-information-400);
 
-	--body-background: var(--color-black-full);
-
-	--cardsofertas-title: var(--color-white-full);
-	--cardsofertas-busca: var(--color-white-full);
-	--cardsofertas-botoes: var(--color-white-full);
-	--cardsofertas-combo-section-background: var(--color-black-full);
-	--cardsofertas-peca-oi: var(--color-white-full);
-	--cardsofertas-ancora-background: var(--color-primary-300);
-	--cardsofertas-ancora-text: var(--color-black-full);
-
-	--carousel-title: var(--color-white-full);
-	--carousel-container-background: var(--color-neutral-600);
-	--carousel-card-background-color: var(--color-neutral-500);
-	--carousel-card-text-color: var(--color-white-full);
-	--carousel-card-item-border: var(--carousel-card-border-dark);
-	--carousel-dots-active: var(--color-primary-300);
-	--carousel-dots: var(--color-neutral-100);
-
-	--oie-text-color: var(--color-white-full);
-
-	--faq-title-color: var(--color-white-full);
-	--faq-paragraph-color: var(--color-white-full);
-	--faq-button-text-color: var(--color-primary-300);
-	--faq-button-background: var(--color-black-full);
-	--faq-border-color: var(--color-white-full);
-	--faq-anchor-color: var(--color-primary-300);
-
-	--profitability-text-color: var(--color-white-full);
-
-	--card-lojaonline-border: var(--card-lojaonline-border-dark);
-
-	--section-oisaude-background: var(--color-black-full);
-	--section-oisaude-text-color: var(--color-white-full);
-
-	--footer-background: var(--color-neutral-600);
-	--footer-text: var(--color-white-full);
-	--footer-bordercenter: var(--color-white-full);
-
-	--cttbtn-text-color: var(--color-white-full);
-	--cttbtn-close-button-color: var(--color-white-full);
-	--cttbtn-background-color: var(--color-neutral-500);
-	--cttbtn-child-2-background-color: var(--color-neutral-600);
-	--cttbtn-child-2-border-top: none;
-	--cttbtn-button-text-color: var(--color-white-full);
-	--cttbtn-button-primary-background-color: var();
-	--cttbtn-secundary-button-border-color: var(--color-primary-200);
-
-	--cttbtnv2-button-border: var(--color-primary-300);
-	--cttbtnv2-background: var(--color-black-full);
-	--cttbtnv2-title-text: var(--color-white-full);
-	--cttbtnv2-anchor: var(--color-primary-300);
-	--cttbtnv2-anchor-text: var(--color-black-full);
-	--cttbtnv2-headernormal: var(--color-white-full);
-	--cttbtnv2-headericon: var(--color-white-full);
-	--cttbtnv2-whtsapp-icon: var(--color-primary-300);
-	--cttbtnv2-border: solid;
-	--cttbtnv2-bordercolor: var(--color-neutral-300);
 }
 
 .light {
-	--banneroifibra-text-color:var(--color-white-full);
-	--banneroifibra-background-button:var(--color-warning-300);
-	--banneroifibra-text-color-button:var(--color-neutral-600);
 
-	--cardsofertascombo-background-section: var(--color-neutral-200);
-	--cardsofertascombo-background-img: var(--color-white-full);
-	--cardsofertascombo-border-color-img: var(--color-white-full);
-	--cardsofertascombo-text-color-img: var(--color-black-full);
-	--cardsofertascombo-title-color: var(--color-neutral-550);
-	--cardsofertascombo-text-color-button: var(--color-white-full);
-	--cardsofertascombo-background-button: var(--color-primary-410);
-	--cardsofertascombo-nav-bar-color-mobile: var(--color-neutral-400);
-	--cardsofertascombo-nav-bar-color-mobile-select: var(--color-primary-400);
 
-	--vantagensfibra-background-section: var(--color-neutral-100);
-	--vantagensfibra-color-text: var(--color-neutral-600);
-	--vantagensfibra-background-button-whats: var(--color-neutral-100);
+	// GLOBALS
+	--newhome-section-contrast-border-height: 0px;
+	--newhome-light-gray-background: var(--color-neutral-100);
+	--newhome-gray-text: var(--color-neutral-400);
+	--newhome-gray-500-text: var(--color-neutral-500);
+	--newhome-semi-black: var(--color-neutral-600);
+	--newhome-semi-black-background: var(--color-neutral-600);
+	--newhome-max-contrast-background: var(--color-white-full);
+	--newhome-green-contrast: var(--color-primary-500);
+	--newhome-green-contrast-600: var(--color-primary-400);
+	// CUSTOMER SERVICE
+	--newhome-customer-service-background-before-desktop: linear-gradient(315deg, rgba(0,163,0,0) 0%, rgba(0,163,49,0.35) 100%);
+	--newhome-customer-service-background-before-mobile: linear-gradient(270deg, rgba(0,163,0,0) 0%, rgba(0,163,49,0.35) 100%);
+	--newhome-grayscale-background-before: 0;
+	
+	// CUSTOMER SERVICE - JOICE 
+	--newhome-joice-green-color: var(--color-primary-400);
+	--newhome-joice-semi-black-color: var(--color-neutral-600);
+	--newhome-joice-cta-hover: #086C04;
+	
+	
+	// OISAUDE E ENERGIA COLOR
+	--newhome-oi-saude-text-color: var(--color-health-300);
+	--newhome-oi-energia-text-color: var(--color-energy-300);
+	
+	// NOTICIAS OI
+	--newhome-oinews-cta-green-color: var(--color-primary-500);
+	--newhome-transparent-and-green-cta: rgba(0,0,0,0);
+	--newhome-oinews-topic-flag-1-color: var(--color-smarthouse-300);
+	--newhome-oinews-topic-flag-2-color: var(--color-information-400);
+	--newhome-oinews-topic-flag-3-color: var(--color-entretainment-300);
+	--newhome-oinews-arrow-filter: brightness(0) saturate(100%) invert(14%) sepia(71%) saturate(5696%) hue-rotate(99deg) brightness(98%) contrast(102%);
+	--newhome-oinews-white-topic-flag: var(--color-white-full);
 
-	--jatemoifibra-background: var(--color-success-150);
-	--jatemoifibra-background-button: var(--color-neutral-600);
-	--jatemoifibra-color-text-button: var(--color-white-full);
+	// BANNER HERO
+	--newhome-banner-hero-background-gradient: linear-gradient(85deg, rgba(0,49,0,1) 0%, rgba(0,0,0,1) 65%);
 
-	--header-acessibility: var(--color-neutral-450);
-	--header-middle-button: var(--color-neutral-580);
-	--header-bottom-background: var(--color-neutral-600);
+	
+	// FOOTER
+	--global_information_background: var(--color-neutral-500);
+	--global_information_text: var(--color-neutral-100);
+	--global_information_line-divider: var(--color-neutral-200);
+	--global_information_link-colored: var(--color-primary-200);
+	--global_information_link-uncolored: var(--color-neutral-100 );
+	
+	--global_footer_background: var(--color-neutral-600);
+	--global_footer_title-menu: var(--color-primary-200);
+	--global_footer_title-menu-item: var(--color-white-full);
+	--global_footer_title-menu-item_border-mobile: var(--color-neutral-400);
+	--global_footer_social-icon-background: var(--color-neutral-600);
+	--global_footer_social-icon-border: var(--color-neutral-500);
+	
+	--global_footer-cta-filled_background: var(--color-primary-200);
+	--global_footer-cta-filled_text: var(--color-black-full);
+	--global_footer-cta-stroke_border: var(--color-smarthouse-300);
+	--global_footer-cta-stroke_border: var(--color-smarthouse-300);
+	
+	--global_footer-copyright_text: var(--color-neutral-400);
 
-	--body-background: var(--color-white-full);
-
-	--cardsofertas-title: var(--color-neutral-600);
-	--cardsofertas-busca: var(--color-neutral-600);
-	--cardsofertas-botoes: var(--color-neutral-400);
-	--cardsofertas-combo-section-background: var(--color-neutral-200);
-	--cardsofertas-peca-oi: var(--color-neutral-550);
-	--cardsofertas-ancora-background: var(--color-primary-410);
-	--cardsofertas-ancora-text: var(--color-white-full);
-
-	--carousel-title: var(--color-neutral-600);
-	--carousel-container-background: var(--color-neutral-100);
-	--carousel-card-background-color: var(--color-white-full);
-	--carousel-card-text-color: var(--color-neutral-600);
-	--carousel-card-item-border: var(--carousel-card-border-light);
-	--carousel-dots-active: var(--color-neutral-650);
-	--carousel-dots: var(--color-neutral-225);
-
-	--oie-text-color: var(--color-neutral-600);
-
-	--faq-title-color: var(--color-neutral-600);
-	--faq-paragraph-color: var(--color-neutral-400);
-	--faq-button-text-color: var(--color-primary-400);
-	--faq-button-background: var(--color-white-full);
-	--faq-border-color: var(--color-neutral-225);
-	--faq-anchor-color: var(--color-primary-400);
-
-	--profitability-text-color: var(--color-neutral-600);
-
-	--card-lojaonline-border: var(--card-lojaonline-border-light);
-
-	--section-oisaude-background: var(--color-neutral-100);
-	--section-oisaude-text-color: var(--color-neutral-600);
-
-	--footer-background: var(--color-neutral-95);
-	--footer-text: var(--color-black-full);
-	--footer-bordercenter: var(--color-neutral-399);
-
-	--cttbtn-text-color: var(--color-black-full);
-	--cttbtn-close-button-color: var(--color-neutral-600);
-	--cttbtn-background-color: var(--color-white-full);
-	--cttbtn-child-2-background-color: var(--color-neutral-94);
-	--cttbtn-child-2-border-top: var(--color-neutral-200);
-	--cttbtn-button-text-color: var(--color-black-full);
-	--cttbtn-secundary-button-border-color: var(--color-neutral-200);
-
-	--cttbtnv2-button-border: var(--color-primary-400);
-	--cttbtnv2-background: var(--color-white-full);
-	--cttbtnv2-title-text: var(--color-neutral-600);
-	--cttbtnv2-anchor: var(--color-primary-400);
-	--cttbtnv2-anchor-text: var(--color-white-full);
-	--cttbtnv2-headernormal: var(--color-neutral-600);
-	--cttbtnv2-headericon: var(--color-neutral-600);
-	--cttbtnv2-whtsapp-icon: var(--color-primary-410);
-	--cttbtnv2-border: none;
-	--cttbtnv2-bordercolor: transparent;
-
+	// HEADER
+	--newhome-header-acessibility-border: var(--color-neutral-200);
 }
 
 body {
+	
 	background-color: var(--body-background);
 }

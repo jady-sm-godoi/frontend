@@ -2,7 +2,7 @@
 <html lang="pt-br">
 
 <head>
-  @@loop("./components/head/_head.html", "./scripts/data/head-og.json")
+  @@loop("./components/head/_head.html", "./scripts/data/head-og.json") 
   <script src="http://localhost:4000/livereload.js"></script>
   <!-- <script defer src="scripts/components/getoffers.js"></script> -->
 
@@ -21,39 +21,24 @@
   </script> -->
 </head>
 
+<!-- @@include("./components/changeTheme/_changeTheme.html") -->
 <body>
-  <!-- HEADER -->
-  @@include("./components/header/_header.html")
-  <!--// HEADER -->
 
-  <!-- CONTENT -->
+  
+ 
   <main id="main" class="main">
-
-    <!-- @@include("./components/test/index.html") -->
-
-    <!-- @@include("./components/banneroifibra/_banneroifibra.html") -->
-    @@include("./components/banner-US274955/html.html")
-    @@include("./components/offerCarrousel/index.html")
-    @@include("./components/carousel/_carousel.html")
-    @@include("./components/vantagensfibra/_vantagensfibra.html")
-    @@include("./components/jatemoifibra/_jatemoifibra.html")
-    <!-- @@include('./components/oiplay/_oiplay.html') -->
-    @@include("./components/lojaonline/index.html")
-    @@include("./components/oisaude/_oi_saude.html")
-    @@include("./components/oi-e/_oi-e.html")
-    <!-- @@include("./components/oiexpert/_oiexpert.html")
-    @@include("./components/oiplace/_oiplace.html") -->
-
-    @@include("./components/new_faq/_new_faq.html")
+    @@include("./components/newHeader/_newHeader.html")
+    @@include("./components/heroBanner/_heroBanner.html")
+    @@include("./components/plansForCompanies/_plansForCompanies.html")
+    @@include("./components/signStreaming/_signStreaming.html")
+    @@include("./components/oiFibraX/_oiFibraX.html")
+    @@include("./components/oiSolutions/_oiSolutions.html")
+    @@include("./components/customerService/_customerService.html")
+    @@include("./components/oiPlace/_oiPlace.html")
+    @@include("./components/oiNews/_oiNews.html")
+    @@include("./components/newFooter/_newFooter.html")
   </main>
-  <!--// CONTENT -->
 
-  <!-- FOOTER -->
-  @@include("./components/footerfibra/_footerfibra.html")
-  <!-- @@include("./components/contactButton/_contactButton.html") -->
-  @@include("./components/contactButtonV2/index.html")
-  @@include("./components/cookiesBar/_cookiesBar.html")
-  <!--// FOOTER -->
 </body>
 
 
