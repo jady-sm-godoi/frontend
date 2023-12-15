@@ -1,4 +1,4 @@
-function selectCity(city) {
+function selectCity(event, city) {
 	offerManager.setCurrentCityByIndex(city.dataset.cityindex)
 	destroyModal()
 }
@@ -21,23 +21,36 @@ class DebounceSearchRequest {
 function showCitys(arr) {
 	const getUlContent = document.getElementById('container-city-modal')
 	getUlContent.innerHTML = ''
-
+	const currentCity = offerManager.currentCity
+	createCityLi(currentCity, -1, getUlContent)
 	arr.forEach((city, index) => {
-		const createRowLi = document.createElement('li')
-		createRowLi.setAttribute('class', 'max_width_container')
-		const createRowButton = document.createElement('button')
-		createRowButton.setAttribute('class', 'header-modal_li_buttons')
-		createRowButton.innerText = `${city.city.toUpperCase()}, ${city.uf.toUpperCase()}`
-		createRowButton.dataset['cityindex'] = index
-		createRowButton.dataset['normalized'] = city.normalized
-
-		createRowButton.autofocus = true
-
-		createRowButton.setAttribute('onclick', 'selectCity(this)')
-		createRowLi.appendChild(createRowButton)
-		getUlContent.appendChild(createRowLi)
+		createCityLi(city, index, getUlContent)
 	})
 	mappingFocusedButtons()
+	
+}
+
+function createCityLi(city, index, getUlContent){
+	const createRowLi = document.createElement('li')
+	const locationIconContainer =  document.createElement('div');
+	const locationIcon = `
+	<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+	<path fill-rule="evenodd" clip-rule="evenodd" d="M3.75 10.0772C3.75 5.51246 7.45195 1.75 12 1.75C16.548 1.75 20.25 5.51246 20.25 10.0772C20.25 12.2703 19.3883 14.4044 17.8557 15.9654L12.892 21.021C12.402 21.52 11.598 21.52 11.108 21.021L6.14434 15.9654C4.6117 14.4044 3.75 12.2703 3.75 10.0772ZM12 0.25C6.60692 0.25 2.25 4.70073 2.25 10.0772C2.25 12.6578 3.26211 15.1708 5.074 17.0163L10.0377 22.0719C11.1156 23.1697 12.8844 23.1697 13.9623 22.0719L18.926 17.0163C20.7379 15.1708 21.75 12.6578 21.75 10.0772C21.75 4.70073 17.3931 0.25 12 0.25ZM9.75 10C9.75 8.75736 10.7574 7.75 12 7.75C13.2426 7.75 14.25 8.75736 14.25 10C14.25 11.2426 13.2426 12.25 12 12.25C10.7574 12.25 9.75 11.2426 9.75 10ZM12 6.25C9.92893 6.25 8.25 7.92893 8.25 10C8.25 12.0711 9.92893 13.75 12 13.75C14.0711 13.75 15.75 12.0711 15.75 10C15.75 7.92893 14.0711 6.25 12 6.25Z" fill="var(--newhome-semi-black)"/>
+	</svg>`
+	locationIconContainer.innerHTML = locationIcon;
+	createRowLi.setAttribute('class', 'regionalization-city-item')
+	const createRowButton = document.createElement('button')
+	createRowButton.setAttribute('class', 'header-modal_li_buttons')
+	createRowButton.innerText = `${city.city.toUpperCase()}, ${city.uf.toUpperCase()}`
+	createRowButton.dataset['cityindex'] = index
+	createRowButton.dataset['normalized'] = city.normalized
+	
+	createRowButton.autofocus = true
+	
+	createRowButton.setAttribute('onclick', 'selectCity(event, this)')
+	createRowLi.appendChild(locationIconContainer)
+	createRowLi.appendChild(createRowButton)
+	getUlContent.appendChild(createRowLi)
 }
 
 let getSearchInput = ''
@@ -69,26 +82,34 @@ const fetchCitysOnBackend = (city) => {
 	)
 }
 
-
+// let isModalRegionalizationClosed = true;
+// function openOrCloseModal(){
+// 	if(isModalRegionalizationClosed) openModal()
+// 	else destroyModal()
+// }
 
 function openModal() {
+	// isModalRegionalizationClosed = false;
 	const modalStructure = `
 <div class="header-modal_search_bar">
-    <div class="max_width_container header-modal_input-content">
-      <input oninput="searchCity(this)" placeholder="ONDE VOCÊ ESTÁ?" id="header-modal_inputcontent">
-      <button onclick="destroyModal()">CANCELAR</button>
+    <div class="header-modal_input-content">
+	<img
+		src="assets/images/newHeader/search-icon-gray.svg"
+		data-src-dark="assets/images/newHeader/search-icon-white.svg"
+		alt=""/>
+      <input oninput="searchCity(this)" placeholder="Buscar" id="header-modal_inputcontent">
     </div>
 </div>
 `
 
-	overflowHidden()
+	blockScrollOnPage();
 	const createModal = document.createElement('div')
 
 	createModal.id = 'header-modal-container'
 	createModal.setAttribute('class', 'header-modal_city_modal')
 	createModal.innerHTML = modalStructure
 
-	document.body.appendChild(createModal)
+	document.querySelector('.newHeader__topArea__changeLocationContainer').appendChild(createModal)
 
 	const createUl = document.createElement('ul')
 	createUl.className = 'elUl'
@@ -100,10 +121,15 @@ function openModal() {
 	mappingFocusedButtons()
 }
 
+setTimeout(openModal, 2000)
+
+// openModal();
+
 function destroyModal() {
+	// isModalRegionalizationClosed = true;
 	const getModal = document.getElementById('header-modal-container')
-	document.body.removeChild(getModal)
-	overflowShow()
+	document.querySelector('.newHeader__topArea__changeLocationContainer').removeChild(getModal)
+	releaseScrollOnPage();
 }
 
 function mappingFocusedButtons() {
@@ -147,10 +173,7 @@ const aVlibras = document.getElementById('button_accessibility_vlibras')
 const VlibrasAndContrastContainer = document.getElementById('vlibras-and-contrast-container')
 
 function toggleLibrasAndContrastContainer(){
-	console.log('YES');
     if(themeManager.currentTheme == 'dark' || vlibasManager.currentState){
-		console.log('entrei');
-		console.log(VlibrasAndContrastContainer);
         return VlibrasAndContrastContainer.classList.add('newHeader__acessibility-active')
     }
     VlibrasAndContrastContainer.classList.remove('newHeader__acessibility-active')
@@ -179,8 +202,8 @@ aSum.addEventListener('click', function (e) {
 })
 
 offerManager.runWhenCityLoad('data', (city) => {
-	const element = document.getElementById('changeLocalization')
-	element.innerText = `${city.city}, ${city.uf}`
+	const cityNameArea = document.querySelector(".newHeader__topArea__cityName")
+	cityNameArea.innerHTML = `${city.city}<span class="newHeader__topArea__ufName">, ${city.uf}</span>`
 })
 
 function resize(action) {
@@ -196,4 +219,91 @@ function resize(action) {
 	} else if (action == 'decrease' && size >= 13) {
 		html.style.fontSize = size - 1 + 'px'
 	}
+}
+
+
+function openMenuMobile(){
+	openMenuContainer();
+}
+
+function openMenuContainer(){
+	const menuContainer = document.querySelector(".newHeader__menuContainer");
+	menuContainer.classList.add('newHeader__menuIsActive')
+	blockScrollOnPage();
+}
+
+function closeMenuContainer(){
+	const menuContainer = document.querySelector(".newHeader__menuContainer");
+	menuContainer.classList.remove('newHeader__menuIsActive');
+	releaseScrollOnPage();
+}
+
+let actualMenuSelectedId;
+
+function menuSelected(event, selectedId, menuTitle){
+	hideSelectArea();
+	hideMenuSelected();
+	const menuHeader = document.querySelector(".newHeader__menuHeader");
+	const menuHeaderTitle = document.querySelector(".newHeader__menuHeader__title")
+	if(window.innerWidth < 992) menuHeader.style.display = 'flex';
+	const selectedMenu = document.querySelector('#'+ selectedId)
+	selectedMenu.style.display = 'flex';
+
+	menuHeaderTitle.innerHTML = menuTitle;
+
+	actualMenuSelectedId = selectedId;
+
+	if(window.innerWidth >= 992){
+		openMenuContainer();
+	}
+}
+
+function hideMenuSelected(){
+	const menuHeader = document.querySelector(".newHeader__menuHeader");
+	menuHeader.style.display = "none";
+	const selectedMenu = document.querySelector('#'+ actualMenuSelectedId)
+	if(selectedMenu) selectedMenu.style.display = 'none';
+	
+}
+
+function hideSelectArea(){
+	const selectArea = document.querySelector("#select-area");
+	selectArea.style.display = 'none';
+}
+
+function showSelectArea(){
+	const selectArea = document.querySelector("#select-area");
+	selectArea.style.display = 'initial';
+}
+
+function backToMenuOptions(){
+	hideMenuSelected();
+	showSelectArea();
+}
+
+function openSignFiberModal(){
+	const signFiberModal = document.querySelector(".newHeader__signFiberModal");
+	signFiberModal.style.display = 'initial'
+	blockScrollOnPage();
+}
+
+function closeSignFiberModal(){
+	const signFiberModal = document.querySelector(".newHeader__signFiberModal");
+	signFiberModal.style.display = 'none'
+	releaseScrollOnPage();
+}
+
+function blockScrollOnPage(){
+	const htmlTag = document.querySelector('html');
+	htmlTag.style.overflowY = 'hidden';
+	if(window.innerWidth >= 992){
+		htmlTag.style.paddingRight = '20px';
+	}
+
+}
+
+function releaseScrollOnPage(){
+	const htmlTag = document.querySelector('html');
+	htmlTag.style.overflowY = 'scroll';
+	htmlTag.style.paddingRight = '0px';
 }

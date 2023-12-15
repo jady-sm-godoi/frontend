@@ -190,10 +190,30 @@
 	--global_footer-cta-stroke_border: var(--color-smarthouse-300);
 	
 	--global_footer-copyright_text: var(--color-white-full);
-
+	
 	// HEADER
 	--newhome-header-acessibility-border: var(--color-information-400);
-
+	--newhome-header-regionalization-border: var(--color-neutral-200);
+	--newhome-header-regionalization-text: var(--color-neutral-100);
+	--newhome-whatsapp-button-border: var(--color-primary-200);
+	--newhome-whatsapp-button-background: var(--color-black-full);
+	--newhome-sign-fiber-text: var(--color-secondary-300);
+	--newhome-sign-fiber-background: var(--color-black-full);
+	--newhome-already-client-filter: brightness(0) saturate(100%) invert(81%) sepia(87%) saturate(362%) hue-rotate(57deg) brightness(101%) contrast(101%);
+	--newhome-menu-bg-black: var(--color-black-full);
+	--newhome-menu-bg-semi-black: var(--color-neutral-600);
+	--newhome-menu-input-border: var(--color-neutral-500);
+	--newhome-menu-attendance-text-color: var(--color-primary-200);
+	--newhome-menu-attendance-bg-color: rgba(0,0,0,0);
+	--newhome-menu-attendance-border-color: var(--color-primary-200);
+	--newhome-menu-signfiber-green-border: var(--color-primary-200);
+	--newhome-menu-selected-item: var(--color-primary-200);
+	--newhome-white-and-semiblack-bg: var(--color-neutral-600);
+	--newhome-regionalization-active-city-color: none;
+	--newhome-regionalization-active-city-border: var(--color-primary-200);
+	--newhome-modais-bg-mobile: var(--color-neutral-600);
+	--newhome-modais-bg-desktop: var(--color-black-full);
+	--newhome-signfiber-card-border: var(--color-primary-200);
 }
 
 .light {
@@ -260,6 +280,28 @@
 
 	// HEADER
 	--newhome-header-acessibility-border: var(--color-neutral-200);
+	--newhome-header-regionalization-border: var(--color-neutral-500);
+	--newhome-header-regionalization-text: var(---color-neutral-600);
+	--newhome-whatsapp-button-border: var(--color-primary-400);
+	--newhome-whatsapp-button-background: var(--color-primary-400);
+	--newhome-sign-fiber-text: var(--color-neutral-600);
+	--newhome-sign-fiber-background: var(--color-secondary-300);
+	--newhome-already-client-filter: brightness(0) saturate(100%) invert(35%) sepia(92%) saturate(1251%) hue-rotate(91deg) brightness(95%) contrast(104%);
+	--newhome-menu-bg-black: var(--color-neutral-100);
+	--newhome-menu-bg-semi-black: var(--color-neutral-100);
+	--newhome-menu-input-border: var(--color-neutral-300);
+	--newhome-menu-attendance-text-color: var(--color-white-full);
+	--newhome-menu-attendance-bg-color: var(--color-primary-400);
+	--newhome-menu-attendance-border-color: var(--color-primary-400);
+	--newhome-menu-attendance-shadow: drop-shadow(0px -4px 44px rgba(0, 0, 0, 0.4));
+	--newhome-menu-signfiber-green-border: var(--color-neutral-100);
+	--newhome-menu-selected-item: var(--color-neutral-600);
+	--newhome-white-and-semiblack-bg: var(--color-white-full);
+	--newhome-regionalization-active-city-color: var(--color-primary-400);
+	--newhome-regionalization-active-city-border: var(--color-primary-400);
+	--newhome-modais-bg-mobile: var(--color-white-full);
+	--newhome-modais-bg-desktop: var(--color-neutral-100);
+	--newhome-signfiber-card-border: var(--color-neutral-400);
 }
 
 body {
