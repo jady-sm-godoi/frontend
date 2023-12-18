@@ -2,7 +2,7 @@
 <html lang="pt-br">
 
 <head>
-  @@loop("./components/head/_head.html", "./scripts/data/head-og.json") 
+  @@loop("./components/head/_head.html", "./scripts/data/head-og.json")
   <script src="http://localhost:4000/livereload.js"></script>
   <!-- <script defer src="scripts/components/getoffers.js"></script> -->
 
@@ -22,12 +22,14 @@
 </head>
 
 <!-- @@include("./components/changeTheme/_changeTheme.html") -->
+
 <body>
 
-  
- 
-  <main id="main" class="main">
+  <header>
     @@include("./components/newHeader/_newHeader.html")
+  </header>
+
+  <main id="main" class="main">
     @@include("./components/heroBanner/_heroBanner.html")
     @@include("./components/plansForCompanies/_plansForCompanies.html")
     @@include("./components/signStreaming/_signStreaming.html")
@@ -36,8 +38,11 @@
     @@include("./components/customerService/_customerService.html")
     @@include("./components/oiPlace/_oiPlace.html")
     @@include("./components/oiNews/_oiNews.html")
-    @@include("./components/newFooter/_newFooter.html")
   </main>
+
+  <footer>
+    @@include("./components/newFooter/_newFooter.html")
+  </footer>
 
 </body>
 
