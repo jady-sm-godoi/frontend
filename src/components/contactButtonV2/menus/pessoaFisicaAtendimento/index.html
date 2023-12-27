@@ -1,0 +1,25 @@
+<section
+	data-whatsappmodalv2-menuname="pessoaFisicaAtendimento"
+	class="modal-whatsappv2-menu__pessoaFisicaAtendimento"
+>
+	@@include("../../components/header-normal/index.html", {title: "Você quer:", "menuName": "pessoaFisicaAtendimento"})
+	<div class="modal-whatsappv2__buttons-container">
+		@@include("../../components/anchor-green/index.html", {
+			"iconSrcLight": "./assets/images/contactbuttonv2-whatsapp-light.svg",
+			"iconSrcDark": "./assets/images/contactbuttonv2-whatsapp-dark.svg",
+			"iconAlt": "icone de modal-whatsappv2-menu__pessoaFisicaAtendimento",
+			"text": "Por WhatsApp",
+			"href": "https://api.whatsapp.com/send?1=pt_BR&phone=553131313131",
+			"menuName": "pessoaFisicaAtendimento"
+		})
+
+		@@include("../../components/button-green/index.html", {
+			"iconSrcLight": "./assets/images/contactbuttonv2-usersupport-light.svg",
+			"iconSrcDark": "./assets/images/contactbuttonv2-usersupport-dark.svg",
+			"iconAlt": "icone de suporte",
+			"text": "Pelo 0800 031 8000", 
+			"changeMenu": "telefone08000318000",
+			"menuName": "pessoaFisicaAtendimento"
+		})
+	</div>
+</section>

@@ -1,3 +1,26 @@
+.section_header_top_acessibility_hidden {
+	display: flex;
+	height: 0;
+	overflow-y: hidden;
+	align-items: center;
+	color: #1f1f1f;
+}
+.section_header_top_acessibility_hidden:focus-within {
+    height: 1.5rem;
+    border-bottom: 1px solid #dbdbdb;
+    font-weight: 400;
+    align-items: center;
+    font-size: 0.56rem;
+}
+.header_anchor_acessibility {
+	display: flex;
+	flex-direction: row;
+    gap: 16px;
+}
+.header_anchor_acessibility a {
+    color: #282828;
+}
+
 section.newHeader__top-section{
     background-color: var(--newhome-light-gray-background);
     position: relative;
@@ -85,6 +108,16 @@ section.newHeader__top-section{
     right: 24px;
     top: 220px;
     background-color: var(--newhome-light-gray-background);
+    z-index: 8;
+}
+
+.newHeader__topArea__changeLocationContainer-overlay{
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: -16px;
     z-index: 9;
 }
 
@@ -192,9 +225,6 @@ section.newHeader__top-section{
 
 .newHeader__topArea__changeLocationContainer{
     display: none;
-}
-.newHeader__topArea__regionalizationArea:focus-within .newHeader__topArea__changeLocationContainer{
-    display: initial;
 }
 
 .newHeader__topArea__cityName{
@@ -548,7 +578,7 @@ button.newHeader__topArea__menuMobile__item-atendimento{
 }
 
 div.newHeader__signFiberModal{
-    position: absolute;
+    position: fixed;
     display: none;
     bottom: calc(-100vh + 100%);
     background-color: var(--newhome-modais-bg-mobile);
@@ -562,7 +592,7 @@ div.newHeader__signFiberModal{
     display: flex;   
     align-items: center;
     border-radius: 42px 42px 0px 0px;
-    position: absolute;
+    position: fixed;
     z-index: 8;
     bottom: calc(-100vh + 100%);
     justify-content: center;
@@ -655,7 +685,7 @@ div.newHeader__signFiberModalContainer{
 .newHeader__topArea__changeLocationContainer{
     position: absolute;
     background-color: var(--newhome-white-and-semiblack-bg);
-    z-index: 10;
+    z-index: 9;
     width: 100%;
     border-radius: 0px 0px 8px 8px;
     left: 0px;
@@ -793,7 +823,7 @@ div.newHeader__signFiberModalContainer{
     }
 }
 
-@media screen and (min-width: 535px) {
+@media screen and (min-width: 700px) {
     .newHeader__acessibility__container{
         display: flex;
         flex-direction: row;
@@ -818,7 +848,7 @@ div.newHeader__signFiberModalContainer{
         order: 1;
     }
     .newHeader__topArea__leftSide{
-        width: 66%;
+        width: 60%;
     }
     .newHeader__topArea__regionalizationArea{
         order: 2;
@@ -881,6 +911,7 @@ div.newHeader__signFiberModalContainer{
 
 
     div.newHeader__signFiberModal{
+        position: absolute;
         top: 100%;
         height: fit-content;
     }
@@ -1012,11 +1043,11 @@ div.newHeader__signFiberModalContainer{
         margin-left: auto;
         position: relative;
     }
-    .newHeader__topArea__regionalizationArea:focus-within{
+    .regionalizationAreaIsFocused{
         max-width: 290px;
         width: 100%;
     }
-    .newHeader__topArea__regionalizationArea:focus-within .newHeader__topArea__chevron{
+    .regionalizationAreaIsFocused .newHeader__topArea__chevron{
         margin-left: auto;
         transform: rotate(180deg);
     }
@@ -1081,12 +1112,14 @@ div.newHeader__signFiberModalContainer{
         display: none;
     }
 
-    .newHeader__topArea__menuDesktop__item:focus-within .newHeader__topArea__selectedMenuItem-chevron{
+    .menuDesktopChevronOn{
         display: flex;
         width: 24px;
         height: 24px;
         margin-left: -4px;
     }
+
+
     .newHeader__topArea__menuDesktop__item:focus-within a, 
     .newHeader__topArea__menuDesktop__item:focus-within button, 
     .newHeader__topArea__menuDesktop__item:hover a, 

@@ -1,0 +1,25 @@
+.modal-whatsappv2-components__anchor-phone-dektop {
+	display: flex;
+	height: 48px;
+	padding: 2px 16px;
+
+	gap: 8px;
+	max-width: 100%;
+	border-radius: 999px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	margin-inline: 16px;
+
+	span {
+		text-decoration: none;
+		color: black;
+		text-align: center;
+		font-size: 1rem;
+		font-weight: 500;
+		line-height: 150%;
+		display: flex;
+		flex-direction: column;
+	}
+}

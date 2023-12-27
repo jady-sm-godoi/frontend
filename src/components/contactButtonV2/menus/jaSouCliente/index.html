@@ -1,0 +1,10 @@
+<section
+	data-whatsappmodalv2-menuname="jaSouCliente"
+	class="modal-whatsappv2-menu__jaSouCliente"
+>
+	@@include("../../components/header-normal/index.html", {title: "Meu plano é de:", "menuName": "jaSouCliente"})
+
+	<div class="modal-whatsappv2__buttons-container">
+		@@loop("../../components/button-green/index.html", "./components/contactButtonV2/menus/jaSouCliente/buttons.json")
+	</div>
+</section>

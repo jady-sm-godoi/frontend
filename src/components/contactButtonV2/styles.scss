@@ -1,0 +1,134 @@
+[data-whatsappmodalv2-status='open'] {
+	inset: 0 !important;
+	background: rgb(0, 0, 0, 0.3);
+	backdrop-filter: blur(3px);
+
+	.modal-whatsappv2__menu-container {
+		display: flex;
+	}
+}
+
+// [data-whatsappmodalv2-status="close"]{
+
+// }
+.modal-whatsappv2 {
+	position: fixed;
+	z-index: 8;
+	inset: auto 0 0 auto;
+	// padding: 0 2rem 2rem 0;
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+
+	justify-content: flex-end;
+	align-items: flex-end;
+
+	&__toggle-button {
+		border: none;
+		z-index: 52;
+		min-width: 4rem;
+		min-height: 4rem;
+		border-radius: 10rem;
+
+		background-color: var(--cttbtnv2-whtsapp-icon);
+
+		display: flex;
+		position: fixed;
+		align-items: center;
+		justify-content: center;
+		cursor: pointer;
+		top: 143px;
+		right: 22px;
+	}
+
+	&__menu-container {
+		margin: 0 2rem;
+		margin-bottom: 2rem;
+
+		flex-direction: column;
+		display: none;
+
+
+	}
+
+	&__buttons-container {
+		display: flex;
+		flex-direction: column;
+		gap: 8px;
+
+		&__desktop {
+			display: block;
+		}
+		&__mobile {
+			display: none;
+		}
+		@media (max-width: 420px) {
+			&__desktop {
+				display: none;
+			}
+			&__mobile {
+				display: block;
+			}
+		}
+	}
+}
+
+[data-whatsappmodalv2-menuname] {
+	display: none;
+
+	background-color: var(--cttbtnv2-background);
+	border-radius: 16px;
+
+	// dark mode
+	border: 1px var(--cttbtnv2-border) var(--cttbtnv2-bordercolor);
+
+	// box-shadow: 1px 1px 20px 1px rgb(0, 0, 0, 0.3);
+
+	color: var(--cttbtnv2-title-text);
+
+	position: relative;
+
+	&::after {
+		content: '';
+		position: absolute;
+		left: 0;
+		right: 0;
+		bottom: -20px;
+		margin: auto;
+		width: 0px;
+		height: 0px;
+		border-left: 20px solid transparent;
+		border-right: 20px solid transparent;
+		border-top: 30px solid var(--cttbtn-v2-background-color);
+	}
+}
+
+.modal-whatsappv2-menu__telefone {
+	max-width: 366px;
+	padding-block: 20px;
+
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+
+	position: absolute;
+
+	inset: 0;
+
+	margin: auto;
+	height: min-content;
+
+	@media (max-width: 420px) {
+		z-index: 100;
+		inset: auto 0 0;
+
+		max-width: 100%;
+
+		border-radius: 16px 16px 0px 0px;
+	}
+}
+@media screen and (min-width: 700px) {
+	.modal-whatsappv2__toggle-button{
+		display: none;
+	}
+}

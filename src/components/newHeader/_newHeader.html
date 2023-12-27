@@ -1,3 +1,14 @@
+<section class="section_header_top_acessibility_hidden">
+    <div class="max_width_container">
+        <div class="header_anchor_acessibility">
+            <a href="#main" accesskey="1">Ir para o corpo do site</a>
+            <a href="#header-container" accesskey="2"
+                >Ir para o cabeçalho da página</a
+            >
+            <a href="#footer-fibra" accesskey="3">Ir para o rodapé da página</a>
+        </div>
+    </div>
+</section>
 <section class="newHeader__top-section home-section">
     <div class="width-container">
         <div class="newHeader__topArea__flexbox">
@@ -16,7 +27,7 @@
                     </li>
                 </ul>
             </div>
-
+            <div class="newHeader__topArea__changeLocationContainer-overlay" onclick="closeRegionalizationModal()"></div>
             <button id="changeLocalization" class="newHeader__topArea__regionalizationArea">
                 <img src="assets/images/newHeader/location-light-mode.svg"
                     class="newHeader__topArea__regionalizationIcon"
@@ -56,7 +67,7 @@
                             Já sou cliente
                         </span>
                     </a>
-                    <button onclick="openMenuMobile()" class="newHeader__menuButton">
+                    <button onclick="triggerMenuMobile()" class="newHeader__menuButton">
                         <img src="assets/images/newHeader/menu-icon-black.svg" alt=""
                             data-src-dark="assets/images/newHeader/menu-icon-white.svg" />
                     </button>
@@ -111,10 +122,10 @@
             </ul>
 
             <div class="newHeader__topArea__floatingButtons">
-                <a class="newHeader__topArea__whatsappButton" href="#">
+                <button class="newHeader__topArea__whatsappButton" onclick="contactButtonV2.toggleModal()">
                     <img class="newHeader__topArea__whatsappIcon" src="assets/images/newHeader/whatsapp-icon-white.svg"
                         data-src-dark="assets/images/newHeader/whatsapp-icon-green.svg" alt="" />
-                </a>
+                </button>
                 <button onclick="openSignFiberModal()" class="newHeader__topArea__signFiber">
                     Assinar Oi Fibra
                 </button>

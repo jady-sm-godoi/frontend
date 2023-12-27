@@ -24,7 +24,10 @@ function showCitys(arr) {
 	const currentCity = offerManager.currentCity
 	createCityLi(currentCity, -1, getUlContent)
 	arr.forEach((city, index) => {
-		createCityLi(city, index, getUlContent)
+		if(currentCity.city.toUpperCase() != city.city.toUpperCase()){
+
+			createCityLi(city, index, getUlContent)
+		}
 	})
 	mappingFocusedButtons()
 	
@@ -101,8 +104,6 @@ function openModal() {
     </div>
 </div>
 `
-
-	blockScrollOnPage();
 	const createModal = document.createElement('div')
 
 	createModal.id = 'header-modal-container'
@@ -221,6 +222,21 @@ function resize(action) {
 	}
 }
 
+let isDesktopBefore = isDesktop();
+window.addEventListener('resize', ()=> {
+	if(isDesktopBefore == isDesktop()) return
+	isDesktopBefore = isDesktop();
+	backToMenuOptions()
+	closeMenuContainer();
+});
+
+let menuDesktopChevronIcon = undefined;
+
+function triggerMenuMobile(){
+	const menuContainer = document.querySelector(".newHeader__menuContainer");
+	if(new Array(...menuContainer.classList).includes("newHeader__menuIsActive")) closeMenuContainer()
+	else openMenuMobile()
+}
 
 function openMenuMobile(){
 	openMenuContainer();
@@ -233,16 +249,30 @@ function openMenuContainer(){
 }
 
 function closeMenuContainer(){
+	if( menuDesktopChevronIcon){
+		menuDesktopChevronIcon.classList.remove("menuDesktopChevronOn");
+	}
 	const menuContainer = document.querySelector(".newHeader__menuContainer");
-	menuContainer.classList.remove('newHeader__menuIsActive');
+	menuContainer.classList.remove('newHeader__menuIsActive');	
 	releaseScrollOnPage();
+	
 }
 
 let actualMenuSelectedId;
 
+function isDesktop(){
+	return window.innerWidth >= 992
+}
+
 function menuSelected(event, selectedId, menuTitle){
+	if(isDesktop()) closeMenuContainer();
 	hideSelectArea();
 	hideMenuSelected();
+	if (actualMenuSelectedId == selectedId){
+		actualMenuSelectedId = '';
+		return
+	}
+	menuDesktopChevronIcon = event?.srcElement?.nextElementSibling || event?.srcElement?.parentNode?.nextElementSibling 
 	const menuHeader = document.querySelector(".newHeader__menuHeader");
 	const menuHeaderTitle = document.querySelector(".newHeader__menuHeader__title")
 	if(window.innerWidth < 992) menuHeader.style.display = 'flex';
@@ -250,15 +280,17 @@ function menuSelected(event, selectedId, menuTitle){
 	selectedMenu.style.display = 'flex';
 
 	menuHeaderTitle.innerHTML = menuTitle;
-
 	actualMenuSelectedId = selectedId;
-
-	if(window.innerWidth >= 992){
+	if(new Array(...menuDesktopChevronIcon.classList).includes("newHeader__topArea__selectedMenuItem-chevron")){
+		menuDesktopChevronIcon.classList.add("menuDesktopChevronOn");
+	}
+	if(isDesktop()){
 		openMenuContainer();
 	}
 }
 
 function hideMenuSelected(){
+	if(actualMenuSelectedId == '') return;
 	const menuHeader = document.querySelector(".newHeader__menuHeader");
 	menuHeader.style.display = "none";
 	const selectedMenu = document.querySelector('#'+ actualMenuSelectedId)
@@ -283,6 +315,7 @@ function backToMenuOptions(){
 
 function openSignFiberModal(){
 	const signFiberModal = document.querySelector(".newHeader__signFiberModal");
+	if(signFiberModal.style.display == 'initial') return closeSignFiberModal();
 	signFiberModal.style.display = 'initial'
 	blockScrollOnPage();
 }
@@ -292,12 +325,42 @@ function closeSignFiberModal(){
 	signFiberModal.style.display = 'none'
 	releaseScrollOnPage();
 }
+document.querySelector(".newHeader__topArea__changeLocationContainer").addEventListener("click", function(event){
+    event.stopPropagation();
+});
+document.querySelector(".newHeader__topArea__regionalizationArea").addEventListener("click", function(event){
+    triggerRegionalizationModal(event);
+});
+function triggerRegionalizationModal(event){
+	event.stopPropagation();
+	const regionalizationModal = document.querySelector(".newHeader__topArea__changeLocationContainer");
+	if (regionalizationModal.style.display == "none" || regionalizationModal.style.display == '') openRegionalizationModal();
+	else closeRegionalizationModal()
+}
+function openRegionalizationModal(){
+	const regionalizationModal = document.querySelector(".newHeader__topArea__changeLocationContainer");
+	const regionalizationModalOverlay = document.querySelector(".newHeader__topArea__changeLocationContainer-overlay");
+	const regionalizationButton = document.querySelector(".newHeader__topArea__regionalizationArea")
+	regionalizationButton.classList.add("regionalizationAreaIsFocused")
+	regionalizationModal.style.display = "initial";
+	regionalizationModalOverlay.style.display = "initial";
+	blockScrollOnPage();
+}
+function closeRegionalizationModal(){
+	const regionalizationModal = document.querySelector(".newHeader__topArea__changeLocationContainer");
+	const regionalizationButton = document.querySelector(".newHeader__topArea__regionalizationArea")
+	const regionalizationModalOverlay = document.querySelector(".newHeader__topArea__changeLocationContainer-overlay");
+	regionalizationButton.classList.remove("regionalizationAreaIsFocused")
+	regionalizationModal.style.display = "none";
+	regionalizationModalOverlay.style.display = "none";
+	releaseScrollOnPage();
+}
 
 function blockScrollOnPage(){
 	const htmlTag = document.querySelector('html');
 	htmlTag.style.overflowY = 'hidden';
 	if(window.innerWidth >= 992){
-		htmlTag.style.paddingRight = '20px';
+		htmlTag.style.paddingRight = '16px';
 	}
 
 }
@@ -307,3 +370,4 @@ function releaseScrollOnPage(){
 	htmlTag.style.overflowY = 'scroll';
 	htmlTag.style.paddingRight = '0px';
 }
+
