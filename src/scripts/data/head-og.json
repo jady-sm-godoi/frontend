@@ -1,16 +1,20 @@
-[{
-  "title": "Internet fibra ótica: planos de internet banda larga Oi Fibra",
-  "description": "Saiba como funciona a internet fibra ótica. Conheça os planos de Oi Fibra e os benefícios exclusivos pra você. Acesse e aproveite as melhores ofertas.",
-  "canonicalUrl": "https://oi.com.br/internet",
-  "ogType": "website",
-  "ogLocale": "pt_BR",
-  "ogImage": "https://portalnovafibra.s3.amazonaws.com/prd/home/oi-logo-verde.svg",
-  "ogImageType": "image/svg+xml",
-  "ogImageWidth": "48px",
-  "ogImageHeight": "42px",
-  "twitterCard": "summary",
-  "twitterSite": "@oi_oficial",
-  "twitterCreator": "@oi_oficial",
-  "twitterDomain": "https://www.oi.com.br/"
-}
+[
+	{
+		"title": "Oi Fibra: planos de internet residencial e internet para empresas",
+		"description": "Confira a cobertura dos planos Oi Fibra de internet residencial e internet pra empresas com até 1 Giga. Acesse o atendimento oi, 2ªvia de conta e mais.",
+		"canonicalUrl": "https://www.oi.com.br/",
+		"ogSiteName": "Oi Fibra",
+		"ogType": "website",
+		"ogLocale": "pt_BR",
+		"ogImage": "https://portalnovafibra.s3.amazonaws.com/prd/home/oi-logo-verde.svg",
+		"ogImageTitle": "Logo Oi",
+		"ogImageType": "image/png",
+		"ogImageWidth": "48px",
+		"ogImageHeight": "42px",
+		"twitterCard": "summary",
+		"twitterSite": "@oi_oficial",
+		"twitterCreator": "@oi_oficial",
+		"twitterDomain": "https://www.oi.com.br/",
+		"gtmTag": "GTM-W6Q9KD2"
+	}
 ]

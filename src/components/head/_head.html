@@ -13,7 +13,24 @@
 	content="ydwh2aK3KPNg2gwIqmRu5qUJyja6elubXMifsviXw6I"
 />
 
+<!-- Google Tag Manager -->
+<script>
+	;(function (w, d, s, l, i) {
+		w[l] = w[l] || []
+		w[l].push({'gtm.start': new Date().getTime(), event: 'gtm.js'})
+		var f = d.getElementsByTagName(s)[0],
+			j = d.createElement(s),
+			dl = l != 'dataLayer' ? '&l=' + l : ''
+		j.async = true
+		j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl
+		f.parentNode.insertBefore(j, f)
+	})(window, document, 'script', 'dataLayer', "@@gtmTag")
+</script>
+<!-- End Google Tag Manager -->
+
 <!-- Open Graph Metas -->
+<meta property="og:title" content="@@title" />
+<meta property="og:site_name" content="@@ogSiteName" />
 <meta property="og:url" content="@@canonicalUrl" />
 <meta property="og:description" content="@@description" />
 <meta property="og:type" content="@@ogType" />
@@ -32,7 +49,7 @@
 <meta name="twitter:title" content="@@title" />
 <meta name="twitter:description" content="@@description" />
 <meta name="twitter:image" content="@@ogImage" />
-<meta name="twitter:image:alt" content="@@title" />
+<meta name="twitter:image:alt" content="@@ogImageTitle" />
 
 <!-- Google Fonts API -->
 <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -80,17 +97,21 @@
 <link
 	href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
 	rel="stylesheet"
-	
 />
 <!-- // Open Sans (Google Fonts) -->
 
 <!-- CSS -->
-<link rel="stylesheet" href="styles/main.css"/>
+<link rel="stylesheet" href="styles/main.css" />
 <!--// CSS -->
 
 <script type="text/javascript" defer src="scripts/main.js"></script>
 
-<script src="https://vlibras.gov.br/app/vlibras-plugin.js" onload="vlibasManager.deployVlibras()" async defer></script>
+<script
+	src="https://vlibras.gov.br/app/vlibras-plugin.js"
+	onload="vlibasManager.deployVlibras()"
+	async
+	defer
+></script>
 <!-- DEFERRED SCRIPTS -->
 
 <!-- <script defer src="scripts/components/modal-atendimento.js"></script> -->

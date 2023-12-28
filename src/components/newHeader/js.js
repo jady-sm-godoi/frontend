@@ -3,13 +3,12 @@ function selectCity(event, city) {
 	destroyModal()
 }
 
-
 class DebounceSearchRequest {
 	constructor() {
 		this.timer
 		this.delayToDeploy = 500
 	}
-	deployPromisse(callback, { autokill = false }) {
+	deployPromisse(callback, {autokill = false}) {
 		autokill && this.kill()
 		this.timer = setTimeout(callback, this.delayToDeploy)
 	}
@@ -24,32 +23,30 @@ function showCitys(arr) {
 	const currentCity = offerManager.currentCity
 	createCityLi(currentCity, -1, getUlContent)
 	arr.forEach((city, index) => {
-		if(currentCity.city.toUpperCase() != city.city.toUpperCase()){
-
+		if (currentCity.city.toUpperCase() != city.city.toUpperCase()) {
 			createCityLi(city, index, getUlContent)
 		}
 	})
 	mappingFocusedButtons()
-	
 }
 
-function createCityLi(city, index, getUlContent){
+function createCityLi(city, index, getUlContent) {
 	const createRowLi = document.createElement('li')
-	const locationIconContainer =  document.createElement('div');
+	const locationIconContainer = document.createElement('div')
 	const locationIcon = `
 	<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
 	<path fill-rule="evenodd" clip-rule="evenodd" d="M3.75 10.0772C3.75 5.51246 7.45195 1.75 12 1.75C16.548 1.75 20.25 5.51246 20.25 10.0772C20.25 12.2703 19.3883 14.4044 17.8557 15.9654L12.892 21.021C12.402 21.52 11.598 21.52 11.108 21.021L6.14434 15.9654C4.6117 14.4044 3.75 12.2703 3.75 10.0772ZM12 0.25C6.60692 0.25 2.25 4.70073 2.25 10.0772C2.25 12.6578 3.26211 15.1708 5.074 17.0163L10.0377 22.0719C11.1156 23.1697 12.8844 23.1697 13.9623 22.0719L18.926 17.0163C20.7379 15.1708 21.75 12.6578 21.75 10.0772C21.75 4.70073 17.3931 0.25 12 0.25ZM9.75 10C9.75 8.75736 10.7574 7.75 12 7.75C13.2426 7.75 14.25 8.75736 14.25 10C14.25 11.2426 13.2426 12.25 12 12.25C10.7574 12.25 9.75 11.2426 9.75 10ZM12 6.25C9.92893 6.25 8.25 7.92893 8.25 10C8.25 12.0711 9.92893 13.75 12 13.75C14.0711 13.75 15.75 12.0711 15.75 10C15.75 7.92893 14.0711 6.25 12 6.25Z" fill="var(--newhome-semi-black)"/>
 	</svg>`
-	locationIconContainer.innerHTML = locationIcon;
+	locationIconContainer.innerHTML = locationIcon
 	createRowLi.setAttribute('class', 'regionalization-city-item')
 	const createRowButton = document.createElement('button')
 	createRowButton.setAttribute('class', 'header-modal_li_buttons')
 	createRowButton.innerText = `${city.city.toUpperCase()}, ${city.uf.toUpperCase()}`
 	createRowButton.dataset['cityindex'] = index
 	createRowButton.dataset['normalized'] = city.normalized
-	
+
 	createRowButton.autofocus = true
-	
+
 	createRowButton.setAttribute('onclick', 'selectCity(event, this)')
 	createRowLi.appendChild(locationIconContainer)
 	createRowLi.appendChild(createRowButton)
@@ -81,7 +78,7 @@ const fetchCitysOnBackend = (city) => {
 				.then((request) => showCitys(request))
 				.catch(() => showCitys(offerManager.defaultCities))
 		},
-		{ autokill: true }
+		{autokill: true}
 	)
 }
 
@@ -110,7 +107,9 @@ function openModal() {
 	createModal.setAttribute('class', 'header-modal_city_modal')
 	createModal.innerHTML = modalStructure
 
-	document.querySelector('.newHeader__topArea__changeLocationContainer').appendChild(createModal)
+	document
+		.querySelector('.newHeader__topArea__changeLocationContainer')
+		.appendChild(createModal)
 
 	const createUl = document.createElement('ul')
 	createUl.className = 'elUl'
@@ -129,8 +128,10 @@ setTimeout(openModal, 2000)
 function destroyModal() {
 	// isModalRegionalizationClosed = true;
 	const getModal = document.getElementById('header-modal-container')
-	document.querySelector('.newHeader__topArea__changeLocationContainer').removeChild(getModal)
-	releaseScrollOnPage();
+	document
+		.querySelector('.newHeader__topArea__changeLocationContainer')
+		.removeChild(getModal)
+	releaseScrollOnPage()
 }
 
 function mappingFocusedButtons() {
@@ -171,13 +172,17 @@ const aSubtraction = document.getElementById('button_accessibility_subtraction')
 const aSum = document.getElementById('button_accessibility_sum')
 const aTheme = document.getElementById('button_accessibility_theme')
 const aVlibras = document.getElementById('button_accessibility_vlibras')
-const VlibrasAndContrastContainer = document.getElementById('vlibras-and-contrast-container')
+const VlibrasAndContrastContainer = document.getElementById(
+	'vlibras-and-contrast-container'
+)
 
-function toggleLibrasAndContrastContainer(){
-    if(themeManager.currentTheme == 'dark' || vlibasManager.currentState){
-        return VlibrasAndContrastContainer.classList.add('newHeader__acessibility-active')
-    }
-    VlibrasAndContrastContainer.classList.remove('newHeader__acessibility-active')
+function toggleLibrasAndContrastContainer() {
+	if (themeManager.currentTheme == 'dark' || vlibasManager.currentState) {
+		return VlibrasAndContrastContainer.classList.add(
+			'newHeader__acessibility-active'
+		)
+	}
+	VlibrasAndContrastContainer.classList.remove('newHeader__acessibility-active')
 }
 setInterval(toggleLibrasAndContrastContainer, 2000)
 
@@ -189,12 +194,11 @@ aSubtraction.addEventListener('click', function (e) {
 aTheme.addEventListener('click', function (e) {
 	themeManager.currentTheme =
 		themeManager.currentTheme == 'dark' ? 'light' : 'dark'
-    toggleLibrasAndContrastContainer()
-    
+	toggleLibrasAndContrastContainer()
 })
 aVlibras.addEventListener('click', function (e) {
 	vlibasManager.currentState = true
-    toggleLibrasAndContrastContainer()
+	toggleLibrasAndContrastContainer()
 })
 
 aSum.addEventListener('click', function (e) {
@@ -203,7 +207,7 @@ aSum.addEventListener('click', function (e) {
 })
 
 offerManager.runWhenCityLoad('data', (city) => {
-	const cityNameArea = document.querySelector(".newHeader__topArea__cityName")
+	const cityNameArea = document.querySelector('.newHeader__topArea__cityName')
 	cityNameArea.innerHTML = `${city.city}<span class="newHeader__topArea__ufName">, ${city.uf}</span>`
 })
 
@@ -222,152 +226,180 @@ function resize(action) {
 	}
 }
 
-let isDesktopBefore = isDesktop();
-window.addEventListener('resize', ()=> {
-	if(isDesktopBefore == isDesktop()) return
-	isDesktopBefore = isDesktop();
+let isDesktopBefore = isDesktop()
+window.addEventListener('resize', () => {
+	if (isDesktopBefore == isDesktop()) return
+	isDesktopBefore = isDesktop()
 	backToMenuOptions()
-	closeMenuContainer();
-});
+	closeMenuContainer()
+})
 
-let menuDesktopChevronIcon = undefined;
+let menuDesktopChevronIcon = undefined
 
-function triggerMenuMobile(){
-	const menuContainer = document.querySelector(".newHeader__menuContainer");
-	if(new Array(...menuContainer.classList).includes("newHeader__menuIsActive")) closeMenuContainer()
+function triggerMenuMobile() {
+	const menuContainer = document.querySelector('.newHeader__menuContainer')
+	if (new Array(...menuContainer.classList).includes('newHeader__menuIsActive'))
+		closeMenuContainer()
 	else openMenuMobile()
 }
 
-function openMenuMobile(){
-	openMenuContainer();
+function openMenuMobile() {
+	openMenuContainer()
 }
 
-function openMenuContainer(){
-	const menuContainer = document.querySelector(".newHeader__menuContainer");
+function openMenuContainer() {
+	const menuContainer = document.querySelector('.newHeader__menuContainer')
 	menuContainer.classList.add('newHeader__menuIsActive')
-	blockScrollOnPage();
+	blockScrollOnPage()
 }
 
-function closeMenuContainer(){
-	if( menuDesktopChevronIcon){
-		menuDesktopChevronIcon.classList.remove("menuDesktopChevronOn");
+function closeMenuContainer() {
+	if (menuDesktopChevronIcon) {
+		menuDesktopChevronIcon.classList.remove('menuDesktopChevronOn')
 	}
-	const menuContainer = document.querySelector(".newHeader__menuContainer");
-	menuContainer.classList.remove('newHeader__menuIsActive');	
-	releaseScrollOnPage();
-	
+	const menuContainer = document.querySelector('.newHeader__menuContainer')
+	menuContainer.classList.remove('newHeader__menuIsActive')
+	releaseScrollOnPage()
 }
 
-let actualMenuSelectedId;
+let actualMenuSelectedId
 
-function isDesktop(){
+function isDesktop() {
 	return window.innerWidth >= 992
 }
 
-function menuSelected(event, selectedId, menuTitle){
-	if(isDesktop()) closeMenuContainer();
-	hideSelectArea();
-	hideMenuSelected();
-	if (actualMenuSelectedId == selectedId){
-		actualMenuSelectedId = '';
+function menuSelected(event, selectedId, menuTitle) {
+	if (isDesktop()) closeMenuContainer()
+	hideSelectArea()
+	hideMenuSelected()
+	if (actualMenuSelectedId == selectedId && isDesktop()) {
+		actualMenuSelectedId = ''
 		return
 	}
-	menuDesktopChevronIcon = event?.srcElement?.nextElementSibling || event?.srcElement?.parentNode?.nextElementSibling 
-	const menuHeader = document.querySelector(".newHeader__menuHeader");
-	const menuHeaderTitle = document.querySelector(".newHeader__menuHeader__title")
-	if(window.innerWidth < 992) menuHeader.style.display = 'flex';
-	const selectedMenu = document.querySelector('#'+ selectedId)
-	selectedMenu.style.display = 'flex';
+	menuDesktopChevronIcon =
+		event?.srcElement?.nextElementSibling ||
+		event?.srcElement?.parentNode?.nextElementSibling
+	const menuHeader = document.querySelector('.newHeader__menuHeader')
+	const menuHeaderTitle = document.querySelector(
+		'.newHeader__menuHeader__title'
+	)
+	if (window.innerWidth < 992) menuHeader.style.display = 'flex'
+	const selectedMenu = document.querySelector('#' + selectedId)
+	selectedMenu.style.display = 'flex'
 
-	menuHeaderTitle.innerHTML = menuTitle;
-	actualMenuSelectedId = selectedId;
-	if(new Array(...menuDesktopChevronIcon.classList).includes("newHeader__topArea__selectedMenuItem-chevron")){
-		menuDesktopChevronIcon.classList.add("menuDesktopChevronOn");
+	menuHeaderTitle.innerHTML = menuTitle
+	actualMenuSelectedId = selectedId
+	console.log(event, menuDesktopChevronIcon)
+	if (
+		new Array(...menuDesktopChevronIcon.classList).includes(
+			'newHeader__topArea__selectedMenuItem-chevron'
+		)
+	) {
+		menuDesktopChevronIcon.classList.add('menuDesktopChevronOn')
 	}
-	if(isDesktop()){
-		openMenuContainer();
+	if (isDesktop()) {
+		openMenuContainer()
 	}
 }
 
-function hideMenuSelected(){
-	if(actualMenuSelectedId == '') return;
-	const menuHeader = document.querySelector(".newHeader__menuHeader");
-	menuHeader.style.display = "none";
-	const selectedMenu = document.querySelector('#'+ actualMenuSelectedId)
-	if(selectedMenu) selectedMenu.style.display = 'none';
-	
+function hideMenuSelected() {
+	if (actualMenuSelectedId == '') return
+	const menuHeader = document.querySelector('.newHeader__menuHeader')
+	menuHeader.style.display = 'none'
+	const selectedMenu = document.querySelector('#' + actualMenuSelectedId)
+	if (selectedMenu) selectedMenu.style.display = 'none'
 }
 
-function hideSelectArea(){
-	const selectArea = document.querySelector("#select-area");
-	selectArea.style.display = 'none';
+function hideSelectArea() {
+	const selectArea = document.querySelector('#select-area')
+	selectArea.style.display = 'none'
 }
 
-function showSelectArea(){
-	const selectArea = document.querySelector("#select-area");
-	selectArea.style.display = 'initial';
+function showSelectArea() {
+	const selectArea = document.querySelector('#select-area')
+	selectArea.style.display = 'initial'
 }
 
-function backToMenuOptions(){
-	hideMenuSelected();
-	showSelectArea();
+function backToMenuOptions() {
+	hideMenuSelected()
+	showSelectArea()
 }
 
-function openSignFiberModal(){
-	const signFiberModal = document.querySelector(".newHeader__signFiberModal");
-	if(signFiberModal.style.display == 'initial') return closeSignFiberModal();
+function openSignFiberModal() {
+	const signFiberModal = document.querySelector('.newHeader__signFiberModal')
+	if (signFiberModal.style.display == 'initial') return closeSignFiberModal()
 	signFiberModal.style.display = 'initial'
-	blockScrollOnPage();
+	blockScrollOnPage()
 }
 
-function closeSignFiberModal(){
-	const signFiberModal = document.querySelector(".newHeader__signFiberModal");
+function closeSignFiberModal() {
+	const signFiberModal = document.querySelector('.newHeader__signFiberModal')
 	signFiberModal.style.display = 'none'
-	releaseScrollOnPage();
+	releaseScrollOnPage()
 }
-document.querySelector(".newHeader__topArea__changeLocationContainer").addEventListener("click", function(event){
-    event.stopPropagation();
-});
-document.querySelector(".newHeader__topArea__regionalizationArea").addEventListener("click", function(event){
-    triggerRegionalizationModal(event);
-});
-function triggerRegionalizationModal(event){
-	event.stopPropagation();
-	const regionalizationModal = document.querySelector(".newHeader__topArea__changeLocationContainer");
-	if (regionalizationModal.style.display == "none" || regionalizationModal.style.display == '') openRegionalizationModal();
+document
+	.querySelector('.newHeader__topArea__changeLocationContainer')
+	.addEventListener('click', function (event) {
+		event.stopPropagation()
+	})
+document
+	.querySelector('.newHeader__topArea__regionalizationArea')
+	.addEventListener('click', function (event) {
+		triggerRegionalizationModal(event)
+	})
+function triggerRegionalizationModal(event) {
+	event.stopPropagation()
+	const regionalizationModal = document.querySelector(
+		'.newHeader__topArea__changeLocationContainer'
+	)
+	if (
+		regionalizationModal.style.display == 'none' ||
+		regionalizationModal.style.display == ''
+	)
+		openRegionalizationModal()
 	else closeRegionalizationModal()
 }
-function openRegionalizationModal(){
-	const regionalizationModal = document.querySelector(".newHeader__topArea__changeLocationContainer");
-	const regionalizationModalOverlay = document.querySelector(".newHeader__topArea__changeLocationContainer-overlay");
-	const regionalizationButton = document.querySelector(".newHeader__topArea__regionalizationArea")
-	regionalizationButton.classList.add("regionalizationAreaIsFocused")
-	regionalizationModal.style.display = "initial";
-	regionalizationModalOverlay.style.display = "initial";
-	blockScrollOnPage();
+function openRegionalizationModal() {
+	const regionalizationModal = document.querySelector(
+		'.newHeader__topArea__changeLocationContainer'
+	)
+	const regionalizationModalOverlay = document.querySelector(
+		'.newHeader__topArea__changeLocationContainer-overlay'
+	)
+	const regionalizationButton = document.querySelector(
+		'.newHeader__topArea__regionalizationArea'
+	)
+	regionalizationButton.classList.add('regionalizationAreaIsFocused')
+	regionalizationModal.style.display = 'initial'
+	regionalizationModalOverlay.style.display = 'initial'
+	blockScrollOnPage()
 }
-function closeRegionalizationModal(){
-	const regionalizationModal = document.querySelector(".newHeader__topArea__changeLocationContainer");
-	const regionalizationButton = document.querySelector(".newHeader__topArea__regionalizationArea")
-	const regionalizationModalOverlay = document.querySelector(".newHeader__topArea__changeLocationContainer-overlay");
-	regionalizationButton.classList.remove("regionalizationAreaIsFocused")
-	regionalizationModal.style.display = "none";
-	regionalizationModalOverlay.style.display = "none";
-	releaseScrollOnPage();
+function closeRegionalizationModal() {
+	const regionalizationModal = document.querySelector(
+		'.newHeader__topArea__changeLocationContainer'
+	)
+	const regionalizationButton = document.querySelector(
+		'.newHeader__topArea__regionalizationArea'
+	)
+	const regionalizationModalOverlay = document.querySelector(
+		'.newHeader__topArea__changeLocationContainer-overlay'
+	)
+	regionalizationButton.classList.remove('regionalizationAreaIsFocused')
+	regionalizationModal.style.display = 'none'
+	regionalizationModalOverlay.style.display = 'none'
+	releaseScrollOnPage()
 }
 
-function blockScrollOnPage(){
-	const htmlTag = document.querySelector('html');
-	htmlTag.style.overflowY = 'hidden';
-	if(window.innerWidth >= 992){
-		htmlTag.style.paddingRight = '16px';
+function blockScrollOnPage() {
+	const htmlTag = document.querySelector('html')
+	htmlTag.style.overflowY = 'hidden'
+	if (window.innerWidth >= 992) {
+		htmlTag.style.paddingRight = '16px'
 	}
-
 }
 
-function releaseScrollOnPage(){
-	const htmlTag = document.querySelector('html');
-	htmlTag.style.overflowY = 'scroll';
-	htmlTag.style.paddingRight = '0px';
+function releaseScrollOnPage() {
+	const htmlTag = document.querySelector('html')
+	htmlTag.style.overflowY = 'scroll'
+	htmlTag.style.paddingRight = '0px'
 }
-
