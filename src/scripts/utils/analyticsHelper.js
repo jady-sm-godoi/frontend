@@ -230,8 +230,8 @@ const analyticsContainerHelper = async () => {
 		]
 
 		if (
-			(itemIdentification =
-				'tv_e_streaming_assine_junto_com_a_oi_fibra_home_oi') &&
+			itemIdentification ==
+				'tv_e_streaming_assine_junto_com_a_oi_fibra_home_oi' &&
 			!itemName
 		) {
 			items = [
@@ -293,7 +293,8 @@ const analyticsContainerHelper = async () => {
 
 		if (
 			itemIdentification ==
-			'marketplace_da_oi_os_melhores_produtos_de_tecnologia_estao_no_oi_place'
+				'marketplace_da_oi_os_melhores_produtos_de_tecnologia_estao_no_oi_place' &&
+			!itemName
 		) {
 			items = [
 				{
@@ -536,7 +537,7 @@ const analyticsContainerHelper = async () => {
 	})
 
 	newObserver({
-		root: document.body, //document.querySelector('.plansForCompanies__flexbox'),
+		root: document.querySelector('.plansForCompanies__section home-section'),
 		target: document.querySelector('.plansForCompanies__ctaArea'),
 		callback: (event) =>
 			viewPromotionEvent(event, {
@@ -548,7 +549,7 @@ const analyticsContainerHelper = async () => {
 	})
 
 	newObserver({
-		root: document.querySelector('.signStreaming__flexbox'),
+		root: document.querySelector('.signStreaming__section home-section'),
 		target: document.querySelector('.signStreaming__carousel-wrapper'),
 		callback: (event) =>
 			viewItemEvent(event, {
@@ -557,7 +558,7 @@ const analyticsContainerHelper = async () => {
 	})
 
 	newObserver({
-		root: document.querySelector('.oiSolutions__section'),
+		root: document.querySelector('.oiSolutions__section home-section'),
 		target: document.querySelector('.oiSolutions__carousel-wrapper'),
 		callback: (event) =>
 			viewItemEvent(event, {
@@ -566,7 +567,7 @@ const analyticsContainerHelper = async () => {
 	})
 
 	newObserver({
-		root: document.querySelector('.oiFibraX__section'),
+		root: document.querySelector('.oiFibraX__section home-section'),
 		target: document.querySelector('.oiFibraX__ctaArea'),
 		callback: (event) =>
 			viewPromotionEvent(event, {
@@ -578,7 +579,7 @@ const analyticsContainerHelper = async () => {
 	})
 
 	newObserver({
-		root: document.querySelector('.oiPlace__section'),
+		root: document.querySelector('.oiPlace__section home-section'),
 		target: document.querySelector('.oiPlace__carousel-wrapper'),
 		callback: (event) =>
 			viewItemEvent(event, {
