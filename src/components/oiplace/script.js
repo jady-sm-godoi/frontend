@@ -1,12 +1,18 @@
 document.addEventListener('DOMContentLoaded', function () {
-	const oiPlaceCarouselWrapper = document.querySelector('.oiPlace__carousel-wrapper')
+	const oiPlaceCarouselWrapper = document.querySelector(
+		'.oiPlace__carousel-wrapper'
+	)
 	const oiPlaceCards = document.querySelectorAll('.oiPlace__card')
 	const oiPlaceDotsContainer = document.querySelector('.oiPlace__dotsContainer')
 	let oiPlaceActiveDotIndex = 0
-	let oiPlaceCardsVisible = Math.floor(oiPlaceCarouselWrapper.offsetWidth / oiPlaceCards[0].offsetWidth)
+	let oiPlaceCardsVisible = Math.floor(
+		oiPlaceCarouselWrapper.offsetWidth / oiPlaceCards[0].offsetWidth
+	)
 
 	function updateDotsToShow() {
-		oiPlaceCardsVisible = Math.floor(oiPlaceCarouselWrapper.offsetWidth / oiPlaceCards[0].offsetWidth)
+		oiPlaceCardsVisible = Math.floor(
+			oiPlaceCarouselWrapper.offsetWidth / oiPlaceCards[0].offsetWidth
+		)
 		const dots = document.querySelectorAll('.oiPlace__dot')
 		for (let i = 0; i < oiPlaceCards.length; i++) {
 			if (i >= oiPlaceCards.length - oiPlaceCardsVisible + 1) {
@@ -17,7 +23,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
 	function setupDots() {
 		oiPlaceDotsContainer.innerHTML = ''
-		oiPlaceCardsVisible = Math.floor(oiPlaceCarouselWrapper.offsetWidth / oiPlaceCards[0].offsetWidth)
+		oiPlaceCardsVisible = Math.floor(
+			oiPlaceCarouselWrapper.offsetWidth / oiPlaceCards[0].offsetWidth
+		)
 
 		for (let i = 0; i < oiPlaceCards.length; i++) {
 			const dot = document.createElement('button')
@@ -37,14 +45,28 @@ document.addEventListener('DOMContentLoaded', function () {
 
 	window.addEventListener('resize', updateDotsToShow)
 
-    function scrollToCard(index) {
+	function scrollToCard(index) {
 		const cardWidth = oiPlaceCards[0].offsetWidth
 		oiPlaceCarouselWrapper.scrollLeft = index * cardWidth
 	}
 
 	function updateActiveDot() {
 		const cardWidth = oiPlaceCards[0].offsetWidth
-		const oiPlaceActiveDotIndexInView = Math.floor(oiPlaceCarouselWrapper.scrollLeft / cardWidth)
+		let oiPlaceActiveDotIndexInView = Math.floor(
+			oiPlaceCarouselWrapper.scrollLeft / cardWidth
+		)
+
+		const elementMaxScroll =
+			oiPlaceCarouselWrapper.scrollWidth - oiPlaceCarouselWrapper.clientWidth
+
+		const isMaxScroll =
+			oiPlaceCarouselWrapper.scrollLeft - elementMaxScroll == 0
+
+		if (isMaxScroll) {
+			const dots = document.querySelectorAll('.oiPlace__dot')
+			const visibleDots = [...dots].filter((dot) => dot.style.display != 'none')
+			oiPlaceActiveDotIndexInView = visibleDots.length - 1
+		}
 
 		const dots = document.querySelectorAll('.oiPlace__dot')
 		dots.forEach((dot) => dot.classList.remove('active'))

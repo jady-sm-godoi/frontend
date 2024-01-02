@@ -1,24 +1,24 @@
 [
 	{
-		"id": 4329,
-		"city": "Salvador das Missões",
-		"uf": "RS",
-		"ddd": 55,
-		"normalized": "salvador das missoes"
+		"id": 4203,
+		"city": "Rio de Janeiro",
+		"uf": "RJ",
+		"ddd": 21,
+		"normalized": "rio de janeiro"
 	},
 	{
-		"id": 4330,
-		"city": "Salvador do Sul",
-		"uf": "RS",
-		"ddd": 51,
-		"normalized": "salvador do sul"
+		"id": 592,
+		"city": "Belo Horizonte",
+		"uf": "MG",
+		"ddd": 31,
+		"normalized": "belo horizonte"
 	},
 	{
-		"id": 4882,
-		"city": "São Salvador do Tocantins",
-		"uf": "TO",
-		"ddd": 63,
-		"normalized": "sao salvador do tocantins"
+		"id": 4850,
+		"city": "São Paulo",
+		"uf": "SP",
+		"ddd": 11,
+		"normalized": "sao paulo"
 	},
 	{
 		"id": 4328,
@@ -26,5 +26,47 @@
 		"uf": "BA",
 		"ddd": 71,
 		"normalized": "salvador"
+	},
+	{
+		"id": 1834,
+		"city": "Fortaleza",
+		"uf": "CE",
+		"ddd": 85,
+		"normalized": "fortaleza"
+	},
+	{
+		"id": 4106,
+		"city": "Recife",
+		"uf": "PE",
+		"ddd": 81,
+		"normalized": "recife"
+	},
+	{
+		"id": 1930,
+		"city": "Goiânia",
+		"uf": "GO",
+		"ddd": 62,
+		"normalized": "goiania"
+	},
+	{
+		"id": 1511,
+		"city": "Curitiba",
+		"uf": "PR",
+		"ddd": 41,
+		"normalized": "curitiba"
+	},
+	{
+		"id": 756,
+		"city": "Brasília",
+		"uf": "DF",
+		"ddd": 61,
+		"normalized": "brasilia"
+	},
+	{
+		"id": 3943,
+		"city": "Porto Alegre",
+		"uf": "RS",
+		"ddd": 51,
+		"normalized": "porto alegre"
 	}
 ]

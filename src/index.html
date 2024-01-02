@@ -1,42 +1,49 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+	<head>
+		<script>
+			const backendUrlVariable = 'http://localhost:3001'
+			let mainOfferVariable = null
+		</script>
+		@@loop("./components/head/_head.html", "./scripts/data/head-og.json")
+		<script src="http://localhost:4000/livereload.js"></script>
+		<!-- <script defer src="scripts/components/getoffers.js"></script> -->
+	</head>
 
-<head>
-  @@loop("./components/head/_head.html", "./scripts/data/head-og.json")
-  <script src="http://localhost:4000/livereload.js"></script>
-  <!-- <script defer src="scripts/components/getoffers.js"></script> -->
-</head>
+	<!-- @@include("./components/changeTheme/_changeTheme.html") -->
 
-<!-- @@include("./components/changeTheme/_changeTheme.html") -->
+	<body>
+		<!-- Google Tag Manager (noscript) -->
+		<noscript
+			><iframe
+				src="https://www.googletagmanager.com/ns.html?id=GTM-W6Q9KD2"
+				height="0"
+				width="0"
+				style="display: none; visibility: hidden"
+			></iframe
+		></noscript>
+		<!-- End Google Tag Manager (noscript) -->
 
-<body>
-  <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W6Q9KD2"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  <!-- End Google Tag Manager (noscript) -->
-  
+		<header>
+			@@include("./components/newHeader/_newHeader.html")
+			@@include("./components/contactButtonV2/index.html")
+		</header>
 
-  <header>
-    @@include("./components/newHeader/_newHeader.html")
-    @@include("./components/contactButtonV2/index.html")
-  </header>
+		<main id="main" class="main">
+			@@include("./components/heroBanner/_heroBanner.html")
+			@@include("./components/plansForCompanies/_plansForCompanies.html")
+			@@include("./components/signStreaming/_signStreaming.html")
+			@@include("./components/oiFibraX/_oiFibraX.html")
+			@@include("./components/oiSolutions/_oiSolutions.html")
+			@@include("./components/customerService/_customerService.html")
+			@@include("./components/oiPlace/_oiPlace.html")
+			@@include("./components/oiNews/_oiNews.html")
+			@@include("./components/avoidFraud/_avoidFraud.html")
+			@@include("./components/informationLegal/_informationLegal.html")
+		</main>
 
-  <main id="main" class="main">
-    @@include("./components/heroBanner/_heroBanner.html")
-    @@include("./components/plansForCompanies/_plansForCompanies.html")
-    @@include("./components/signStreaming/_signStreaming.html")
-    @@include("./components/oiFibraX/_oiFibraX.html")
-    @@include("./components/oiSolutions/_oiSolutions.html")
-    @@include("./components/customerService/_customerService.html")
-    @@include("./components/oiPlace/_oiPlace.html")
-    @@include("./components/oiNews/_oiNews.html")
-    @@include("./components/informationLegal/_informationLegal.html")
-  </main>
-
-  <footer class="footer_container" id="footerContainer">
-    @@include("./components/newFooter/_newFooter.html")
-  </footer>
-
-</body>
-
+		<footer class="footer_container" id="footerContainer">
+			@@include("./components/newFooter/_newFooter.html")
+		</footer>
+	</body>
 </html>

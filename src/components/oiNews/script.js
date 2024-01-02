@@ -1,12 +1,18 @@
 document.addEventListener('DOMContentLoaded', function () {
-	const oiNewsCarouselWrapper = document.querySelector('.oiNews__carousel-wrapper')
+	const oiNewsCarouselWrapper = document.querySelector(
+		'.oiNews__carousel-wrapper'
+	)
 	const oiNewsCards = document.querySelectorAll('.oiNews__card')
 	const oiNewsDotsContainer = document.querySelector('.oiNews__dotsContainer')
 	let oiNewsActiveDotIndex = 0
-	let oiNewsCardsVisible = Math.floor(oiNewsCarouselWrapper.offsetWidth / oiNewsCards[0].offsetWidth)
+	let oiNewsCardsVisible = Math.floor(
+		oiNewsCarouselWrapper.offsetWidth / oiNewsCards[0].offsetWidth
+	)
 
 	function updateDotsToShow() {
-		oiNewsCardsVisible = Math.floor(oiNewsCarouselWrapper.offsetWidth / oiNewsCards[0].offsetWidth)
+		oiNewsCardsVisible = Math.floor(
+			oiNewsCarouselWrapper.offsetWidth / oiNewsCards[0].offsetWidth
+		)
 		const dots = document.querySelectorAll('.oiNews__dot')
 		for (let i = 0; i < oiNewsCards.length; i++) {
 			if (i >= oiNewsCards.length - oiNewsCardsVisible + 1) {
@@ -17,7 +23,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
 	function setupDots() {
 		oiNewsDotsContainer.innerHTML = ''
-		oiNewsCardsVisible = Math.floor(oiNewsCarouselWrapper.offsetWidth / oiNewsCards[0].offsetWidth)
+		oiNewsCardsVisible = Math.floor(
+			oiNewsCarouselWrapper.offsetWidth / oiNewsCards[0].offsetWidth
+		)
 
 		for (let i = 0; i < oiNewsCards.length; i++) {
 			const dot = document.createElement('button')
@@ -37,14 +45,27 @@ document.addEventListener('DOMContentLoaded', function () {
 
 	window.addEventListener('resize', updateDotsToShow)
 
-    function scrollToCard(index) {
+	function scrollToCard(index) {
 		const cardWidth = oiNewsCards[0].offsetWidth
 		oiNewsCarouselWrapper.scrollLeft = index * cardWidth
 	}
 
 	function updateActiveDot() {
 		const cardWidth = oiNewsCards[0].offsetWidth
-		const oiNewsActiveDotIndexInView = Math.floor(oiNewsCarouselWrapper.scrollLeft / cardWidth)
+		let oiNewsActiveDotIndexInView = Math.floor(
+			oiNewsCarouselWrapper.scrollLeft / cardWidth
+		)
+
+		const elementMaxScroll =
+			oiNewsCarouselWrapper.scrollWidth - oiNewsCarouselWrapper.clientWidth
+
+		const isMaxScroll = oiNewsCarouselWrapper.scrollLeft - elementMaxScroll == 0
+
+		if (isMaxScroll) {
+			const dots = document.querySelectorAll('.oiNews__dot')
+			const visibleDots = [...dots].filter((dot) => dot.style.display != 'none')
+			oiNewsActiveDotIndexInView = visibleDots.length - 1
+		}
 
 		const dots = document.querySelectorAll('.oiNews__dot')
 		dots.forEach((dot) => dot.classList.remove('active'))

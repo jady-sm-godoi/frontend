@@ -1,12 +1,20 @@
 document.addEventListener('DOMContentLoaded', function () {
-	const oiSolutionsCarouselWrapper = document.querySelector('.oiSolutions__carousel-wrapper')
+	const oiSolutionsCarouselWrapper = document.querySelector(
+		'.oiSolutions__carousel-wrapper'
+	)
 	const oiSolutionsCards = document.querySelectorAll('.oiSolutions__card')
-	const oiSolutionsDotsContainer = document.querySelector('.oiSolutions__dotsContainer')
+	const oiSolutionsDotsContainer = document.querySelector(
+		'.oiSolutions__dotsContainer'
+	)
 	let oiSolutionsActiveDotIndex = 0
-	let oiSolutionsCardsVisible = Math.floor(oiSolutionsCarouselWrapper.offsetWidth / oiSolutionsCards[0].offsetWidth)
+	let oiSolutionsCardsVisible = Math.floor(
+		oiSolutionsCarouselWrapper.offsetWidth / oiSolutionsCards[0].offsetWidth
+	)
 
 	function updateDotsToShow() {
-		oiSolutionsCardsVisible = Math.floor(oiSolutionsCarouselWrapper.offsetWidth / oiSolutionsCards[0].offsetWidth)
+		oiSolutionsCardsVisible = Math.floor(
+			oiSolutionsCarouselWrapper.offsetWidth / oiSolutionsCards[0].offsetWidth
+		)
 		const dots = document.querySelectorAll('.oiSolutions__dot')
 		for (let i = 0; i < oiSolutionsCards.length; i++) {
 			if (i >= oiSolutionsCards.length - oiSolutionsCardsVisible + 1) {
@@ -17,7 +25,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
 	function setupDots() {
 		oiSolutionsDotsContainer.innerHTML = ''
-		oiSolutionsCardsVisible = Math.floor(oiSolutionsCarouselWrapper.offsetWidth / oiSolutionsCards[0].offsetWidth)
+		oiSolutionsCardsVisible = Math.floor(
+			oiSolutionsCarouselWrapper.offsetWidth / oiSolutionsCards[0].offsetWidth
+		)
 
 		for (let i = 0; i < oiSolutionsCards.length; i++) {
 			const dot = document.createElement('button')
@@ -37,14 +47,29 @@ document.addEventListener('DOMContentLoaded', function () {
 
 	window.addEventListener('resize', updateDotsToShow)
 
-    function scrollToCard(index) {
+	function scrollToCard(index) {
 		const cardWidth = oiSolutionsCards[0].offsetWidth
 		oiSolutionsCarouselWrapper.scrollLeft = index * cardWidth
 	}
 
 	function updateActiveDot() {
 		const cardWidth = oiSolutionsCards[0].offsetWidth
-		const oiSolutionsActiveDotIndexInView = Math.floor(oiSolutionsCarouselWrapper.scrollLeft / cardWidth)
+		let oiSolutionsActiveDotIndexInView = Math.floor(
+			oiSolutionsCarouselWrapper.scrollLeft / cardWidth
+		)
+
+		const elementMaxScroll =
+			oiSolutionsCarouselWrapper.scrollWidth -
+			oiSolutionsCarouselWrapper.clientWidth
+
+		const isMaxScroll =
+			oiSolutionsCarouselWrapper.scrollLeft - elementMaxScroll == 0
+
+		if (isMaxScroll) {
+			const dots = document.querySelectorAll('.oiSolutions__dot')
+			const visibleDots = [...dots].filter((dot) => dot.style.display != 'none')
+			oiSolutionsActiveDotIndexInView = visibleDots.length - 1
+		}
 
 		const dots = document.querySelectorAll('.oiSolutions__dot')
 		dots.forEach((dot) => dot.classList.remove('active'))

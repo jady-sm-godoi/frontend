@@ -1,6 +1,7 @@
 function selectCity(event, city) {
 	offerManager.setCurrentCityByIndex(city.dataset.cityindex)
-	destroyModal()
+	// destroyModal()
+	closeRegionalizationModal()
 }
 
 class DebounceSearchRequest {
@@ -20,12 +21,8 @@ class DebounceSearchRequest {
 function showCitys(arr) {
 	const getUlContent = document.getElementById('container-city-modal')
 	getUlContent.innerHTML = ''
-	const currentCity = offerManager.currentCity
-	createCityLi(currentCity, -1, getUlContent)
 	arr.forEach((city, index) => {
-		if (currentCity.city.toUpperCase() != city.city.toUpperCase()) {
-			createCityLi(city, index, getUlContent)
-		}
+		createCityLi(city, index, getUlContent)
 	})
 	mappingFocusedButtons()
 }
@@ -184,7 +181,7 @@ function toggleLibrasAndContrastContainer() {
 	}
 	VlibrasAndContrastContainer.classList.remove('newHeader__acessibility-active')
 }
-setInterval(toggleLibrasAndContrastContainer, 2000)
+setInterval(toggleLibrasAndContrastContainer, 10000)
 
 aSubtraction.addEventListener('click', function (e) {
 	e.preventDefault()
@@ -206,9 +203,66 @@ aSum.addEventListener('click', function (e) {
 	resize('increase')
 })
 
+function hideBanner(toggle = true, loader = true) {
+	const bannerImg = document.querySelector('.heroBanner__backgroundImage')
+	const bannerContent = document.querySelector('.heroBanner__flexbox-top')
+	const loadingElement = document.querySelector('#loader')
+	bannerImg.style.display = toggle ? 'none' : 'flex'
+	bannerContent.style.display = toggle ? 'none' : 'flex'
+	loadingElement.style.display =
+		toggle == false || loader == false ? 'none' : 'flex'
+}
+
+function replaceBannerOfferValues(mainOffer) {
+	const integer = Math.floor(mainOffer.amount)
+	const float = mainOffer.amount.toFixed(2).split('.')[1]
+
+	const speed =
+		mainOffer.downloadSpeed >= 1000
+			? mainOffer.downloadSpeed / 1000
+			: mainOffer.downloadSpeed
+	const speedType = speed >= 1000 ? 'GIGA' : 'MEGA'
+
+	document.querySelector(
+		'.heroBanner__signFiberVelocity'
+	).innerHTML = `${speed} <b>${speedType}</b>`
+	document.querySelector('.heroBanner__priceIntValue').innerHTML = `${integer}`
+	document.querySelector('.heroBanner__decimalValue').innerHTML = `,${float}`
+}
+
+function loadOffersValues(dados) {
+	const {offers, data} = dados
+
+	if (data?.offers?.length === 0 && offers?.length === 0) {
+		mainOfferVariable = null
+		return hideBanner()
+	}
+
+	const newOffers = data?.offers || offers
+
+	const hasGloboplayOffer =
+		newOffers.filter((offer) => offer.code.indexOf('GLOBOPLAY') != -1).length >
+		0
+
+	if (!hasGloboplayOffer) {
+		mainOfferVariable = null
+		return hideBanner()
+	}
+
+	hideBanner(false)
+	let mainOffer = newOffers.filter(
+		(offer) => offer.code.indexOf('GLOBOPLAY') != -1
+	)[0]
+
+	mainOfferVariable = mainOffer
+	replaceBannerOfferValues(mainOffer)
+}
+
 offerManager.runWhenCityLoad('data', (city) => {
 	const cityNameArea = document.querySelector('.newHeader__topArea__cityName')
 	cityNameArea.innerHTML = `${city.city}<span class="newHeader__topArea__ufName">, ${city.uf}</span>`
+
+	// loadOffersValues(offerManager)
 })
 
 function resize(action) {
@@ -289,7 +343,6 @@ function menuSelected(event, selectedId, menuTitle) {
 
 	menuHeaderTitle.innerHTML = menuTitle
 	actualMenuSelectedId = selectedId
-	console.log(event, menuDesktopChevronIcon)
 	if (
 		new Array(...menuDesktopChevronIcon.classList).includes(
 			'newHeader__topArea__selectedMenuItem-chevron'
@@ -355,9 +408,11 @@ function triggerRegionalizationModal(event) {
 	if (
 		regionalizationModal.style.display == 'none' ||
 		regionalizationModal.style.display == ''
-	)
+	) {
 		openRegionalizationModal()
-	else closeRegionalizationModal()
+	} else {
+		closeRegionalizationModal()
+	}
 }
 function openRegionalizationModal() {
 	const regionalizationModal = document.querySelector(
@@ -403,3 +458,12 @@ function releaseScrollOnPage() {
 	htmlTag.style.overflowY = 'scroll'
 	htmlTag.style.paddingRight = '0px'
 }
+
+hideBanner()
+
+document.addEventListener('keydown', (e) => {
+	if (e.keyCode == 32 && e.target.id == 'header-modal_inputcontent') {
+		document.querySelector('#header-modal_inputcontent').value += ' '
+		e.preventDefault()
+	}
+})

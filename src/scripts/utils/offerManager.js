@@ -7,9 +7,7 @@ class OfferManager {
 		this.offerData = {}
 
 		/**  @private */
-		this._backendUrl = new URL(
-			'https://homeoifibra-back-dev-hml.hml.ocpcorp.oi.intranet'
-		)
+		this._backendUrl = new URL(backendUrlVariable)
 
 		// callbacks de execucoes
 		/**
@@ -39,7 +37,6 @@ class OfferManager {
 			this.defaultCities = city
 			this._lastCitySearch = city
 		})
-
 
 		/**  @private  * @type {cityObject}  */
 		this._currentCity = {}
@@ -76,7 +73,6 @@ class OfferManager {
 	 */
 	async searchCityById(id) {
 		this._backendUrl.pathname = ['cities', 'id', id].join('/')
-
 		return await new Promise((res, rej) =>
 			fetch(this._backendUrl)
 				.then((response) => response.json())
@@ -106,11 +102,18 @@ class OfferManager {
 			'1033422'
 		].join('/')
 
+		hideBanner()
 		const defaultOffer = await new Promise((res, rej) =>
 			fetch(this._backendUrl)
 				.then((response) => response.json())
-				.then((data) => res(data))
-				.catch((err) => rej(err))
+				.then((data) => {
+					loadOffersValues(data)
+					return res(data)
+				})
+				.catch((err) => {
+					hideBanner(true, false)
+					return rej(err)
+				})
 		)
 
 		// set default city
@@ -130,7 +133,6 @@ class OfferManager {
 		// set default offer
 		this.offerData = defaultOffer
 		this._executeOfferCallbacks('data')
-
 	}
 
 	/**
@@ -152,11 +154,18 @@ class OfferManager {
 			'1033422'
 		].join('/')
 
+		hideBanner()
 		return await new Promise((res, rej) =>
 			fetch(this._backendUrl)
 				.then((response) => response.json())
-				.then((data) => res(data))
-				.catch((err) => rej(err))
+				.then((data) => {
+					loadOffersValues(data)
+					return res(data)
+				})
+				.catch((err) => {
+					hideBanner(true, false)
+					return rej(err)
+				})
 		)
 	}
 
@@ -192,7 +201,7 @@ class OfferManager {
 				id: cookies.cidade,
 				city: cookies['cidade-nome'],
 				uf: cookies.estado,
-				ddd: cookies.ddd || "",
+				ddd: cookies.ddd || '',
 				normalized: ''
 			}
 		} else {
@@ -268,7 +277,7 @@ class OfferManager {
 		this._cityCallbacks.forEach(async (cb) => {
 			try {
 				if (cb.callbackType == callbackType)
-					cb.callback(this._currentCity, callbackType == "loading")
+					cb.callback(this._currentCity, callbackType == 'loading')
 			} catch (error) {
 				console.log('erro ao execurar callback', error)
 			}
@@ -284,7 +293,7 @@ class OfferManager {
 		this._offerCallbacks.forEach(async (cb) => {
 			try {
 				if (cb.callbackType == callbackType)
-					cb.callback(this.offerData, callbackType == "loading")
+					cb.callback(this.offerData, callbackType == 'loading')
 			} catch (error) {
 				console.log('erro ao execurar callback', error)
 			}
@@ -300,7 +309,7 @@ class OfferManager {
 		if (Object.keys(this._currentCity).length > 0 && callbackType == 'data')
 			callback(this._currentCity, false)
 
-		this._cityCallbacks.push({ callbackType, callback })
+		this._cityCallbacks.push({callbackType, callback})
 	}
 
 	/**
@@ -312,7 +321,7 @@ class OfferManager {
 		if (Object.keys(this.offerData).length > 0 && callbackType == 'data')
 			callback(this.offerData, false)
 
-		this._offerCallbacks.push({ callbackType, callback })
+		this._offerCallbacks.push({callbackType, callback})
 	}
 }
 
@@ -413,8 +422,6 @@ class OfferManager {
 /**
  * @typedef {"loading" | "data"} callbackType - listeners data or loading
  */
-
-
 
 // INSTANCE OFFER HERE
 const offerManager = classInstancer(OfferManager)

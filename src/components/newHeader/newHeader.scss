@@ -468,6 +468,24 @@ button.newHeader__topArea__menuMobile__item-atendimento {
 	color: var(--color-neutral-400);
 }
 
+[data-analytics='header'] label,
+[data-analytics='header'] span,
+[data-analytics='header'] img {
+	pointer-events: none;
+}
+
+[data-analytics='banner'] label,
+[data-analytics='banner'] span,
+[data-analytics='banner'] img {
+	pointer-events: none;
+}
+
+[data-analytics='footer'] label,
+[data-analytics='footer'] span,
+[data-analytics='footer'] img {
+	pointer-events: none;
+}
+
 .newHeader__greenOption a {
 	font-weight: 500;
 	color: var(--newhome-green-contrast-600);
@@ -754,13 +772,13 @@ div.newHeader__signFiberModalContainer {
 	border-radius: 999px;
 }
 
-.regionalization-city-item:nth-child(1) {
-	background-color: var(--newhome-regionalization-active-city-color);
-	border: 1px solid var(--newhome-regionalization-active-city-border);
-}
-.regionalization-city-item:nth-child(1) button {
-	color: var(--newhome-menu-signfiber-green-border);
-}
+// .regionalization-city-item:nth-child(1) {
+// 	background-color: var(--newhome-regionalization-active-city-color);
+// 	border: 1px solid var(--newhome-regionalization-active-city-border);
+// }
+// .regionalization-city-item:nth-child(1) button {
+// 	color: var(--newhome-menu-signfiber-green-border);
+// }
 
 .regionalization-city-item:hover {
 	border: 1px solid var(--color-primary-400);
