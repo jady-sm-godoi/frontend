@@ -233,6 +233,8 @@ function replaceBannerOfferValues(mainOffer) {
 function loadOffersValues(dados) {
 	const {offers, data} = dados
 
+	typeof execComplement !== undefined && execComplement(dados)
+
 	if (data?.offers?.length === 0 && offers?.length === 0) {
 		mainOfferVariable = null
 		return hideBanner(true, false)
