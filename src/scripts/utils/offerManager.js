@@ -82,12 +82,78 @@ class OfferManager {
 	}
 
 	async requestDefaultCities() {
-		return await new Promise((resolve, reject) => {
-			fetch(this._defaultCityUrl)
-				.then((response) => response.json())
-				.then(resolve)
-				.catch(reject)
-		})
+		return [
+			{
+				id: 4203,
+				city: 'Rio de Janeiro',
+				uf: 'RJ',
+				ddd: 21,
+				normalized: 'rio de janeiro'
+			},
+			{
+				id: 592,
+				city: 'Belo Horizonte',
+				uf: 'MG',
+				ddd: 31,
+				normalized: 'belo horizonte'
+			},
+			{
+				id: 4850,
+				city: 'São Paulo',
+				uf: 'SP',
+				ddd: 11,
+				normalized: 'sao paulo'
+			},
+			{
+				id: 4328,
+				city: 'Salvador',
+				uf: 'BA',
+				ddd: 71,
+				normalized: 'salvador'
+			},
+			{
+				id: 1834,
+				city: 'Fortaleza',
+				uf: 'CE',
+				ddd: 85,
+				normalized: 'fortaleza'
+			},
+			{
+				id: 4106,
+				city: 'Recife',
+				uf: 'PE',
+				ddd: 81,
+				normalized: 'recife'
+			},
+			{
+				id: 1930,
+				city: 'Goiânia',
+				uf: 'GO',
+				ddd: 62,
+				normalized: 'goiania'
+			},
+			{
+				id: 1511,
+				city: 'Curitiba',
+				uf: 'PR',
+				ddd: 41,
+				normalized: 'curitiba'
+			},
+			{
+				id: 756,
+				city: 'Brasília',
+				uf: 'DF',
+				ddd: 61,
+				normalized: 'brasilia'
+			},
+			{
+				id: 3943,
+				city: 'Porto Alegre',
+				uf: 'RS',
+				ddd: 51,
+				normalized: 'porto alegre'
+			}
+		]
 	}
 
 	async setDefaultConfigs() {
