@@ -1,0 +1,68 @@
+.max-width-alert-message {
+	margin: 0 auto;
+	padding: 0 16px;
+
+	@media (min-width: 768px) {
+		padding: 0 36px;
+	}
+
+	@media (min-width: 1364px) {
+		width: 1320px;
+		padding: 0;
+	}
+}
+
+.max-width-alert-message {
+	display: flex;
+	flex-direction: row;
+	padding-top: 8px;
+	padding-bottom: 8px;
+}
+
+.alert_message_section {
+	background-color: var(--global_information_background);
+	font-family: 'Simplon_BP', sans-serif;
+	color: var(--global_information_text);
+	line-height: 175%;
+	border-bottom: 1px solid #e0e0e0;
+}
+
+.alert_message_section-icon {
+	margin-top: auto;
+	margin-bottom: auto;
+	@media (max-width: 768px) {
+		margin-top: unset;
+		margin-bottom: unset;
+	}
+}
+
+.alert_message_section-icon svg {
+	width: 16px;
+	height: 16px;
+	margin-top: 4px;
+}
+
+.alert_message_section-icon path {
+	fill: var(--global_information_text);
+}
+
+.alert_message_section-message {
+	display: flex;
+	flex-direction: row;
+	@media (max-width: 768px) {
+		flex-direction: column;
+	}
+}
+
+.alert_message_section-message-anchor {
+	margin-left: 8px;
+	text-decoration: none;
+	color: var(--global_footer_title-menu);
+}
+
+.alert_message_section-message-pipe {
+	margin: 0 8px;
+	@media (max-width: 768px) {
+		display: none;
+	}
+}

@@ -470,19 +470,31 @@ button.newHeader__topArea__menuMobile__item-atendimento {
 
 [data-analytics='header'] label,
 [data-analytics='header'] span,
+[data-analytics='header'] svg,
 [data-analytics='header'] img {
 	pointer-events: none;
 }
 
 [data-analytics='banner'] label,
 [data-analytics='banner'] span,
+[data-analytics='banner'] svg,
+[data-analytics='banner'] div,
+[data-analytics='banner'] h3,
 [data-analytics='banner'] img {
 	pointer-events: none;
 }
 
 [data-analytics='footer'] label,
 [data-analytics='footer'] span,
+[data-analytics='footer'] svg,
 [data-analytics='footer'] img {
+	pointer-events: none;
+}
+
+.select-item label,
+.select-item span,
+.select-item svg,
+.select-item img {
 	pointer-events: none;
 }
 

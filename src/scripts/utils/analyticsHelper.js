@@ -367,13 +367,13 @@ const analyticsContainerHelper = async () => {
 				'conhecer o Oi Energia': 'oi_energia',
 				'conferir ofertas': event.target.parentNode
 					.querySelector('.oiPlace__contentTitle')
-					.innerText.trim(),
+					?.innerText.trim(),
 				'aproveitar ofertas': event.target.parentNode
 					.querySelector('.oiPlace__contentTitle')
-					.innerText.trim(),
+					?.innerText.trim(),
 				'conhecer ofertas': event.target.parentNode
 					.querySelector('.oiPlace__contentTitle')
-					.innerText.trim()
+					?.innerText.trim()
 			}[event.target.innerText] || ''
 
 		let itemBrand =
