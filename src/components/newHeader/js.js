@@ -235,7 +235,7 @@ function loadOffersValues(dados) {
 
 	if (data?.offers?.length === 0 && offers?.length === 0) {
 		mainOfferVariable = null
-		return hideBanner()
+		return hideBanner(true, false)
 	}
 
 	const newOffers = data?.offers || offers
@@ -246,7 +246,7 @@ function loadOffersValues(dados) {
 
 	if (!hasGloboplayOffer) {
 		mainOfferVariable = null
-		return hideBanner()
+		return hideBanner(true, false)
 	}
 
 	hideBanner(false)
