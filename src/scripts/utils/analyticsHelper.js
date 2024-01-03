@@ -56,7 +56,7 @@ const analyticsContainerHelper = async () => {
 					item_name: 'Conhecer os planos',
 					item_brand: 'oi_fibra_varejo',
 					item_category: 'oi_fibra_varejo',
-					price: 'n/a',
+					price: '',
 					quantity: '1'
 				}
 			]
@@ -72,7 +72,7 @@ const analyticsContainerHelper = async () => {
 					item_name: 'Quero Internet pra Empresas',
 					item_brand: 'oi_fibra_empresarial',
 					item_category: 'oi_fibra_empresarial',
-					price: 'n/a',
+					price: '',
 					quantity: '1'
 				},
 				{
@@ -80,7 +80,7 @@ const analyticsContainerHelper = async () => {
 					item_name: 'Confira nossos parceiros',
 					item_brand: 'oi_fibra_empresarial',
 					item_category: 'oi_fibra_empresarial',
-					price: 'n/a',
+					price: '',
 					quantity: '1'
 				}
 			]
@@ -93,7 +93,7 @@ const analyticsContainerHelper = async () => {
 					item_name: 'Quero Internet pra Empresas',
 					item_brand: 'oi_fibra_empresarial',
 					item_category: 'oi_fibra_empresarial',
-					price: 'n/a',
+					price: '',
 					quantity: '1'
 				}
 			]
@@ -106,7 +106,7 @@ const analyticsContainerHelper = async () => {
 					item_name: 'Confira nossos parceiros',
 					item_brand: 'oi_fibra_empresarial',
 					item_category: 'oi_fibra_empresarial',
-					price: 'n/a',
+					price: '',
 					quantity: '1'
 				}
 			]
@@ -122,7 +122,7 @@ const analyticsContainerHelper = async () => {
 					item_name: 'Conhecer Oi Fibra X',
 					item_brand: 'oi_fibra_x',
 					item_category: 'oi_fibra_x',
-					price: 'n/a',
+					price: '',
 					quantity: '1'
 				},
 				{
@@ -130,7 +130,7 @@ const analyticsContainerHelper = async () => {
 					item_name: 'Conhecer Oi Fibra X Premium',
 					item_brand: 'oi_fibra_x',
 					item_category: 'oi_fibra_x',
-					price: 'n/a',
+					price: '',
 					quantity: '1'
 				}
 			]
@@ -147,7 +147,7 @@ const analyticsContainerHelper = async () => {
 					item_name: 'Conhecer Oi Fibra X',
 					item_brand: 'oi_fibra_x',
 					item_category: 'oi_fibra_x',
-					price: 'n/a',
+					price: '',
 					quantity: '1'
 				}
 			]
@@ -164,7 +164,7 @@ const analyticsContainerHelper = async () => {
 					item_name: 'Conhecer Oi Fibra X Premium',
 					item_brand: 'oi_fibra_x',
 					item_category: 'oi_fibra_x',
-					price: 'n/a',
+					price: '',
 					quantity: '1'
 				}
 			]
@@ -236,7 +236,7 @@ const analyticsContainerHelper = async () => {
 				item_name: itemName,
 				item_brand: itemBrand || 'adicionais',
 				item_category: itemBrand || 'adicionais',
-				price: 'n/a',
+				price: '',
 				quantity: '1'
 			}
 		]
@@ -252,7 +252,7 @@ const analyticsContainerHelper = async () => {
 					item_name: 'globoplay',
 					item_brand: 'adicionais',
 					item_category: 'adicionais',
-					price: 'n/a',
+					price: '',
 					quantity: '1'
 				},
 				{
@@ -260,7 +260,7 @@ const analyticsContainerHelper = async () => {
 					item_name: 'paramount+',
 					item_brand: 'adicionais',
 					item_category: 'adicionais',
-					price: 'n/a',
+					price: '',
 					quantity: '1'
 				},
 				{
@@ -268,7 +268,7 @@ const analyticsContainerHelper = async () => {
 					item_name: 'combate',
 					item_brand: 'adicionais',
 					item_category: 'adicionais',
-					price: 'n/a',
+					price: '',
 					quantity: '1'
 				},
 				{
@@ -276,7 +276,7 @@ const analyticsContainerHelper = async () => {
 					item_name: 'premiere',
 					item_brand: 'adicionais',
 					item_category: 'adicionais',
-					price: 'n/a',
+					price: '',
 					quantity: '1'
 				}
 			]
@@ -289,7 +289,7 @@ const analyticsContainerHelper = async () => {
 					item_name: 'Oi Saude',
 					item_brand: 'oi_saude',
 					item_category: 'oi_saude',
-					price: 'n/a',
+					price: '',
 					quantity: '1'
 				},
 				{
@@ -297,7 +297,7 @@ const analyticsContainerHelper = async () => {
 					item_name: 'Oi Energia',
 					item_brand: 'oi_energia',
 					item_category: 'oi_energia',
-					price: 'n/a',
+					price: '',
 					quantity: '1'
 				}
 			]
@@ -314,7 +314,7 @@ const analyticsContainerHelper = async () => {
 					item_name: 'Smartphones',
 					item_brand: 'oiplace',
 					item_category: 'oiplace',
-					price: 'n/a',
+					price: '',
 					quantity: '1'
 				},
 				{
@@ -322,7 +322,7 @@ const analyticsContainerHelper = async () => {
 					item_name: 'Notebooks',
 					item_brand: 'oiplace',
 					item_category: 'oiplace',
-					price: 'n/a',
+					price: '',
 					quantity: '1'
 				},
 				{
@@ -330,7 +330,7 @@ const analyticsContainerHelper = async () => {
 					item_name: 'Games',
 					item_brand: 'oiplace',
 					item_category: 'oiplace',
-					price: 'n/a',
+					price: '',
 					quantity: '1'
 				},
 				{
@@ -338,7 +338,7 @@ const analyticsContainerHelper = async () => {
 					item_name: 'Casa inteligente',
 					item_brand: 'oiplace',
 					item_category: 'oiplace',
-					price: 'n/a',
+					price: '',
 					quantity: '1'
 				}
 			]
