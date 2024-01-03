@@ -258,6 +258,7 @@ function loadOffersValues(dados) {
 
 	mainOfferVariable = mainOffer
 	replaceBannerOfferValues(mainOffer)
+	typeof execComplement2 !== undefined && execComplement2(dados)
 }
 
 offerManager.runWhenCityLoad('data', (city) => {

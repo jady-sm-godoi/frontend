@@ -37,11 +37,11 @@ const analyticsContainerHelper = async () => {
 	) => {
 		let items = [
 			{
-				item_id: mainOfferVariable?.code,
-				item_name: mainOfferVariable?.name,
+				item_id: mainOfferVariable?.code || '',
+				item_name: mainOfferVariable?.name || '',
 				item_brand: 'oi_fibra_varejo_globoplay',
 				item_category: 'oi_fibra_varejo_globoplay',
-				price: mainOfferVariable?.amount,
+				price: mainOfferVariable?.amount || '',
 				quantity: '1'
 			}
 		]
@@ -86,7 +86,7 @@ const analyticsContainerHelper = async () => {
 			]
 		}
 
-		if (eventIdentification == 'quero_internet_pra_empresa') {
+		if (eventId == 'quero_internet_pra_empresa') {
 			items = [
 				{
 					item_id: 'quero_internet_pra_empresas',
@@ -99,7 +99,7 @@ const analyticsContainerHelper = async () => {
 			]
 		}
 
-		if (eventIdentification == 'confira_nossos_parceiros') {
+		if (eventId == 'confira_nossos_parceiros') {
 			items = [
 				{
 					item_id: 'confira_nossos_parceiros',
@@ -187,24 +187,36 @@ const analyticsContainerHelper = async () => {
 	const selectPromotionEvent = (event) => {
 		let eventIdentification =
 			{
-				'Quero internet pra empresa': 'quero_internet_pra_empresa',
-				'Confira nossos parceiros': 'confira_nossos_parceiros',
+				'Conhecer os planos':
+					'banner_oi_fibra_a_internet_ideal_pra_sua_casa_home_oi',
+				'Quero internet pra empresa':
+					'banner_quer_internet_fibra_optica_pra_sua_empresa_home_oi',
+				'Confira nossos parceiros':
+					'banner_quer_internet_fibra_optica_pra_sua_empresa_home_oi',
 				'conhecer Oi Fibra X':
 					'banner_wifi_na_casa_toda_seu_wifi_nao_funciona_como_voce_gostaria_home_oi',
 				'Conhecer Oi Fibra X Premium':
 					'banner_wifi_na_casa_toda_seu_wifi_nao_funciona_como_voce_gostaria_home_oi'
 			}[event.target.innerText] || 'banner_principal_home_oi'
 
-		let eventId = {}[event.target.innerText] || ''
+		let eventId =
+			{
+				'Quero internet pra empresa': 'quero_internet_pra_empresa',
+				'Confira nossos parceiros': 'confira_nossos_parceiros'
+			}[event.target.innerText] || ''
 
 		let eventTitle =
 			{
-				'Quero internet pra empresa': 'quero_internet_pra_empresa',
-				'Confira nossos parceiros': 'confira_nossos_parceiros',
+				'Conhecer os planos': 'conhecer_os_planos',
+				'Quero internet pra empresa':
+					'Quer internet fibra ótica pra sua empresa?',
+				'Confira nossos parceiros':
+					'Quer internet fibra ótica pra sua empresa?',
 				'conhecer Oi Fibra X': 'conhecer_oi_fibra_x',
 				'Conhecer Oi Fibra X Premium': 'conhecer_oi_fibra_x_premium'
 			}[event.target.innerText] || 'Assinar Oi Fibra'
 
+		console.log(eventTitle)
 		let eventOptions = {
 			eventIdentification: eventIdentification,
 			eventId: eventId,
@@ -407,13 +419,14 @@ const analyticsContainerHelper = async () => {
 	}
 
 	const selectContentEvent = (event) => {
+		console.log(event.target)
 		return (
 			window &&
 			window.dataLayer &&
 			window.dataLayer.push({
 				event: 'select_content',
 				content_type: 'home_oi_blog',
-				content_id: event.target.getAttribute('data-title')
+				content_id: event.target.dataset.title
 			})
 		)
 	}
@@ -600,7 +613,7 @@ const analyticsContainerHelper = async () => {
 
 	const blogBtns = document.querySelectorAll('.oiNews__cardContentCTA')
 	blogBtns.forEach((element) => {
-		element.addEventListener('click', selectItemEvent)
+		element.addEventListener('click', selectContentEvent)
 	})
 }
 

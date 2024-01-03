@@ -491,6 +491,13 @@ button.newHeader__topArea__menuMobile__item-atendimento {
 	pointer-events: none;
 }
 
+[data-title] label,
+[data-title] span,
+[data-title] svg,
+[data-title] img {
+	pointer-events: none;
+}
+
 .select-item label,
 .select-item span,
 .select-item svg,
