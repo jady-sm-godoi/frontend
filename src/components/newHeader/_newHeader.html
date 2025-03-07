@@ -1,1225 +1,845 @@
 <section class="section_header_top_acessibility_hidden">
 	<div class="max_width_container">
 		<div class="header_anchor_acessibility">
-			<a href="#main" accesskey="1" data-analytics="header"
-				>Ir para o corpo do site</a
-			>
-			<a href="#header-container" accesskey="2" data-analytics="header"
-				>Ir para o cabeçalho da página</a
-			>
-			<a href="#informationContainer" accesskey="3" data-analytics="header"
-				>Ir para o rodapé da página</a
-			>
+			<a href="#main" accesskey="1" data-analytics="header">Ir para o corpo do site</a>
+			<a href="#header-container" accesskey="2" data-analytics="header">Ir para o cabeçalho da página</a>
+			<a href="#informationContainer" accesskey="3" data-analytics="header">Ir para o rodapé da página</a>
 		</div>
 	</div>
 </section>
+<style type="text/css">
+	.newHeader__menuWidthContainer::-webkit-scrollbar {
+		display: none !important;
+		width: 0 !important;
+		height: 0 !important;
+	}
+
+	.newHeader__menuHeader {
+		justify-content: unset;
+		gap: 104px;
+	}
+
+	.newHeader__menuHeader__closeButton {
+		display: none;
+	}
+
+	/*Configuração para o banner com cnpj*/
+	.newHeader__menuOptionCard::before {
+		content: "";
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		background: -webkit-gradient(linear, left top, right top, color-stop(0, #000), to(rgba(0, 0, 0, 0)));
+		background: linear-gradient(90deg, #000 0, rgba(0, 0, 0, 0) 100%);
+		top: 0;
+		left: 0;
+		z-index: 1;
+	}
+
+	.btn_central_de_ajuda {
+		justify-content: unset;
+		gap: 8px;
+	}
+
+	.newHeader__menuOptionCard-bg__internet-boost {
+		z-index: -2;
+		width: 100%;
+		min-width: 268px;
+		position: absolute;
+		left: 0;
+		top: 0;
+	}
+
+	.menuAttendance::before {
+		content: "";
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		background: linear-gradient(222deg, rgba(0, 0, 0, 0.00) 15.9%, #000 55.64%);
+		top: 0;
+		left: 0;
+		z-index: -1;
+	}
+
+	.newHeader__new-cnpj-container {
+		display: flex;
+		flex-direction: column;
+		gap: 24px;
+		left: unset;
+		min-width: fit-content;
+		overflow: unset;
+		padding: 0;
+		border-radius: 0;
+	}
+
+	.new-cnpj-adjusts {
+		min-width: 286px;
+		min-height: 110px;
+		overflow: hidden;
+		padding: 16px;
+		border-radius: 16px;
+	}
+
+
+	.newHeader__menuOptionCard-onlyTitle__internet-boost {
+		font-size: 1rem;
+		line-height: 150%;
+		font-weight: 700;
+		color: #fff;
+		max-width: 246px !important;
+	}
+
+	.new-cnpj {
+		padding: 23px 0 16px 16px;
+	}
+
+	.newHeader__menuOptionCard-bg__new-cnpj {
+		position: absolute;
+		z-index: -1;
+		min-width: 100%;
+		top: -46px;
+		left: 0;
+	}
+
+	.newHeader__menuOptionCard-onlyTitle__new-cnpj {
+		max-width: 246px;
+		font-size: 0.875rem;
+		line-height: 150%;
+		font-weight: 700;
+		color: #fff;
+	}
+
+	.newHeader__menuOptionCard-links-whyOi__new-cnpj-adjusts a {
+		font-size: 1rem;
+		gap: 8px;
+		max-width: fit-content;
+	}
+
+	.newHeader__menuOptionCard-links-whyOi__new-cnpj-adjusts li {
+		margin-top: 0;
+		height: unset;
+		width: 100%;
+	}
+
+	@media screen and (min-width: 767px) {
+		.newHeader__menuOptionCard-bg__new-cnpj {
+			top: -97px;
+		}
+
+		.newHeader__menuWidthContainer {
+			overflow: scroll;
+		}
+
+		.newHeader__new-cnpj-container {
+			padding-block: 12px;
+			gap: 12px;
+		}
+	}
+
+	@media screen and (max-width: 767px) {
+		.newHeader__menuOptionContainer {
+			height: 82vh !important;
+
+		}
+
+		.newHeader__menuOptionCard-bg__new-cnpj {
+			top: -97px;
+		}
+	}
+
+	img.newHeader__logoIcon {
+		height: 55px;
+	}
+
+	.newHeader__menuOptionCard-bg__new-cnpj {
+		top: -50px;
+		height: 167px;
+		object-fit: cover;
+	}
+
+	@media screen and (min-width: 992px) {
+		.newHeader__menuOptionCard-onlyTitle__new-cnpj {
+
+			max-width: 200px;
+		}
+
+		.new-cnpj-adjusts {
+			min-height: 144px;
+			justify-content: space-between;
+		}
+
+		.newHeader__menuOptionCard-bg__internet-boost {
+			height: 100%;
+		}
+
+		.newHeader__menuOptionCard-onlyTitle__internet-boost {
+			max-width: 172px !important;
+
+		}
+
+		.newHeader__menuOptionCard-bg__new-cnpj {
+
+			top: 0;
+			height: fit-content;
+		}
+	}
+</style>
 <section class="newHeader__top-section home-section" id="header-container">
 	<div class="width-container">
 		<div class="newHeader__topArea__flexbox">
+			<!-- header 1o nivel (esquerda): Pra sua casa/ Pra sua empresa -->
 			<div class="newHeader__topArea__leftSide">
-				<a href="/" data-analytics="header">
+				<a data-analytics="header" href="https://www.oi.com.br/">
 					<img
-						class="newHeader__logoIcon"
-						src="assets/images/newHeader/header-logo-icon.svg"
+						alt="" class="newHeader__logoIcon"
 						data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/header-logo-icon-green.svg"
-						alt=""
-					/>
+						src="assets/images/newHeader/header-logo-icon.svg" /> 
 				</a>
 				<ul class="newHeader__topArea__links">
 					<li>
-						<a
-							class="newHeader__topArea__link newHeader__topArea__selectedLink"
-							href="/"
-							data-analytics="header"
-							>Pra sua casa</a
-						>
+						<a class="newHeader__topArea__link newHeader__topArea__selectedLink" data-analytics="header"
+							href="/">Pra sua casa</a>
 					</li>
 					<li>
-						<a
-							class="newHeader__topArea__link"
-							href="https://www.oi.com.br/empresas/"
-							data-analytics="header"
-							>Pra sua empresa</a
-						>
+						<a class="newHeader__topArea__link" data-analytics="header"
+							href="https://www.oi.com.br/empresas/">Pra sua empresa</a>
 					</li>
 				</ul>
 			</div>
-			<div
-				class="newHeader__topArea__changeLocationContainer-overlay"
-				onclick="closeRegionalizationModal()"
-			></div>
-			<button
-				id="changeLocalization"
-				class="newHeader__topArea__regionalizationArea"
-			>
-				<img
-					src="assets/images/newHeader/location-light-mode.svg"
+
+			<!-- modal para fechar o dropdown de regiões -->
+			<div class="newHeader__topArea__changeLocationContainer-overlay" onclick="closeRegionalizationModal()">
+				&nbsp;</div>
+
+			<!-- troca de região -->
+			<div class="newHeader__topArea__regionalizationArea" id="changeLocalization">
+				<img alt=""
 					class="newHeader__topArea__regionalizationIcon"
 					data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/location-dark-mode.svg"
-					alt=""
-				/>
-				<span class="newHeader__topArea__cityName">
-					Rio de Janeiro<span class="newHeader__topArea__ufName">, RJ</span>
-				</span>
-				<img
+					src="assets/images/newHeader/location-light-mode.svg" /> <span class="newHeader__topArea__cityName">
+					Rio de Janeiro<span class="newHeader__topArea__ufName">, RJ</span> </span> <img alt=""
 					class="newHeader__topArea__chevron"
-					src="assets/images/newHeader/chevron-down-black.svg"
 					data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/chevron-down-white.svg"
-					alt=""
-				/>
-				<div class="newHeader__topArea__changeLocationContainer"></div>
-			</button>
+					src="assets/images/newHeader/chevron-down-black.svg" />
+				<div class="newHeader__topArea__changeLocationContainer">&nbsp;</div>
+			</div>
 
+			<!-- header 1o nivel (direita): acessibilidade -->
 			<div class="newHeader__topArea__rightSide">
-				<div
-					id="vlibras-and-contrast-container"
-					class="newHeader__acessibility__container"
-				>
+				<div class="newHeader__acessibility__container" id="vlibras-and-contrast-container">
 					<div class="newHeader__acessibility__icon-area">
-						<img
+						<img alt=""
 							class="newHeader__acessibility__icon-image"
-							src="assets/images/newHeader/acessibility-icon.svg"
 							data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/acessibility-icon-blue.svg"
-							alt=""
-						/>
+							src="assets/images/newHeader/acessibility-icon.svg" />
 					</div>
-					<button
-						class="newHeader__acessibility__button"
-						id="button_accessibility_theme"
-					>
-						<img
-							src="assets/images/newHeader/contrast-icon-black.svg"
-							data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/contrast-icon-white.svg"
-							loading="lazy"
+					<button class="newHeader__acessibility__button" id="button_accessibility_theme"><img
 							alt="Botao de alto contraste"
-						/>
+							data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/contrast-icon-white.svg"
+							loading="lazy" src="assets/images/newHeader/contrast-icon-black.svg" />
 					</button>
 					<button
-						class="newHeader__acessibility__button"
-						id="button_accessibility_vlibras"
-					>
-						<img
-							class="button_accessibility_vlibras_icon"
-							src="assets/images/newHeader/libras-icon-black.svg"
+						class="newHeader__acessibility__button" id="button_accessibility_vlibras"><img
+							alt="Botao do VLibras" class="button_accessibility_vlibras_icon"
 							data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/libras-icon-white.svg"
-							loading="lazy"
-							alt="Botao do VLibras"
-						/>
+							loading="lazy" src="assets/images/newHeader/libras-icon-black.svg" />
 					</button>
 				</div>
+				
+				<!-- header 1o nivel (direita): Já sou cliente -->
 				<div class="newHeader__menuOrAlreadyClientContainer">
-					<a
-						href="https://www.oi.com.br/minha-oi/"
-						class="newHeader__alreadyClientLink"
-						data-analytics="header"
-					>
-						<img
-							src="assets/images/newHeader/already-client-black.svg"
-							alt=""
+					<a class="newHeader__alreadyClientLink"
+						data-analytics="header" href="https://www.oi.com.br/minha-oi/">
+						<img alt=""
 							data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/already-client-white.svg"
-						/>
-						<span> Já sou cliente </span>
+							src="assets/images/newHeader/already-client-black.svg" /> 
+							<span> J&aacute; sou cliente</span> 
 					</a>
-					<button onclick="triggerMenuMobile()" class="newHeader__menuButton">
-						<img
-							src="assets/images/newHeader/menu-icon-black.svg"
-							alt=""
+					<!-- menu hamburguer para mobile -->
+					<button class="newHeader__menuButton" onclick="triggerMenuMobile()"><img alt=""
 							data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/menu-icon-white.svg"
-						/>
+							src="assets/images/newHeader/menu-icon-black.svg" />
 					</button>
 				</div>
 			</div>
-
-			<a
-				href="https://www.oi.com.br/faq/"
-				class="newHeader__topArea__FAQCTA"
-				data-analytics="header"
-			>
-				<img
+			<!-- Campo de busca fake: é um botão que leva para o Faq -->
+			<a class="newHeader__topArea__FAQCTA" data-analytics="header" href="https://www.oi.com.br/faq/">
+				<img alt=""
 					class="newHeader__topArea__searchIcon"
-					src="assets/images/newHeader/search-icon-black.svg"
 					data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/search-icon-white.svg"
-					alt=""
-				/>
-				<span>Busca</span>
+					src="assets/images/newHeader/search-icon-black.svg" /> 
+				<span>Busca</span> 
 			</a>
 
+			<!-- ___________________________________________________________________________________ -->
+			<!-- header 2o nivel -->
+
+			<!-- lista de menus a esquerda -->
 			<ul class="newHeader__topArea__menuDesktop">
-				<li class="newHeader__topArea__menuDesktop__item">
-					<button
-						onclick="menuSelected(event ,'menu-option-products-and-services', 'Produtos e serviços')"
-					>
-						Produtos e serviços
-					</button>
-					<img
-						class="newHeader__topArea__selectedMenuItem-chevron"
-						src="assets/images/newHeader/chevron-down-black.svg"
-						data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/chevron-down-green.svg"
-						alt=""
-					/>
+				<li class="newHeader__topArea__menuDesktop__item"> 
+					<!-- dispara o header 3o nivel (modal) -->
+					<button	onclick="menuSelected(event ,'menu-option-products-and-services', 'Produtos e serviços')">Produtos e serviços<button>
+					<img alt="" class="newHeader__topArea__selectedMenuItem-chevron"
+					data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/chevron-down-green.svg"
+					src="assets/images/newHeader/chevron-down-black.svg" />
 				</li>
 				<li class="newHeader__topArea__menuDesktop__item">
-					<button
-						onclick="menuSelected(event ,'menu-option-why-oi', 'Por que Oi')"
-					>
-						Por que Oi
-					</button>
-					<img
-						class="newHeader__topArea__selectedMenuItem-chevron"
-						src="assets/images/newHeader/chevron-down-black.svg"
-						data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/chevron-down-green.svg"
-						alt=""
-					/>
+					<!-- dispara o header 3o nivel (modal) -->
+					<button onclick="menuSelected(event ,'menu-option-why-oi', 'Por que Oi')">Por que Oi</button>
+					<img alt=""	class="newHeader__topArea__selectedMenuItem-chevron" data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/chevron-down-green.svg" src="assets/images/newHeader/chevron-down-black.svg" />
 				</li>
 				<li class="newHeader__topArea__menuDesktop__item">
-					<a href="https://www.oiplace.com.br/" data-analytics="header">
-						Loja Oi Place
-					</a>
+					<a data-analytics="header" href="https://www.oi.com.br/blog/">Blog </a>
 				</li>
 				<li class="newHeader__topArea__menuDesktop__item">
-					<a href="https://www.oi.com.br/blog/" data-analytics="header">
-						Blog
-					</a>
+					<a data-analytics="header" href="https://www.oi.com.br/negociacao/">Negociar d&iacute;vidas </a>
 				</li>
 				<li class="newHeader__topArea__menuDesktop__item">
-					<button
-						onclick="menuSelected(event ,'menu-option-attendance-client', 'Atendimento cliente Oi')"
-						class="newHeader__topArea__menuDesktop__item-atendimento"
-					>
-						<img
-							src="assets/images/newHeader/user-support.svg"
+					<!-- dispara o header 3o nivel (modal) -->
+					<button class="newHeader__topArea__menuDesktop__item-atendimento"
+						onclick="menuSelected(event ,'menu-option-attendance-client', 'Atendimento cliente Oi')">
+						<img alt=""
 							data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/user-support-dark.svg"
-							alt=""
-						/>
+							src="assets/images/newHeader/user-support.svg" /> 
 						<span>Atendimento Oi</span>
 					</button>
-					<img
-						class="newHeader__topArea__selectedMenuItem-chevron"
-						src="assets/images/newHeader/chevron-down-black.svg"
+					<img alt="" class="newHeader__topArea__selectedMenuItem-chevron"
 						data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/chevron-down-green.svg"
-						alt=""
-					/>
+						src="assets/images/newHeader/chevron-down-black.svg" />
 				</li>
 			</ul>
 
+			<!-- botões a direita: whatsapp e Assinar Oi Fibra -->
 			<div class="newHeader__topArea__floatingButtons">
-				<button
-					class="newHeader__topArea__whatsappButton"
-					onclick="contactButtonV2.toggleModal()"
-				>
-					<img
+				<button class="newHeader__topArea__whatsappButton"
+					onclick="document.getElementById('modal-contato').style.display='block'">
+					<img alt=""
 						class="newHeader__topArea__whatsappIcon"
-						src="assets/images/newHeader/whatsapp-icon-white.svg"
 						data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/whatsapp-icon-green.svg"
-						alt=""
-					/>
+						src="assets/images/newHeader/whatsapp-icon-white.svg" />
 				</button>
 				<button
-					onclick="openSignFiberModal()"
-					class="newHeader__topArea__signFiber"
-				>
-					Assinar Oi Fibra
-				</button>
+					class="newHeader__topArea__signFiber" onclick="openSignFiberModal()">Assinar Oi Fibra</button>
 			</div>
 		</div>
 	</div>
-	<div class="home-section newHeader__menuContainer">
-		<button
-			onclick="closeMenuContainer()"
-			class="newHeader__menuContainer__overlay"
-		></button>
 
+	<!-- ___________________________________________________________________________________ -->
+	<!-- header 3o nivel: modal -->
+
+	<div class="home-section newHeader__menuContainer">
+		<!-- fecha a modal -->
+		<button class="newHeader__menuContainer__overlay" onclick="closeMenuContainer()">
+		</button>
+
+		<!-- menu mobile -->
 		<div class="width-container newHeader__menuWidthContainer">
 			<div class="newHeader__menuMobile__top">
+
+				<!-- header 1o nivel: mobile -->
 				<ul class="newHeader__menuMobile__top-links">
 					<li>
-						<a
-							class="newHeader__menuMobile__top-link newHeader__menuMobile__top-selectedLink"
-							href="/"
-							data-analytics="header"
-							>Pra sua casa</a
-						>
+						<a class="newHeader__menuMobile__top-link newHeader__menuMobile__top-selectedLink"
+							data-analytics="header" href="/">Pra sua casa</a>
 					</li>
 					<li>
-						<a
-							class="newHeader__menuMobile__top-link"
-							href="https://www.oi.com.br/empresas/"
-							data-analytics="header"
-							>Pra sua empresa</a
-						>
+						<a class="newHeader__menuMobile__top-link" data-analytics="header"
+							href="https://www.oi.com.br/empresas/">Pra sua empresa</a>
 					</li>
 				</ul>
-				<button
-					onclick="closeMenuContainer()"
-					class="newHeader__menuHeader__close-btn"
-				>
-					<img
+				<!-- fecha a modal -->
+				<button class="newHeader__menuHeader__close-btn" onclick="closeMenuContainer()">
+					<img alt=""
 						class="newHeader__menuHeader__close-icon"
-						src="assets/images/newHeader/close-icon-black.svg"
 						data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/close-icon-white.svg"
-						alt=""
-					/>
+						src="assets/images/newHeader/close-icon-black.svg" />
 				</button>
 			</div>
-			<div id="select-area" class="newHeader__menuMobile__selectArea">
-				<!-- <div class="newHeader__menuMobile__inputArea">
-                    <img src="assets/images/newHeader/search-icon-gray.svg"
-                        data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/search-icon-white.svg" alt="" />
-                    <input placeholder="Faça sua busca" type="text" class="menuMobile__searchInput">
-                </div> -->
+
+			<!-- header 2o nivel -->
+			<div class="newHeader__menuMobile__selectArea" id="select-area">
 				<ul class="newHeader__topArea__menuMobile">
 					<li class="newHeader__topArea__menuMobile__item">
-						<button
-							onclick="menuSelected(event ,'menu-option-products-and-services', 'Produtos e serviços')"
-						>
-							<span> Produtos e serviços </span>
-							<img
+						<button onclick="menuSelected(event ,'menu-option-products-and-services', 'Produtos e serviços')">
+							<span>Produtos e servi&ccedil;os </span> 
+							<img alt=""
 								class="newHeader__topArea__menuMobile__chevron"
-								src="assets/images/newHeader/chevron-down-black.svg"
 								data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/chevron-down-white.svg"
-								alt=""
-							/>
+								src="assets/images/newHeader/chevron-down-black.svg" />
 						</button>
 					</li>
 					<li class="newHeader__topArea__menuMobile__item">
-						<button
-							onclick="menuSelected(event ,'menu-option-why-oi', 'Por que Oi')"
-						>
+						<button onclick="menuSelected(event ,'menu-option-why-oi', 'Por que Oi')">
 							<span> Por que Oi </span>
-							<img
-								class="newHeader__topArea__menuMobile__chevron"
-								src="assets/images/newHeader/chevron-down-black.svg"
+							<img alt="" class="newHeader__topArea__menuMobile__chevron"
 								data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/chevron-down-white.svg"
-								alt=""
-							/>
+								src="assets/images/newHeader/chevron-down-black.svg" />
 						</button>
 					</li>
 					<li class="newHeader__topArea__menuMobile__item">
-						<a href="https://www.oiplace.com.br/" data-analytics="header">
-							<span> Loja Oi Place </span>
-							<img
+						<a data-analytics="header" href="https://www.oi.com.br/blog/">
+							<span> Blog </span> 
+							<img alt=""
 								class="newHeader__topArea__menuMobile__chevron"
-								src="assets/images/newHeader/chevron-down-black.svg"
 								data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/chevron-down-white.svg"
-								alt=""
-							/>
+								src="assets/images/newHeader/chevron-down-black.svg" /> 
 						</a>
 					</li>
 					<li class="newHeader__topArea__menuMobile__item">
-						<a href="https://www.oi.com.br/blog/" data-analytics="header">
-							<span> Blog </span>
-							<img
+						<a data-analytics="header" href="https://www.oi.com.br/negociacao/">
+							<span> Negociar d&iacute;vidas </span> 
+							<img alt=""
 								class="newHeader__topArea__menuMobile__chevron"
-								src="assets/images/newHeader/chevron-down-black.svg"
 								data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/chevron-down-white.svg"
-								alt=""
-							/>
+								src="assets/images/newHeader/chevron-down-black.svg" /> 
 						</a>
 					</li>
 					<li class="newHeader__topArea__menuMobile__item">
-						<button
-							onclick="menuSelected(event ,'menu-option-attendance-client', 'Atendimento cliente Oi')"
-							class="newHeader__topArea__menuMobile__item-atendimento"
-						>
-							<img
-								src="assets/images/newHeader/user-support-white.svg"
+						<button class="newHeader__topArea__menuMobile__item-atendimento" onclick="menuSelected(event ,'menu-option-attendance-client', 'Atendimento cliente Oi')">
+							<img alt=""
 								data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/user-support-dark.svg"
-								alt=""
-							/>
+								src="assets/images/newHeader/user-support-white.svg" /> 
 							<span>Atendimento Cliente Oi</span>
 						</button>
 					</li>
 				</ul>
 			</div>
 
+			<!-- header 3o nivel -->
+			 <!-- cabeçalho: botão de voltar -> titulo troca dinamicamente -->
 			<div class="newHeader__menuHeader">
-				<button
-					onclick="backToMenuOptions()"
-					class="newHeader__menuHeader__back-btn"
-				>
-					<img
-						class="newHeader__menuHeader__back-icon"
-						src="assets/images/newHeader/chevron-left-black.svg"
+				<button class="newHeader__menuHeader__back-btn" onclick="backToMenuOptions()">
+					<img alt="" class="newHeader__menuHeader__back-icon"
 						data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/chevron-left-white.svg"
-						alt=""
-					/>
+						src="assets/images/newHeader/chevron-left-black.svg" />
 				</button>
-				<span class="newHeader__menuHeader__title">
-					Atendimento cliente Oi
-				</span>
-				<button
-					onclick="closeMenuContainer()"
-					class="newHeader__menuHeader__closeButton"
-				>
-					<img
+				<span class="newHeader__menuHeader__title"> Atendimento cliente Oi </span>
+				<button class="newHeader__menuHeader__closeButton" onclick="backToMenuOptions()">
+					<img alt=""
 						class="newHeader__menuHeader__close-icon"
-						src="assets/images/newHeader/close-icon-black.svg"
 						data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/close-icon-white.svg"
-						alt=""
-					/>
+						src="assets/images/newHeader/close-icon-black.svg" />
 				</button>
 			</div>
 
-			<div
-				id="menu-option-products-and-services"
-				class="newHeader__menuOptionContainer"
-			>
+			 <!-- corpo com options: Produtos e Serviços -->
+			<div class="newHeader__menuOptionContainer" id="menu-option-products-and-services">
 				<div class="newHeader__linksContainer">
 					<div class="newHeader__linksContainer-title">
-						<img
-							src="assets/images/newHeader/smart-house.svg"
-							data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/smart-house-dark.svg"
-							alt=""
-						/>
-						<span> Pra sua casa </span>
-					</div>
+						<img alt="" data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/smart-house-dark.svg"
+							src="assets/images/newHeader/smart-house.svg" /> 
+							<span> Pra sua casa </span>
+						</div>
+
 					<ul class="newHeader__optionLinks">
 						<li class="newHeader__optionLink">
-							<a href="https://www.oi.com.br/internet" data-analytics="header">
-								<span> Internet Oi Fibra </span>
-								<img
-									class="newHeader__optionLink__chevron"
-									src="assets/images/newHeader/chevron-down-black.svg"
+							<a data-analytics="header"
+								href="https://www.oi.com.br/internet">
+								<span> Internet Oi Fibra </span> 
+								<img alt="" class="newHeader__optionLink__chevron"
 									data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/chevron-down-white.svg"
-									alt=""
-								/>
+									src="assets/images/newHeader/chevron-down-black.svg" /> 
 							</a>
 						</li>
-						<li class="newHeader__optionLink">
-							<a
-								href="https://www.oi.com.br/internet/wifi-em-casa-com-maior-cobertura/"
-								data-analytics="header"
-							>
-								<span> Internet Oi Fibra + ponto extra Wi-Fi </span>
-								<img
+						<li class="newHeader__optionLink"><a data-analytics="header"
+								href="https://www.oi.com.br/internet/wifi-em-casa-com-maior-cobertura/"><span> Internet
+									Oi Fibra + ponto extra Wi-Fi </span> <img alt=""
 									class="newHeader__optionLink__chevron"
-									src="assets/images/newHeader/chevron-down-black.svg"
 									data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/chevron-down-white.svg"
-									alt=""
-								/>
-							</a>
-						</li>
-
-						<li class="newHeader__optionLink">
-							<a
-								href="https://www.oi.com.br/internet/plano-de-internet-com-telefone-fixo/"
-								data-analytics="header"
-							>
-								<span> Internet Oi Fibra + telefone fixo </span>
-								<img
+									src="assets/images/newHeader/chevron-down-black.svg" /> </a></li>
+						<li class="newHeader__optionLink"><a data-analytics="header"
+								href="https://www.oi.com.br/internet/plano-de-internet-com-telefone-fixo/"><span>
+									Internet Oi Fibra + telefone fixo </span> <img alt=""
 									class="newHeader__optionLink__chevron"
-									src="assets/images/newHeader/chevron-down-black.svg"
 									data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/chevron-down-white.svg"
-									alt=""
-								/>
-							</a>
-						</li>
-
-						<li class="newHeader__optionLink">
-							<a href="https://www.oi.com.br/fixo/" data-analytics="header">
-								<span> Telefone fixo </span>
-								<img
+									src="assets/images/newHeader/chevron-down-black.svg" /> </a></li>
+						<li class="newHeader__optionLink"><a data-analytics="header"
+								href="https://www.oi.com.br/fixo/"><span> Telefone fixo </span> <img alt=""
 									class="newHeader__optionLink__chevron"
-									src="assets/images/newHeader/chevron-down-black.svg"
 									data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/chevron-down-white.svg"
-									alt=""
-								/>
-							</a>
-						</li>
-						<li class="newHeader__optionLink">
-							<a href="https://www.oi.com.br/tv-hd" data-analytics="header">
-								<span> TV HD </span>
-								<img
+									src="assets/images/newHeader/chevron-down-black.svg" /> </a></li>
+						<li class="newHeader__optionLink"><a data-analytics="header"
+								href="https://www.oi.com.br/tv-hd"><span> TV HD </span> <img alt=""
 									class="newHeader__optionLink__chevron"
-									src="assets/images/newHeader/chevron-down-black.svg"
 									data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/chevron-down-white.svg"
-									alt=""
-								/>
-							</a>
-						</li>
+									src="assets/images/newHeader/chevron-down-black.svg" /> </a></li>
+						<li class="newHeader__optionLink"><a data-analytics="header"
+								href="https://www.oi.com.br/regulatorio/produtos-pra-voce/#internet"><span> Ofertas
+									Regulat&oacute;rias </span> <img alt="" class="newHeader__optionLink__chevron"
+									data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/chevron-down-white.svg"
+									src="assets/images/newHeader/chevron-down-black.svg" /> </a></li>
 						<li class="newHeader__optionLink newHeader__greenOption">
-							<a
-								href="https://oinovafibra.oi.com.br/fibra/s/?bundle=true"
-								data-analytics="header"
-							>
+							<a data-analytics="header" href="https://oinovafibra.oi.com.br/fibra/s/?bundle=true">
 								<span> Monte seu plano </span>
-								<img
-									class="newHeader__optionLink__chevron"
-									src="assets/images/newHeader/chevron-right-green.svg"
+								<img alt="" class="newHeader__optionLink__chevron"
 									data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/chevron-right-green-dark.svg"
-									alt=""
-								/>
-							</a>
-						</li>
-						<li class="newHeader__optionLink newHeader__greenOption">
-							<a href="https://www.oi.com.br/internet" data-analytics="header">
-								<span> Indique um plano pra mim </span>
-								<img
-									class="newHeader__optionLink__chevron"
-									src="assets/images/newHeader/chevron-right-green.svg"
-									data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/chevron-right-green-dark.svg"
-									alt=""
-								/>
+									src="assets/images/newHeader/chevron-right-green.svg" /> 
 							</a>
 						</li>
 					</ul>
 				</div>
+
 				<div class="newHeader__linksContainer">
-					<div class="newHeader__linksContainer-title">
-						<img
-							src="assets/images/newHeader/category.svg"
+					<div class="newHeader__linksContainer-title"><img alt=""
 							data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/category-dark.svg"
-							alt=""
-						/>
-						<span> Internet + streaming </span>
-					</div>
+							src="assets/images/newHeader/category.svg" /> <span> Internet + streaming </span></div>
+
 					<ul class="newHeader__optionLinks">
-						<li class="newHeader__optionLink">
-							<a
-								href="https://oinovafibra.oi.com.br/fibra/s/"
-								data-analytics="header"
-							>
-								<span> Oi Fibra + Globoplay </span>
-								<img
-									class="newHeader__optionLink__chevron"
-									src="assets/images/newHeader/chevron-down-black.svg"
+						<li class="newHeader__optionLink"><a data-analytics="header"
+								href="https://oinovafibra.oi.com.br/fibra/s/?productCode=BL_700MB_VAR_PRMNT_JUL24_129_90_109_90&amp;speed=700"><span>
+									Oi Fibra com Paramount+ </span> <img alt="" class="newHeader__optionLink__chevron"
 									data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/chevron-down-white.svg"
-									alt=""
-								/>
-							</a>
-						</li>
-						<li class="newHeader__optionLink">
-							<a
-								href="https://oinovafibra.oi.com.br/fibra/s/"
-								data-analytics="header"
-							>
-								<span> Oi Fibra + Netflix </span>
-								<img
-									class="newHeader__optionLink__chevron"
-									src="assets/images/newHeader/chevron-down-black.svg"
+									src="assets/images/newHeader/chevron-down-black.svg" /> </a></li>
+						<li class="newHeader__optionLink"><a data-analytics="header"
+								href="https://oinovafibra.oi.com.br/fibra/s/?svodcode=SVOD_GLOBOPLAY_ANUNCIOS"><span> Oi
+									Fibra com Globoplay </span> <img alt="" class="newHeader__optionLink__chevron"
 									data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/chevron-down-white.svg"
-									alt=""
-								/>
-							</a>
-						</li>
-						<li class="newHeader__optionLink">
-							<a
-								href="https://oinovafibra.oi.com.br/fibra/s/"
-								data-analytics="header"
-							>
-								<span> Oi Fibra + Paramount </span>
-								<img
-									class="newHeader__optionLink__chevron"
-									src="assets/images/newHeader/chevron-down-black.svg"
+									src="assets/images/newHeader/chevron-down-black.svg" /> </a></li>
+						<li class="newHeader__optionLink"><a data-analytics="header"
+								href="https://oinovafibra.oi.com.br/fibra/s/?productCode=BL_700MB_VAR_JUL24_MAX_129_90_109_90&amp;speed=700"><span>
+									Oi Fibra com Max </span> <img alt="" class="newHeader__optionLink__chevron"
 									data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/chevron-down-white.svg"
-									alt=""
-								/>
-							</a>
-						</li>
-						<!-- <li class="newHeader__optionLink newHeader__greenOption">
-                            <a href="#">
-                                <span>
-                                    Todos os streamings
-                                </span>
-                                <img class="newHeader__optionLink__chevron"
-                                    src="assets/images/newHeader/chevron-right-green.svg"
-                                    data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/chevron-right-green-dark.svg" alt="" />
-                            </a>
-                        </li> -->
+									src="assets/images/newHeader/chevron-down-black.svg" /> </a></li>
+						<li class="newHeader__optionLink newHeader__greenOption"><a
+								href="https://www.oi.com.br/internet/entretenimento/"><span> Todos os streamings </span>
+								<img alt="" class="newHeader__optionLink__chevron"
+									data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/chevron-right-green-dark.svg"
+									src="assets/images/newHeader/chevron-right-green.svg" /> </a></li>
 					</ul>
 				</div>
 
 				<div class="newHeader__linksContainer">
-					<div class="newHeader__linksContainer-title">
-						<img
-							src="assets/images/newHeader/plus.svg"
+					<div class="newHeader__linksContainer-title"><img alt=""
 							data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/plus-dark.svg"
-							alt=""
-						/>
-						<span> Outros serviços </span>
-					</div>
+							src="assets/images/newHeader/plus.svg" /> <span> Outros servi&ccedil;os </span></div>
+
 					<ul class="newHeader__optionLinks">
-						<li class="newHeader__optionLink">
-							<a
-								href="https://saude.produtosoi.com.br/"
-								data-analytics="header"
-							>
-								<span>
-									Oi Saúde
-									<label for="">Consultas médicas online</label>
-								</span>
-								<img
+						<li class="newHeader__optionLink"><a data-analytics="header"
+								href="https://saude.produtosoi.com.br/"><span> Oi Sa&uacute;de <label for="">Consultas
+										m&eacute;dicas online</label> </span> <img alt=""
 									class="newHeader__optionLink__chevron"
-									src="assets/images/newHeader/chevron-down-black.svg"
 									data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/chevron-down-white.svg"
-									alt=""
-								/>
-							</a>
-						</li>
-						<li class="newHeader__optionLink">
-							<a href="https://oienergia.com.br/" data-analytics="header">
-								<span>
-									Oi Energia
-									<label for="">Energia limpa e mais barata</label>
-								</span>
-								<img
-									class="newHeader__optionLink__chevron"
-									src="assets/images/newHeader/chevron-down-black.svg"
+									src="assets/images/newHeader/chevron-down-black.svg" /> </a></li>
+						<li class="newHeader__optionLink"><a data-analytics="header"
+								href="https://oienergia.com.br/"><span> Oi Energia <label for="">Energia limpa e mais
+										barata</label> </span> <img alt="" class="newHeader__optionLink__chevron"
 									data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/chevron-down-white.svg"
-									alt=""
-								/>
-							</a>
-						</li>
-						<!-- <li class="newHeader__optionLink newHeader__greenOption">
-                            <a href="#">
-                                <span>
-                                    Todos os serviços
-                                </span>
-                                <img class="newHeader__optionLink__chevron"
-                                    src="assets/images/newHeader/chevron-right-green.svg"
-                                    data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/chevron-right-green-dark.svg" alt="" />
-                            </a>
-                        </li> -->
+									src="assets/images/newHeader/chevron-down-black.svg" /> </a></li>
 					</ul>
 				</div>
 
-				<div class="newHeader__menuOptionCard">
-					<img
-						class="newHeader__menuOptionCard-bg"
-						src="assets/images/newHeader/products-and-services-menu-card-bg.webp"
-						alt=""
-					/>
-					<div class="newHeader__menuOptionCard-content">
-						<span class="newHeader__menuOptionCard-title">
-							<img src="assets/images/newHeader/briefcase.svg" alt="" />
-							<span> Venda Oi Fibra </span>
-						</span>
-						<span class="newHeader__menuOptionCard-subtitle">
-							Aumente sua renda vendendo produtos da Oi
-						</span>
+				<!-- banner lateral-->
+				<div class="newHeader__menuOptionCard"><img alt="" class="newHeader__menuOptionCard-bg" loading="lazy"
+						src="assets/images/newHeader/products-and-services-menu-card-bg.webp" />
+					<div class="newHeader__menuOptionCard-content"><span class="newHeader__menuOptionCard-title"> <img
+								alt="" src="assets/images/newHeader/briefcase.svg" /> <span> Venda Oi Fibra </span>
+						</span> <span class="newHeader__menuOptionCard-subtitle"> Aumente sua renda vendendo produtos da
+							Oi </span>
+
 						<ul class="newHeader__menuOptionCard-links">
-							<li>
-								<a
-									href="https://www.oi.com.br/seja-parceiro-oi/empresas/"
-									data-analytics="header"
-								>
-									<span> Pra empresas </span>
-									<img
-										class="newHeader__menuOptionCard__link-chevron"
-										src="assets/images/newHeader/arrow-right.svg"
-										alt=""
-									/>
-								</a>
-							</li>
-							<li>
-								<a
-									href="https://www.oi.com.br/seja-parceiro-oi/televendas/"
-									data-analytics="header"
-								>
-									<span> Televendas </span>
-									<img
-										class="newHeader__menuOptionCard__link-chevron"
-										src="assets/images/newHeader/arrow-right.svg"
-										alt=""
-									/>
-								</a>
-							</li>
-							<li>
-								<a
-									href="https://www.oi.com.br/seja-parceiro-oi/porta-a-porta/"
-									data-analytics="header"
-								>
-									<span> Venda direta </span>
-									<img
-										class="newHeader__menuOptionCard__link-chevron"
-										src="assets/images/newHeader/arrow-right.svg"
-										alt=""
-									/>
-								</a>
-							</li>
+							<li><a data-analytics="header"
+									href="https://www.oi.com.br/seja-parceiro-oi/empresas/"><span> Pra empresas </span>
+									<img alt="" class="newHeader__menuOptionCard__link-chevron"
+										src="assets/images/newHeader/arrow-right.svg" /> </a></li>
+							<li><a data-analytics="header"
+									href="https://www.oi.com.br/seja-parceiro-oi/televendas/"><span> Televendas </span>
+									<img alt="" class="newHeader__menuOptionCard__link-chevron"
+										src="assets/images/newHeader/arrow-right.svg" /> </a></li>
+							<li><a data-analytics="header"
+									href="https://www.oi.com.br/seja-parceiro-oi/porta-a-porta/"><span> Venda direta
+									</span> <img alt="" class="newHeader__menuOptionCard__link-chevron"
+										src="assets/images/newHeader/arrow-right.svg" /> </a></li>
 						</ul>
 					</div>
 				</div>
 			</div>
-
-			<div id="menu-option-why-oi" class="newHeader__menuOptionContainer">
+			
+			<!-- corpo com options: Por que Oi -->
+			<div class="newHeader__menuOptionContainer" id="menu-option-why-oi">
 				<div class="newHeader__linksContainer">
-					<div class="newHeader__linksContainer-title">
-						<img
-							src="assets/images/newHeader/gift.svg"
+					<div class="newHeader__linksContainer-title"><img alt=""
 							data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/gift-dark.svg"
-							alt=""
-						/>
-						<span> Benefícios </span>
-					</div>
+							src="assets/images/newHeader/gift.svg" /> <span> Benef&iacute;cios </span></div>
+
 					<ul class="newHeader__optionLinks">
-						<li class="newHeader__optionLink">
-							<a
-								href="https://www.oifibrarecompensa.com.br/#indique"
-								data-analytics="header"
-							>
-								<span> Indique e ganhe </span>
-								<img
-									class="newHeader__optionLink__chevron"
-									src="assets/images/newHeader/chevron-down-black.svg"
+						<li class="newHeader__optionLink"><a data-analytics="header"
+								href="https://www.oifibrarecompensa.com.br/#indique"><span> Indique e ganhe </span> <img
+									alt="" class="newHeader__optionLink__chevron"
 									data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/chevron-down-white.svg"
-									alt=""
-								/>
-							</a>
-						</li>
-						<li class="newHeader__optionLink">
-							<a
-								href="https://www.oi.com.br/minha-oi/tecnico-virtual/"
-								data-analytics="header"
-							>
-								<span> Suporte especializado </span>
-								<img
-									class="newHeader__optionLink__chevron"
-									src="assets/images/newHeader/chevron-down-black.svg"
+									src="assets/images/newHeader/chevron-down-black.svg" /> </a></li>
+						<li class="newHeader__optionLink"><a data-analytics="header"
+								href="https://www.oi.com.br/minha-oi/tecnico-virtual/"><span> Suporte especializado
+								</span> <img alt="" class="newHeader__optionLink__chevron"
 									data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/chevron-down-white.svg"
-									alt=""
-								/>
-							</a>
-						</li>
-						<li class="newHeader__optionLink">
-							<a
-								href="https://www.oi.com.br/internet/beneficios/"
-								data-analytics="header"
-							>
-								<span> Benefícios Oi Fibra </span>
-								<img
-									class="newHeader__optionLink__chevron"
-									src="assets/images/newHeader/chevron-down-black.svg"
+									src="assets/images/newHeader/chevron-down-black.svg" /> </a></li>
+						<li class="newHeader__optionLink"><a data-analytics="header"
+								href="https://www.oi.com.br/internet/beneficios/"><span> Benef&iacute;cios Oi Fibra
+								</span> <img alt="" class="newHeader__optionLink__chevron"
 									data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/chevron-down-white.svg"
-									alt=""
-								/>
-							</a>
-						</li>
-					</ul>
-				</div>
-				<div class="newHeader__linksContainer">
-					<div class="newHeader__linksContainer-title">
-						<img
-							src="assets/images/newHeader/group-people.svg"
-							data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/group-people-dark.svg"
-							alt=""
-						/>
-						<span> Compromissos </span>
-					</div>
-					<ul class="newHeader__optionLinks">
-						<li class="newHeader__optionLink">
-							<a
-								href="https://oinovafibra.my.site.com/esg/s/"
-								data-analytics="header"
-							>
-								<span> ESG e sustentabilidade </span>
-								<img
-									class="newHeader__optionLink__chevron"
-									src="assets/images/newHeader/chevron-down-black.svg"
-									data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/chevron-down-white.svg"
-									alt=""
-								/>
-							</a>
-						</li>
-						<li class="newHeader__optionLink">
-							<a
-								href="https://www.oi.com.br/acessibilidade/"
-								data-analytics="header"
-							>
-								<span> Acessibilidade </span>
-								<img
-									class="newHeader__optionLink__chevron"
-									src="assets/images/newHeader/chevron-down-black.svg"
-									data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/chevron-down-white.svg"
-									alt=""
-								/>
-							</a>
-						</li>
-						<li class="newHeader__optionLink">
-							<a href="https://oifuturo.org.br/" data-analytics="header">
-								<span> Oi Futuro </span>
-								<img
-									class="newHeader__optionLink__chevron"
-									src="assets/images/newHeader/chevron-down-black.svg"
-									data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/chevron-down-white.svg"
-									alt=""
-								/>
-							</a>
-						</li>
-						<li class="newHeader__optionLink">
-							<a
-								href="https://oifuturo.org.br/espacos/centro-cultural/"
-								data-analytics="header"
-							>
-								<span> Futuros - Arte e Tecnologia </span>
-								<img
-									class="newHeader__optionLink__chevron"
-									src="assets/images/newHeader/chevron-down-black.svg"
-									data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/chevron-down-white.svg"
-									alt=""
-								/>
-							</a>
-						</li>
-						<li class="newHeader__optionLink">
-							<a
-								href="https://oifuturo.org.br/espacos/musehum/"
-								data-analytics="header"
-							>
-								<span> Musehum </span>
-								<img
-									class="newHeader__optionLink__chevron"
-									src="assets/images/newHeader/chevron-down-black.svg"
-									data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/chevron-down-white.svg"
-									alt=""
-								/>
-							</a>
-						</li>
-						<li class="newHeader__optionLink">
-							<a
-								href="https://oifuturo.org.br/programas/nave/"
-								data-analytics="header"
-							>
-								<span> Núcleo Avançado em Educação </span>
-								<img
-									class="newHeader__optionLink__chevron"
-									src="assets/images/newHeader/chevron-down-black.svg"
-									data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/chevron-down-white.svg"
-									alt=""
-								/>
-							</a>
-						</li>
-						<li class="newHeader__optionLink newHeader__greenOption">
-							<a
-								href="https://www.oi.com.br/sobre-a-oi/"
-								data-analytics="header"
-							>
-								<span> Sobre a Oi </span>
-								<img
-									class="newHeader__optionLink__chevron"
-									src="assets/images/newHeader/chevron-right-green.svg"
-									data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/chevron-right-green-dark.svg"
-									alt=""
-								/>
-							</a>
-						</li>
+									src="assets/images/newHeader/chevron-down-black.svg" /> </a></li>
 					</ul>
 				</div>
 
-				<div class="newHeader__menuOptionCard newHeader__menuOptionCard-whyOi">
-					<img
-						class="newHeader__menuOptionCard-bg"
-						src="assets/images/newHeader/why-oi-menu-card-bg.webp"
-						alt=""
-					/>
-					<div class="newHeader__menuOptionCard-content">
-						<span class="newHeader__menuOptionCard-onlyTitle">
-							A Oi tem os clientes <b>mais satisfeitos</b>
-						</span>
-						<ul
-							class="newHeader__menuOptionCard-links newHeader__menuOptionCard-links-whyOi"
-						>
-							<li>
-								<a
-									href="https://www.youtube.com/watch?v=v2lPqWqz4C8"
-									data-analytics="header"
-								>
-									<span> Assista </span>
-									<img
-										class="newHeader__menuOptionCard__link-chevron"
-										src="assets/images/newHeader/arrow-right.svg"
-										alt=""
-									/>
-								</a>
-							</li>
+				<div class="newHeader__linksContainer">
+					<div class="newHeader__linksContainer-title"><img alt=""
+							data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/group-people-dark.svg"
+							src="assets/images/newHeader/group-people.svg" /> <span> Compromissos </span></div>
+
+					<ul class="newHeader__optionLinks">
+						<li class="newHeader__optionLink"><a data-analytics="header"
+								href="https://oinovafibra.my.site.com/esg/s/"><span> ESG e sustentabilidade </span> <img
+									alt="" class="newHeader__optionLink__chevron"
+									data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/chevron-down-white.svg"
+									src="assets/images/newHeader/chevron-down-black.svg" /> </a></li>
+						<li class="newHeader__optionLink"><a data-analytics="header"
+								href="https://www.oi.com.br/acessibilidade/"><span> Acessibilidade </span> <img alt=""
+									class="newHeader__optionLink__chevron"
+									data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/chevron-down-white.svg"
+									src="assets/images/newHeader/chevron-down-black.svg" /> </a></li>
+						<li class="newHeader__optionLink"><a data-analytics="header"
+								href="https://oifuturo.org.br/"><span> Oi Futuro </span> <img alt=""
+									class="newHeader__optionLink__chevron"
+									data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/chevron-down-white.svg"
+									src="assets/images/newHeader/chevron-down-black.svg" /> </a></li>
+						<li class="newHeader__optionLink"><a data-analytics="header"
+								href="https://oifuturo.org.br/espacos/centro-cultural/"><span> Futuros - Arte e
+									Tecnologia </span> <img alt="" class="newHeader__optionLink__chevron"
+									data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/chevron-down-white.svg"
+									src="assets/images/newHeader/chevron-down-black.svg" /> </a></li>
+						<li class="newHeader__optionLink"><a data-analytics="header"
+								href="https://oifuturo.org.br/espacos/musehum/"><span> Musehum </span> <img alt=""
+									class="newHeader__optionLink__chevron"
+									data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/chevron-down-white.svg"
+									src="assets/images/newHeader/chevron-down-black.svg" /> </a></li>
+						<li class="newHeader__optionLink"><a data-analytics="header"
+								href="https://oifuturo.org.br/programas/nave/"><span> N&uacute;cleo Avan&ccedil;ado em
+									Educa&ccedil;&atilde;o </span> <img alt="" class="newHeader__optionLink__chevron"
+									data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/chevron-down-white.svg"
+									src="assets/images/newHeader/chevron-down-black.svg" /> </a></li>
+						<li class="newHeader__optionLink newHeader__greenOption"><a data-analytics="header"
+								href="https://www.oi.com.br/sobre-a-oi/"><span> Sobre a Oi </span> <img alt=""
+									class="newHeader__optionLink__chevron"
+									data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/chevron-right-green-dark.svg"
+									src="assets/images/newHeader/chevron-right-green.svg" /> </a></li>
+					</ul>
+				</div>
+
+				<div class="newHeader__menuOptionCard newHeader__menuOptionCard-whyOi"><img alt=""
+						class="newHeader__menuOptionCard-bg" loading="lazy"
+						src="assets/images/newHeader/why-oi-menu-card-bg.webp" />
+					<div class="newHeader__menuOptionCard-content"><span class="newHeader__menuOptionCard-onlyTitle"> A
+							Oi tem os clientes <b>mais satisfeitos</b> </span>
+
+						<ul class="newHeader__menuOptionCard-links newHeader__menuOptionCard-links-whyOi">
+							<li><a data-analytics="header" href="https://www.youtube.com/watch?v=v2lPqWqz4C8"><span>
+										Assista </span> <img alt="" class="newHeader__menuOptionCard__link-chevron"
+										src="assets/images/newHeader/arrow-right.svg" /> </a></li>
 						</ul>
 					</div>
 				</div>
 			</div>
-			<div
-				id="menu-option-attendance-client"
-				class="newHeader__menuOptionContainer"
-			>
+
+			<!-- corpo com options: Atendimento Oi -->
+			<div class="newHeader__menuOptionContainer" id="menu-option-attendance-client">
 				<div class="newHeader__linksContainer">
-					<div class="newHeader__linksContainer-title">
-						<img
-							src="assets/images/newHeader/flash.svg"
+					<div class="newHeader__linksContainer-title"><img alt=""
 							data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/flash-dark.svg"
-							alt=""
-						/>
-						<span> Resolva rápido </span>
-					</div>
+							src="assets/images/newHeader/flash.svg" /> <span> Resolva r&aacute;pido </span></div>
+
 					<ul class="newHeader__optionLinks">
-						<li class="newHeader__optionLink">
-							<a
-								href="https://www.oi.com.br/minha-oi/segunda-via/"
-								data-analytics="header"
-							>
-								<span> 2ª via de conta </span>
-								<img
-									class="newHeader__optionLink__chevron"
-									src="assets/images/newHeader/chevron-down-black.svg"
+						<li class="newHeader__optionLink"><a data-analytics="header"
+								href="https://www.oi.com.br/minha-oi/segunda-via/"><span> 2&ordf; via de conta </span>
+								<img alt="" class="newHeader__optionLink__chevron"
 									data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/chevron-down-white.svg"
-									alt=""
-								/>
-							</a>
-						</li>
-						<li class="newHeader__optionLink">
-							<a
-								href="https://www.oi.com.br/minha-oi/atendimento-oi/#:~:text=Consulta-,de,-protocolo"
-								data-analytics="header"
-							>
-								<span> Consultar protocolo </span>
-								<img
-									class="newHeader__optionLink__chevron"
-									src="assets/images/newHeader/chevron-down-black.svg"
+									src="assets/images/newHeader/chevron-down-black.svg" /> </a></li>
+						<li class="newHeader__optionLink"><a data-analytics="header"
+								href="https://www.oi.com.br/minha-oi/atendimento-oi/#:~:text=Consulta-,de,-protocolo"><span>
+									Consultar protocolo </span> <img alt="" class="newHeader__optionLink__chevron"
 									data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/chevron-down-white.svg"
-									alt=""
-								/>
-							</a>
-						</li>
-						<li class="newHeader__optionLink">
-							<a
-								href="https://www.oi.com.br/minha-oi/religar-servico/#/religar/consulta"
-								data-analytics="header"
-							>
-								<span> Desbloquear serviço </span>
-								<img
+									src="assets/images/newHeader/chevron-down-black.svg" /> </a></li>
+						<li class="newHeader__optionLink"><a data-analytics="header"
+								href="https://www.oi.com.br/minha-oi/religar-servico/#/religar/consulta"><span>
+									Desbloquear servi&ccedil;o </span> <img alt=""
 									class="newHeader__optionLink__chevron"
-									src="assets/images/newHeader/chevron-down-black.svg"
 									data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/chevron-down-white.svg"
-									alt=""
-								/>
-							</a>
-						</li>
-						<li class="newHeader__optionLink">
-							<a
-								href="https://www.oi.com.br/minha-oi/contato/coleta-aparelhos"
-								data-analytics="header"
-							>
-								<span> Devolver equipamento </span>
-								<img
-									class="newHeader__optionLink__chevron"
-									src="assets/images/newHeader/chevron-down-black.svg"
+									src="assets/images/newHeader/chevron-down-black.svg" /> </a></li>
+						<li class="newHeader__optionLink"><a data-analytics="header"
+								href="https://www.oi.com.br/minha-oi/contato/coleta-aparelhos"><span> Devolver
+									equipamento </span> <img alt="" class="newHeader__optionLink__chevron"
 									data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/chevron-down-white.svg"
-									alt=""
-								/>
-							</a>
-						</li>
-						<li class="newHeader__optionLink">
-							<a
-								href="https://www.oi.com.br/negociacao/"
-								data-analytics="header"
-							>
-								<span> Negociar dívidas </span>
-								<img
-									class="newHeader__optionLink__chevron"
-									src="assets/images/newHeader/chevron-down-black.svg"
+									src="assets/images/newHeader/chevron-down-black.svg" /> </a></li>
+						<li class="newHeader__optionLink"><a data-analytics="header"
+								href="https://www.oi.com.br/negociacao/"><span> Negociar d&iacute;vidas </span> <img
+									alt="" class="newHeader__optionLink__chevron"
 									data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/chevron-down-white.svg"
-									alt=""
-								/>
-							</a>
-						</li>
-					</ul>
-				</div>
-				<div class="newHeader__linksContainer">
-					<div class="newHeader__linksContainer-title">
-						<img
-							src="assets/images/newHeader/router.svg"
-							data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/router-dark.svg"
-							alt=""
-						/>
-						<span> Sua Oi Fibra </span>
-					</div>
-					<ul class="newHeader__optionLinks">
-						<li class="newHeader__optionLink">
-							<a
-								href="https://www.oi.com.br/internet/lp/boas-vindas-fibra/#dicas-uso"
-								data-analytics="header"
-							>
-								<span> Dicas </span>
-								<img
-									class="newHeader__optionLink__chevron"
-									src="assets/images/newHeader/chevron-down-black.svg"
-									data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/chevron-down-white.svg"
-									alt=""
-								/>
-							</a>
-						</li>
-						<li class="newHeader__optionLink">
-							<a
-								href="https://www.oi.com.br/internet/teste-de-velocidade/"
-								data-analytics="header"
-							>
-								<span> Teste de velocidade </span>
-								<img
-									class="newHeader__optionLink__chevron"
-									src="assets/images/newHeader/chevron-down-black.svg"
-									data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/chevron-down-white.svg"
-									alt=""
-								/>
-							</a>
-						</li>
-						<li class="newHeader__optionLink">
-							<a
-								href="https://www.oi.com.br/minha-oi/manuais-digitais/"
-								data-analytics="header"
-							>
-								<span> Manuais de modens </span>
-								<img
-									class="newHeader__optionLink__chevron"
-									src="assets/images/newHeader/chevron-down-black.svg"
-									data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/chevron-down-white.svg"
-									alt=""
-								/>
-							</a>
-						</li>
-						<li class="newHeader__optionLink">
-							<a
-								href="https://www.oi.com.br/minha-oi/tecnico-virtual/"
-								data-analytics="header"
-							>
-								<span> Suporte técnico </span>
-								<img
-									class="newHeader__optionLink__chevron"
-									src="assets/images/newHeader/chevron-down-black.svg"
-									data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/chevron-down-white.svg"
-									alt=""
-								/>
-							</a>
-						</li>
-					</ul>
-				</div>
-				<div class="newHeader__linksContainer">
-					<div class="newHeader__linksContainer-title">
-						<img
-							src="assets/images/newHeader/smartphone.svg"
-							data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/smartphone-dark.svg"
-							alt=""
-						/>
-						<span> Aplicativos </span>
-					</div>
-					<ul class="newHeader__optionLinks">
-						<li class="newHeader__optionLink">
-							<a
-								href="https://www.assinar-oi-fibra.com.br/blog/aplicativo-oie"
-								data-analytics="header"
-							>
-								<span> Oi_e </span>
-								<img
-									class="newHeader__optionLink__chevron"
-									src="assets/images/newHeader/chevron-down-black.svg"
-									data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/chevron-down-white.svg"
-									alt=""
-								/>
-							</a>
-						</li>
-						<li class="newHeader__optionLink">
-							<a href="https://www.oi.com.br/minha-oi/" data-analytics="header">
-								<span> Minha Oi </span>
-								<img
-									class="newHeader__optionLink__chevron"
-									src="assets/images/newHeader/chevron-down-black.svg"
-									data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/chevron-down-white.svg"
-									alt=""
-								/>
-							</a>
-						</li>
-						<li class="newHeader__optionLink">
-							<a
-								href="https://www.oi.com.br/pwa/tecnico-virtual/"
-								data-analytics="header"
-							>
-								<span> Técnico virtual </span>
-								<img
-									class="newHeader__optionLink__chevron"
-									src="assets/images/newHeader/chevron-down-black.svg"
-									data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/chevron-down-white.svg"
-									alt=""
-								/>
-							</a>
-						</li>
-					</ul>
-				</div>
-				<div class="newHeader__linksContainer">
-					<div class="newHeader__linksContainer-title">
-						<img
-							src="assets/images/newHeader/phone.svg"
-							data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/phone-dark.svg"
-							alt=""
-						/>
-						<span> Fale com a Oi </span>
-					</div>
-					<ul class="newHeader__optionLinks">
-						<li class="newHeader__optionLink">
-							<a
-								href="https://www.oi.com.br/minha-oi/atendimento-oi/"
-								data-analytics="header"
-							>
-								<span> Canais de atendimento </span>
-								<img
-									class="newHeader__optionLink__chevron"
-									src="assets/images/newHeader/chevron-down-black.svg"
-									data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/chevron-down-white.svg"
-									alt=""
-								/>
-							</a>
-						</li>
-						<li class="newHeader__optionLink">
-							<a
-								href="https://api.whatsapp.com/send?1=pt_BR&phone=553131313131"
-								data-analytics="header"
-							>
-								<span> Pelo WhatsApp </span>
-								<img
-									class="newHeader__optionLink__chevron"
-									src="assets/images/newHeader/chevron-down-black.svg"
-									data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/chevron-down-white.svg"
-									alt=""
-								/>
-							</a>
-						</li>
-						<li class="newHeader__optionLink newHeader__greenOption">
-							<a href="https://www.oi.com.br/faq/" data-analytics="header">
-								<span> Central de ajuda </span>
-								<img
-									class="newHeader__optionLink__chevron"
-									src="assets/images/newHeader/chevron-right-green.svg"
-									data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/chevron-right-green-dark.svg"
-									alt=""
-								/>
-							</a>
-						</li>
+									src="assets/images/newHeader/chevron-down-black.svg" /> </a></li>
 					</ul>
 				</div>
 
-				<div class="newHeader__menuOptionCard newHeader__menuOptionCard-whyOi">
-					<img
-						class="newHeader__menuOptionCard-bg"
-						src="assets/images/newHeader/why-oi-menu-card-bg.webp"
-						alt=""
-					/>
-					<div class="newHeader__menuOptionCard-content menuAttendance">
-						<span class="newHeader__menuOptionCard-onlyTitle">
-							Aumente a velocidade do seu plano
-						</span>
+				<div class="newHeader__linksContainer">
+					<div class="newHeader__linksContainer-title"><img alt=""
+							data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/router-dark.svg"
+							src="assets/images/newHeader/router.svg" /> <span> Sua Oi Fibra </span></div>
+
+					<ul class="newHeader__optionLinks">
+						<li class="newHeader__optionLink"><a data-analytics="header"
+								href="https://www.oi.com.br/internet/lp/boas-vindas-fibra/#dicas-uso"><span> Dicas
+								</span> <img alt="" class="newHeader__optionLink__chevron"
+									data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/chevron-down-white.svg"
+									src="assets/images/newHeader/chevron-down-black.svg" /> </a></li>
+						<li class="newHeader__optionLink"><a data-analytics="header"
+								href="https://www.oi.com.br/internet/teste-de-velocidade/"><span> Teste de velocidade
+								</span> <img alt="" class="newHeader__optionLink__chevron"
+									data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/chevron-down-white.svg"
+									src="assets/images/newHeader/chevron-down-black.svg" /> </a></li>
+						<li class="newHeader__optionLink"><a data-analytics="header"
+								href="https://www.oi.com.br/minha-oi/manuais-digitais/"><span> Manuais de modens </span>
+								<img alt="" class="newHeader__optionLink__chevron"
+									data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/chevron-down-white.svg"
+									src="assets/images/newHeader/chevron-down-black.svg" /> </a></li>
+						<li class="newHeader__optionLink"><a data-analytics="header"
+								href="https://www.oi.com.br/minha-oi/tecnico-virtual/"><span> Suporte t&eacute;cnico
+								</span> <img alt="" class="newHeader__optionLink__chevron"
+									data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/chevron-down-white.svg"
+									src="assets/images/newHeader/chevron-down-black.svg" /> </a></li>
+					</ul>
+				</div>
+
+				<div class="newHeader__linksContainer">
+					<div class="newHeader__linksContainer-title"><img alt=""
+							data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/smartphone-dark.svg"
+							src="assets/images/newHeader/smartphone.svg" /> <span> Aplicativos </span></div>
+
+					<ul class="newHeader__optionLinks">
+						<li class="newHeader__optionLink"><a data-analytics="header"
+								href="https://www.oi.com.br/faq/p/voce-ja-conhece-o-oie"><span> Oi_e </span> <img alt=""
+									class="newHeader__optionLink__chevron"
+									data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/chevron-down-white.svg"
+									src="assets/images/newHeader/chevron-down-black.svg" /> </a></li>
+						<li class="newHeader__optionLink"><a data-analytics="header"
+								href="https://www.oi.com.br/minha-oi/"><span> Minha Oi </span> <img alt=""
+									class="newHeader__optionLink__chevron"
+									data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/chevron-down-white.svg"
+									src="assets/images/newHeader/chevron-down-black.svg" /> </a></li>
+						<li class="newHeader__optionLink"><a data-analytics="header"
+								href="https://www.oi.com.br/pwa/tecnico-virtual/"><span> T&eacute;cnico virtual </span>
+								<img alt="" class="newHeader__optionLink__chevron"
+									data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/chevron-down-white.svg"
+									src="assets/images/newHeader/chevron-down-black.svg" /> </a></li>
+					</ul>
+				</div>
+
+				<div class="newHeader__linksContainer">
+					<div class="newHeader__linksContainer-title"><img alt=""
+							data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/phone-dark.svg"
+							src="assets/images/newHeader/phone.svg" /> <span> Fale com a Oi </span></div>
+
+					<ul class="newHeader__optionLinks">
+						<li class="newHeader__optionLink"><a data-analytics="header"
+								href="https://www.oi.com.br/minha-oi/atendimento-oi/"><span> Canais de atendimento
+								</span> <img alt="" class="newHeader__optionLink__chevron"
+									data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/chevron-down-white.svg"
+									src="assets/images/newHeader/chevron-down-black.svg" /> </a></li>
+						<li class="newHeader__optionLink"><a data-analytics="header"
+								href="https://api.whatsapp.com/send?1=pt_BR&amp;phone=553131313131"><span> Pelo WhatsApp
+								</span> <img alt="" class="newHeader__optionLink__chevron"
+									data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/chevron-down-white.svg"
+									src="assets/images/newHeader/chevron-down-black.svg" /> </a></li>
+						<li class="newHeader__optionLink"><a class="btn_pelo_whatsapp" data-analytics="header"
+								href="tel:08000310453"><span style="display: flex;flex-direction: column;">Assinar pelo
+									telefone <b style="font-size: 14px;font-weight: 400;color: #8F8F8F;">0800 031
+										0453</b></span> <img alt="" class="newHeader__optionLink__chevron"
+									src="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/chevron-down-black.svg" />
+							</a></li>
+						<li class="newHeader__optionLink newHeader__greenOption"><a data-analytics="header"
+								href="https://www.oi.com.br/faq/"><span> Central de ajuda </span> <img alt=""
+									class="newHeader__optionLink__chevron"
+									data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/chevron-right-green-dark.svg"
+									src="assets/images/newHeader/chevron-right-green.svg" /> </a></li>
+					</ul>
+				</div>
+
+				<div class="newHeader__new-cnpj-container">
+					<div class="newHeader__menuOptionCard-content menuAttendance new-cnpj-adjusts"><span
+							class="newHeader__menuOptionCard-onlyTitle__new-cnpj">A Nio est&aacute; chegando e
+							trar&aacute; muitas novidades.<br />
+							Fique Ligado!</span> <img alt="" class="newHeader__menuOptionCard-bg__new-cnpj"
+							src="/lumis/portal/file/fileDownload.jsp?fileId=FF808181956D315801956D5642C702B5&amp;inline=1" />
 						<ul
-							class="newHeader__menuOptionCard-links newHeader__menuOptionCard-links-whyOi"
-						>
-							<li>
-								<a
-									href="https://minha.oi.com.br/minhaoi/vendas/turbine-internet?origem=minhaoi30-portal-coi"
-									data-analytics="header"
-								>
-									<span> Confira as ofertas </span>
-									<img
+							class="newHeader__menuOptionCard-links newHeader__menuOptionCard-links-whyOi__new-cnpj-adjusts">
+							<li><a data-analytics="header"
+									href="https://www.oi.com.br/regulatorio/#transformacao"><span>Leia mais</span> <img
+										alt="" class="newHeader__menuOptionCard__link-chevron"
+										src="assets/images/newHeader/arrow-right.svg" /> </a></li>
+						</ul>
+					</div>
+
+					<div class="newHeader__menuOptionCard-content menuAttendance new-cnpj-adjusts"><span
+							class="newHeader__menuOptionCard-onlyTitle__internet-boost">Aumente a velocidade do seu
+							plano</span> <img alt="" class="newHeader__menuOptionCard-bg__internet-boost"
+							src="assets/images/newHeader/why-oi-menu-card-bg.webp" />
+						<ul
+							class="newHeader__menuOptionCard-links newHeader__menuOptionCard-links-whyOi__new-cnpj-adjusts">
+							<li><a data-analytics="header"
+									href="https://minha.oi.com.br/minhaoi/vendas/turbine-internet?origem=minhaoi30-portal-coi"><span>
+										Confira as ofertas </span> <img alt=""
 										class="newHeader__menuOptionCard__link-chevron"
-										src="assets/images/newHeader/arrow-right.svg"
-										alt=""
-									/>
-								</a>
-							</li>
+										src="assets/images/newHeader/arrow-right.svg" /> </a></li>
 						</ul>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-	<div class="home-section newHeader__signFiberModal">
-		<button
-			onclick="closeSignFiberModal()"
-			class="newHeader__signFiberModal__overlay"
-		></button>
-		<div class="width-container newHeader__signFiberModalContainer">
-			<button
-				onclick="closeSignFiberModal()"
-				class="newHeader__signFiberModal__closeBtn"
-			>
-				<img
-					class="newHeader__menuHeader__close-icon"
-					src="assets/images/newHeader/close-icon-black.svg"
-					data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/close-icon-white.svg"
-					alt=""
-				/>
-			</button>
 
-			<span class="newHeader__signFiberModalTitle"> Assinar Oi Fibra </span>
-			<span class="newHeader__signFiberModalSubtitle">
-				Escolha a melhor opção e confira as nossas ofertas:
-			</span>
+	<!-- Modal do botão "Assinar Oi Fibra" -->
+	<div class="home-section newHeader__signFiberModal">
+		<!-- fecha a modal -->
+		<button class="newHeader__signFiberModal__overlay" onclick="closeSignFiberModal()"></button>
+
+		<div class="width-container newHeader__signFiberModalContainer">
+			<button	class="newHeader__signFiberModal__closeBtn" onclick="closeSignFiberModal()">
+				<img alt=""
+					class="newHeader__menuHeader__close-icon"
+					data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/close-icon-white.svg"
+					src="assets/images/newHeader/close-icon-black.svg" />
+			</button>
+			<span class="newHeader__signFiberModalTitle"> Assinar Oi Fibra </span> 
+			<span class="newHeader__signFiberModalSubtitle"> Escolha a melhor op&ccedil;&atilde;o e confira as nossas ofertas: </span>
+
+			<!-- lista de cards -->
 			<ul class="newHeader__signFiberModalCards">
-				<li class="newHeader__signFiberModalCard">
-					<a href="https://www.oi.com.br/internet" data-analytics="header">
-						<img
-							src="assets/images/newHeader/signfiber-home.svg"
+				<li class="newHeader__signFiberModalCard"><a data-analytics="header"
+						href="https://www.oi.com.br/internet"><img alt=""
 							data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/signfiber-home-dark.svg"
-							alt=""
-						/>
-						<span> Pra sua casa </span>
-						<img
+							src="assets/images/newHeader/signfiber-home.svg" /> <span> Pra sua casa </span> <img alt=""
 							class="newHeader__signFiberModalCard-arrow"
-							src="assets/images/newHeader/arrow-right-black.svg"
 							data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/arrow-right.svg"
+							src="assets/images/newHeader/arrow-right-black.svg" /> </a></li>
+				<li class="newHeader__signFiberModalCard"><a data-analytics="header"
+						href="https://www.oi.com.br/empresas/oi-fibra?utm_source=site-oi&amp;utm_medium=pra-sua-empresa"><img
 							alt=""
-						/>
-					</a>
-				</li>
-				<li class="newHeader__signFiberModalCard">
-					<a
-						href="https://www.oi.com.br/empresas/oi-fibra?utm_source=site-oi&utm_medium=pra-sua-empresa"
-						data-analytics="header"
-					>
-						<img
-							src="assets/images/newHeader/signfiber-briefcase.svg"
 							data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/signfiber-briefcase-dark.svg"
-							alt=""
-						/>
-						<span> Pra sua empresa </span>
-						<img
-							class="newHeader__signFiberModalCard-arrow"
-							src="assets/images/newHeader/arrow-right-black.svg"
+							src="assets/images/newHeader/signfiber-briefcase.svg" /> <span> Pra sua empresa </span> <img
+							alt="" class="newHeader__signFiberModalCard-arrow"
 							data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/arrow-right.svg"
-							alt=""
-						/>
-					</a>
-				</li>
-				<li class="newHeader__signFiberModalCard">
-					<a href="https://www.oi.com.br/minha-oi/" data-analytics="header">
-						<img
-							src="assets/images/newHeader/signfiber-user.svg"
+							src="assets/images/newHeader/arrow-right-black.svg" /> </a></li>
+				<li class="newHeader__signFiberModalCard"><a data-analytics="header"
+						href="https://www.oi.com.br/minha-oi/"><img alt=""
 							data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/signfiber-user-dark.svg"
-							alt=""
-						/>
-						<span> Pra quem já é cliente Oi </span>
-						<img
-							class="newHeader__signFiberModalCard-arrow"
-							src="assets/images/newHeader/arrow-right-black.svg"
+							src="assets/images/newHeader/signfiber-user.svg" /> <span> Pra quem j&aacute; &eacute;
+							cliente Oi </span> <img alt="" class="newHeader__signFiberModalCard-arrow"
 							data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/arrow-right.svg"
-							alt=""
-						/>
-					</a>
-				</li>
+							src="assets/images/newHeader/arrow-right-black.svg" /> </a></li>
+				<li class="newHeader__topArea__menuDesktop__item"><a class="btn-ajude-rs"
+						href="https://www.oi.com.br/internet/oi-pelo-rs/" target="_blank"><img alt="coração"
+							class="newHeader__topArea__selectedMenuItem-chevron"
+							src="/lumis/portal/file/fileDownload.jsp?fileId=8ABAB5B08ECB8D86018F5F2EFF76137E&amp;inline=1" /><span>Oi
+							pelo Rio Grande do Sul</span></a></li>
 			</ul>
 		</div>
 	</div>
-	<button
-		onclick="openSignFiberModal()"
-		class="newHeader__signFiberButtonMobile"
-	>
-		Assinar Oi Fibra
-	</button>
 </section>
-<!-- <section class="newHeader__mid-section home-section">
-    <div class="width-container">
-        <div class="newHeader__midArea__flexbox">
 
-        </div>
-    </div>
-</section> -->
-
-<!-- <div id="header-modal-container"></div>
-
-<div id="changeLocalization"></div>
-<div id="header-modal_inputcontent"></div>
-<div id="container-city-modal"></div> -->
 <div id="button_accessibility_sum" style="display: none;"></div>
 <div id="button_accessibility_subtraction" style="display: none;"></div>
