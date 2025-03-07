@@ -183,10 +183,91 @@
 			height: fit-content;
 		}
 	}
+
+	.noi-header-two-right-btn{
+		display: flex;
+		height: 48px;
+		padding: 8px 32px;
+		justify-content: center;
+		align-items: center;
+		gap: 8px;
+		border-radius: 999px;
+		background: var(--Main-brand-Primary-Light, #70FF84);
+		border: 0;
+
+		width: 100%;
+		min-width: none;
+		max-width: none;
+		margin: 0;
+
+		span{
+			color: var(--funcional-neutral-neutral-dark, #3D3D3D);
+			text-align: center;
+			font-family: "Simplon BP";
+			font-size: 14px;
+			font-style: normal;
+			font-weight: 500;
+			line-height: 0;
+		}
+	}
+	.noi-header-three-links-list{
+		display: flex;
+		flex: 3;
+		width: 100%;
+		gap: 64px;
+
+		div{
+			width: fit-content;
+		}
+	}
+	.noi-header-three-banner{
+		flex: 1;
+		left: 0;
+
+		div{
+			justify-content: center;
+		}
+
+		.noi-three-banner-title{
+			color: var(--Oi-Solues---Light, #D9E29C);
+			font-family: "Simplon BP";
+			font-size: 16px;
+			font-style: normal;
+			font-weight: 500;
+			line-height: 150%;
+		}
+
+		.noi-three-banner-body{
+			color: var(--Functional-Pure-White, #FFF);
+			font-family: "Simplon BP";
+			font-size: 20px;
+			font-style: normal;
+			font-weight: 500;
+			line-height: 120%;
+		}
+		a{
+			display: flex;
+			height: 48px;
+			padding: 8px 0px;
+			/* justify-content: space-between; */
+			align-items: center;
+			align-self: stretch;
+
+			span{
+				color: var(--Oi-Solues---Light, #D9E29C);
+				text-align: center;
+				font-family: "Simplon BP";
+				font-size: 16px;
+				font-style: normal;
+				font-weight: 500;
+				line-height: 150%;
+			}
+		}
+	}
 </style>
 <section class="newHeader__top-section home-section" id="header-container">
-	<div class="width-container">
-		<div class="newHeader__topArea__flexbox">
+	<div class="width-container" style="flex-direction: column;">
+		<div class="newHeader__topArea__flexbox" style="justify-content: space-between;">
 			<!-- header 1o nivel (esquerda): Pra sua casa/ Pra sua empresa -->
 			<div class="newHeader__topArea__leftSide">
 				<a data-analytics="header" href="https://www.oi.com.br/">
@@ -197,22 +278,27 @@
 				</a>
 				<ul class="newHeader__topArea__links">
 					<li>
-						<a class="newHeader__topArea__link newHeader__topArea__selectedLink" data-analytics="header"
-							href="/">Pra sua casa</a>
+						<a class="newHeader__topArea__link newHeader__topArea__selectedLink" style=" gap: 8px; border-bottom: 0;" data-analytics="header"
+							href="https://www.oi.com.br/grandes-empresas">
+							<span>Conheça a Oi Soluções</span>
+							<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M9.26672 12.4001C9.36672 12.5001 9.49339 12.5467 9.62006 12.5467C9.74673 12.5467 9.87339 12.5001 9.97339 12.4001L14.0201 8.35341C14.2134 8.16008 14.2134 7.84008 14.0201 7.64674L9.97339 3.60008C9.78006 3.40674 9.46006 3.40674 9.26672 3.60008C9.07339 3.79341 9.07339 4.11341 9.26672 4.30674L12.4601 7.50008H2.33331C2.05998 7.50008 1.83331 7.72675 1.83331 8.00008C1.83331 8.27341 2.05998 8.50008 2.33331 8.50008H12.4601L9.26672 11.6934C9.07339 11.8867 9.07339 12.2067 9.26672 12.4001Z" fill="#00A300"/>
+							</svg>
+						</a>
 					</li>
-					<li>
+					<!-- <li>
 						<a class="newHeader__topArea__link" data-analytics="header"
 							href="https://www.oi.com.br/empresas/">Pra sua empresa</a>
-					</li>
+					</li> -->
 				</ul>
 			</div>
 
 			<!-- modal para fechar o dropdown de regiões -->
-			<div class="newHeader__topArea__changeLocationContainer-overlay" onclick="closeRegionalizationModal()">
-				&nbsp;</div>
+			<!-- <div class="newHeader__topArea__changeLocationContainer-overlay" onclick="closeRegionalizationModal()">
+				&nbsp;</div> -->
 
 			<!-- troca de região -->
-			<div class="newHeader__topArea__regionalizationArea" id="changeLocalization">
+			<!-- <div class="newHeader__topArea__regionalizationArea" id="changeLocalization">
 				<img alt=""
 					class="newHeader__topArea__regionalizationIcon"
 					data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/location-dark-mode.svg"
@@ -222,10 +308,19 @@
 					data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/chevron-down-white.svg"
 					src="assets/images/newHeader/chevron-down-black.svg" />
 				<div class="newHeader__topArea__changeLocationContainer">&nbsp;</div>
-			</div>
+			</div> -->
 
 			<!-- header 1o nivel (direita): acessibilidade -->
-			<div class="newHeader__topArea__rightSide">
+			<div class="newHeader__topArea__rightSide" style="gap: 16px;">
+				
+				<!-- Campo de busca fake: é um botão que leva para o Faq -->
+				<a class="newHeader__topArea__FAQCTA" data-analytics="header" href="https://www.oi.com.br/faq/" style="border: 1px solid var(--newhome-header-acessibility-border);">
+					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+						<path fill-rule="evenodd" clip-rule="evenodd" d="M12 21.25C17.1086 21.25 21.25 17.1086 21.25 12C21.25 6.89137 17.1086 2.75 12 2.75C6.89137 2.75 2.75 6.89137 2.75 12C2.75 17.1086 6.89137 21.25 12 21.25ZM12 22.75C17.9371 22.75 22.75 17.9371 22.75 12C22.75 6.06294 17.9371 1.25 12 1.25C6.06294 1.25 1.25 6.06294 1.25 12C1.25 17.9371 6.06294 22.75 12 22.75ZM12.0155 8.67878C11.3577 8.67878 10.7357 9.26647 10.7357 10.1048C10.7357 10.5289 10.3919 10.8727 9.96786 10.8727C9.54378 10.8727 9.2 10.5289 9.2 10.1048C9.2 8.51984 10.4115 7.14307 12.0155 7.14307C13.6195 7.14307 14.831 8.51984 14.831 10.1048C14.831 10.8905 14.539 11.6133 14.0532 12.1491C13.8553 12.3673 13.6481 12.5424 13.4728 12.6847C13.4253 12.7233 13.3817 12.7583 13.3412 12.7908L13.3408 12.7911C13.2197 12.8883 13.1261 12.9635 13.0373 13.0463C12.8432 13.2273 12.7833 13.3415 12.7833 13.5419C12.7833 13.966 12.4396 14.3097 12.0155 14.3097C11.5914 14.3097 11.2476 13.966 11.2476 13.5419C11.2476 12.7729 11.6069 12.2804 11.9897 11.9234C12.1246 11.7975 12.2789 11.6739 12.4091 11.5695L12.4095 11.5692C12.4432 11.5422 12.4752 11.5165 12.5049 11.4924C12.6641 11.3631 12.7981 11.247 12.9155 11.1176C13.1461 10.8632 13.2952 10.5077 13.2952 10.1048C13.2952 9.26647 12.6732 8.67878 12.0155 8.67878ZM12.0192 15C11.4563 15 11 15.4584 11 16.0238C11 16.5892 11.4563 17.0476 12.0192 17.0476H12.0284C12.5913 17.0476 13.0476 16.5892 13.0476 16.0238C13.0476 15.4584 12.5913 15 12.0284 15H12.0192Z" fill="#1F1F1F"/>
+					</svg> 
+					<span style="line-height: 0;">Central de ajuda</span> 
+				</a>
+
 				<div class="newHeader__acessibility__container" id="vlibras-and-contrast-container">
 					<div class="newHeader__acessibility__icon-area">
 						<img alt=""
@@ -245,9 +340,8 @@
 							loading="lazy" src="assets/images/newHeader/libras-icon-black.svg" />
 					</button>
 				</div>
-				
 				<!-- header 1o nivel (direita): Já sou cliente -->
-				<div class="newHeader__menuOrAlreadyClientContainer">
+				<!-- <div class="newHeader__menuOrAlreadyClientContainer">
 					<a class="newHeader__alreadyClientLink"
 						data-analytics="header" href="https://www.oi.com.br/minha-oi/">
 						<img alt=""
@@ -255,25 +349,19 @@
 							src="assets/images/newHeader/already-client-black.svg" /> 
 							<span> J&aacute; sou cliente</span> 
 					</a>
-					<!-- menu hamburguer para mobile -->
-					<button class="newHeader__menuButton" onclick="triggerMenuMobile()"><img alt=""
-							data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/menu-icon-white.svg"
-							src="assets/images/newHeader/menu-icon-black.svg" />
-					</button>
-				</div>
+				</div> -->
+				<!-- menu hamburguer para mobile -->
+				<button class="newHeader__menuButton" onclick="triggerMenuMobile()">
+					<img alt=""
+						data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/menu-icon-white.svg"
+						src="assets/images/newHeader/menu-icon-black.svg" />
+				</button>
 			</div>
-			<!-- Campo de busca fake: é um botão que leva para o Faq -->
-			<a class="newHeader__topArea__FAQCTA" data-analytics="header" href="https://www.oi.com.br/faq/">
-				<img alt=""
-					class="newHeader__topArea__searchIcon"
-					data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/search-icon-white.svg"
-					src="assets/images/newHeader/search-icon-black.svg" /> 
-				<span>Busca</span> 
-			</a>
+		</div>	
 
 			<!-- ___________________________________________________________________________________ -->
 			<!-- header 2o nivel -->
-
+		<div class="newHeader__topArea__flexbox">
 			<!-- lista de menus a esquerda -->
 			<ul class="newHeader__topArea__menuDesktop">
 				<li class="newHeader__topArea__menuDesktop__item"> 
@@ -288,9 +376,9 @@
 					<button onclick="menuSelected(event ,'menu-option-why-oi', 'Por que Oi')">Por que Oi</button>
 					<img alt=""	class="newHeader__topArea__selectedMenuItem-chevron" data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/chevron-down-green.svg" src="assets/images/newHeader/chevron-down-black.svg" />
 				</li>
-				<li class="newHeader__topArea__menuDesktop__item">
+				<!-- <li class="newHeader__topArea__menuDesktop__item">
 					<a data-analytics="header" href="https://www.oi.com.br/blog/">Blog </a>
-				</li>
+				</li> -->
 				<li class="newHeader__topArea__menuDesktop__item">
 					<a data-analytics="header" href="https://www.oi.com.br/negociacao/">Negociar d&iacute;vidas </a>
 				</li>
@@ -311,15 +399,19 @@
 
 			<!-- botões a direita: whatsapp e Assinar Oi Fibra -->
 			<div class="newHeader__topArea__floatingButtons">
-				<button class="newHeader__topArea__whatsappButton"
+				<!-- <button class="newHeader__topArea__whatsappButton"
 					onclick="document.getElementById('modal-contato').style.display='block'">
 					<img alt=""
 						class="newHeader__topArea__whatsappIcon"
 						data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/whatsapp-icon-green.svg"
 						src="assets/images/newHeader/whatsapp-icon-white.svg" />
+				</button> -->
+				<button	class="newHeader__topArea__signFiber noi-header-two-right-btn" onclick="openSignFiberModal()">
+					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+						<path fill-rule="evenodd" clip-rule="evenodd" d="M12 1.25C17.93 1.25 22.75 6.07 22.75 12C22.75 17.93 17.93 22.75 12 22.75C6.07 22.75 1.25 17.93 1.25 12C1.25 6.07 6.07 1.25 12 1.25ZM12 21.25C17.1 21.25 21.25 17.1 21.25 12C21.25 6.9 17.1 2.75 12 2.75C6.9 2.75 2.75 6.9 2.75 12C2.75 17.1 6.9 21.25 12 21.25ZM12 10.25C12.41 10.25 12.75 10.59 12.75 11V16C12.75 16.41 12.41 16.75 12 16.75C11.59 16.75 11.25 16.41 11.25 16V11C11.25 10.59 11.59 10.25 12 10.25ZM12.38 7.08C12.26 7.03 12.13 7 12 7C11.87 7 11.74 7.03 11.62 7.08C11.5 7.13 11.39 7.2 11.29 7.29C11.2 7.39 11.13 7.49 11.08 7.62C11.03 7.74 11 7.87 11 8C11 8.13 11.03 8.26 11.08 8.38C11.13 8.5 11.2 8.61 11.29 8.71C11.39 8.8 11.5 8.87 11.62 8.92C11.86 9.02 12.14 9.02 12.38 8.92C12.5 8.87 12.61 8.8 12.71 8.71C12.8 8.61 12.87 8.5 12.92 8.38C12.97 8.26 13 8.13 13 8C13 7.87 12.97 7.74 12.92 7.62C12.87 7.49 12.8 7.39 12.71 7.29C12.61 7.2 12.5 7.13 12.38 7.08Z" fill="#3D3D3D"/>
+					  </svg>
+					<span> Entenda as mudanças da Oi</span>
 				</button>
-				<button
-					class="newHeader__topArea__signFiber" onclick="openSignFiberModal()">Assinar Oi Fibra</button>
 			</div>
 		</div>
 	</div>
@@ -327,7 +419,7 @@
 	<!-- ___________________________________________________________________________________ -->
 	<!-- header 3o nivel: modal -->
 
-	<div class="home-section newHeader__menuContainer">
+	<div class="home-section newHeader__menuContainer" style="border-top: 1px solid var(--Functional-Neutral-Light, #E0E0E0);">
 		<!-- fecha a modal -->
 		<button class="newHeader__menuContainer__overlay" onclick="closeMenuContainer()">
 		</button>
@@ -376,7 +468,7 @@
 								src="assets/images/newHeader/chevron-down-black.svg" />
 						</button>
 					</li>
-					<li class="newHeader__topArea__menuMobile__item">
+					<!-- <li class="newHeader__topArea__menuMobile__item">
 						<a data-analytics="header" href="https://www.oi.com.br/blog/">
 							<span> Blog </span> 
 							<img alt=""
@@ -384,7 +476,7 @@
 								data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/chevron-down-white.svg"
 								src="assets/images/newHeader/chevron-down-black.svg" /> 
 						</a>
-					</li>
+					</li> -->
 					<li class="newHeader__topArea__menuMobile__item">
 						<a data-analytics="header" href="https://www.oi.com.br/negociacao/">
 							<span> Negociar d&iacute;vidas </span> 
@@ -424,91 +516,108 @@
 
 			 <!-- corpo com options: Produtos e Serviços -->
 			<div class="newHeader__menuOptionContainer" id="menu-option-products-and-services">
-				<div class="newHeader__linksContainer">
-					<div class="newHeader__linksContainer-title">
-						<img alt="" data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/smart-house-dark.svg"
-							src="assets/images/newHeader/smart-house.svg" /> 
-							<span> Pra sua casa </span>
+				<div class="noi-header-three-links-list">
+					<div class="newHeader__linksContainer">
+						<div class="newHeader__linksContainer-title">
+							<img alt="" data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/smart-house-dark.svg"
+								src="assets/images/newHeader/smart-house.svg" /> 
+								<span> Pra sua casa </span>
+							</div>
+
+						<ul class="newHeader__optionLinks">
+							<!-- <li class="newHeader__optionLink">
+								<a data-analytics="header"
+									href="https://www.oi.com.br/internet">
+									<span> Internet Oi Fibra </span> 
+									<img alt="" class="newHeader__optionLink__chevron"
+										data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/chevron-down-white.svg"
+										src="assets/images/newHeader/chevron-down-black.svg" /> 
+								</a>
+							</li> -->
+							<!-- <li class="newHeader__optionLink"><a data-analytics="header"
+									href="https://www.oi.com.br/internet/wifi-em-casa-com-maior-cobertura/"><span> Internet
+										Oi Fibra + ponto extra Wi-Fi </span> <img alt=""
+										class="newHeader__optionLink__chevron"
+										data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/chevron-down-white.svg"
+										src="assets/images/newHeader/chevron-down-black.svg" /> </a></li> -->
+							<!-- <li class="newHeader__optionLink"><a data-analytics="header"
+									href="https://www.oi.com.br/internet/plano-de-internet-com-telefone-fixo/"><span>
+										Internet Oi Fibra + telefone fixo </span> <img alt=""
+										class="newHeader__optionLink__chevron"
+										data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/chevron-down-white.svg"
+										src="assets/images/newHeader/chevron-down-black.svg" /> </a></li> -->
+							<li class="newHeader__optionLink">
+								<a data-analytics="header" href="https://www.oi.com.br/fixo/">
+									<span> Telefone fixo </span> 
+									<img alt="" class="newHeader__optionLink__chevron"
+										data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/chevron-down-white.svg"
+										src="assets/images/newHeader/chevron-down-black.svg" /> 
+								</a>
+							</li>
+							<li class="newHeader__optionLink">
+								<a data-analytics="header" href="https://www.oi.com.br/tv-hd">
+									<span> TV HD </span> 
+									<img alt="" class="newHeader__optionLink__chevron"
+										data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/chevron-down-white.svg"
+										src="assets/images/newHeader/chevron-down-black.svg" /> 
+								</a>
+							</li>
+							<!-- <li class="newHeader__optionLink"><a data-analytics="header"
+									href="https://www.oi.com.br/regulatorio/produtos-pra-voce/#internet"><span> Ofertas
+										Regulat&oacute;rias </span> <img alt="" class="newHeader__optionLink__chevron"
+										data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/chevron-down-white.svg"
+										src="assets/images/newHeader/chevron-down-black.svg" /> </a></li> -->
+							<!-- <li class="newHeader__optionLink newHeader__greenOption">
+								<a data-analytics="header" href="https://oinovafibra.oi.com.br/fibra/s/?bundle=true">
+									<span> Monte seu plano </span>
+									<img alt="" class="newHeader__optionLink__chevron"
+										data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/chevron-right-green-dark.svg"
+										src="assets/images/newHeader/chevron-right-green.svg" /> 
+								</a>
+							</li> -->
+						</ul>
+					</div>
+
+					<div class="newHeader__linksContainer">
+						<div class="newHeader__linksContainer-title">
+							<!-- <img alt="" data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/category-dark.svg" src="assets/images/newHeader/category.svg" />  -->
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M16 6.75L15.9814 6.74977H8.01864L8 6.75L7.98136 6.74977H7.00023C5.31023 6.74977 4.15023 7.07977 3.56023 7.73977C3.07023 8.27977 2.91023 9.10977 3.04023 10.3498L3.07095 10.6779C4.93948 11.9445 7.05669 12.7967 9.25 13.1722V13C9.25 11.59 9.59 11.25 11 11.25H13C14.41 11.25 14.75 11.59 14.75 13V13.142C16.9749 12.7405 19.0977 11.8626 20.9393 10.5824L20.9602 10.3598C21.0902 9.10977 20.9302 8.27977 20.4402 7.73977C19.8502 7.07977 18.6902 6.74977 17.0002 6.74977H16.0186L16 6.75ZM9.27113 14.695C7.16315 14.3729 5.11048 13.6436 3.247 12.5581L3.79023 18.3598C3.96023 19.9398 4.39023 21.2498 8.00023 21.2498H16.0002C19.6002 21.2498 20.0402 19.9398 20.2102 18.3498L20.7609 12.4837C18.9153 13.5774 16.8664 14.3234 14.7288 14.6767C14.6426 15.6491 14.2066 16.75 12 16.75C9.79267 16.75 9.35709 15.6547 9.27113 14.695ZM21.7002 18.4998L22.3965 11.0818C22.3976 11.0725 22.3984 11.0632 22.3991 11.054L22.4502 10.5098C22.5602 9.44977 22.5902 7.89977 21.5502 6.73977C20.6602 5.74977 19.1702 5.25977 17.0002 5.25977H16.75V5.2C16.75 3.44 16.75 1.25 12.8 1.25H11.2C7.25 1.25 7.25 3.44 7.25 5.2V5.25977H7.00023C4.84023 5.25977 3.35023 5.73977 2.45023 6.73977C1.41023 7.89977 1.44023 9.44977 1.55023 10.4998L2.30023 18.5098C2.52023 20.5998 3.38023 22.7498 8.00023 22.7498H16.0002C20.6202 22.7498 21.4802 20.5998 21.7002 18.4998ZM15.25 5.25977H8.75V5.2C8.75 3.42 8.75 2.75 11.2 2.75H12.8C15.25 2.75 15.25 3.42 15.25 5.2V5.25977ZM10.75 13V12.75H11H13H13.25V13V14.02C13.25 15.09 13.25 15.25 12 15.25C10.75 15.25 10.75 15.06 10.75 14.03V13Z" fill="#3D3D3D"/>
+							</svg>
+							<span> Para sua empresa </span>
 						</div>
 
-					<ul class="newHeader__optionLinks">
-						<li class="newHeader__optionLink">
-							<a data-analytics="header"
-								href="https://www.oi.com.br/internet">
-								<span> Internet Oi Fibra </span> 
-								<img alt="" class="newHeader__optionLink__chevron"
-									data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/chevron-down-white.svg"
-									src="assets/images/newHeader/chevron-down-black.svg" /> 
-							</a>
-						</li>
-						<li class="newHeader__optionLink"><a data-analytics="header"
-								href="https://www.oi.com.br/internet/wifi-em-casa-com-maior-cobertura/"><span> Internet
-									Oi Fibra + ponto extra Wi-Fi </span> <img alt=""
-									class="newHeader__optionLink__chevron"
-									data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/chevron-down-white.svg"
-									src="assets/images/newHeader/chevron-down-black.svg" /> </a></li>
-						<li class="newHeader__optionLink"><a data-analytics="header"
-								href="https://www.oi.com.br/internet/plano-de-internet-com-telefone-fixo/"><span>
-									Internet Oi Fibra + telefone fixo </span> <img alt=""
-									class="newHeader__optionLink__chevron"
-									data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/chevron-down-white.svg"
-									src="assets/images/newHeader/chevron-down-black.svg" /> </a></li>
-						<li class="newHeader__optionLink"><a data-analytics="header"
-								href="https://www.oi.com.br/fixo/"><span> Telefone fixo </span> <img alt=""
-									class="newHeader__optionLink__chevron"
-									data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/chevron-down-white.svg"
-									src="assets/images/newHeader/chevron-down-black.svg" /> </a></li>
-						<li class="newHeader__optionLink"><a data-analytics="header"
-								href="https://www.oi.com.br/tv-hd"><span> TV HD </span> <img alt=""
-									class="newHeader__optionLink__chevron"
-									data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/chevron-down-white.svg"
-									src="assets/images/newHeader/chevron-down-black.svg" /> </a></li>
-						<li class="newHeader__optionLink"><a data-analytics="header"
-								href="https://www.oi.com.br/regulatorio/produtos-pra-voce/#internet"><span> Ofertas
-									Regulat&oacute;rias </span> <img alt="" class="newHeader__optionLink__chevron"
-									data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/chevron-down-white.svg"
-									src="assets/images/newHeader/chevron-down-black.svg" /> </a></li>
-						<li class="newHeader__optionLink newHeader__greenOption">
-							<a data-analytics="header" href="https://oinovafibra.oi.com.br/fibra/s/?bundle=true">
-								<span> Monte seu plano </span>
-								<img alt="" class="newHeader__optionLink__chevron"
-									data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/chevron-right-green-dark.svg"
-									src="assets/images/newHeader/chevron-right-green.svg" /> 
-							</a>
-						</li>
-					</ul>
+						<ul class="newHeader__optionLinks">
+							<li class="newHeader__optionLink">
+								<a data-analytics="header" href="https://www.oi.com.br/fixo/">
+									<span>Telefone fixo </span> 
+									<img alt="" class="newHeader__optionLink__chevron"
+										data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/chevron-down-white.svg"
+										src="assets/images/newHeader/chevron-down-black.svg" /> 
+								</a>
+							</li>
+							<li class="newHeader__optionLink">
+								<a data-analytics="header" href="https://www.oi.com.br/tv-hd">
+									<span> TV HD </span> 
+									<img alt="" class="newHeader__optionLink__chevron"
+										data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/chevron-down-white.svg"
+										src="assets/images/newHeader/chevron-down-black.svg" /> 
+								</a>
+							</li>
+							<!-- <li class="newHeader__optionLink"><a data-analytics="header"
+									href="https://oinovafibra.oi.com.br/fibra/s/?productCode=BL_700MB_VAR_JUL24_MAX_129_90_109_90&amp;speed=700"><span>
+										Oi Fibra com Max </span> <img alt="" class="newHeader__optionLink__chevron"
+										data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/chevron-down-white.svg"
+										src="assets/images/newHeader/chevron-down-black.svg" /> </a></li>
+							<li class="newHeader__optionLink newHeader__greenOption"><a
+									href="https://www.oi.com.br/internet/entretenimento/"><span> Todos os streamings </span>
+									<img alt="" class="newHeader__optionLink__chevron"
+										data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/chevron-right-green-dark.svg"
+										src="assets/images/newHeader/chevron-right-green.svg" /> </a></li> -->
+						</ul>
+					</div>
 				</div>
-
-				<div class="newHeader__linksContainer">
-					<div class="newHeader__linksContainer-title"><img alt=""
-							data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/category-dark.svg"
-							src="assets/images/newHeader/category.svg" /> <span> Internet + streaming </span></div>
-
-					<ul class="newHeader__optionLinks">
-						<li class="newHeader__optionLink"><a data-analytics="header"
-								href="https://oinovafibra.oi.com.br/fibra/s/?productCode=BL_700MB_VAR_PRMNT_JUL24_129_90_109_90&amp;speed=700"><span>
-									Oi Fibra com Paramount+ </span> <img alt="" class="newHeader__optionLink__chevron"
-									data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/chevron-down-white.svg"
-									src="assets/images/newHeader/chevron-down-black.svg" /> </a></li>
-						<li class="newHeader__optionLink"><a data-analytics="header"
-								href="https://oinovafibra.oi.com.br/fibra/s/?svodcode=SVOD_GLOBOPLAY_ANUNCIOS"><span> Oi
-									Fibra com Globoplay </span> <img alt="" class="newHeader__optionLink__chevron"
-									data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/chevron-down-white.svg"
-									src="assets/images/newHeader/chevron-down-black.svg" /> </a></li>
-						<li class="newHeader__optionLink"><a data-analytics="header"
-								href="https://oinovafibra.oi.com.br/fibra/s/?productCode=BL_700MB_VAR_JUL24_MAX_129_90_109_90&amp;speed=700"><span>
-									Oi Fibra com Max </span> <img alt="" class="newHeader__optionLink__chevron"
-									data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/chevron-down-white.svg"
-									src="assets/images/newHeader/chevron-down-black.svg" /> </a></li>
-						<li class="newHeader__optionLink newHeader__greenOption"><a
-								href="https://www.oi.com.br/internet/entretenimento/"><span> Todos os streamings </span>
-								<img alt="" class="newHeader__optionLink__chevron"
-									data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/chevron-right-green-dark.svg"
-									src="assets/images/newHeader/chevron-right-green.svg" /> </a></li>
-					</ul>
-				</div>
-
-				<div class="newHeader__linksContainer">
+				<!-- <div class="newHeader__linksContainer">
 					<div class="newHeader__linksContainer-title"><img alt=""
 							data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/plus-dark.svg"
 							src="assets/images/newHeader/plus.svg" /> <span> Outros servi&ccedil;os </span></div>
@@ -526,30 +635,43 @@
 									data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/chevron-down-white.svg"
 									src="assets/images/newHeader/chevron-down-black.svg" /> </a></li>
 					</ul>
-				</div>
+				</div> -->
 
 				<!-- banner lateral-->
-				<div class="newHeader__menuOptionCard"><img alt="" class="newHeader__menuOptionCard-bg" loading="lazy"
-						src="assets/images/newHeader/products-and-services-menu-card-bg.webp" />
-					<div class="newHeader__menuOptionCard-content"><span class="newHeader__menuOptionCard-title"> <img
-								alt="" src="assets/images/newHeader/briefcase.svg" /> <span> Venda Oi Fibra </span>
-						</span> <span class="newHeader__menuOptionCard-subtitle"> Aumente sua renda vendendo produtos da
-							Oi </span>
-
-						<ul class="newHeader__menuOptionCard-links">
-							<li><a data-analytics="header"
-									href="https://www.oi.com.br/seja-parceiro-oi/empresas/"><span> Pra empresas </span>
-									<img alt="" class="newHeader__menuOptionCard__link-chevron"
-										src="assets/images/newHeader/arrow-right.svg" /> </a></li>
-							<li><a data-analytics="header"
-									href="https://www.oi.com.br/seja-parceiro-oi/televendas/"><span> Televendas </span>
-									<img alt="" class="newHeader__menuOptionCard__link-chevron"
-										src="assets/images/newHeader/arrow-right.svg" /> </a></li>
-							<li><a data-analytics="header"
-									href="https://www.oi.com.br/seja-parceiro-oi/porta-a-porta/"><span> Venda direta
-									</span> <img alt="" class="newHeader__menuOptionCard__link-chevron"
-										src="assets/images/newHeader/arrow-right.svg" /> </a></li>
-						</ul>
+				<div class="newHeader__menuOptionCard noi-header-three-banner">
+					<img alt="" class="newHeader__menuOptionCard-bg" loading="lazy" src="assets/images/newHeader/products-and-services-menu-card-bg.webp" />
+					<div class="newHeader__menuOptionCard-content">
+						<span class="newHeader__menuOptionCard-title noi-three-banner-title"> 
+							<!-- <img alt="" src="assets/images/newHeader/briefcase.svg" />  -->
+							<span> Conheça a Oi Soluções </span>
+						</span> 
+						<span class="newHeader__menuOptionCard-subtitle noi-three-banner-body"> Um portfólio completo de soluções digitais que podem ser customizadas para grandes empresas públicas ou privadas. </span>
+						<a data-analytics="header" href="https://www.oi.com.br/grandes-empresas/">
+							<span> Conheça </span>
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M13.9001 18.6001C14.0501 18.7501 14.2401 18.8201 14.4301 18.8201C14.6201 18.8201 14.8101 18.7501 14.9601 18.6001L21.0301 12.5301C21.3201 12.2401 21.3201 11.7601 21.0301 11.4701L14.9601 5.40012C14.6701 5.11012 14.1901 5.11012 13.9001 5.40012C13.6101 5.69012 13.6101 6.17012 13.9001 6.46012L18.6901 11.2501H3.5C3.09 11.2501 2.75 11.5901 2.75 12.0001C2.75 12.4101 3.09 12.7501 3.5 12.7501H18.6901L13.9001 17.5401C13.6101 17.8301 13.6101 18.3101 13.9001 18.6001Z" fill="#D9E29C"/>
+							</svg>
+						</a>
+						<!-- <ul class="newHeader__menuOptionCard-links">
+							<li>
+								<a data-analytics="header" href="https://www.oi.com.br/seja-parceiro-oi/empresas/">
+									<span> Pra empresas </span>
+									<img alt="" class="newHeader__menuOptionCard__link-chevron" src="assets/images/newHeader/arrow-right.svg" /> 
+								</a>
+							</li>
+							<li>
+								<a data-analytics="header" 	href="https://www.oi.com.br/seja-parceiro-oi/televendas/">
+									<span> Televendas </span>
+									<img alt="" class="newHeader__menuOptionCard__link-chevron" src="assets/images/newHeader/arrow-right.svg" /> 
+								</a>
+							</li>
+							<li>
+								<a data-analytics="header" href="https://www.oi.com.br/seja-parceiro-oi/porta-a-porta/">
+									<span> Venda direta</span> 
+									<img alt="" class="newHeader__menuOptionCard__link-chevron" src="assets/images/newHeader/arrow-right.svg" /> 
+								</a>
+							</li>
+						</ul> -->
 					</div>
 				</div>
 			</div>
