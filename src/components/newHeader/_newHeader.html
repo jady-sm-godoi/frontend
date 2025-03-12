@@ -12,16 +12,16 @@
 	width: 0 !important;
 	height: 0 !important;
 	}
-  
+
 	.newHeader__menuHeader {
 	  justify-content: unset;
 	  gap: 104px;
 	}
-  
+
 	.newHeader__menuHeader__closeButton {
 	  display: none;
 	}
-  
+
 	/*Configuração para o banner com cnpj*/
 	.newHeader__menuOptionCard::before {
 	  content: "";
@@ -34,12 +34,26 @@
 	  left: 0;
 	  z-index: 1;
 	}
-  
-	.btn_central_de_ajuda {
-	  justify-content: unset;
-	  gap: 8px;
+
+	.newHeader__topArea__FAQCTA {
+		justify-content: unset;
+		gap: 8px;
 	}
-  
+
+	body.dark .newHeader__topArea__FAQCTA {
+		background: #fff;
+		border: 1px solid #fff !important;
+	}
+
+	body.dark .newHeader__topArea__FAQCTA svg path {
+		fill: #000;
+	}
+
+	body.dark .newHeader__topArea__FAQCTA span {
+		color: #000;
+	}
+
+
 	.newHeader__menuOptionCard-bg__internet-boost {
 	  z-index: -2;
 	  width: 100%;
@@ -48,7 +62,7 @@
 	  left: 0;
 	  top: 0;
 	}
-  
+
 	.menuAttendance::before {
 	  content: "";
 	  position: absolute;
@@ -59,7 +73,7 @@
 	  left: 0;
 	  z-index: -1;
 	}
-  
+
 	.newHeader__new-cnpj-container {
 	  display: flex;
 	  flex-direction: column;
@@ -69,10 +83,10 @@
 	  overflow: unset;
 	  padding: 0;
 	  border-radius: 0;
-  
+
 	  height: 100%;
 	}
-  
+
 	.new-cnpj-adjusts {
 	  min-width: 286px;
 	  min-height: 110px;
@@ -80,8 +94,8 @@
 	  padding: 16px;
 	  border-radius: 16px;
 	}
-  
-  
+
+
 	.newHeader__menuOptionCard-onlyTitle__internet-boost {
 	  font-size: 1rem;
 	  line-height: 150%;
@@ -89,11 +103,11 @@
 	  color: #fff;
 	  max-width: 246px !important;
 	}
-  
+
 	.new-cnpj {
 	  padding: 23px 0 16px 16px;
 	}
-  
+
 	.newHeader__menuOptionCard-bg__new-cnpj {
 	  position: absolute;
 	  z-index: -1;
@@ -101,7 +115,7 @@
 	  top: -46px;
 	  left: 0;
 	}
-  
+
 	.newHeader__menuOptionCard-onlyTitle__new-cnpj {
 	  max-width: 246px;
 	  font-size: 0.875rem;
@@ -109,82 +123,82 @@
 	  font-weight: 700;
 	  color: #fff;
 	}
-  
+
 	.newHeader__menuOptionCard-links-whyOi__new-cnpj-adjusts a {
 	  font-size: 1rem;
 	  gap: 8px;
 	  max-width: fit-content;
 	}
-  
+
 	.newHeader__menuOptionCard-links-whyOi__new-cnpj-adjusts li {
 	  margin-top: 0;
 	  height: unset;
 	  width: 100%;
 	}
-  
+
 	@media screen and (min-width: 767px) {
 	  .newHeader__menuOptionCard-bg__new-cnpj {
 		top: -97px;
 	  }
-  
+
 	  .newHeader__menuWidthContainer {
 		overflow: scroll;
 	  }
-  
+
 	  .newHeader__new-cnpj-container {
 		padding-block: 12px;
 		gap: 12px;
 	  }
 	}
-  
+
 	@media screen and (max-width: 767px) {
 	  .newHeader__menuOptionContainer {
 		height: 82vh !important;
-  
+
 	  }
-  
+
 	  .newHeader__menuOptionCard-bg__new-cnpj {
 		top: -97px;
 	  }
 	}
-  
+
 	img.newHeader__logoIcon {
 	  height: 55px;
 	}
-  
+
 	.newHeader__menuOptionCard-bg__new-cnpj {
 	  top: -50px;
 	  height: 167px;
 	  object-fit: cover;
 	}
-  
+
 	@media screen and (min-width: 992px) {
 	  .newHeader__menuOptionCard-onlyTitle__new-cnpj {
-  
+
 		max-width: 200px;
 	  }
-  
+
 	  .new-cnpj-adjusts {
 		min-height: 144px;
 		justify-content: space-between;
 	  }
-  
+
 	  .newHeader__menuOptionCard-bg__internet-boost {
 		height: 100%;
 	  }
-  
+
 	  .newHeader__menuOptionCard-onlyTitle__internet-boost {
 		max-width: 172px !important;
-  
+
 	  }
-  
+
 	  .newHeader__menuOptionCard-bg__new-cnpj {
-  
+
 		top: 0;
 		height: fit-content;
 	  }
 	}
-  
+
 	@media screen and (min-width: 200px) {
 	  .noi-header-two-right-btn{
 		display: flex;
@@ -196,12 +210,12 @@
 		border-radius: 999px;
 		background: var(--Main-brand-Primary-Light, #70FF84);
 		border: 0;
-  
+
 		width: 100%;
 		min-width: none;
 		max-width: none;
 		margin: 0;
-  
+
 		span{
 		  color: var(--funcional-neutral-neutral-dark, #3D3D3D);
 		  text-align: center;
@@ -218,15 +232,15 @@
 	  flex: 3;
 	  width: 100%;
 	  gap: 64px;
-  
+
 	  div{
 		width: fit-content;
-  
+
 		@media screen and (max-width: 992px) {
 		  width: 100%;
 		}
 	  }
-  
+
 	  @media screen and (max-width: 992px) {
 		flex-direction: column;
 	  }
@@ -234,11 +248,11 @@
 	.noi-header-three-banner{
 	  flex: 1;
 	  left: 0;
-  
+
 	  div{
 		justify-content: center;
 	  }
-  
+
 	  .noi-three-banner-title{
 		color: var(--Oi-Solues---Light, #D9E29C);
 		font-family: "Simplon BP";
@@ -247,7 +261,7 @@
 		font-weight: 500;
 		line-height: 150%;
 	  }
-  
+
 	  .noi-three-banner-body{
 		color: var(--Functional-Pure-White, #FFF);
 		font-family: "Simplon BP";
@@ -255,24 +269,22 @@
 		font-style: normal;
 		font-weight: 500;
 		line-height: 120%;
-  
+
 		max-width: 100%;
-  
+
 		@media screen and (max-width: 992px) {
 		  max-width: 245px;
-  
+
 		}
 	  }
 	  a{
 		display: flex;
 		height: 48px;
 		padding: 8px 0px;
-		/* justify-content: space-between; */
 		align-items: center;
 		align-self: stretch;
-  
+
 		span{
-		  /* color: var(--Oi-Solues---Light, #D9E29C); */
 		  text-align: center;
 		  font-family: "Simplon BP";
 		  font-size: 16px;
@@ -282,12 +294,18 @@
 		}
 	  }
 	}
+
+	body.dark .noi-header-three-banner {
+		img{
+			filter: grayscale();
+		}
+	}
+
 	@media screen and (min-width: 620px) {
 	  .newHeader__topArea__floatingButtons {
 		display: -webkit-box;
 		display: -ms-flexbox;
-		display: flex
-		  ;
+		display: flex;
 		-webkit-box-ordinal-group: 4;
 		-ms-flex-order: 3;
 		order: 3;
@@ -296,16 +314,14 @@
 		-webkit-box-align: center;
 		-ms-flex-align: center;
 		align-items: center;
-  
+
 		height: 64px;
 	  }
-  
+
 	}
-	/* @media screen and (min-width: 992px){ */
 	.newHeader__menuButton{
 	  display: none;
 	}
-	/* } */
 	@media screen and (max-width: 992px){
 	  .newHeader__menuButton{
 		display: flex;
@@ -314,14 +330,14 @@
 		right: 2px;	
 	  }
 	}
-  
+
 	.noi-offcanva-header{
 	  display: flex;
 	  padding: 12px 50px 16px 0px;
 	  justify-content: space-between;
 	  align-items: center;
 	  align-self: stretch;
-  
+
 	  .noi-help-center-mobi{
 		display: flex;
 		height: 40px;
@@ -329,10 +345,10 @@
 		align-items: center;
 		gap: 4px;
 		flex: 1 0 0;
-  
+
 		border-radius: 999px;
 		border: 1px solid var(--Functional-Neutral-Light, #E0E0E0);
-  
+
 		svg{
 		  width: 24px;
 		  height: 24px;
@@ -343,207 +359,217 @@
 		  justify-content: center;
 		  align-items: center;
 		  gap: 8px;
-  
+
 		  span{
 			color: var(--Functional-Neutral-Darkest, #1F1F1F);
-  
-			/* Callout/Medium */
+
 			font-family: "Simplon BP";
 			font-size: 14px;
 			font-style: normal;
 			font-weight: 500;
-			/* line-height: 140%; 19.6px */
 		  }
 		}
 	  }
 	}
-  
+
 	.noi-header-one-right-btns{
 	  gap: 16px;
-  
+
 	  @media screen and (max-width: 992px) {
 		margin-right: 50px;
-  
+
 	  }
 	}
-  
+
 	@media screen and (min-width: 500px) {
 	  .noi-conheca-oi-solucoes-mobi{
 		display: none;
 	  }
-  
+
 	}
+
+	body.dark .newHeader__linksContainer-title svg path {
+	  fill: #fff;
+  }
+
+  .newHeader__acessibility-active{
+	background-color: #2899cd !important;
+	border: 0 !important;
+
+	img {
+		filter: brightness(0) saturate(100%) invert(95%) sepia(86%) saturate(0%) hue-rotate(214deg) brightness(105%) contrast(100%);
+	}
+  }
 </style>
 <section class="newHeader__top-section home-section" id="header-container">
 <div class="width-container" style="flex-direction: column;">
-	<div class="newHeader__topArea__flexbox" style="justify-content: space-between;"><!-- header 1o nivel (esquerda): Pra sua casa/ Pra sua empresa -->
-	<div class="newHeader__topArea__leftSide" style="justify-content: space-between;">
-		<div style="display: flex;"><a data-analytics="header" href="https://www.oi.com.br/"><img alt="" class="newHeader__logoIcon" data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/header-logo-icon-green.svg" src="assets/images/newHeader/header-logo-icon.svg" /> </a>
-		<ul class="newHeader__topArea__links">
-			<li><a class="newHeader__topArea__link newHeader__topArea__selectedLink" data-analytics="header" href="https://www.oi.com.br/grandes-empresas" style=" gap: 8px; border-bottom: 0; line-height: normal;"><span>Conhe&ccedil;a a Oi Solu&ccedil;&otilde;es</span> <svg fill="none" height="16" viewbox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg"> <path clip-rule="evenodd" d="M9.26672 12.4001C9.36672 12.5001 9.49339 12.5467 9.62006 12.5467C9.74673 12.5467 9.87339 12.5001 9.97339 12.4001L14.0201 8.35341C14.2134 8.16008 14.2134 7.84008 14.0201 7.64674L9.97339 3.60008C9.78006 3.40674 9.46006 3.40674 9.26672 3.60008C9.07339 3.79341 9.07339 4.11341 9.26672 4.30674L12.4601 7.50008H2.33331C2.05998 7.50008 1.83331 7.72675 1.83331 8.00008C1.83331 8.27341 2.05998 8.50008 2.33331 8.50008H12.4601L9.26672 11.6934C9.07339 11.8867 9.07339 12.2067 9.26672 12.4001Z" fill="#00A300" fill-rule="evenodd"></path> </svg> </a></li>
-		</ul>
-		<!-- menu hamburguer para mobile --><button class="newHeader__menuButton" onclick="triggerMenuMobile()"><img alt="" data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/menu-icon-white.svg" src="assets/images/newHeader/menu-icon-black.svg" /></button></div>
-	</div>
-	<!-- header 1o nivel (direita): acessibilidade -->
+<div class="newHeader__topArea__flexbox" style="justify-content: space-between;"><!-- header 1o nivel (esquerda): Pra sua casa/ Pra sua empresa -->
+<div class="newHeader__topArea__leftSide" style="justify-content: space-between;">
+<div style="display: flex;"><a data-analytics="header" href="https://www.oi.com.br/"><img alt="" class="newHeader__logoIcon" data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/header-logo-icon-green.svg" src="assets/images/newHeader/header-logo-icon.svg" /> </a>
+<ul class="newHeader__topArea__links">
+	<li><a class="newHeader__topArea__link newHeader__topArea__selectedLink" data-analytics="header" href="https://www.oi.com.br/grandes-empresas" style=" gap: 8px; border-bottom: 0; line-height: normal;"><span>Conhe&ccedil;a a Oi Solu&ccedil;&otilde;es</span> <svg fill="none" height="16" viewbox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg"> <path clip-rule="evenodd" d="M9.26672 12.4001C9.36672 12.5001 9.49339 12.5467 9.62006 12.5467C9.74673 12.5467 9.87339 12.5001 9.97339 12.4001L14.0201 8.35341C14.2134 8.16008 14.2134 7.84008 14.0201 7.64674L9.97339 3.60008C9.78006 3.40674 9.46006 3.40674 9.26672 3.60008C9.07339 3.79341 9.07339 4.11341 9.26672 4.30674L12.4601 7.50008H2.33331C2.05998 7.50008 1.83331 7.72675 1.83331 8.00008C1.83331 8.27341 2.05998 8.50008 2.33331 8.50008H12.4601L9.26672 11.6934C9.07339 11.8867 9.07339 12.2067 9.26672 12.4001Z" fill="#00A300" fill-rule="evenodd"></path> </svg> </a></li>
+</ul>
+<!-- menu hamburguer para mobile --><button class="newHeader__menuButton" onclick="triggerMenuMobile()"><img alt="" data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/menu-icon-white.svg" src="assets/images/newHeader/menu-icon-black.svg" /></button></div>
+</div>
+<!-- header 1o nivel (direita): acessibilidade -->
 
-	<div class="newHeader__topArea__rightSide noi-header-one-right-btns"><!-- Campo de busca fake: é um botão que leva para o Faq --><a class="newHeader__topArea__FAQCTA" data-analytics="header" href="https://www.oi.com.br/faq/" style="border: 1px solid var(--newhome-header-acessibility-border);"><svg fill="none" height="24" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"> <path clip-rule="evenodd" d="M12 21.25C17.1086 21.25 21.25 17.1086 21.25 12C21.25 6.89137 17.1086 2.75 12 2.75C6.89137 2.75 2.75 6.89137 2.75 12C2.75 17.1086 6.89137 21.25 12 21.25ZM12 22.75C17.9371 22.75 22.75 17.9371 22.75 12C22.75 6.06294 17.9371 1.25 12 1.25C6.06294 1.25 1.25 6.06294 1.25 12C1.25 17.9371 6.06294 22.75 12 22.75ZM12.0155 8.67878C11.3577 8.67878 10.7357 9.26647 10.7357 10.1048C10.7357 10.5289 10.3919 10.8727 9.96786 10.8727C9.54378 10.8727 9.2 10.5289 9.2 10.1048C9.2 8.51984 10.4115 7.14307 12.0155 7.14307C13.6195 7.14307 14.831 8.51984 14.831 10.1048C14.831 10.8905 14.539 11.6133 14.0532 12.1491C13.8553 12.3673 13.6481 12.5424 13.4728 12.6847C13.4253 12.7233 13.3817 12.7583 13.3412 12.7908L13.3408 12.7911C13.2197 12.8883 13.1261 12.9635 13.0373 13.0463C12.8432 13.2273 12.7833 13.3415 12.7833 13.5419C12.7833 13.966 12.4396 14.3097 12.0155 14.3097C11.5914 14.3097 11.2476 13.966 11.2476 13.5419C11.2476 12.7729 11.6069 12.2804 11.9897 11.9234C12.1246 11.7975 12.2789 11.6739 12.4091 11.5695L12.4095 11.5692C12.4432 11.5422 12.4752 11.5165 12.5049 11.4924C12.6641 11.3631 12.7981 11.247 12.9155 11.1176C13.1461 10.8632 13.2952 10.5077 13.2952 10.1048C13.2952 9.26647 12.6732 8.67878 12.0155 8.67878ZM12.0192 15C11.4563 15 11 15.4584 11 16.0238C11 16.5892 11.4563 17.0476 12.0192 17.0476H12.0284C12.5913 17.0476 13.0476 16.5892 13.0476 16.0238C13.0476 15.4584 12.5913 15 12.0284 15H12.0192Z" fill="#1F1F1F" fill-rule="evenodd"></path> </svg> <span style="line-height: 0;">Central de ajuda</span> </a>
+<div class="newHeader__topArea__rightSide noi-header-one-right-btns"><!-- Campo de busca fake: é um botão que leva para o Faq --><a class="newHeader__topArea__FAQCTA" data-analytics="header" href="https://www.oi.com.br/faq/" style="border: 1px solid var(--newhome-header-acessibility-border);"><svg fill="none" height="24" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"> <path clip-rule="evenodd" d="M12 21.25C17.1086 21.25 21.25 17.1086 21.25 12C21.25 6.89137 17.1086 2.75 12 2.75C6.89137 2.75 2.75 6.89137 2.75 12C2.75 17.1086 6.89137 21.25 12 21.25ZM12 22.75C17.9371 22.75 22.75 17.9371 22.75 12C22.75 6.06294 17.9371 1.25 12 1.25C6.06294 1.25 1.25 6.06294 1.25 12C1.25 17.9371 6.06294 22.75 12 22.75ZM12.0155 8.67878C11.3577 8.67878 10.7357 9.26647 10.7357 10.1048C10.7357 10.5289 10.3919 10.8727 9.96786 10.8727C9.54378 10.8727 9.2 10.5289 9.2 10.1048C9.2 8.51984 10.4115 7.14307 12.0155 7.14307C13.6195 7.14307 14.831 8.51984 14.831 10.1048C14.831 10.8905 14.539 11.6133 14.0532 12.1491C13.8553 12.3673 13.6481 12.5424 13.4728 12.6847C13.4253 12.7233 13.3817 12.7583 13.3412 12.7908L13.3408 12.7911C13.2197 12.8883 13.1261 12.9635 13.0373 13.0463C12.8432 13.2273 12.7833 13.3415 12.7833 13.5419C12.7833 13.966 12.4396 14.3097 12.0155 14.3097C11.5914 14.3097 11.2476 13.966 11.2476 13.5419C11.2476 12.7729 11.6069 12.2804 11.9897 11.9234C12.1246 11.7975 12.2789 11.6739 12.4091 11.5695L12.4095 11.5692C12.4432 11.5422 12.4752 11.5165 12.5049 11.4924C12.6641 11.3631 12.7981 11.247 12.9155 11.1176C13.1461 10.8632 13.2952 10.5077 13.2952 10.1048C13.2952 9.26647 12.6732 8.67878 12.0155 8.67878ZM12.0192 15C11.4563 15 11 15.4584 11 16.0238C11 16.5892 11.4563 17.0476 12.0192 17.0476H12.0284C12.5913 17.0476 13.0476 16.5892 13.0476 16.0238C13.0476 15.4584 12.5913 15 12.0284 15H12.0192Z" fill="#1F1F1F" fill-rule="evenodd"></path> </svg> <span style="line-height: 0;">Central de ajuda</span> </a>
 
-		<div class="newHeader__acessibility__container" id="vlibras-and-contrast-container">
-		<div class="newHeader__acessibility__icon-area"><img alt="" class="newHeader__acessibility__icon-image" data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/acessibility-icon-blue.svg" src="assets/images/newHeader/acessibility-icon.svg" /></div>
-		<button class="newHeader__acessibility__button" id="button_accessibility_theme"><img alt="Botao de alto contraste" data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/contrast-icon-white.svg" loading="lazy" src="assets/images/newHeader/contrast-icon-black.svg" /></button><button class="newHeader__acessibility__button" id="button_accessibility_vlibras"><img alt="Botao do VLibras" class="button_accessibility_vlibras_icon" data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/libras-icon-white.svg" loading="lazy" src="assets/images/newHeader/libras-icon-black.svg" /></button></div>
-	</div>
-	</div>
-	<!-- ___________________________________________________________________________________ --><!-- header 2o nivel -->
+<div class="newHeader__acessibility__container" id="vlibras-and-contrast-container">
+<div class="newHeader__acessibility__icon-area"><img alt="" class="newHeader__acessibility__icon-image" data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/acessibility-icon-blue.svg" src="assets/images/newHeader/acessibility-icon.svg" /></div>
+<button class="newHeader__acessibility__button" id="button_accessibility_theme"><img alt="Botao de alto contraste" data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/contrast-icon-white.svg" loading="lazy" src="assets/images/newHeader/contrast-icon-black.svg" /></button><button class="newHeader__acessibility__button" id="button_accessibility_vlibras"><img alt="Botao do VLibras" class="button_accessibility_vlibras_icon" data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/libras-icon-white.svg" loading="lazy" src="assets/images/newHeader/libras-icon-black.svg" /></button></div>
+</div>
+</div>
+<!-- ___________________________________________________________________________________ --><!-- header 2o nivel -->
 
-	<div class="newHeader__topArea__flexbox"><!-- lista de menus a esquerda -->
-	<ul class="newHeader__topArea__menuDesktop">
-		<li class="newHeader__topArea__menuDesktop__item"><!-- dispara o header 3o nivel (modal) --><button onclick="menuSelected(event ,'menu-option-products-and-services', 'Produtos e serviços')">Produtos e servi&ccedil;os</button><button><img alt="" class="newHeader__topArea__selectedMenuItem-chevron" data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/chevron-down-green.svg" src="assets/images/newHeader/chevron-down-black.svg" /></button></li>
-		<li class="newHeader__topArea__menuDesktop__item"><!-- dispara o header 3o nivel (modal) --><button onclick="menuSelected(event ,'menu-option-why-oi', 'Por que Oi')">Por que Oi</button><img alt="" class="newHeader__topArea__selectedMenuItem-chevron" data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/chevron-down-green.svg" src="assets/images/newHeader/chevron-down-black.svg" /></li>
-		<li class="newHeader__topArea__menuDesktop__item"><a data-analytics="header" href="https://www.oi.com.br/negociacao/">Negociar d&iacute;vidas </a></li>
-		<li class="newHeader__topArea__menuDesktop__item"><!-- dispara o header 3o nivel (modal) --><button class="newHeader__topArea__menuDesktop__item-atendimento" onclick="menuSelected(event ,'menu-option-attendance-client', 'Atendimento cliente Oi')"><img alt="" data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/user-support-dark.svg" src="assets/images/newHeader/user-support.svg" /> <span>Atendimento Oi</span></button><img alt="" class="newHeader__topArea__selectedMenuItem-chevron" data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/chevron-down-green.svg" src="assets/images/newHeader/chevron-down-black.svg" /></li>
-	</ul>
-	<!-- botões a direita: whatsapp e Assinar Oi Fibra -->
+<div class="newHeader__topArea__flexbox"><!-- lista de menus a esquerda -->
+<ul class="newHeader__topArea__menuDesktop">
+	<li class="newHeader__topArea__menuDesktop__item"><!-- dispara o header 3o nivel (modal) --><button onclick="menuSelected(event ,'menu-option-products-and-services', 'Produtos e serviços')">Produtos e servi&ccedil;os</button><button><img alt="" class="newHeader__topArea__selectedMenuItem-chevron" data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/chevron-down-green.svg" src="assets/images/newHeader/chevron-down-black.svg" /></button></li>
+	<li class="newHeader__topArea__menuDesktop__item"><!-- dispara o header 3o nivel (modal) --><button onclick="menuSelected(event ,'menu-option-why-oi', 'Por que Oi')">Por que Oi</button><img alt="" class="newHeader__topArea__selectedMenuItem-chevron" data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/chevron-down-green.svg" src="assets/images/newHeader/chevron-down-black.svg" /></li>
+	<li class="newHeader__topArea__menuDesktop__item"><a data-analytics="header" href="https://www.oi.com.br/negociacao/">Negociar d&iacute;vidas </a></li>
+	<li class="newHeader__topArea__menuDesktop__item"><!-- dispara o header 3o nivel (modal) --><button class="newHeader__topArea__menuDesktop__item-atendimento" onclick="menuSelected(event ,'menu-option-attendance-client', 'Atendimento cliente Oi')"><img alt="" data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/user-support-dark.svg" src="assets/images/newHeader/user-support.svg" /> <span>Atendimento Oi</span></button><img alt="" class="newHeader__topArea__selectedMenuItem-chevron" data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/chevron-down-green.svg" src="assets/images/newHeader/chevron-down-black.svg" /></li>
+</ul>
+<!-- botões a direita: whatsapp e Assinar Oi Fibra -->
 
-	<div class="newHeader__topArea__floatingButtons"><button class="newHeader__topArea__signFiber noi-header-two-right-btn" onclick="window.location.href='https://www.oi.com.br/comunicado/'"><svg fill="none" height="24" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"> <path clip-rule="evenodd" d="M12 1.25C17.93 1.25 22.75 6.07 22.75 12C22.75 17.93 17.93 22.75 12 22.75C6.07 22.75 1.25 17.93 1.25 12C1.25 6.07 6.07 1.25 12 1.25ZM12 21.25C17.1 21.25 21.25 17.1 21.25 12C21.25 6.9 17.1 2.75 12 2.75C6.9 2.75 2.75 6.9 2.75 12C2.75 17.1 6.9 21.25 12 21.25ZM12 10.25C12.41 10.25 12.75 10.59 12.75 11V16C12.75 16.41 12.41 16.75 12 16.75C11.59 16.75 11.25 16.41 11.25 16V11C11.25 10.59 11.59 10.25 12 10.25ZM12.38 7.08C12.26 7.03 12.13 7 12 7C11.87 7 11.74 7.03 11.62 7.08C11.5 7.13 11.39 7.2 11.29 7.29C11.2 7.39 11.13 7.49 11.08 7.62C11.03 7.74 11 7.87 11 8C11 8.13 11.03 8.26 11.08 8.38C11.13 8.5 11.2 8.61 11.29 8.71C11.39 8.8 11.5 8.87 11.62 8.92C11.86 9.02 12.14 9.02 12.38 8.92C12.5 8.87 12.61 8.8 12.71 8.71C12.8 8.61 12.87 8.5 12.92 8.38C12.97 8.26 13 8.13 13 8C13 7.87 12.97 7.74 12.92 7.62C12.87 7.49 12.8 7.39 12.71 7.29C12.61 7.2 12.5 7.13 12.38 7.08Z" fill="#3D3D3D" fill-rule="evenodd"></path> </svg> <span> Entenda as mudan&ccedil;as da Oi</span></button></div>
-	</div>
+<div class="newHeader__topArea__floatingButtons"><button class="newHeader__topArea__signFiber noi-header-two-right-btn" onclick="window.location.href='https://www.oi.com.br/comunicado/'"><svg fill="none" height="24" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"> <path clip-rule="evenodd" d="M12 1.25C17.93 1.25 22.75 6.07 22.75 12C22.75 17.93 17.93 22.75 12 22.75C6.07 22.75 1.25 17.93 1.25 12C1.25 6.07 6.07 1.25 12 1.25ZM12 21.25C17.1 21.25 21.25 17.1 21.25 12C21.25 6.9 17.1 2.75 12 2.75C6.9 2.75 2.75 6.9 2.75 12C2.75 17.1 6.9 21.25 12 21.25ZM12 10.25C12.41 10.25 12.75 10.59 12.75 11V16C12.75 16.41 12.41 16.75 12 16.75C11.59 16.75 11.25 16.41 11.25 16V11C11.25 10.59 11.59 10.25 12 10.25ZM12.38 7.08C12.26 7.03 12.13 7 12 7C11.87 7 11.74 7.03 11.62 7.08C11.5 7.13 11.39 7.2 11.29 7.29C11.2 7.39 11.13 7.49 11.08 7.62C11.03 7.74 11 7.87 11 8C11 8.13 11.03 8.26 11.08 8.38C11.13 8.5 11.2 8.61 11.29 8.71C11.39 8.8 11.5 8.87 11.62 8.92C11.86 9.02 12.14 9.02 12.38 8.92C12.5 8.87 12.61 8.8 12.71 8.71C12.8 8.61 12.87 8.5 12.92 8.38C12.97 8.26 13 8.13 13 8C13 7.87 12.97 7.74 12.92 7.62C12.87 7.49 12.8 7.39 12.71 7.29C12.61 7.2 12.5 7.13 12.38 7.08Z" fill="#3D3D3D" fill-rule="evenodd"></path> </svg> <span> Entenda as mudan&ccedil;as da Oi</span></button></div>
+</div>
 </div>
 <!-- ___________________________________________________________________________________ --><!-- header 3o nivel: modal -->
 
 <div class="home-section newHeader__menuContainer" style="border-top: 1px solid var(--Functional-Neutral-Light, #E0E0E0);"><!-- fecha a modal --><button class="newHeader__menuContainer__overlay" onclick="closeMenuContainer()"></button><!-- menu mobile -->
 
-	<div class="width-container newHeader__menuWidthContainer">
-	<div class="newHeader__menuMobile__top">
-		<ul class="newHeader__topArea__links noi-conheca-oi-solucoes-mobi">
-		<li><a class="newHeader__topArea__link newHeader__topArea__selectedLink" data-analytics="header" href="https://www.oi.com.br/grandes-empresas" style=" gap: 8px; border-bottom: 0; line-height: normal;"><span>Conhe&ccedil;a a Oi Solu&ccedil;&otilde;es</span> <svg fill="none" height="16" viewbox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg"> <path clip-rule="evenodd" d="M9.26672 12.4001C9.36672 12.5001 9.49339 12.5467 9.62006 12.5467C9.74673 12.5467 9.87339 12.5001 9.97339 12.4001L14.0201 8.35341C14.2134 8.16008 14.2134 7.84008 14.0201 7.64674L9.97339 3.60008C9.78006 3.40674 9.46006 3.40674 9.26672 3.60008C9.07339 3.79341 9.07339 4.11341 9.26672 4.30674L12.4601 7.50008H2.33331C2.05998 7.50008 1.83331 7.72675 1.83331 8.00008C1.83331 8.27341 2.05998 8.50008 2.33331 8.50008H12.4601L9.26672 11.6934C9.07339 11.8867 9.07339 12.2067 9.26672 12.4001Z" fill="#00A300" fill-rule="evenodd"></path> </svg> </a></li>
-		</ul>
-		<!-- fecha a modal --><button class="newHeader__menuHeader__close-btn" onclick="closeMenuContainer()"><img alt="" class="newHeader__menuHeader__close-icon" data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/close-icon-white.svg" src="assets/images/newHeader/close-icon-black.svg" /></button></div>
-	<!-- header 2o nivel -->
+<div class="width-container newHeader__menuWidthContainer">
+<div class="newHeader__menuMobile__top">
+<ul class="newHeader__topArea__links noi-conheca-oi-solucoes-mobi">
+	<li><a class="newHeader__topArea__link newHeader__topArea__selectedLink" data-analytics="header" href="https://www.oi.com.br/grandes-empresas" style=" gap: 8px; border-bottom: 0; line-height: normal;"><span>Conhe&ccedil;a a Oi Solu&ccedil;&otilde;es</span> <svg fill="none" height="16" viewbox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg"> <path clip-rule="evenodd" d="M9.26672 12.4001C9.36672 12.5001 9.49339 12.5467 9.62006 12.5467C9.74673 12.5467 9.87339 12.5001 9.97339 12.4001L14.0201 8.35341C14.2134 8.16008 14.2134 7.84008 14.0201 7.64674L9.97339 3.60008C9.78006 3.40674 9.46006 3.40674 9.26672 3.60008C9.07339 3.79341 9.07339 4.11341 9.26672 4.30674L12.4601 7.50008H2.33331C2.05998 7.50008 1.83331 7.72675 1.83331 8.00008C1.83331 8.27341 2.05998 8.50008 2.33331 8.50008H12.4601L9.26672 11.6934C9.07339 11.8867 9.07339 12.2067 9.26672 12.4001Z" fill="#00A300" fill-rule="evenodd"></path> </svg> </a></li>
+</ul>
+<!-- fecha a modal --><button class="newHeader__menuHeader__close-btn" onclick="closeMenuContainer()"><img alt="" class="newHeader__menuHeader__close-icon" data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/close-icon-white.svg" src="assets/images/newHeader/close-icon-black.svg" /></button></div>
+<!-- header 2o nivel -->
 
-	<div class="newHeader__menuMobile__selectArea" id="select-area">
-		<div class="noi-offcanva-header"><a class="noi-help-center-mobi" data-analytics="header" href="https://www.oi.com.br/faq/"><svg fill="none" height="24" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"> <path clip-rule="evenodd" d="M12 21.25C17.1086 21.25 21.25 17.1086 21.25 12C21.25 6.89137 17.1086 2.75 12 2.75C6.89137 2.75 2.75 6.89137 2.75 12C2.75 17.1086 6.89137 21.25 12 21.25ZM12 22.75C17.9371 22.75 22.75 17.9371 22.75 12C22.75 6.06294 17.9371 1.25 12 1.25C6.06294 1.25 1.25 6.06294 1.25 12C1.25 17.9371 6.06294 22.75 12 22.75ZM12.0155 8.67878C11.3577 8.67878 10.7357 9.26647 10.7357 10.1048C10.7357 10.5289 10.3919 10.8727 9.96786 10.8727C9.54378 10.8727 9.2 10.5289 9.2 10.1048C9.2 8.51984 10.4115 7.14307 12.0155 7.14307C13.6195 7.14307 14.831 8.51984 14.831 10.1048C14.831 10.8905 14.539 11.6133 14.0532 12.1491C13.8553 12.3673 13.6481 12.5424 13.4728 12.6847C13.4253 12.7233 13.3817 12.7583 13.3412 12.7908L13.3408 12.7911C13.2197 12.8883 13.1261 12.9635 13.0373 13.0463C12.8432 13.2273 12.7833 13.3415 12.7833 13.5419C12.7833 13.966 12.4396 14.3097 12.0155 14.3097C11.5914 14.3097 11.2476 13.966 11.2476 13.5419C11.2476 12.7729 11.6069 12.2804 11.9897 11.9234C12.1246 11.7975 12.2789 11.6739 12.4091 11.5695L12.4095 11.5692C12.4432 11.5422 12.4752 11.5165 12.5049 11.4924C12.6641 11.3631 12.7981 11.247 12.9155 11.1176C13.1461 10.8632 13.2952 10.5077 13.2952 10.1048C13.2952 9.26647 12.6732 8.67878 12.0155 8.67878ZM12.0192 15C11.4563 15 11 15.4584 11 16.0238C11 16.5892 11.4563 17.0476 12.0192 17.0476H12.0284C12.5913 17.0476 13.0476 16.5892 13.0476 16.0238C13.0476 15.4584 12.5913 15 12.0284 15H12.0192Z" fill="#1F1F1F" fill-rule="evenodd"></path> </svg>
+<div class="newHeader__menuMobile__selectArea" id="select-area">
+<div class="noi-offcanva-header"><a class="noi-help-center-mobi" data-analytics="header" href="https://www.oi.com.br/faq/"><svg fill="none" height="24" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"> <path clip-rule="evenodd" d="M12 21.25C17.1086 21.25 21.25 17.1086 21.25 12C21.25 6.89137 17.1086 2.75 12 2.75C6.89137 2.75 2.75 6.89137 2.75 12C2.75 17.1086 6.89137 21.25 12 21.25ZM12 22.75C17.9371 22.75 22.75 17.9371 22.75 12C22.75 6.06294 17.9371 1.25 12 1.25C6.06294 1.25 1.25 6.06294 1.25 12C1.25 17.9371 6.06294 22.75 12 22.75ZM12.0155 8.67878C11.3577 8.67878 10.7357 9.26647 10.7357 10.1048C10.7357 10.5289 10.3919 10.8727 9.96786 10.8727C9.54378 10.8727 9.2 10.5289 9.2 10.1048C9.2 8.51984 10.4115 7.14307 12.0155 7.14307C13.6195 7.14307 14.831 8.51984 14.831 10.1048C14.831 10.8905 14.539 11.6133 14.0532 12.1491C13.8553 12.3673 13.6481 12.5424 13.4728 12.6847C13.4253 12.7233 13.3817 12.7583 13.3412 12.7908L13.3408 12.7911C13.2197 12.8883 13.1261 12.9635 13.0373 13.0463C12.8432 13.2273 12.7833 13.3415 12.7833 13.5419C12.7833 13.966 12.4396 14.3097 12.0155 14.3097C11.5914 14.3097 11.2476 13.966 11.2476 13.5419C11.2476 12.7729 11.6069 12.2804 11.9897 11.9234C12.1246 11.7975 12.2789 11.6739 12.4091 11.5695L12.4095 11.5692C12.4432 11.5422 12.4752 11.5165 12.5049 11.4924C12.6641 11.3631 12.7981 11.247 12.9155 11.1176C13.1461 10.8632 13.2952 10.5077 13.2952 10.1048C13.2952 9.26647 12.6732 8.67878 12.0155 8.67878ZM12.0192 15C11.4563 15 11 15.4584 11 16.0238C11 16.5892 11.4563 17.0476 12.0192 17.0476H12.0284C12.5913 17.0476 13.0476 16.5892 13.0476 16.0238C13.0476 15.4584 12.5913 15 12.0284 15H12.0192Z" fill="#1F1F1F" fill-rule="evenodd"></path> </svg>
 
-		<div class="noi-help-center-mobi-text"><span> Central de ajuda </span></div>
-		</a></div>
+<div class="noi-help-center-mobi-text"><span> Central de ajuda </span></div>
+</a></div>
 
-		<ul class="newHeader__topArea__menuMobile">
-		<li class="newHeader__topArea__menuMobile__item"><button onclick="menuSelected(event ,'menu-option-products-and-services', 'Produtos e serviços')"><span>Produtos e servi&ccedil;os </span> <img alt="" class="newHeader__topArea__menuMobile__chevron" data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/chevron-down-white.svg" src="assets/images/newHeader/chevron-down-black.svg" /></button></li>
-		<li class="newHeader__topArea__menuMobile__item"><button onclick="menuSelected(event ,'menu-option-why-oi', 'Por que Oi')"><span> Por que Oi </span> <img alt="" class="newHeader__topArea__menuMobile__chevron" data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/chevron-down-white.svg" src="assets/images/newHeader/chevron-down-black.svg" /></button></li>
-		<li class="newHeader__topArea__menuMobile__item"><a data-analytics="header" href="https://www.oi.com.br/negociacao/"><span> Negociar d&iacute;vidas </span> <img alt="" class="newHeader__topArea__menuMobile__chevron" data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/chevron-down-white.svg" src="assets/images/newHeader/chevron-down-black.svg" /> </a></li>
-		<li class="newHeader__topArea__menuMobile__item"><button class="newHeader__topArea__menuMobile__item-atendimento" onclick="menuSelected(event ,'menu-option-attendance-client', 'Atendimento cliente Oi')" style="border-radius: 42px 42px 0 0 !important; bottom: 0 !important;"><img alt="" data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/user-support-dark.svg" src="assets/images/newHeader/user-support-white.svg" /> <span>Atendimento Cliente Oi</span></button></li>
-		</ul>
-	</div>
-	<!-- header 3o nivel --><!-- cabeçalho: botão de voltar -> titulo troca dinamicamente -->
+<ul class="newHeader__topArea__menuMobile">
+	<li class="newHeader__topArea__menuMobile__item"><button onclick="menuSelected(event ,'menu-option-products-and-services', 'Produtos e serviços')"><span>Produtos e servi&ccedil;os </span> <img alt="" class="newHeader__topArea__menuMobile__chevron" data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/chevron-down-white.svg" src="assets/images/newHeader/chevron-down-black.svg" /></button></li>
+	<li class="newHeader__topArea__menuMobile__item"><button onclick="menuSelected(event ,'menu-option-why-oi', 'Por que Oi')"><span> Por que Oi </span> <img alt="" class="newHeader__topArea__menuMobile__chevron" data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/chevron-down-white.svg" src="assets/images/newHeader/chevron-down-black.svg" /></button></li>
+	<li class="newHeader__topArea__menuMobile__item"><a data-analytics="header" href="https://www.oi.com.br/negociacao/"><span> Negociar d&iacute;vidas </span> <img alt="" class="newHeader__topArea__menuMobile__chevron" data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/chevron-down-white.svg" src="assets/images/newHeader/chevron-down-black.svg" /> </a></li>
+	<li class="newHeader__topArea__menuMobile__item"><button class="newHeader__topArea__menuMobile__item-atendimento" onclick="menuSelected(event ,'menu-option-attendance-client', 'Atendimento cliente Oi')" style="border-radius: 42px 42px 0 0 !important; bottom: 0 !important;"><img alt="" data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/user-support-dark.svg" src="assets/images/newHeader/user-support-white.svg" /> <span>Atendimento Cliente Oi</span></button></li>
+</ul>
+</div>
+<!-- header 3o nivel --><!-- cabeçalho: botão de voltar -> titulo troca dinamicamente -->
 
-	<div class="newHeader__menuHeader"><button class="newHeader__menuHeader__back-btn" onclick="backToMenuOptions()"><img alt="" class="newHeader__menuHeader__back-icon" data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/chevron-left-white.svg" src="assets/images/newHeader/chevron-left-black.svg" /></button><span class="newHeader__menuHeader__title"> Atendimento cliente Oi </span><button class="newHeader__menuHeader__closeButton" onclick="backToMenuOptions()"><img alt="" class="newHeader__menuHeader__close-icon" data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/close-icon-white.svg" src="assets/images/newHeader/close-icon-black.svg" /></button></div>
-	<!-- corpo com options: Produtos e Serviços -->
+<div class="newHeader__menuHeader"><button class="newHeader__menuHeader__back-btn" onclick="backToMenuOptions()"><img alt="" class="newHeader__menuHeader__back-icon" data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/chevron-left-white.svg" src="assets/images/newHeader/chevron-left-black.svg" /></button><span class="newHeader__menuHeader__title"> Atendimento cliente Oi </span><button class="newHeader__menuHeader__closeButton" onclick="backToMenuOptions()"><img alt="" class="newHeader__menuHeader__close-icon" data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/close-icon-white.svg" src="assets/images/newHeader/close-icon-black.svg" /></button></div>
+<!-- corpo com options: Produtos e Serviços -->
 
-	<div class="newHeader__menuOptionContainer" id="menu-option-products-and-services">
-		<div class="noi-header-three-links-list">
-		<div class="newHeader__linksContainer">
-			<div class="newHeader__linksContainer-title"><img alt="" data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/smart-house-dark.svg" src="assets/images/newHeader/smart-house.svg" /> <span> Pra sua casa </span></div>
+<div class="newHeader__menuOptionContainer" id="menu-option-products-and-services">
+<div class="noi-header-three-links-list">
+<div class="newHeader__linksContainer">
+<div class="newHeader__linksContainer-title"><svg fill="none" height="24" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"> <path clip-rule="evenodd" d="M10.6364 2.98176C11.4419 2.36806 12.5581 2.36806 13.3636 2.98176L20.25 8.22852V19C20.25 20.2426 19.2426 21.25 18 21.25H6C4.75736 21.25 3.75 20.2426 3.75 19V8.22858L10.6364 2.98176ZM2.25 9.37143L1.95457 9.59652C1.62509 9.84755 1.1545 9.78396 0.903466 9.45448C0.652435 9.125 0.716029 8.65441 1.04551 8.40337L9.72738 1.78862C11.0699 0.765774 12.9302 0.765774 14.2727 1.78862L22.9546 8.40337C23.2841 8.65441 23.3476 9.125 23.0966 9.45448C22.8456 9.78396 22.375 9.84755 22.0455 9.59652L21.75 9.37137V19C21.75 21.0711 20.0711 22.75 18 22.75H6C3.92893 22.75 2.25 21.0711 2.25 19V9.37143ZM7.26813 10.6198C8.73673 10.0581 10.3316 9.75 12.0002 9.75C13.6688 9.75 15.2637 10.0581 16.7323 10.6198C17.1192 10.7677 17.5528 10.5741 17.7007 10.1872C17.8487 9.8003 17.655 9.36672 17.2681 9.21875C15.6311 8.59264 13.8548 8.25 12.0002 8.25C10.1456 8.25 8.36928 8.59264 6.73228 9.21875C6.3454 9.36672 6.15172 9.8003 6.29969 10.1872C6.44766 10.5741 6.88125 10.7677 7.26813 10.6198ZM8.73869 13.2796C9.76225 12.9363 10.8587 12.75 12.0002 12.75C13.1417 12.75 14.2382 12.9363 15.2617 13.2796C15.6544 13.4113 16.0796 13.1997 16.2113 12.807C16.343 12.4143 16.1314 11.9892 15.7387 11.8574C14.5634 11.4633 13.3059 11.25 12.0002 11.25C10.6945 11.25 9.43704 11.4633 8.26172 11.8574C7.86901 11.9892 7.65742 12.4143 7.78913 12.807C7.92084 13.1997 8.34597 13.4113 8.73869 13.2796ZM12.0002 15.75C11.3732 15.75 10.7658 15.8294 10.1871 15.9784C9.78598 16.0816 9.3771 15.8401 9.27385 15.439C9.17061 15.0378 9.4121 14.629 9.81324 14.5257C10.513 14.3456 11.246 14.25 12.0002 14.25C12.7544 14.25 13.4873 14.3456 14.1871 14.5257C14.5883 14.629 14.8298 15.0378 14.7265 15.439C14.6233 15.8401 14.2144 16.0816 13.8132 15.9784C13.2346 15.8294 12.6272 15.75 12.0002 15.75ZM11.2119 18.7201C11.7295 18.5907 12.2709 18.5907 12.7884 18.7201L12.8183 18.7275C13.2201 18.828 13.6273 18.5837 13.7278 18.1818C13.8282 17.78 13.5839 17.3728 13.1821 17.2723L13.1522 17.2649C12.3958 17.0758 11.6045 17.0758 10.8481 17.2649L10.8183 17.2723C10.4164 17.3728 10.1721 17.78 10.2726 18.1818C10.373 18.5837 10.7802 18.828 11.1821 18.7275L11.2119 18.7201Z" fill="#3D3D3D" fill-rule="evenodd"></path> </svg> <span> Pra sua casa </span></div>
 
-			<ul class="newHeader__optionLinks">
-			<li class="newHeader__optionLink"><a data-analytics="header" href="https://www.oi.com.br/fixo/"><span> Telefone fixo </span> <img alt="" class="newHeader__optionLink__chevron" data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/chevron-down-white.svg" src="assets/images/newHeader/chevron-down-black.svg" /> </a></li>
-			<li class="newHeader__optionLink"><a data-analytics="header" href="https://www.oi.com.br/tv-hd"><span> TV HD </span> <img alt="" class="newHeader__optionLink__chevron" data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/chevron-down-white.svg" src="assets/images/newHeader/chevron-down-black.svg" /> </a></li>
-			</ul>
-		</div>
+<ul class="newHeader__optionLinks">
+	<li class="newHeader__optionLink"><a data-analytics="header" href="https://www.oi.com.br/fixo/"><span> Telefone fixo </span> <img alt="" class="newHeader__optionLink__chevron" data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/chevron-down-white.svg" src="assets/images/newHeader/chevron-down-black.svg" /> </a></li>
+	<li class="newHeader__optionLink"><a data-analytics="header" href="https://www.oi.com.br/tv-hd"><span> TV HD </span> <img alt="" class="newHeader__optionLink__chevron" data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/chevron-down-white.svg" src="assets/images/newHeader/chevron-down-black.svg" /> </a></li>
+</ul>
+</div>
 
-		<div class="newHeader__linksContainer">
-			<div class="newHeader__linksContainer-title"><svg fill="none" height="24" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"> <path clip-rule="evenodd" d="M16 6.75L15.9814 6.74977H8.01864L8 6.75L7.98136 6.74977H7.00023C5.31023 6.74977 4.15023 7.07977 3.56023 7.73977C3.07023 8.27977 2.91023 9.10977 3.04023 10.3498L3.07095 10.6779C4.93948 11.9445 7.05669 12.7967 9.25 13.1722V13C9.25 11.59 9.59 11.25 11 11.25H13C14.41 11.25 14.75 11.59 14.75 13V13.142C16.9749 12.7405 19.0977 11.8626 20.9393 10.5824L20.9602 10.3598C21.0902 9.10977 20.9302 8.27977 20.4402 7.73977C19.8502 7.07977 18.6902 6.74977 17.0002 6.74977H16.0186L16 6.75ZM9.27113 14.695C7.16315 14.3729 5.11048 13.6436 3.247 12.5581L3.79023 18.3598C3.96023 19.9398 4.39023 21.2498 8.00023 21.2498H16.0002C19.6002 21.2498 20.0402 19.9398 20.2102 18.3498L20.7609 12.4837C18.9153 13.5774 16.8664 14.3234 14.7288 14.6767C14.6426 15.6491 14.2066 16.75 12 16.75C9.79267 16.75 9.35709 15.6547 9.27113 14.695ZM21.7002 18.4998L22.3965 11.0818C22.3976 11.0725 22.3984 11.0632 22.3991 11.054L22.4502 10.5098C22.5602 9.44977 22.5902 7.89977 21.5502 6.73977C20.6602 5.74977 19.1702 5.25977 17.0002 5.25977H16.75V5.2C16.75 3.44 16.75 1.25 12.8 1.25H11.2C7.25 1.25 7.25 3.44 7.25 5.2V5.25977H7.00023C4.84023 5.25977 3.35023 5.73977 2.45023 6.73977C1.41023 7.89977 1.44023 9.44977 1.55023 10.4998L2.30023 18.5098C2.52023 20.5998 3.38023 22.7498 8.00023 22.7498H16.0002C20.6202 22.7498 21.4802 20.5998 21.7002 18.4998ZM15.25 5.25977H8.75V5.2C8.75 3.42 8.75 2.75 11.2 2.75H12.8C15.25 2.75 15.25 3.42 15.25 5.2V5.25977ZM10.75 13V12.75H11H13H13.25V13V14.02C13.25 15.09 13.25 15.25 12 15.25C10.75 15.25 10.75 15.06 10.75 14.03V13Z" fill="#3D3D3D" fill-rule="evenodd"></path> </svg> <span> Para sua empresa </span></div>
+<div class="newHeader__linksContainer">
+<div class="newHeader__linksContainer-title"><svg fill="none" height="24" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"> <path clip-rule="evenodd" d="M16 6.75L15.9814 6.74977H8.01864L8 6.75L7.98136 6.74977H7.00023C5.31023 6.74977 4.15023 7.07977 3.56023 7.73977C3.07023 8.27977 2.91023 9.10977 3.04023 10.3498L3.07095 10.6779C4.93948 11.9445 7.05669 12.7967 9.25 13.1722V13C9.25 11.59 9.59 11.25 11 11.25H13C14.41 11.25 14.75 11.59 14.75 13V13.142C16.9749 12.7405 19.0977 11.8626 20.9393 10.5824L20.9602 10.3598C21.0902 9.10977 20.9302 8.27977 20.4402 7.73977C19.8502 7.07977 18.6902 6.74977 17.0002 6.74977H16.0186L16 6.75ZM9.27113 14.695C7.16315 14.3729 5.11048 13.6436 3.247 12.5581L3.79023 18.3598C3.96023 19.9398 4.39023 21.2498 8.00023 21.2498H16.0002C19.6002 21.2498 20.0402 19.9398 20.2102 18.3498L20.7609 12.4837C18.9153 13.5774 16.8664 14.3234 14.7288 14.6767C14.6426 15.6491 14.2066 16.75 12 16.75C9.79267 16.75 9.35709 15.6547 9.27113 14.695ZM21.7002 18.4998L22.3965 11.0818C22.3976 11.0725 22.3984 11.0632 22.3991 11.054L22.4502 10.5098C22.5602 9.44977 22.5902 7.89977 21.5502 6.73977C20.6602 5.74977 19.1702 5.25977 17.0002 5.25977H16.75V5.2C16.75 3.44 16.75 1.25 12.8 1.25H11.2C7.25 1.25 7.25 3.44 7.25 5.2V5.25977H7.00023C4.84023 5.25977 3.35023 5.73977 2.45023 6.73977C1.41023 7.89977 1.44023 9.44977 1.55023 10.4998L2.30023 18.5098C2.52023 20.5998 3.38023 22.7498 8.00023 22.7498H16.0002C20.6202 22.7498 21.4802 20.5998 21.7002 18.4998ZM15.25 5.25977H8.75V5.2C8.75 3.42 8.75 2.75 11.2 2.75H12.8C15.25 2.75 15.25 3.42 15.25 5.2V5.25977ZM10.75 13V12.75H11H13H13.25V13V14.02C13.25 15.09 13.25 15.25 12 15.25C10.75 15.25 10.75 15.06 10.75 14.03V13Z" fill="#3D3D3D" fill-rule="evenodd"></path> </svg> <span> Para sua empresa </span></div>
 
-			<ul class="newHeader__optionLinks">
-			<li class="newHeader__optionLink"><a data-analytics="header" href="https://www.oi.com.br/fixo/"><span>Telefone fixo </span> <img alt="" class="newHeader__optionLink__chevron" data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/chevron-down-white.svg" src="assets/images/newHeader/chevron-down-black.svg" /> </a></li>
-			<li class="newHeader__optionLink"><a data-analytics="header" href="https://www.oi.com.br/tv-hd"><span> TV HD </span> <img alt="" class="newHeader__optionLink__chevron" data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/chevron-down-white.svg" src="assets/images/newHeader/chevron-down-black.svg" /> </a></li>
-			</ul>
-		</div>
-		</div>
-		<!-- banner lateral-->
+<ul class="newHeader__optionLinks">
+	<li class="newHeader__optionLink"><a data-analytics="header" href="https://www.oi.com.br/fixo/"><span>Telefone fixo </span> <img alt="" class="newHeader__optionLink__chevron" data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/chevron-down-white.svg" src="assets/images/newHeader/chevron-down-black.svg" /> </a></li>
+	<li class="newHeader__optionLink"><a data-analytics="header" href="https://www.oi.com.br/tv-hd"><span> TV HD </span> <img alt="" class="newHeader__optionLink__chevron" data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/chevron-down-white.svg" src="assets/images/newHeader/chevron-down-black.svg" /> </a></li>
+</ul>
+</div>
+</div>
+<!-- banner lateral-->
 
-		<div class="newHeader__menuOptionCard noi-header-three-banner"><img alt="" class="newHeader__menuOptionCard-bg" loading="lazy" src="/lumis/portal/file/fileDownload.jsp?fileId=FF808181958520B10195866FC6C408FA&amp;inline=1" />
-		<div class="newHeader__menuOptionCard-content"><span class="newHeader__menuOptionCard-title noi-three-banner-title"> <span> Conhe&ccedil;a a Oi Solu&ccedil;&otilde;es </span> </span> <span class="newHeader__menuOptionCard-subtitle noi-three-banner-body"> Um portf&oacute;lio completo de solu&ccedil;&otilde;es digitais que podem ser customizadas para grandes empresas p&uacute;blicas ou privadas. </span> <a data-analytics="header" href="https://www.oi.com.br/grandes-empresas/"> <span style="color: var(--Oi-Solues---Light, #D9E29C);"> Conhe&ccedil;a </span> <svg fill="none" height="24" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"> <path clip-rule="evenodd" d="M13.9001 18.6001C14.0501 18.7501 14.2401 18.8201 14.4301 18.8201C14.6201 18.8201 14.8101 18.7501 14.9601 18.6001L21.0301 12.5301C21.3201 12.2401 21.3201 11.7601 21.0301 11.4701L14.9601 5.40012C14.6701 5.11012 14.1901 5.11012 13.9001 5.40012C13.6101 5.69012 13.6101 6.17012 13.9001 6.46012L18.6901 11.2501H3.5C3.09 11.2501 2.75 11.5901 2.75 12.0001C2.75 12.4101 3.09 12.7501 3.5 12.7501H18.6901L13.9001 17.5401C13.6101 17.8301 13.6101 18.3101 13.9001 18.6001Z" fill="#D9E29C" fill-rule="evenodd"></path> </svg> </a></div>
-		</div>
-	</div>
-	<!-- corpo com options: Por que Oi -->
+<div class="newHeader__menuOptionCard noi-header-three-banner"><img alt="" class="newHeader__menuOptionCard-bg" loading="lazy" src="/lumis/portal/file/fileDownload.jsp?fileId=FF808181958520B10195866FC6C408FA&amp;inline=1" />
+<div class="newHeader__menuOptionCard-content"><span class="newHeader__menuOptionCard-title noi-three-banner-title"> <span> Conhe&ccedil;a a Oi Solu&ccedil;&otilde;es </span> </span> <span class="newHeader__menuOptionCard-subtitle noi-three-banner-body"> Um portf&oacute;lio completo de solu&ccedil;&otilde;es digitais que podem ser customizadas para grandes empresas p&uacute;blicas ou privadas. </span> <a data-analytics="header" href="https://www.oi.com.br/grandes-empresas/"> <span style="color: var(--Oi-Solues---Light, #D9E29C);"> Conhe&ccedil;a </span> <svg fill="none" height="24" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"> <path clip-rule="evenodd" d="M13.9001 18.6001C14.0501 18.7501 14.2401 18.8201 14.4301 18.8201C14.6201 18.8201 14.8101 18.7501 14.9601 18.6001L21.0301 12.5301C21.3201 12.2401 21.3201 11.7601 21.0301 11.4701L14.9601 5.40012C14.6701 5.11012 14.1901 5.11012 13.9001 5.40012C13.6101 5.69012 13.6101 6.17012 13.9001 6.46012L18.6901 11.2501H3.5C3.09 11.2501 2.75 11.5901 2.75 12.0001C2.75 12.4101 3.09 12.7501 3.5 12.7501H18.6901L13.9001 17.5401C13.6101 17.8301 13.6101 18.3101 13.9001 18.6001Z" fill="#D9E29C" fill-rule="evenodd"></path> </svg> </a></div>
+</div>
+</div>
+<!-- corpo com options: Por que Oi -->
 
-	<div class="newHeader__menuOptionContainer" id="menu-option-why-oi">
-		<div class="newHeader__linksContainer">
-		<div class="newHeader__linksContainer-title"><img alt="" data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/group-people-dark.svg" src="assets/images/newHeader/group-people.svg" /> <span> Compromissos </span></div>
+<div class="newHeader__menuOptionContainer" id="menu-option-why-oi">
+<div class="newHeader__linksContainer">
+<div class="newHeader__linksContainer-title"><svg fill="none" height="24" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"> <path clip-rule="evenodd" d="M5.97047 7.91H5.95047C4.15047 7.85 2.74047 6.39 2.73047 4.59C2.73047 2.75 4.23047 1.25 6.06047 1.25C7.89047 1.25 9.39047 2.75 9.39047 4.58C9.39047 6.39 7.98047 7.85 6.18047 7.91L5.97047 7.16L6.04047 7.91H5.97047ZM6.07047 6.41H6.07057C6.13053 6.41 6.18051 6.41 6.24047 6.42C7.13047 6.38 7.91047 5.58 7.91047 4.59C7.91047 3.58 7.09047 2.75999 6.08047 2.75999C5.07047 2.75999 4.25047 3.58 4.25047 4.59C4.25047 5.57 5.01047 6.36 5.98047 6.42C5.99046 6.41 6.03042 6.41 6.0704 6.41H6.07047ZM17.9203 7.90977H18.0003H18.0003C18.0053 7.90977 18.0078 7.90977 18.0091 7.91102C18.0103 7.91227 18.0103 7.91477 18.0103 7.91977C19.8103 7.85977 21.2203 6.39977 21.2303 4.58977C21.2303 2.75977 19.7303 1.25977 17.9003 1.25977C16.0703 1.25977 14.5703 2.74977 14.5703 4.58977C14.5703 6.38977 15.9803 7.84977 17.8703 7.90977H17.9203ZM16.0703 4.57977C16.0703 3.56977 16.8903 2.74977 17.9003 2.74977C18.9203 2.74977 19.7403 3.56977 19.7403 4.57977C19.7303 5.55977 18.9803 6.35977 18.0103 6.40977C17.9203 6.39977 17.8403 6.39977 17.8303 6.40977C16.8403 6.36977 16.0703 5.56977 16.0703 4.57977ZM16.8405 15.1801C17.2305 15.2501 17.6205 15.2801 18.0105 15.2801C19.2405 15.2801 20.4205 14.9502 21.3305 14.3502C22.2205 13.7502 22.7205 12.9001 22.7205 12.0101C22.7205 11.1101 22.2105 10.2701 21.3305 9.68014C20.1305 8.88014 18.4405 8.57015 16.8105 8.86015C16.4005 8.93015 16.1305 9.32015 16.2005 9.73015C16.2705 10.1401 16.6605 10.4201 17.0705 10.3401C18.3105 10.1201 19.6305 10.3501 20.5005 10.9301C20.9605 11.2401 21.2205 11.6201 21.2205 12.0101C21.2205 12.4001 20.9705 12.7902 20.5005 13.1002C19.6305 13.6802 18.3305 13.9101 17.1005 13.7001C16.6905 13.6301 16.3005 13.9001 16.2305 14.3101C16.1605 14.7201 16.4305 15.1101 16.8405 15.1801ZM2.64 14.3502C3.55 14.9502 4.73 15.2801 5.96 15.2801C6.35 15.2801 6.74 15.2501 7.13 15.1801C7.54 15.1101 7.81 14.7201 7.74 14.3101C7.67 13.9101 7.28 13.6301 6.87 13.7001C5.64 13.9101 4.34 13.6802 3.47 13.1002C3.01 12.7902 2.75 12.4001 2.75 12.0101C2.75 11.6201 3 11.2401 3.47 10.9301C4.35 10.3501 5.66 10.1201 6.9 10.3401C7.31 10.4201 7.7 10.1401 7.77 9.73015C7.84 9.32015 7.57 8.93015 7.16 8.86015C5.53 8.57015 3.84 8.88014 2.64 9.68014C1.76 10.2701 1.25 11.1201 1.25 12.0101C1.25 12.9101 1.76 13.7602 2.64 14.3502ZM12.0003 15.38H11.9203H11.8703C9.98031 15.32 8.57031 13.86 8.57031 12.06C8.57031 10.22 10.0703 8.72998 11.9003 8.72998C13.7303 8.72998 15.2303 10.23 15.2303 12.06C15.2203 13.87 13.8103 15.33 12.0103 15.39C12.0103 15.385 12.0103 15.3825 12.0091 15.3812C12.0078 15.38 12.0053 15.38 12.0003 15.38H12.0003ZM11.9003 10.22C10.8903 10.22 10.0703 11.04 10.0703 12.05C10.0703 13.04 10.8403 13.84 11.8303 13.88C11.8403 13.87 11.9203 13.87 12.0103 13.88C12.9803 13.83 13.7303 13.03 13.7403 12.05C13.7403 11.05 12.9203 10.22 11.9003 10.22ZM8.6693 21.8197C9.5993 22.4497 10.7993 22.7597 11.9993 22.7597C13.1993 22.7597 14.3993 22.4397 15.3293 21.8197C16.2193 21.2297 16.7193 20.3697 16.7193 19.4797C16.7193 18.5797 16.2093 17.7397 15.3293 17.1497C13.4693 15.9097 10.5393 15.9097 8.6693 17.1497C7.7793 17.7397 7.2793 18.5997 7.2793 19.4897C7.2793 20.3897 7.7893 21.2297 8.6693 21.8197ZM8.7793 19.4997C8.7793 19.1097 9.0293 18.7197 9.4993 18.4097C10.8593 17.5097 13.1493 17.4997 14.4893 18.4097C14.9493 18.7197 15.2093 19.0997 15.2093 19.4897C15.2093 19.8797 14.9593 20.2697 14.4893 20.5797C13.1393 21.4897 10.8493 21.4897 9.4993 20.5797C9.0393 20.2697 8.7793 19.8897 8.7793 19.4997Z" fill="#3D3D3D" fill-rule="evenodd"></path> </svg> <span> Compromissos </span></div>
 
-		<ul class="newHeader__optionLinks">
-			<li class="newHeader__optionLink"><a data-analytics="header" href="https://oinovafibra.my.site.com/esg/s/"><span> ESG e sustentabilidade </span> <img alt="" class="newHeader__optionLink__chevron" data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/chevron-down-white.svg" src="assets/images/newHeader/chevron-down-black.svg" /> </a></li>
-			<li class="newHeader__optionLink"><a data-analytics="header" href="https://www.oi.com.br/acessibilidade/"><span> Acessibilidade </span> <img alt="" class="newHeader__optionLink__chevron" data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/chevron-down-white.svg" src="assets/images/newHeader/chevron-down-black.svg" /> </a></li>
-			<li class="newHeader__optionLink"><a data-analytics="header" href="https://oifuturo.org.br/"><span> Oi Futuro </span> <img alt="" class="newHeader__optionLink__chevron" data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/chevron-down-white.svg" src="assets/images/newHeader/chevron-down-black.svg" /> </a></li>
-			<li class="newHeader__optionLink"><a data-analytics="header" href="https://oifuturo.org.br/espacos/centro-cultural/"><span> Futuros - Arte e Tecnologia </span> <img alt="" class="newHeader__optionLink__chevron" data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/chevron-down-white.svg" src="assets/images/newHeader/chevron-down-black.svg" /> </a></li>
-			<li class="newHeader__optionLink"><a data-analytics="header" href="https://oifuturo.org.br/espacos/musehum/"><span> Musehum </span> <img alt="" class="newHeader__optionLink__chevron" data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/chevron-down-white.svg" src="assets/images/newHeader/chevron-down-black.svg" /> </a></li>
-			<li class="newHeader__optionLink"><a data-analytics="header" href="https://oifuturo.org.br/programas/nave/"><span> N&uacute;cleo Avan&ccedil;ado em Educa&ccedil;&atilde;o </span> <img alt="" class="newHeader__optionLink__chevron" data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/chevron-down-white.svg" src="assets/images/newHeader/chevron-down-black.svg" /> </a></li>
-		</ul>
-		</div>
+<ul class="newHeader__optionLinks">
+	<li class="newHeader__optionLink"><a data-analytics="header" href="https://oinovafibra.my.site.com/esg/s/"><span> ESG e sustentabilidade </span> <img alt="" class="newHeader__optionLink__chevron" data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/chevron-down-white.svg" src="assets/images/newHeader/chevron-down-black.svg" /> </a></li>
+	<li class="newHeader__optionLink"><a data-analytics="header" href="https://www.oi.com.br/acessibilidade/"><span> Acessibilidade </span> <img alt="" class="newHeader__optionLink__chevron" data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/chevron-down-white.svg" src="assets/images/newHeader/chevron-down-black.svg" /> </a></li>
+	<li class="newHeader__optionLink"><a data-analytics="header" href="https://oifuturo.org.br/"><span> Oi Futuro </span> <img alt="" class="newHeader__optionLink__chevron" data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/chevron-down-white.svg" src="assets/images/newHeader/chevron-down-black.svg" /> </a></li>
+	<li class="newHeader__optionLink"><a data-analytics="header" href="https://oifuturo.org.br/espacos/centro-cultural/"><span> Futuros - Arte e Tecnologia </span> <img alt="" class="newHeader__optionLink__chevron" data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/chevron-down-white.svg" src="assets/images/newHeader/chevron-down-black.svg" /> </a></li>
+	<li class="newHeader__optionLink"><a data-analytics="header" href="https://oifuturo.org.br/espacos/musehum/"><span> Musehum </span> <img alt="" class="newHeader__optionLink__chevron" data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/chevron-down-white.svg" src="assets/images/newHeader/chevron-down-black.svg" /> </a></li>
+	<li class="newHeader__optionLink"><a data-analytics="header" href="https://oifuturo.org.br/programas/nave/"><span> N&uacute;cleo Avan&ccedil;ado em Educa&ccedil;&atilde;o </span> <img alt="" class="newHeader__optionLink__chevron" data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/chevron-down-white.svg" src="assets/images/newHeader/chevron-down-black.svg" /> </a></li>
+</ul>
+</div>
 
-		<div class="newHeader__menuOptionCard noi-header-three-banner" style="height: auto;"><img alt="" class="newHeader__menuOptionCard-bg" loading="lazy" src="/lumis/portal/file/fileDownload.jsp?fileId=FF808181958520B1019585BBD4E70654&amp;inline=1" style="min-width: auto;" />
-		<div class="newHeader__menuOptionCard-content" style="justify-content: flex-end;"><span class="newHeader__menuOptionCard-subtitle noi-three-banner-body"> Entenda as mudan&ccedil;as na Oi </span> <a data-analytics="header" href="https://www.oi.com.br/grandes-empresas/"> <span style="color: var(--Oi-Solues---Light, #70FF84);"> Saiba mais </span> <svg fill="none" height="24" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"> <path clip-rule="evenodd" d="M13.9001 18.6001C14.0501 18.7501 14.2401 18.8201 14.4301 18.8201C14.6201 18.8201 14.8101 18.7501 14.9601 18.6001L21.0301 12.5301C21.3201 12.2401 21.3201 11.7601 21.0301 11.4701L14.9601 5.40012C14.6701 5.11012 14.1901 5.11012 13.9001 5.40012C13.6101 5.69012 13.6101 6.17012 13.9001 6.46012L18.6901 11.2501H3.5C3.09 11.2501 2.75 11.5901 2.75 12.0001C2.75 12.4101 3.09 12.7501 3.5 12.7501H18.6901L13.9001 17.5401C13.6101 17.8301 13.6101 18.3101 13.9001 18.6001Z" fill="#70FF84" fill-rule="evenodd"></path> </svg> </a></div>
-		</div>
-	</div>
-	<!-- corpo com options: Atendimento Oi -->
+<div class="newHeader__menuOptionCard noi-header-three-banner" style="height: auto;"><img alt="" class="newHeader__menuOptionCard-bg" loading="lazy" src="/lumis/portal/file/fileDownload.jsp?fileId=FF808181958520B1019585BBD4E70654&amp;inline=1" style="min-width: auto;" />
+<div class="newHeader__menuOptionCard-content" style="justify-content: flex-end;"><span class="newHeader__menuOptionCard-subtitle noi-three-banner-body"> Entenda as mudan&ccedil;as na Oi </span> <a data-analytics="header" href="https://www.oi.com.br/grandes-empresas/"> <span style="color: var(--Oi-Solues---Light, #70FF84);"> Saiba mais </span> <svg fill="none" height="24" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"> <path clip-rule="evenodd" d="M13.9001 18.6001C14.0501 18.7501 14.2401 18.8201 14.4301 18.8201C14.6201 18.8201 14.8101 18.7501 14.9601 18.6001L21.0301 12.5301C21.3201 12.2401 21.3201 11.7601 21.0301 11.4701L14.9601 5.40012C14.6701 5.11012 14.1901 5.11012 13.9001 5.40012C13.6101 5.69012 13.6101 6.17012 13.9001 6.46012L18.6901 11.2501H3.5C3.09 11.2501 2.75 11.5901 2.75 12.0001C2.75 12.4101 3.09 12.7501 3.5 12.7501H18.6901L13.9001 17.5401C13.6101 17.8301 13.6101 18.3101 13.9001 18.6001Z" fill="#70FF84" fill-rule="evenodd"></path> </svg> </a></div>
+</div>
+</div>
+<!-- corpo com options: Atendimento Oi -->
 
-	<div class="newHeader__menuOptionContainer" id="menu-option-attendance-client">
-		<div class="newHeader__linksContainer">
-		<div class="newHeader__linksContainer-title"><svg fill="none" height="25" viewbox="0 0 24 25" width="24" xmlns="http://www.w3.org/2000/svg"> <path clip-rule="evenodd" d="M10.6364 3.48176C11.4419 2.86806 12.5581 2.86806 13.3636 3.48176L20.25 8.72852V19.5C20.25 20.7426 19.2426 21.75 18 21.75H6C4.75736 21.75 3.75 20.7426 3.75 19.5V8.72858L10.6364 3.48176ZM2.25 9.87143L1.95457 10.0965C1.62509 10.3476 1.1545 10.284 0.903466 9.95448C0.652435 9.625 0.716029 9.15441 1.04551 8.90337L9.72738 2.28862C11.0699 1.26577 12.9302 1.26577 14.2727 2.28862L22.9546 8.90337C23.2841 9.15441 23.3476 9.625 23.0966 9.95448C22.8456 10.284 22.375 10.3476 22.0455 10.0965L21.75 9.87137V19.5C21.75 21.5711 20.0711 23.25 18 23.25H6C3.92893 23.25 2.25 21.5711 2.25 19.5V9.87143ZM7.26813 11.1198C8.73673 10.5581 10.3316 10.25 12.0002 10.25C13.6688 10.25 15.2637 10.5581 16.7323 11.1198C17.1192 11.2677 17.5528 11.0741 17.7007 10.6872C17.8487 10.3003 17.655 9.86672 17.2681 9.71875C15.6311 9.09264 13.8548 8.75 12.0002 8.75C10.1456 8.75 8.36928 9.09264 6.73228 9.71875C6.3454 9.86672 6.15172 10.3003 6.29969 10.6872C6.44766 11.0741 6.88125 11.2677 7.26813 11.1198ZM8.73869 13.7796C9.76225 13.4363 10.8587 13.25 12.0002 13.25C13.1417 13.25 14.2382 13.4363 15.2617 13.7796C15.6544 13.9113 16.0796 13.6997 16.2113 13.307C16.343 12.9143 16.1314 12.4892 15.7387 12.3574C14.5634 11.9633 13.3059 11.75 12.0002 11.75C10.6945 11.75 9.43704 11.9633 8.26172 12.3574C7.86901 12.4892 7.65742 12.9143 7.78913 13.307C7.92084 13.6997 8.34597 13.9113 8.73869 13.7796ZM12.0002 16.25C11.3732 16.25 10.7658 16.3294 10.1871 16.4784C9.78598 16.5816 9.3771 16.3401 9.27385 15.939C9.17061 15.5378 9.4121 15.129 9.81324 15.0257C10.513 14.8456 11.246 14.75 12.0002 14.75C12.7544 14.75 13.4873 14.8456 14.1871 15.0257C14.5883 15.129 14.8298 15.5378 14.7265 15.939C14.6233 16.3401 14.2144 16.5816 13.8132 16.4784C13.2346 16.3294 12.6272 16.25 12.0002 16.25ZM11.2119 19.2201C11.7295 19.0907 12.2709 19.0907 12.7884 19.2201L12.8183 19.2275C13.2201 19.328 13.6273 19.0837 13.7278 18.6818C13.8282 18.28 13.5839 17.8728 13.1821 17.7723L13.1522 17.7649C12.3958 17.5758 11.6045 17.5758 10.8481 17.7649L10.8183 17.7723C10.4164 17.8728 10.1721 18.28 10.2726 18.6818C10.373 19.0837 10.7802 19.328 11.1821 19.2275L11.2119 19.2201Z" fill="#3D3D3D" fill-rule="evenodd"></path> </svg> <span> Para sua casa </span></div>
+<div class="newHeader__menuOptionContainer" id="menu-option-attendance-client">
+<div class="newHeader__linksContainer">
+<div class="newHeader__linksContainer-title"><svg fill="none" height="25" viewbox="0 0 24 25" width="24" xmlns="http://www.w3.org/2000/svg"> <path clip-rule="evenodd" d="M10.6364 3.48176C11.4419 2.86806 12.5581 2.86806 13.3636 3.48176L20.25 8.72852V19.5C20.25 20.7426 19.2426 21.75 18 21.75H6C4.75736 21.75 3.75 20.7426 3.75 19.5V8.72858L10.6364 3.48176ZM2.25 9.87143L1.95457 10.0965C1.62509 10.3476 1.1545 10.284 0.903466 9.95448C0.652435 9.625 0.716029 9.15441 1.04551 8.90337L9.72738 2.28862C11.0699 1.26577 12.9302 1.26577 14.2727 2.28862L22.9546 8.90337C23.2841 9.15441 23.3476 9.625 23.0966 9.95448C22.8456 10.284 22.375 10.3476 22.0455 10.0965L21.75 9.87137V19.5C21.75 21.5711 20.0711 23.25 18 23.25H6C3.92893 23.25 2.25 21.5711 2.25 19.5V9.87143ZM7.26813 11.1198C8.73673 10.5581 10.3316 10.25 12.0002 10.25C13.6688 10.25 15.2637 10.5581 16.7323 11.1198C17.1192 11.2677 17.5528 11.0741 17.7007 10.6872C17.8487 10.3003 17.655 9.86672 17.2681 9.71875C15.6311 9.09264 13.8548 8.75 12.0002 8.75C10.1456 8.75 8.36928 9.09264 6.73228 9.71875C6.3454 9.86672 6.15172 10.3003 6.29969 10.6872C6.44766 11.0741 6.88125 11.2677 7.26813 11.1198ZM8.73869 13.7796C9.76225 13.4363 10.8587 13.25 12.0002 13.25C13.1417 13.25 14.2382 13.4363 15.2617 13.7796C15.6544 13.9113 16.0796 13.6997 16.2113 13.307C16.343 12.9143 16.1314 12.4892 15.7387 12.3574C14.5634 11.9633 13.3059 11.75 12.0002 11.75C10.6945 11.75 9.43704 11.9633 8.26172 12.3574C7.86901 12.4892 7.65742 12.9143 7.78913 13.307C7.92084 13.6997 8.34597 13.9113 8.73869 13.7796ZM12.0002 16.25C11.3732 16.25 10.7658 16.3294 10.1871 16.4784C9.78598 16.5816 9.3771 16.3401 9.27385 15.939C9.17061 15.5378 9.4121 15.129 9.81324 15.0257C10.513 14.8456 11.246 14.75 12.0002 14.75C12.7544 14.75 13.4873 14.8456 14.1871 15.0257C14.5883 15.129 14.8298 15.5378 14.7265 15.939C14.6233 16.3401 14.2144 16.5816 13.8132 16.4784C13.2346 16.3294 12.6272 16.25 12.0002 16.25ZM11.2119 19.2201C11.7295 19.0907 12.2709 19.0907 12.7884 19.2201L12.8183 19.2275C13.2201 19.328 13.6273 19.0837 13.7278 18.6818C13.8282 18.28 13.5839 17.8728 13.1821 17.7723L13.1522 17.7649C12.3958 17.5758 11.6045 17.5758 10.8481 17.7649L10.8183 17.7723C10.4164 17.8728 10.1721 18.28 10.2726 18.6818C10.373 19.0837 10.7802 19.328 11.1821 19.2275L11.2119 19.2201Z" fill="#3D3D3D" fill-rule="evenodd"></path> </svg> <span> Para sua casa </span></div>
 
-		<ul class="newHeader__optionLinks">
-			<li class="newHeader__optionLink"><a data-analytics="header" href="https://www.oi.com.br/minha-oi/segunda-via/"><span> 2&ordf; via de conta </span> <img alt="" class="newHeader__optionLink__chevron" data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/chevron-down-white.svg" src="assets/images/newHeader/chevron-down-black.svg" /> </a></li>
-			<li class="newHeader__optionLink"><a data-analytics="header" href="https://www.oi.com.br/minha-oi/atendimento-oi/#:~:text=Consulta-,de,-protocolo"><span> Consultar protocolo </span> <img alt="" class="newHeader__optionLink__chevron" data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/chevron-down-white.svg" src="assets/images/newHeader/chevron-down-black.svg" /> </a></li>
-			<li class="newHeader__optionLink"><a data-analytics="header" href="https://www.oi.com.br/minha-oi/religar-servico/#/religar/consulta"><span> Desbloquear servi&ccedil;o </span> <img alt="" class="newHeader__optionLink__chevron" data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/chevron-down-white.svg" src="assets/images/newHeader/chevron-down-black.svg" /> </a></li>
-			<li class="newHeader__optionLink"><a data-analytics="header" href="https://www.oi.com.br/minha-oi/contato/coleta-aparelhos"><span> Devolver equipamento </span> <img alt="" class="newHeader__optionLink__chevron" data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/chevron-down-white.svg" src="assets/images/newHeader/chevron-down-black.svg" /> </a></li>
-			<li class="newHeader__optionLink"><a data-analytics="header" href="https://www.oi.com.br/negociacao/"><span> Negociar d&iacute;vidas </span> <img alt="" class="newHeader__optionLink__chevron" data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/chevron-down-white.svg" src="assets/images/newHeader/chevron-down-black.svg" /> </a></li>
-			<li class="newHeader__optionLink"><a data-analytics="header" href="https://www.oi.com.br/negociacao/"><span> Negociar d&iacute;vidas </span> <img alt="" class="newHeader__optionLink__chevron" data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/chevron-down-white.svg" src="assets/images/newHeader/chevron-down-black.svg" /> </a></li>
-			<li class="newHeader__optionLink"><a data-analytics="header" href="https://www.oi.com.br/negociacao/"><span> Suporte t&eacute;cnico </span> <img alt="" class="newHeader__optionLink__chevron" data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/chevron-down-white.svg" src="assets/images/newHeader/chevron-down-black.svg" /> </a></li>
-		</ul>
-		</div>
+<ul class="newHeader__optionLinks">
+	<li class="newHeader__optionLink"><a data-analytics="header" href="https://www.oi.com.br/minha-oi/segunda-via/"><span> 2&ordf; via de conta </span> <img alt="" class="newHeader__optionLink__chevron" data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/chevron-down-white.svg" src="assets/images/newHeader/chevron-down-black.svg" /> </a></li>
+	<li class="newHeader__optionLink"><a data-analytics="header" href="https://www.oi.com.br/minha-oi/atendimento-oi/#:~:text=Consulta-,de,-protocolo"><span> Consultar protocolo </span> <img alt="" class="newHeader__optionLink__chevron" data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/chevron-down-white.svg" src="assets/images/newHeader/chevron-down-black.svg" /> </a></li>
+	<li class="newHeader__optionLink"><a data-analytics="header" href="https://www.oi.com.br/minha-oi/religar-servico/#/religar/consulta"><span> Desbloquear servi&ccedil;o </span> <img alt="" class="newHeader__optionLink__chevron" data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/chevron-down-white.svg" src="assets/images/newHeader/chevron-down-black.svg" /> </a></li>
+	<li class="newHeader__optionLink"><a data-analytics="header" href="https://www.oi.com.br/minha-oi/contato/coleta-aparelhos"><span> Devolver equipamento </span> <img alt="" class="newHeader__optionLink__chevron" data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/chevron-down-white.svg" src="assets/images/newHeader/chevron-down-black.svg" /> </a></li>
+	<li class="newHeader__optionLink"><a data-analytics="header" href="https://www.oi.com.br/negociacao/"><span> Negociar d&iacute;vidas </span> <img alt="" class="newHeader__optionLink__chevron" data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/chevron-down-white.svg" src="assets/images/newHeader/chevron-down-black.svg" /> </a></li>
+	<li class="newHeader__optionLink"><a data-analytics="header" href="https://www.oi.com.br/negociacao/"><span> Negociar d&iacute;vidas </span> <img alt="" class="newHeader__optionLink__chevron" data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/chevron-down-white.svg" src="assets/images/newHeader/chevron-down-black.svg" /> </a></li>
+	<li class="newHeader__optionLink"><a data-analytics="header" href="https://www.oi.com.br/negociacao/"><span> Suporte t&eacute;cnico </span> <img alt="" class="newHeader__optionLink__chevron" data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/chevron-down-white.svg" src="assets/images/newHeader/chevron-down-black.svg" /> </a></li>
+</ul>
+</div>
 
-		<div class="newHeader__linksContainer">
-		<div class="newHeader__linksContainer-title"><svg fill="none" height="25" viewbox="0 0 24 25" width="24" xmlns="http://www.w3.org/2000/svg"> <path clip-rule="evenodd" d="M16 7.25L15.9814 7.24977H8.01864L8 7.25L7.98136 7.24977H7.00023C5.31023 7.24977 4.15023 7.57977 3.56023 8.23977C3.07023 8.77977 2.91023 9.60977 3.04023 10.8498L3.07095 11.1779C4.93948 12.4445 7.05669 13.2967 9.25 13.6722V13.5C9.25 12.09 9.59 11.75 11 11.75H13C14.41 11.75 14.75 12.09 14.75 13.5V13.642C16.9749 13.2405 19.0977 12.3626 20.9393 11.0824L20.9602 10.8598C21.0902 9.60977 20.9302 8.77977 20.4402 8.23977C19.8502 7.57977 18.6902 7.24977 17.0002 7.24977H16.0186L16 7.25ZM9.27113 15.195C7.16315 14.8729 5.11048 14.1436 3.247 13.0581L3.79023 18.8598C3.96023 20.4398 4.39023 21.7498 8.00023 21.7498H16.0002C19.6002 21.7498 20.0402 20.4398 20.2102 18.8498L20.7609 12.9837C18.9153 14.0774 16.8664 14.8234 14.7288 15.1767C14.6426 16.1491 14.2066 17.25 12 17.25C9.79267 17.25 9.35709 16.1547 9.27113 15.195ZM21.7002 18.9998L22.3965 11.5818C22.3976 11.5725 22.3984 11.5632 22.3991 11.554L22.4502 11.0098C22.5602 9.94977 22.5902 8.39977 21.5502 7.23977C20.6602 6.24977 19.1702 5.75977 17.0002 5.75977H16.75V5.7C16.75 3.94 16.75 1.75 12.8 1.75H11.2C7.25 1.75 7.25 3.94 7.25 5.7V5.75977H7.00023C4.84023 5.75977 3.35023 6.23977 2.45023 7.23977C1.41023 8.39977 1.44023 9.94977 1.55023 10.9998L2.30023 19.0098C2.52023 21.0998 3.38023 23.2498 8.00023 23.2498H16.0002C20.6202 23.2498 21.4802 21.0998 21.7002 18.9998ZM15.25 5.75977H8.75V5.7C8.75 3.92 8.75 3.25 11.2 3.25H12.8C15.25 3.25 15.25 3.92 15.25 5.7V5.75977ZM10.75 13.5V13.25H11H13H13.25V13.5V14.52C13.25 15.59 13.25 15.75 12 15.75C10.75 15.75 10.75 15.56 10.75 14.53V13.5Z" fill="#3D3D3D" fill-rule="evenodd"></path> </svg> <span> Pra sua empresa </span></div>
+<div class="newHeader__linksContainer">
+<div class="newHeader__linksContainer-title"><svg fill="none" height="25" viewbox="0 0 24 25" width="24" xmlns="http://www.w3.org/2000/svg"> <path clip-rule="evenodd" d="M16 7.25L15.9814 7.24977H8.01864L8 7.25L7.98136 7.24977H7.00023C5.31023 7.24977 4.15023 7.57977 3.56023 8.23977C3.07023 8.77977 2.91023 9.60977 3.04023 10.8498L3.07095 11.1779C4.93948 12.4445 7.05669 13.2967 9.25 13.6722V13.5C9.25 12.09 9.59 11.75 11 11.75H13C14.41 11.75 14.75 12.09 14.75 13.5V13.642C16.9749 13.2405 19.0977 12.3626 20.9393 11.0824L20.9602 10.8598C21.0902 9.60977 20.9302 8.77977 20.4402 8.23977C19.8502 7.57977 18.6902 7.24977 17.0002 7.24977H16.0186L16 7.25ZM9.27113 15.195C7.16315 14.8729 5.11048 14.1436 3.247 13.0581L3.79023 18.8598C3.96023 20.4398 4.39023 21.7498 8.00023 21.7498H16.0002C19.6002 21.7498 20.0402 20.4398 20.2102 18.8498L20.7609 12.9837C18.9153 14.0774 16.8664 14.8234 14.7288 15.1767C14.6426 16.1491 14.2066 17.25 12 17.25C9.79267 17.25 9.35709 16.1547 9.27113 15.195ZM21.7002 18.9998L22.3965 11.5818C22.3976 11.5725 22.3984 11.5632 22.3991 11.554L22.4502 11.0098C22.5602 9.94977 22.5902 8.39977 21.5502 7.23977C20.6602 6.24977 19.1702 5.75977 17.0002 5.75977H16.75V5.7C16.75 3.94 16.75 1.75 12.8 1.75H11.2C7.25 1.75 7.25 3.94 7.25 5.7V5.75977H7.00023C4.84023 5.75977 3.35023 6.23977 2.45023 7.23977C1.41023 8.39977 1.44023 9.94977 1.55023 10.9998L2.30023 19.0098C2.52023 21.0998 3.38023 23.2498 8.00023 23.2498H16.0002C20.6202 23.2498 21.4802 21.0998 21.7002 18.9998ZM15.25 5.75977H8.75V5.7C8.75 3.92 8.75 3.25 11.2 3.25H12.8C15.25 3.25 15.25 3.92 15.25 5.7V5.75977ZM10.75 13.5V13.25H11H13H13.25V13.5V14.52C13.25 15.59 13.25 15.75 12 15.75C10.75 15.75 10.75 15.56 10.75 14.53V13.5Z" fill="#3D3D3D" fill-rule="evenodd"></path> </svg> <span> Pra sua empresa </span></div>
 
-		<ul class="newHeader__optionLinks">
-			<li class="newHeader__optionLink"><a data-analytics="header" href="https://www.oi.com.br/internet/lp/boas-vindas-fibra/#dicas-uso"><span> 2&ordf; via de conta</span> <img alt="" class="newHeader__optionLink__chevron" data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/chevron-down-white.svg" src="assets/images/newHeader/chevron-down-black.svg" /> </a></li>
-			<li class="newHeader__optionLink"><a data-analytics="header" href="https://www.oi.com.br/internet/teste-de-velocidade/"><span> Conta digital </span> <img alt="" class="newHeader__optionLink__chevron" data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/chevron-down-white.svg" src="assets/images/newHeader/chevron-down-black.svg" /> </a></li>
-			<li class="newHeader__optionLink"><a data-analytics="header" href="https://www.oi.com.br/minha-oi/manuais-digitais/"><span> Devolver equipamento </span> <img alt="" class="newHeader__optionLink__chevron" data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/chevron-down-white.svg" src="assets/images/newHeader/chevron-down-black.svg" /> </a></li>
-			<li class="newHeader__optionLink"><a data-analytics="header" href="https://www.oi.com.br/minha-oi/tecnico-virtual/"><span> Entenda sua conta </span> <img alt="" class="newHeader__optionLink__chevron" data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/chevron-down-white.svg" src="assets/images/newHeader/chevron-down-black.svg" /> </a></li>
-			<li class="newHeader__optionLink"><a data-analytics="header" href="https://www.oi.com.br/minha-oi/tecnico-virtual/"><span> Negociar d&iacute;vidas </span> <img alt="" class="newHeader__optionLink__chevron" data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/chevron-down-white.svg" src="assets/images/newHeader/chevron-down-black.svg" /> </a></li>
-		</ul>
-		</div>
+<ul class="newHeader__optionLinks">
+	<li class="newHeader__optionLink"><a data-analytics="header" href="https://www.oi.com.br/internet/lp/boas-vindas-fibra/#dicas-uso"><span> 2&ordf; via de conta</span> <img alt="" class="newHeader__optionLink__chevron" data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/chevron-down-white.svg" src="assets/images/newHeader/chevron-down-black.svg" /> </a></li>
+	<li class="newHeader__optionLink"><a data-analytics="header" href="https://www.oi.com.br/internet/teste-de-velocidade/"><span> Conta digital </span> <img alt="" class="newHeader__optionLink__chevron" data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/chevron-down-white.svg" src="assets/images/newHeader/chevron-down-black.svg" /> </a></li>
+	<li class="newHeader__optionLink"><a data-analytics="header" href="https://www.oi.com.br/minha-oi/manuais-digitais/"><span> Devolver equipamento </span> <img alt="" class="newHeader__optionLink__chevron" data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/chevron-down-white.svg" src="assets/images/newHeader/chevron-down-black.svg" /> </a></li>
+	<li class="newHeader__optionLink"><a data-analytics="header" href="https://www.oi.com.br/minha-oi/tecnico-virtual/"><span> Entenda sua conta </span> <img alt="" class="newHeader__optionLink__chevron" data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/chevron-down-white.svg" src="assets/images/newHeader/chevron-down-black.svg" /> </a></li>
+	<li class="newHeader__optionLink"><a data-analytics="header" href="https://www.oi.com.br/minha-oi/tecnico-virtual/"><span> Negociar d&iacute;vidas </span> <img alt="" class="newHeader__optionLink__chevron" data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/chevron-down-white.svg" src="assets/images/newHeader/chevron-down-black.svg" /> </a></li>
+</ul>
+</div>
 
-		<div class="newHeader__linksContainer">
-		<div class="newHeader__linksContainer-title"><svg fill="none" height="25" viewbox="0 0 24 25" width="24" xmlns="http://www.w3.org/2000/svg"> <path clip-rule="evenodd" d="M7 22.25H17C21.41 22.25 22.75 20.91 22.75 16.5V8.5C22.75 4.09 21.41 2.75 17 2.75H7C2.59 2.75 1.25 4.09 1.25 8.5V16.5C1.25 20.91 2.59 22.25 7 22.25ZM2.75 8.5C2.75 4.93 3.42 4.25 7 4.25H17C20.58 4.25 21.25 4.93 21.25 8.5V16.5C21.25 20.07 20.58 20.75 17 20.75H7C3.42 20.75 2.75 20.07 2.75 16.5V8.5ZM14 9.25H19C19.41 9.25 19.75 8.91 19.75 8.5C19.75 8.09 19.41 7.75 19 7.75H14C13.59 7.75 13.25 8.09 13.25 8.5C13.25 8.91 13.59 9.25 14 9.25ZM15 13.25C14.59 13.25 14.25 12.91 14.25 12.5C14.25 12.09 14.59 11.75 15 11.75H19C19.41 11.75 19.75 12.09 19.75 12.5C19.75 12.91 19.41 13.25 19 13.25H15ZM17 17.25H19C19.41 17.25 19.75 16.91 19.75 16.5C19.75 16.09 19.41 15.75 19 15.75H17C16.59 15.75 16.25 16.09 16.25 16.5C16.25 16.91 16.59 17.25 17 17.25ZM8.50043 12.5399C7.09043 12.5399 5.94043 11.3899 5.94043 9.97992C5.94043 8.56992 7.09043 7.41992 8.50043 7.41992C9.91043 7.41992 11.0604 8.56992 11.0604 9.97992C11.0604 11.3899 9.91043 12.5399 8.50043 12.5399ZM8.50043 8.91992C7.92043 8.91992 7.44043 9.39992 7.44043 9.97992C7.44043 10.5599 7.92043 11.0399 8.50043 11.0399C9.08043 11.0399 9.56043 10.5599 9.56043 9.97992C9.56043 9.39992 9.08043 8.91992 8.50043 8.91992ZM11.2499 16.8998C11.2899 17.2898 11.6199 17.5798 11.9999 17.5798C12.0199 17.5798 12.0499 17.5798 12.0699 17.5698C12.4799 17.5298 12.7799 17.1598 12.7399 16.7498C12.5599 14.9598 11.1199 13.5298 9.31991 13.3598C8.76991 13.3098 8.20991 13.3098 7.65991 13.3598C5.84991 13.5198 4.41991 14.9498 4.23991 16.7498C4.19991 17.1598 4.49991 17.5298 4.90991 17.5698C5.31991 17.6198 5.68991 17.3098 5.72991 16.8998C5.83991 15.8098 6.70991 14.9498 7.79991 14.8498C8.25991 14.8098 8.71991 14.8098 9.17991 14.8498C10.2699 14.9498 11.1399 15.8198 11.2499 16.8998Z" fill="#3D3D3D" fill-rule="evenodd"></path> </svg> <span> Acesse </span></div>
+<div class="newHeader__linksContainer">
+<div class="newHeader__linksContainer-title"><svg fill="none" height="25" viewbox="0 0 24 25" width="24" xmlns="http://www.w3.org/2000/svg"> <path clip-rule="evenodd" d="M7 22.25H17C21.41 22.25 22.75 20.91 22.75 16.5V8.5C22.75 4.09 21.41 2.75 17 2.75H7C2.59 2.75 1.25 4.09 1.25 8.5V16.5C1.25 20.91 2.59 22.25 7 22.25ZM2.75 8.5C2.75 4.93 3.42 4.25 7 4.25H17C20.58 4.25 21.25 4.93 21.25 8.5V16.5C21.25 20.07 20.58 20.75 17 20.75H7C3.42 20.75 2.75 20.07 2.75 16.5V8.5ZM14 9.25H19C19.41 9.25 19.75 8.91 19.75 8.5C19.75 8.09 19.41 7.75 19 7.75H14C13.59 7.75 13.25 8.09 13.25 8.5C13.25 8.91 13.59 9.25 14 9.25ZM15 13.25C14.59 13.25 14.25 12.91 14.25 12.5C14.25 12.09 14.59 11.75 15 11.75H19C19.41 11.75 19.75 12.09 19.75 12.5C19.75 12.91 19.41 13.25 19 13.25H15ZM17 17.25H19C19.41 17.25 19.75 16.91 19.75 16.5C19.75 16.09 19.41 15.75 19 15.75H17C16.59 15.75 16.25 16.09 16.25 16.5C16.25 16.91 16.59 17.25 17 17.25ZM8.50043 12.5399C7.09043 12.5399 5.94043 11.3899 5.94043 9.97992C5.94043 8.56992 7.09043 7.41992 8.50043 7.41992C9.91043 7.41992 11.0604 8.56992 11.0604 9.97992C11.0604 11.3899 9.91043 12.5399 8.50043 12.5399ZM8.50043 8.91992C7.92043 8.91992 7.44043 9.39992 7.44043 9.97992C7.44043 10.5599 7.92043 11.0399 8.50043 11.0399C9.08043 11.0399 9.56043 10.5599 9.56043 9.97992C9.56043 9.39992 9.08043 8.91992 8.50043 8.91992ZM11.2499 16.8998C11.2899 17.2898 11.6199 17.5798 11.9999 17.5798C12.0199 17.5798 12.0499 17.5798 12.0699 17.5698C12.4799 17.5298 12.7799 17.1598 12.7399 16.7498C12.5599 14.9598 11.1199 13.5298 9.31991 13.3598C8.76991 13.3098 8.20991 13.3098 7.65991 13.3598C5.84991 13.5198 4.41991 14.9498 4.23991 16.7498C4.19991 17.1598 4.49991 17.5298 4.90991 17.5698C5.31991 17.6198 5.68991 17.3098 5.72991 16.8998C5.83991 15.8098 6.70991 14.9498 7.79991 14.8498C8.25991 14.8098 8.71991 14.8098 9.17991 14.8498C10.2699 14.9498 11.1399 15.8198 11.2499 16.8998Z" fill="#3D3D3D" fill-rule="evenodd"></path> </svg> <span> Acesse </span></div>
 
-		<ul class="newHeader__optionLinks">
-			<li class="newHeader__optionLink"><a data-analytics="header" href="https://www.oi.com.br/faq/p/voce-ja-conhece-o-oie"><span> Minha Oi </span> <img alt="" class="newHeader__optionLink__chevron" data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/chevron-down-white.svg" src="assets/images/newHeader/chevron-down-black.svg" /> </a></li>
-			<li class="newHeader__optionLink"><a data-analytics="header" href=""> <span style="display: flex;flex-direction: column;">Portal Oi Contas <b style="font-size: 14px;font-weight: 400;color: #8F8F8F;">Pequenas e m&eacute;dias empresas</b></span> <img alt="" class="newHeader__optionLink__chevron" data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/chevron-down-white.svg" src="assets/images/newHeader/chevron-down-black.svg" /> </a></li>
-			<li class="newHeader__optionLink"><a data-analytics="header" href=""> <span style="display: flex;flex-direction: column;">Portal Oi Solu&ccedil;&otilde;es <b style="font-size: 14px;font-weight: 400;color: #8F8F8F;">Grandes empresas</b></span> <img alt="" class="newHeader__optionLink__chevron" data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/chevron-down-white.svg" src="assets/images/newHeader/chevron-down-black.svg" /> </a></li>
-		</ul>
-		</div>
+<ul class="newHeader__optionLinks">
+	<li class="newHeader__optionLink"><a data-analytics="header" href="https://www.oi.com.br/faq/p/voce-ja-conhece-o-oie"><span> Minha Oi </span> <img alt="" class="newHeader__optionLink__chevron" data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/chevron-down-white.svg" src="assets/images/newHeader/chevron-down-black.svg" /> </a></li>
+	<li class="newHeader__optionLink"><a data-analytics="header" href=""> <span style="display: flex;flex-direction: column;">Portal Oi Contas <b style="font-size: 14px;font-weight: 400;color: #8F8F8F;">Pequenas e m&eacute;dias empresas</b></span> <img alt="" class="newHeader__optionLink__chevron" data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/chevron-down-white.svg" src="assets/images/newHeader/chevron-down-black.svg" /> </a></li>
+	<li class="newHeader__optionLink"><a data-analytics="header" href=""> <span style="display: flex;flex-direction: column;">Portal Oi Solu&ccedil;&otilde;es <b style="font-size: 14px;font-weight: 400;color: #8F8F8F;">Grandes empresas</b></span> <img alt="" class="newHeader__optionLink__chevron" data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/chevron-down-white.svg" src="assets/images/newHeader/chevron-down-black.svg" /> </a></li>
+</ul>
+</div>
 
-		<div class="newHeader__linksContainer">
-		<div class="newHeader__linksContainer-title"><img alt="" data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/phone-dark.svg" src="assets/images/newHeader/phone.svg" /> <span> Fale com a Oi </span></div>
+<div class="newHeader__linksContainer">
+<div class="newHeader__linksContainer-title"><svg fill="none" height="24" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"> <path clip-rule="evenodd" d="M13.9 21.96C15.13 22.48 16.32 22.75 17.45 22.75C18.24 22.75 18.99 22.6 19.68 22.32C20.4 22.03 21.02 21.58 21.59 20.95C21.92 20.59 22.18 20.2 22.39 19.75C22.6 19.3 22.71 18.82 22.71 18.34C22.71 17.99 22.64 17.64 22.49 17.26C22.33 16.88 22.06 16.56 21.69 16.31L18.37 13.95C18.07 13.74 17.79 13.59 17.53 13.48C16.83 13.19 16.13 13.25 15.58 13.59C15.29 13.74 14.99 13.97 14.68 14.28L13.97 14.95C13.75 14.84 13.38 14.6 12.81 14.12C12.35 13.74 11.86 13.28 11.27 12.7C10.81 12.23 10.35 11.72 9.86 11.16C9.4 10.62 9.16 10.26 9.04 10.05C9.03 10.03 9.02 10.01 9.01 9.98L9.69 9.27C9.98 8.98 10.21 8.69 10.36 8.42C10.57 8.07 10.68 7.7 10.68 7.32C10.68 7.03 10.61 6.73 10.48 6.43C10.37 6.15 10.21 5.87 10 5.58L7.68 2.31C7.44 1.95 7.11 1.68 6.72 1.5C6.38 1.34 5.98 1.25 5.59 1.25C4.65 1.25 3.77 1.63 3 2.39C2.39 2.96 1.94 3.62 1.66 4.33C1.39 5.02 1.25 5.76 1.25 6.54C1.25 7.67 1.51 8.87 2.03 10.11C2.52 11.27 3.21 12.47 4.07 13.67C4.92 14.83 5.88 15.96 6.94 17.03C8.01 18.08 9.14 19.04 10.31 19.9C11.49 20.75 12.7 21.45 13.9 21.96ZM4.04 3.47C4.53 2.99 5.04 2.75 5.59 2.75C5.76 2.75 5.93 2.79 6.09 2.86C6.24 2.93 6.36 3.03 6.46 3.17L8.78 6.45C8.92 6.64 9.03 6.82 9.1 6.98C9.15 7.1 9.18 7.22 9.18 7.3C9.18 7.4 9.15 7.51 9.07 7.64C8.97 7.81 8.82 8 8.62 8.2L7.87 8.98C7.62 9.23 7.49 9.55 7.49 9.91C7.49 10.05 7.51 10.18 7.57 10.41L7.69 10.71C7.9 11.1 8.24 11.57 8.71 12.12C9.22 12.71 9.71 13.24 10.2 13.74C10.83 14.36 11.35 14.84 11.83 15.25C12.36 15.7 12.84 16.04 13.25 16.26L13.52 16.38C13.98 16.55 14.58 16.46 14.97 16.08L15.73 15.33C15.93 15.13 16.11 14.98 16.31 14.88C16.6083 14.6958 16.7142 14.7424 16.8842 14.8174C16.908 14.8279 16.933 14.839 16.96 14.85C17.13 14.92 17.31 15.02 17.51 15.16L20.83 17.52C21.02 17.65 21.08 17.76 21.11 17.82C21.19 18 21.22 18.16 21.22 18.32C21.22 18.58 21.16 18.84 21.04 19.09C20.89 19.41 20.71 19.68 20.48 19.93C20.07 20.39 19.62 20.71 19.11 20.92C17.79 21.47 16.19 21.3 14.48 20.57C13.38 20.11 12.27 19.47 11.19 18.68C10.08 17.87 9 16.95 8 15.96C7 14.95 6.09 13.88 5.29 12.78C4.49 11.68 3.86 10.58 3.41 9.52C2.97 8.48 2.75 7.47 2.75 6.54C2.75 5.95 2.85 5.4 3.06 4.88C3.26 4.37 3.58 3.9 4.04 3.47Z" fill="#3D3D3D" fill-rule="evenodd"></path> </svg> <span> Fale com a Oi </span></div>
 
-		<ul class="newHeader__optionLinks">
-			<li class="newHeader__optionLink"><a class="btn_pelo_whatsapp" data-analytics="header" href="tel:08000310453"><span style="display: flex;flex-direction: column;">Cliente Varejo<b style="font-size: 14px;font-weight: 400;color: #8F8F8F;">103 31</b></span> <img alt="" class="newHeader__optionLink__chevron" data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/chevron-down-white.svg" src="assets/images/newHeader/chevron-down-black.svg" /> </a></li>
-			<li class="newHeader__optionLink"><a class="btn_pelo_whatsapp" data-analytics="header" href="tel:08000310453"><span style="display: flex;flex-direction: column;">Cliente Empresarial<b style="font-size: 14px;font-weight: 400;color: #8F8F8F;">0800 031 8000</b></span> <img alt="" class="newHeader__optionLink__chevron" data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/chevron-down-white.svg" src="assets/images/newHeader/chevron-down-black.svg" /> </a></li>
-			<li class="newHeader__optionLink"><a class="btn_pelo_whatsapp" data-analytics="header" href="tel:08000310453"><span style="display: flex;flex-direction: column;">Cliente Oi Soluções<b style="font-size: 14px;font-weight: 400;color: #8F8F8F;">0800 031 8031</b></span> <img alt="" class="newHeader__optionLink__chevron" data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/chevron-down-white.svg" src="assets/images/newHeader/chevron-down-black.svg" /> </a></li>
-			<li class="newHeader__optionLink newHeader__greenOption"><a data-analytics="header" href="https://www.oi.com.br/faq/"><span> Central de ajuda </span> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-				<path fill-rule="evenodd" clip-rule="evenodd" d="M13.9001 18.6001C14.0501 18.7501 14.2401 18.8201 14.4301 18.8201C14.6201 18.8201 14.8101 18.7501 14.9601 18.6001L21.0301 12.5301C21.3201 12.2401 21.3201 11.7601 21.0301 11.4701L14.9601 5.40012C14.6701 5.11012 14.1901 5.11012 13.9001 5.40012C13.6101 5.69012 13.6101 6.17012 13.9001 6.46012L18.6901 11.2501H3.5C3.09 11.2501 2.75 11.5901 2.75 12.0001C2.75 12.4101 3.09 12.7501 3.5 12.7501H18.6901L13.9001 17.5401C13.6101 17.8301 13.6101 18.3101 13.9001 18.6001Z" fill="#00A300"/>
-			  </svg> </a></li>
-		</ul>
-		</div>
+<ul class="newHeader__optionLinks">
+	<li class="newHeader__optionLink"><a class="btn_pelo_whatsapp" data-analytics="header" href="tel:08000310453"><span style="display: flex;flex-direction: column;">Cliente Varejo<b style="font-size: 14px;font-weight: 400;color: #8F8F8F;">103 31</b></span> <img alt="" class="newHeader__optionLink__chevron" data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/chevron-down-white.svg" src="assets/images/newHeader/chevron-down-black.svg" /> </a></li>
+	<li class="newHeader__optionLink"><a class="btn_pelo_whatsapp" data-analytics="header" href="tel:08000310453"><span style="display: flex;flex-direction: column;">Cliente Empresarial<b style="font-size: 14px;font-weight: 400;color: #8F8F8F;">0800 031 8000</b></span> <img alt="" class="newHeader__optionLink__chevron" data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/chevron-down-white.svg" src="assets/images/newHeader/chevron-down-black.svg" /> </a></li>
+	<li class="newHeader__optionLink"><a class="btn_pelo_whatsapp" data-analytics="header" href="tel:08000310453"><span style="display: flex;flex-direction: column;">Cliente Oi Solu&ccedil;&otilde;es<b style="font-size: 14px;font-weight: 400;color: #8F8F8F;">0800 031 8031</b></span> <img alt="" class="newHeader__optionLink__chevron" data-src-dark="/lumis-theme/br/com/nova/home/theme/nova-home/assets/images/newHeader/chevron-down-white.svg" src="assets/images/newHeader/chevron-down-black.svg" /> </a></li>
+	<li class="newHeader__optionLink newHeader__greenOption"><a data-analytics="header" href="https://www.oi.com.br/faq/"><span> Central de ajuda </span> <svg fill="none" height="24" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"> <path clip-rule="evenodd" d="M13.9001 18.6001C14.0501 18.7501 14.2401 18.8201 14.4301 18.8201C14.6201 18.8201 14.8101 18.7501 14.9601 18.6001L21.0301 12.5301C21.3201 12.2401 21.3201 11.7601 21.0301 11.4701L14.9601 5.40012C14.6701 5.11012 14.1901 5.11012 13.9001 5.40012C13.6101 5.69012 13.6101 6.17012 13.9001 6.46012L18.6901 11.2501H3.5C3.09 11.2501 2.75 11.5901 2.75 12.0001C2.75 12.4101 3.09 12.7501 3.5 12.7501H18.6901L13.9001 17.5401C13.6101 17.8301 13.6101 18.3101 13.9001 18.6001Z" fill="#00A300" fill-rule="evenodd"></path> </svg> </a></li>
+</ul>
+</div>
 
-		<div class="newHeader__new-cnpj-container" style="max-height: 380px; height: auto;">
-		<div class="newHeader__menuOptionCard noi-header-three-banner" style="height: auto;"><img alt="" class="newHeader__menuOptionCard-bg" loading="lazy" src="/lumis/portal/file/fileDownload.jsp?fileId=FF808181958520B1019585BBD4E70654&amp;inline=1" style="min-width: auto;" />
-			<div class="newHeader__menuOptionCard-content" style="justify-content: flex-end;"><span class="newHeader__menuOptionCard-subtitle noi-three-banner-body"> Entenda as mudan&ccedil;as na Oi </span> <a data-analytics="header" href="https://www.oi.com.br/grandes-empresas/"> <span style="color: var(--Oi-Solues---Light, #70FF84);"> Saiba mais </span> <svg fill="none" height="24" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"> <path clip-rule="evenodd" d="M13.9001 18.6001C14.0501 18.7501 14.2401 18.8201 14.4301 18.8201C14.6201 18.8201 14.8101 18.7501 14.9601 18.6001L21.0301 12.5301C21.3201 12.2401 21.3201 11.7601 21.0301 11.4701L14.9601 5.40012C14.6701 5.11012 14.1901 5.11012 13.9001 5.40012C13.6101 5.69012 13.6101 6.17012 13.9001 6.46012L18.6901 11.2501H3.5C3.09 11.2501 2.75 11.5901 2.75 12.0001C2.75 12.4101 3.09 12.7501 3.5 12.7501H18.6901L13.9001 17.5401C13.6101 17.8301 13.6101 18.3101 13.9001 18.6001Z" fill="#70FF84" fill-rule="evenodd"></path> </svg> </a></div>
-		</div>
-		</div>
-	</div>
-	</div>
+<div class="newHeader__new-cnpj-container" style="max-height: 380px; height: auto;">
+<div class="newHeader__menuOptionCard noi-header-three-banner" style="height: auto;"><img alt="" class="newHeader__menuOptionCard-bg" loading="lazy" src="/lumis/portal/file/fileDownload.jsp?fileId=FF808181958520B1019585BBD4E70654&amp;inline=1" style="min-width: auto;" />
+<div class="newHeader__menuOptionCard-content" style="justify-content: flex-end;"><span class="newHeader__menuOptionCard-subtitle noi-three-banner-body"> Entenda as mudan&ccedil;as na Oi </span> <a data-analytics="header" href="https://www.oi.com.br/grandes-empresas/"> <span style="color: var(--Oi-Solues---Light, #70FF84);"> Saiba mais </span> <svg fill="none" height="24" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"> <path clip-rule="evenodd" d="M13.9001 18.6001C14.0501 18.7501 14.2401 18.8201 14.4301 18.8201C14.6201 18.8201 14.8101 18.7501 14.9601 18.6001L21.0301 12.5301C21.3201 12.2401 21.3201 11.7601 21.0301 11.4701L14.9601 5.40012C14.6701 5.11012 14.1901 5.11012 13.9001 5.40012C13.6101 5.69012 13.6101 6.17012 13.9001 6.46012L18.6901 11.2501H3.5C3.09 11.2501 2.75 11.5901 2.75 12.0001C2.75 12.4101 3.09 12.7501 3.5 12.7501H18.6901L13.9001 17.5401C13.6101 17.8301 13.6101 18.3101 13.9001 18.6001Z" fill="#70FF84" fill-rule="evenodd"></path> </svg> </a></div>
+</div>
+</div>
+</div>
+</div>
 </div>
 </section>
+
 
 <div id="button_accessibility_sum" style="display: none;"></div>
 <div id="button_accessibility_subtraction" style="display: none;"></div>
